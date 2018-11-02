@@ -34,7 +34,6 @@ public class TileWithPath{
 		PathFinder.dataStorage.CheckAndUpdate(movingUnit);
 		
 		var climbMultiplier = dest.GetHeight() > prev.GetHeight() ? 3 : 1;
-
 		float requireAP = dest.GetBaseMoveCost() * climbMultiplier;
 		// 거리 가중치 감소(유진-여행자의 발걸음) 효과 적용
 		requireAP += (prevCount + movingUnit.movedTileCount) * PathFinder.dataStorage.moveCostAcc; 
@@ -43,6 +42,7 @@ public class TileWithPath{
 		if (PathFinder.dataStorage.moveCostChange)
 			requireAP = movingUnit.CalculateActualAmount (requireAP, StatusEffectType.RequireMoveAPChange);
 		
+		//Debug.Log(dest.Location + "으로 이동하는 비용: " + requireAP);
 		return requireAP;
 	}
 

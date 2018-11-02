@@ -276,26 +276,8 @@ public class UnitManager : MonoBehaviour{
 	}
 
 	void ApplyAIInfo(Unit unit){
-		var originalAiInfo = VolatileData.stageData.GetAIInfos().Find(info => _String.Match(info.codeName, unit.CodeName));
-		if (originalAiInfo == null) return;
-		
-		var aiInfo = new AIInfo(originalAiInfo.cloneData);
 		var aiData = unit.GetComponent<AIData>();
-		
-		if (aiInfo.actOnStart)
-			aiData.isActive = true; //게임 시작 전이므로 Log를 통해 활성화할 수 없음!
-		else{
-			aiInfo.InstantiateVigilAreas(unit);
-			foreach(var vigilArea in aiInfo.vigilAreas)
-				foreach(var tile in vigilArea.area)
-					if (BattleData.guardDict.ContainsKey(tile))
-						BattleData.guardDict[tile].Add(unit);
-					else
-						BattleData.guardDict.Add(tile, new List<Unit> { unit });
-		}
-		
-		aiData.info = aiInfo;
-		aiData.SetGoalArea(unit);
+		aiData.isActive = true; //게임 시작 전이므로 Log를 통해 활성화할 수 없음!
 		
 		unit.GetActiveSkillList().RemoveAll (skill => skill.korName == "언령" || skill.korName == "광휘" || skill.korName == "집중" || skill.korName == "암살 표식" || skill.korName == "셔플 불릿" || skill.korName == "한여름");
 		unit.AddAI();
@@ -306,21 +288,11 @@ public class UnitManager : MonoBehaviour{
 			unit.GetAI().CheckVigilArea();
 	}
 
-	public void AutomaticGeneration(bool onlyPC = false){
+	public void GenerateUnitAutomatically(){
 		for (int i = 0; i < 3; i++){
-			GenerateUnit();
+			GeneratePC(true);
 		}
-        /*genInfos = VolatileData.stageData.GetUnitGenInfos();
-
-		foreach (var genInfo in genInfos){
-			if (genInfo.IsNonFixedPosPC) continue;
-			if(onlyPC && !genInfo.IsFixedPosPC) continue;
-			if(genInfo.Additive) continue;
-			if(genInfo.alreadyGenerated) continue;
-			GenerateUnitWith(genInfo, false);
-			if (genInfo.IsFixedPosPC && VolatileData.OpenCheck(Setting.readySceneOpenStage))
-				ReadyManager.Instance.candidates.RemoveAll (_candi => "PC" + _candi.CodeName == genInfo.CodeName);
-		}
+		GeneratePC(false);
 
         //UpdateFogOfWar();*/
     }
@@ -329,7 +301,7 @@ public class UnitManager : MonoBehaviour{
 		return Generic.PickRandom(new List<string> {"reina", "lucius", "yeong", "karldrich", "noel"});
 	}}
 
-	void GenerateUnit(){
+	void GeneratePC(bool isPC){
         var unit = Instantiate(unitPrefab).GetComponent<Unit>();
 		string codeName;
 		do{
@@ -337,21 +309,32 @@ public class UnitManager : MonoBehaviour{
 		} while (GetAllUnits().Any(item => item.codeName == codeName));
 
 		unit.codeName = codeName;
-		unit.InitializeStats();
+		unit.InitializeStats(isPC);
         unit.transform.SetParent(transform);
 		unit.LoadSprites();
-        unit.SetDirection(Direction.RightDown);
+        unit.SetDirection(Generic.PickRandom(EnumUtil.directions));
 
-		// 유닛이 생성되자마자 fogOfWar 아래에 있으면 숨겨야 하는데,
-		// pivot 세팅은 다음 프레임에 이루어지므로 미리 하지 않으면 숨겨지지 않는다.
-        unit.SetPivot(Generic.PickRandom(TileManager.Instance.GetAllTiles().Values.ToList()).Location);
+		//유닛이 생성되자마자 fogOfWar 아래에 있으면 숨겨야 하는데,
+		//pivot 세팅은 다음 프레임에 이루어지므로 미리 하지 않으면 숨겨지지 않는다.
+		//빈 타일 중 무작위로 골라서 유닛을 생성
+        unit.SetPivot(Generic.PickRandom(TileManager.Instance.GetAllTiles().Values.ToList().FindAll(tile => !tile.IsUnitOnTile())).Location);
 	
         //AIInfo가 allUnits를 참조하고 unitsActThisPhase.Add 여부가 AI를 참조하므로, 아래 문단 내 순서를 함부로 바꾸지 말 것!
         allUnits.Add(unit);
-		ApplyAIInfo(unit);
+		if (!isPC){
+			unit.side = Side.Enemy;
+			ApplyAIInfo(unit);
+		}
+
+		var skills = new List<Skill>();
+		if (!unit.IsPC){
+			skills.Add(TableData.ActiveSkills.Find(skill => skill.korName == "화염 폭발"));
+			skills.Add(TableData.ActiveSkills.Find(skill => skill.korName == "쇄도"));
+			skills.Add(Generic.PickRandom(TableData.ActiveSkills.FindAll(skill => !skills.Contains(skill))));
+		}else
+			skills.Add(Generic.PickRandom(TableData.ActiveSkills.FindAll(skill => skill.GetCooldown() < 2)));
+		skills.Add(Generic.PickRandom(TableData.PassiveSkills));
 		
-		//스킬 입혀주는 부분
-		var skills = new List<Skill> {Generic.PickRandom(TableData.ActiveSkills), Generic.PickRandom(TableData.PassiveSkills)};
         unit.ApplySkillList(skills, StatusEffector.USEInfoList, StatusEffector.TSEInfoList);
         if(unit.HasAction) unitsActThisPhase.Add(unit);
 
@@ -359,7 +342,7 @@ public class UnitManager : MonoBehaviour{
         if(unit.IsPC){
             var skillNameList = unit.GetPassiveSkillList().FindAll(skill => skill.RequireLevel > 0).Select(skill => skill.Name).ToList();
             skillNameList.AddRange(unit.GetActiveSkillList().Select(skill => skill.GetName()));
-	        Debug.Log(unit.CodeName + "의 스킬 정보 등록");
+	        //Debug.Log(unit.CodeName + "의 스킬 정보 등록");
             PCSelectedSkillList.Add(unit.CodeName, skillNameList);
         }
 

@@ -9,7 +9,7 @@ using GameData;
 using UtilityMethods;
 
 public class Tile : Entity, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler, IPointerUpHandler {
-	public int APAtStandardHeight = 3;
+	public int APAtStandardHeight;
 	public Vector2Int location;
 	public void SetLocation(Vector2Int input) {location = input;}
 	public Vector2Int Location{get { return location; }}
@@ -95,11 +95,8 @@ public class Tile : Entity, IPointerEnterHandler, IPointerExitHandler, IPointerD
 	}
 
 	public void SetStatusEffectList(List<TileStatusEffect> newStatusEffectList) { statusEffectList = newStatusEffectList; }
-
-	public int GetTileAPAtStandardHeight()	{	return APAtStandardHeight;	}
-
 	public int GetHeight()	{	return height;	}
-	public int GetBaseMoveCost()	{	return APAtStandardHeight;	}
+	public int GetBaseMoveCost(){return APAtStandardHeight;}
 
 	public bool IsUnitOnTile ()	{return unitOnTile != null;}
 	public void SetUnitOnTile(Unit unit) {unitOnTile = unit;}

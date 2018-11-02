@@ -1,9 +1,6 @@
-﻿using Battle.Damage;
-using System.Collections.Generic;
-using System;
-using UnityEngine;
-using Enums;
+﻿using System;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace Battle.Skills {
 	class Eugene_P0_SkillLogic : BasePassiveSkillLogic {

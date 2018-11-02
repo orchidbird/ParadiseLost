@@ -1,5 +1,4 @@
-﻿
-using Battle.Damage;
+﻿using Battle.Damage;
 
 namespace Battle.Skills {
     public class Eugene_B8_SkillLogic : BasePassiveSkillLogic {

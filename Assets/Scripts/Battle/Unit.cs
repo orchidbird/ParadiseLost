@@ -261,9 +261,7 @@ public class Unit : Entity{
 	public List<Unit> GetAllies{get { return UnitManager.GetAllUnits().FindAll(unit => unit.IsAllyTo(this)); }}
 	public List<Unit> GetEnemies{get{return UnitManager.GetAllUnits().FindAll(unit => unit.IsEnemyTo(this));}}
 	
-	public bool IsAllyTo(Unit unit){
-		return side == unit.GetSide();
-	}
+	public bool IsAllyTo(Unit unit) {return side == unit.GetSide();}
 	public bool IsEnemyTo(Unit unit){
 		return (side == Side.Ally && unit.GetSide() == Side.Enemy) ||
 		       (side == Side.Enemy && unit.GetSide() == Side.Ally);
@@ -960,8 +958,10 @@ public class Unit : Entity{
 		if (HasStatusEffect(StatusEffectType.RequireSkillAPChange))
 			requireSkillAP = (int) Math.Round(CalculateActualAmount(requireSkillAP, StatusEffectType.RequireSkillAPChange));
 
-		float Will = GetStat(Stat.Will);
-		requireSkillAP = (int) Math.Round(requireSkillAP * (100f / Will));
+		if (VolatileData.OpenCheck(Setting.WillChangeOpenStage)){
+			float Will = GetStat(Stat.Will);
+			requireSkillAP = (int) Math.Round(requireSkillAP * (100f / Will));
+		}
 
 		// 스킬 시전 유닛의 모든 행동력을 요구하는 경우
 		if (skill.GetRequireAP() == 1000)
@@ -1259,15 +1259,26 @@ public class Unit : Entity{
 		faintTurnSkipIcon.SetActive(onoff);
 	}
 
-	public void InitializeStats(){
+	public void InitializeStats(bool isPC){
 		baseStats.Clear();
 		actualStats.Clear();
-		baseStats.Add(Stat.MaxHealth, RandomIntOfVariation(50, 1.2f));
-		baseStats.Add(Stat.Power, RandomIntOfVariation(10, 1.2f));
-		baseStats.Add(Stat.Defense, RandomIntOfVariation(32, 1.2f));
-		baseStats.Add(Stat.Agility, RandomIntOfVariation(50, 1.1f));
-		baseStats.Add(Stat.Will, RandomIntOfVariation(100, 1.1f));
-		baseStats.Add(Stat.Level, 1);
+
+		if (isPC){
+			baseStats.Add(Stat.MaxHealth, RandomIntOfVariation(50, 1.2f));
+			baseStats.Add(Stat.Power, RandomIntOfVariation(10, 1.2f));
+			baseStats.Add(Stat.Defense, RandomIntOfVariation(32, 1.2f));
+			baseStats.Add(Stat.Agility, RandomIntOfVariation(50, 1.1f));
+			baseStats.Add(Stat.Will, RandomIntOfVariation(100, 1.1f));
+			baseStats.Add(Stat.Level, 1);
+		}else{
+			baseStats.Add(Stat.MaxHealth, 150);
+			baseStats.Add(Stat.Power, 20);
+			baseStats.Add(Stat.Defense, 50);
+			baseStats.Add(Stat.Agility, 60);
+			baseStats.Add(Stat.Will, 100);
+			baseStats.Add(Stat.Level, 1);
+		}
+		
 		foreach (var kv in baseStats)
 			actualStats.Add(kv.Key, kv.Value);
 		hp = actualStats[Stat.MaxHealth];

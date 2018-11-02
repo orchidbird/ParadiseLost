@@ -5,11 +5,9 @@ public class Setting{
 	//기능 통제
 	public static readonly StageNum directionOpenStage = StageNum.S1_1;
 	public static readonly StageNum cameraMoveOpenStage = StageNum.S1_2;
-	public static readonly StageNum statusEffectOpenStage = StageNum.S1_2;
 	public static readonly StageNum classOpenStage = StageNum.S2_1;
 	public static readonly StageNum elementOpenStage = StageNum.S3_1;
 	public static readonly StageNum retreatOpenStage = StageNum.S4_1;
-	public static readonly StageNum heightOpenStage = StageNum.S4_1;
 	public static readonly StageNum WillChangeOpenStage = StageNum.S4_1;
 	public static readonly StageNum chainOpenStage = StageNum.S5_1;
 	public static readonly StageNum readySceneOpenStage = StageNum.S6_1; //능력 선택과 동시에 개방
@@ -25,6 +23,7 @@ public class Setting{
 	//변수 통제(전투 규칙)
 	public static readonly float retreatHPFloat = 0.2f;
 	public static readonly int moveCostAcc = 2; //이동할 때 타일당 추가로 붙는 계차값
+	public static readonly float defenseHalfLevel = 100; //방어력에 의한 감소율이 절반이 되는 값. 100일 때 절반이 된다
 	public static readonly float sideAttackBonus = 1.1f;
 	public static readonly float backAttackBonus = 1.25f; 
 	

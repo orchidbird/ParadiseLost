@@ -169,10 +169,11 @@ public class ActiveSkill : Skill{
 
 		targets.ForEach(target => {
 			// AI 유닛에게 활성화를 깨울 만한 기술(공격/디버프/이동기)이 날아오면, 그 유닛이 기술 날아온 순간 활성화되는 AI인지 확인하고 맞다면 활성화시킨다
-			if(IsAwaking() && target.IsAI){
+			/*if(IsAwaking() && target.IsAI){
 				AIData _AIData = target.GetAI()._AIData;
-				if (_AIData != null && !isPreview && IsAwaking()) _AIData.SetActive(_AIData.info.actOnExternal);
-			}
+				if (_AIData != null && !isPreview && IsAwaking())
+					_AIData.SetActive(_AIData.info.actOnExternal);
+			}*/
 
 			CastingApply castingApply = new CastingApply(casting, target);
 

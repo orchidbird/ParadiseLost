@@ -50,10 +50,9 @@ eren	14	B13		초월	Transcendence	자신보다 최대 체력이 낮은 대상을
 eren	0	A29		배척받는 자	배척받는 자	ABCD	ABCD
 eren	0	B29		영겁의 지식	영겁의 지식	ABCD	ABCD
 eren	0	B36		진형 붕괴	진형 붕괴	ABCD	ABCD
-eren	0	A43		압도적인 공포	압도적인 공포	ABCD	ABCD
 eren	0	C43		천상의 전령	천상의 전령	ABCD	ABCD
 eugene	0	P0		거울 공명	Mirror Resonance	대상에 자신이나 동료가 포함된 마법 공격의 위력이, <color=#BDB76B>대상 1명</color>당 5%(최대 30%) 줄어듭니다.	Damage of Magic attacks containing any ally as target will decreased by 5% per every <color=#BDB76B>target</color> of the attack(maximum 30%).
-eugene	10	B10		순은의 매듭	White Knot	<color=yellow>(향상 - 순백의 방패)</color>^효과의 지속이 2턴로 줄어드는 대신, 서로 다른 대상으로부터의 효과가 중첩됩니다.	<color=yellow>(Enhance - White Shield)</color>^Reduce the duration of the effect to 2 Turns, but these effects from different objects become compatible.
+eugene	10	B10	B7	순은의 매듭	White Knot	<color=yellow>(향상 - 순백의 방패)</color>^효과의 지속이 2턴로 줄어드는 대신, 서로 다른 대상으로부터의 효과가 중첩됩니다.	<color=yellow>(Enhance - White Shield)</color>^Reduce the duration of the effect to 2 Turns, but these effects from different objects become compatible.
 eugene	11	C12		여행자의 발걸음	Adventuristic Step	매턴 기술을 시전하기 전까지, 이동 소모 행동력의 거리 가중치가 1 줄어듭니다.	Every turn before casting a skill, moving cost increasing by tile will be 1.
 eugene	0	A29		순수한 물	Pure Water	ABCD	ABCD
 eugene	0	B29		은의 지평선	Silver Horizon	ABCD	ABCD

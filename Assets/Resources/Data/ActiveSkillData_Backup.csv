@@ -1,0 +1,12 @@
+﻿owner	ether	address	required	nameKor	nameEng	ReqAP	cooldown	coef	RangeType	FirstRange	SecondRange	skillApplyType	CastVEName	Area/Move/Dir	CastSEName	HitVeName	HitSeName	explainKor	explainEng	AdditiveValues	ValueType	ValueCoef	ValueBase
+snowHippoLeader	0	L3		높은 도약	High Leap	50	1	0.5	Auto	Global	Global	DamageHealth	-	FFF	-	HitBlue	Pierce	<color=yellow>대상: 자신을 제외한 모든 유닛^DEFAULT^<color=#92B4F2>자신은 지정한 위치로 이동</color>	<color=yellow>Target: All units except for caster^DEFAULT^<color=#92B4F2>Caster moves to the targeted tile.</color>				
+bianca	6	C2		떠밀기	Pushing	5	0	0	Auto	Straight/1/1	Same	Move	Pushing	FFF	Push	HitWhite	Hit/Striked	밀기(2)^과부하(10)^<color=yellow>이 기술은 연계를 발동시키지 않습니다.</color>	Push(2)^Overload(10)				
+curi	0	B22		산성 혼합물	Acidic Mixture	61	4	1.3	Point	Diamond/3/5	Diamond/0/2	DamageHealth	-	TFF	AlkaliBomb	Shot	Hit/Normal	?	?				
+curi	0	C29		도금	Plate	24	4	0	Point	Diamond/1/5	Diagonal/0/1	Debuff	-	FFF	AlkaliBomb	Shot	Hit/Normal	?	?				
+curi	0	B36		유독성 촉매	Toxic Catalyst	0	1	0	Auto	One	One	Buff	-	FFF	AlkaliBomb	Shot	Hit/Normal	?	?				
+eren	0	C22		순간 재충전	Recharge	25	5	0	Point	Diamond/0/9	One	Buff	-	TFF	-	Shot	Hit/Normal	--	--				
+eugene	0	B22		백은의 장막	White Curtain	8	5	0	Auto	Diamond/0/4	Same	Buff	-	FFF	-	Shot	Hit/Normal	?	?				
+kashasty	6	B18		셔플 불릿	Shuffle Bullet	18	3	0	Point	Diamond/1/6	One	Move	-	TTF	Gun	HitArcane	Hit/Normal	대상과 자신의 위치를 바꿉니다.	Exchange positions of the caster and the target.				
+noel	5	B15		언령	Mercy of God	39	3	0	Auto	One	One	Buff	-	FFF	Life	HitHoly	Hit/Normal	다음 자신의 턴까지 모든 유닛의 이탈 기준치를 +10% 높입니다.	Increase ALL units' Retreat Point by 10% until Noel's next turn.				
+reina	0	C29		에테르 과부하	Ether Overload	0	5	A0.2	Auto	One	One	HealAP	-	TTF	Heal	Shot	Hit/Normal	--	--				
+triana	0	C50		실체화: 드라이어드	Realize: Dryad	84	2	4.1	Route	AllDirection/1/3	One	DamageHealth	-	TFF	-	HitGreen	Hit/Normal	?	?				

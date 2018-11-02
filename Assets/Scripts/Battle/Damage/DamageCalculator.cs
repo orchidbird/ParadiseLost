@@ -165,8 +165,7 @@ namespace Battle {
 		}
 
 		private static float HeightBonus(Unit caster, Unit target) {
-			float heightBonus = Utility.GetHeightBonus(caster, target);
-			return heightBonus;
+			return Utility.GetHeightBonus(caster, target);
 		}
 
 		private static float ChainComboBonus(int chainCombo) {
@@ -198,8 +197,8 @@ namespace Battle {
 		}
 
 		public static float ApplyDefense(float damage, float defense){
-			if (defense <= -180) return damage * 10;
-			return damage * 200.0f / (200.0f + defense);
+			if (defense <= -90) return damage * 10;
+			return damage * Setting.defenseHalfLevel / (Setting.defenseHalfLevel + defense);
 		}
 		public static float CalculateDefense(ActiveSkill appliedSkill, Unit target, Unit caster) {
 			float defense = target.GetStat(Stat.Defense);

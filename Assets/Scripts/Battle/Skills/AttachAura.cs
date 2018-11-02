@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using Enums;
+﻿using Enums;
 
 namespace Battle.Skills {
     class AttachAura : BaseActiveSkillLogic {

@@ -273,10 +273,12 @@ public class TileManager : MonoBehaviour {
 		var location = new Vector2Int(x, y);
 		var tile = Instantiate(tilePrefab, CalculateRealTilePosition(location, height), Quaternion.identity).GetComponent<Tile>();
 		tile.name = "Tile(" + x + "," + y + ")";
+		tile.height = height;
 		tile.transform.SetParent(transform);
 		tile.SetLocation(location);
 		tile.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("TileImage/metal_01");
 		tiles.Add(new Vector2Int(x, y), tile);
+		tile.APAtStandardHeight = 3;
 	}
 	
 	public void GenerateMap(){

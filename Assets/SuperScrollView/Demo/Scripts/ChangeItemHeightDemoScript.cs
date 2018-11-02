@@ -1,13 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace SuperScrollView
-{
-
-    public class ChangeItemHeightDemoScript : MonoBehaviour
-    {
+namespace SuperScrollView{
+    public class ChangeItemHeightDemoScript : MonoBehaviour{
         public LoopListView2 mLoopListView;
         Button mScrollToButton;
         Button mAddItemButton;
@@ -18,8 +13,7 @@ namespace SuperScrollView
         Button mBackButton;
 
         // Use this for initialization
-        void Start()
-        {
+        void Start(){
             mLoopListView.InitListView(DataSourceMgr.Get.TotalItemCount, OnGetItemByIndex);
 
             mSetCountButton = GameObject.Find("ButtonPanel/buttonGroup1/SetCountButton").GetComponent<Button>();
@@ -35,13 +29,10 @@ namespace SuperScrollView
             mBackButton.onClick.AddListener(OnBackBtnClicked);
         }
 
-        void OnBackBtnClicked()
-        {
+        void OnBackBtnClicked(){
             UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
         }
-
-
-
+        
         LoopListViewItem2 OnGetItemByIndex(LoopListView2 listView, int index)
         {
             if (index < 0 || index >= DataSourceMgr.Get.TotalItemCount)

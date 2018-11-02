@@ -40,24 +40,17 @@ priest	0	L1		찬송	Hymn	50	0	0.6	Auto	Diamond/0/2	Same	HealHealth	-	FFF	Life	-	
 missionary	0	L2		찬송	Hymn	50	0	0.6	Auto	Diamond/0/2	Same	HealHealth	-	TFT	Life	Shot	Pierce	DEFAULT^행동력 0.3×민첩성 회복	DEFAULT^Recover 0.3×Agility of AP.				
 missionary	0	L18		혼비백산	Horrified	50	3	0	Route	Straight/1/3	Same	Debuff	-	FFF	Run	Shot	Pierce	돌진^경로 양 옆에 있는 대상에 기절(1턴) 효과를 부여합니다.	Charge^Faint(1 Turn) to the units near the moving path.				
 snowHippo	0	L1		눈 트름	Snow Burp	60	0	0.8	Auto	Sector/1/3	Same	DamageHealth	-	FFF	IceBlade	HitBlue	Pierce	DEFAULT	DEFAULT				
-snowHippoLeader	0	L1		눈 먹기	Eating Snow	60	3	0	Auto	One	One	Buff	-	TFT	-	HitBlue	Pierce	<color=yellow>사용 조건: 자신이 물 타일 위</color>^공격력 +30%^최대 체력 +50%	<color=yellow>Require: the caster must be on tile with Water element.</color>^Power +30%^Max HP +50%				
-snowHippoLeader	0	L2		얼음 함성	Ice Crying	70	0	1.2	Auto	Straight/1/30	Same	DamageHealth	-	FFF	-	HitBlue	Pierce	DEFAULT^공격력 -20%^저항력 -100^보호막 무시	DEFAULT^Power -20%^Resistance -100^This attack ignores Shield.				
-snowHippoLeader	0	L3		높은 도약	High Leap	50	1	0.5	Auto	Global	Global	DamageHealth	-	FFF	-	HitBlue	Pierce	<color=yellow>대상: 자신을 제외한 모든 유닛^DEFAULT^<color=#92B4F2>자신은 지정한 위치로 이동</color>	<color=yellow>Target: All units except for caster^DEFAULT^<color=#92B4F2>Caster moves to the targeted tile.</color>				
 arcadia	10	C4		풍화	Weathering	22	1	A0.4	Auto	Sector/1/2	Same	DamageAP	-	FFF	ElectricBuzz	HitGreen	Hit/Normal	행동력 0.4×민첩성(VALUE1) 제거^대상이 바로 앞 타일에 있을 경우, 피해량 0.8×공격력	Remove 0.4×Agility(VALUE1) of AP^If the target is on adjacent tile with caster, Deal Damage of 0.8×Power.	1	Agility	0.4	0
 arcadia	10	C9		계절풍	Monsoon	28	0	0.9	Route	Straight/1/6	One	DamageHealth	-	TFF	SeasonWind	HitGreen	Hit/Normal	당기기^DEFAULT	Pull^DEFAULT				
 arcadia	8	C11		한여름	Midsummer	0	0	0	Auto	Diamond/0/2	Same	Tile	-	TFF	Life	Shot	Hit/Normal	<color=yellow>사용 조건: 범위 내에 나무 속성 타일이 존재</color>^범위 내의 타일을 모두 나무 속성으로 바꿉니다.^<color=#BDB76B>바꾼 타일 하나</color>당 최대 체력의 <color=green>2%</color>를 사용합니다.	<color=yellow>Require: one or more tiles with Plant element in the area</color>^Change elements of all tiles in the area to Plant.^Consume <color=green>2%</color> of Max HP per <color=#BDB76B>every changed tile</color>.				
 arcadia	10	B19		생명의 요람	The cradle of life	35	6	0	Auto	One	One	Buff	LeafBuff	FFF	Life	HitGreen	Hit/Normal	최대 체력 +35%(3턴)^최대 체력 <color=green>10%</color>(<color=green>VALUE1</color>)의 지속 회복(3턴) 획득	Max HP +35%(3 Turns)^Heal <color=green>10%</color>(<color=green>VALUE1</color>) of Max HP for 3 Turns.	1	MaxHealth	0.1	0
-bianca	6	C2		떠밀기	Pushing	5	0	0	Auto	Straight/1/1	Same	Move	Pushing	FFF	Push	HitWhite	Hit/Striked	밀기(2)^과부하(10)^<color=yellow>이 기술은 연계를 발동시키지 않습니다.</color>	Push(2)^Overload(10)				
 bianca	10	A5		잘근잘근 덫	Chewing Trap	32	0	0	Auto	Front/1/1/3	Same	Trap	BindTrap	TFF	SetTrap	HitWhite	Hit/Normal	<color=yellow>덫 설치</color>^속박(2턴)^1.0×공격력의 지속 피해(3턴)	<color=yellow>Trap</color>^Bind(2 Turns)^Deal Damage of 1.0×Power at the start of next 3 turns.				
 bianca	8	B12		부패진	Corruptive Circle	20	0	0	Point	Diamond/1/2	One	Trap	-	TFF	BlackArrow	HitViolet	Hit/Dark	마법진 설치(3턴)^지속 피해 0.7×공격력	Magic Circle(3 Turns)^Deal Damage of 0.7×Power at the start of next 3 turns.				
 bianca	9	A14		짜릿짜릿 지뢰	Electronic Trap	35	0	0	Point	Diamond/1/1	One	Trap	Trap	TFF	SetTrap	HitLightning	Hit/Normal	<color=yellow>덫 설치</color>^기절(2턴)^의지 -40(4턴)	<color=yellow>Trap</color>^Faint(2 Turns)^Will -40(4 Turns)				
 curi	10	B3		수상한 덩어리	Strange Lump	34	0	1	Point	Diamond/3/5	Square/0/1	DamageHealth	-	TFF	AlkaliBomb	HitRed	Hit/Fire	DEFAULT	DEFAULT				
 curi	11	C10		알칼리 폭탄	Alkali Bomb	50	0	1	Point	Diamond/3/6	Square/0/1	DamageHealth	AlkaliBoom	TFF	AlkaliBomb	HitRed	Hit/Fire	DEFAULT^<color=#BDB76B>범위내</color> 물 <color=#BDB76B>속성 타일 하나</color>당, 피해량 +<color=red>10%</color>^전부 물 속성 타일이면, 기절(1턴) 효과를 부여합니다.	DEFAULT^+10% per <color=#BDB76B>every tile with</color> Water <color=#BDB76B>element in the area.</color>^If all of them are tile with Water element, Faint(1 Turn)				
-curi	0	B22		산성 혼합물	Acidic Mixture	61	4	1.3	Point	Diamond/3/5	Diamond/0/2	DamageHealth	-	TFF	AlkaliBomb	Shot	Hit/Normal	?	?				
 curi	0	A22		동기화 점액	Synchronizing Mucus	47	3	1.5	Point	Diamond/3/5	Square/0/1	DamageHealth	-	TFF	AlkaliBomb	Shot	Hit/Normal	?	?				
 curi	0	C22		인간 중정석 폭탄	Barite Bomb	55	4	0	Point	Diamond/1/7	One	Debuff	-	FFF	AlkaliBomb	Shot	Hit/Normal	?	?				
-curi	0	C29		도금	Plate	24	4	0	Point	Diamond/1/5	Diagonal/0/1	Debuff	-	FFF	AlkaliBomb	Shot	Hit/Normal	?	?				
-curi	0	B36		유독성 촉매	Toxic Catalyst	0	1	0	Auto	One	One	Buff	-	FFF	AlkaliBomb	Shot	Hit/Normal	?	?				
 curi	0	C43		에테르 폭탄	Ether Bomb	78	0	2.4	Point	Diamond/3/6	Square/0/1	DamageHealth	-	TFF	AlkaliBomb	HitArcane	Hit/Normal	?	?				
 curi	0	B50		초강산 혼합물	Hyperacidic Mixture	110	6	2	Point	Diamond/3/5	Diamond/0/2	DamageHealth	-	TTF	AlkaliBomb	Shot	Hit/Normal	?	?				
 darkenir	12	B1		에테르 샷	Ether Shot	34	0	0.9	Point	Diamond/0/7	One	DamageHealth	EtherShot	TTF	EtherMissile	HitArcane	Hit/Normal	DEFAULT^지형지물이 아닌 유닛에게 적중하면 인접한 타일에 <color=red>절반</color>의 피해를 주며 퍼져나갑니다(<color=#FF9999>3회</color>까지 반복).	DEFAULT^When hit the non-stuff unit, spreads to adjacent tiles giving half of previous damage(repeated 3 times).				
@@ -71,16 +64,13 @@ eren	11	A2		칠흑의 화살	Dark Arrow	42	0	0.9	Point	Diamond/0/6	Diamond/0/1	D
 eren	10	C7		광휘	Sheen	30	2	0.6	Point	Diamond/0/6	One	Buff	ErenLight	FFF	Life	HitHoly	Hit/Normal	0.6×공격력의 강타 부여^<color=#ff9999ff>흡수</color> <color=#BDB76B>중첩 하나</color>당, 효과가 0.1×공격력 증가합니다.	Smite(0.6×Power)^This effect is increased by 0.1×Power per every <color=#ff9999ff>Absorption</color> count.				
 eren	9	A18		죽음의 화살	Fatal Arrow	51	1	0.9	Point	Diamond/0/6	Diamond/0/1	DamageHealth	ArrowOfDeath	TTF	BlackArrow	HitViolet	Hit/Dark	DEFAULT^<color=green>대상의 잃은 체력 1%</color>당, 위력이 1% 높아집니다.^대상을 처치하면 재사용 대기가 초기화됩니다.^<color=#ff9999ff>흡수</color> <color=#BDB76B>중첩 하나</color>당, 소모 행동력이 10 낮아집니다.	DEFAULT^Deal 1% more Damage per every <color=green>1% of lost HP of target</color>.^If the target is killed, reset the cooldown.^Consume 10 less AP per every <color=#ff9999ff>Absorption</color> count.				
 eren	0	A22		대규모 흡수	Wide Absorption	69	5	1.8	Auto	Sector/1/4	Same	DamageHealth	-	FTF	-	HitViolet	Hit/Dark	--	--				
-eren	0	C22		순간 재충전	Recharge	25	5	0	Point	Diamond/0/9	One	Buff	-	TFF	-	Shot	Hit/Normal	--	--				
 eren	0	C36		치유의 빛	Cure Light	56	5	0.6	Point	Diamond/0/8	One	HealHealth	CureLight	FFF	-	HitHoly	Hit/Normal	?	?				
 eren	0	A50		영혼 소각	Soul Incineration	97	5	2.7	Auto	Sector/1/4	Same	DamageHealth	-	FTF	-	HitViolet	Hit/Dark	?	?				
-eren	0	C50		운명의 개척자	Pioneer of Destiny	90	5	A0.3	Point	Diamond/0/9	One	HealAP	-	TFF	-	Shot	Hit/Normal	--	--				
 eugene	10	A3		얼음 파편	Ice Fragment	28	0	0.6	Point	Diamond/0/3	One	DamageHealth	IceFragments	FTF	-	HitBlue	Hit/Normal	DEFAULT^<color=#BDB76B>'순백의 방패' 효과를 받는 유닛 하나</color>당 위력이 0.2×공격력 높아집니다.	DEFAULT^Deal 0.2×Power more Damage per every <color=#BDB76B>unit with 'White shield' effect</color>.				
 eugene	13	B7		순백의 방패	White Shield	20	0	0	Auto	Straight/1/1	Same	Buff	WhiteShield	FFF	-	Shot	Hit/Normal	대상으로부터 2타일 이내에 있는 유닛의 저항력을 <color=green>40+레벨당 0.5</color> 증가시키는 효과(3턴)를 부여합니다.	Increase the Resistance of the target by <color=green>40+0.5xLevel</color> for 3 Turns.				
 eugene	16	A15		청명수의 축복	Blessing of Clear Water	45	0	0	Point	Diamond/0/4	Diamond/0/2	Buff	ClearWater	TFF	-	Shot	Hit/Normal	0.7×공격력의 지속 회복(2턴) 효과를 부여합니다.	Heal 0.7×Power at the start of next 2 Turns.				
 eugene	9	B19	B7	거울 방패	Mirror Shield	0	3	0	Point	Diamond/0/4	One	Buff	MirrorShield	TFF	-	Shot	Hit/Normal	대상의 ‘순백의 방패’ 효과를 마법 반사(1회, 100%) 효과로 교체합니다.	Change the 'White shield' effect of the target to Magic Reflection(Once, 100%).				
 eugene	0	A22		얼음의 가호	Ice Protection	50	4	0	Point	Diamond/0/2	Square/0/2	Buff	-	FFF	-	Shot	Hit/Normal	?	?				
-eugene	0	B22		백은의 장막	White Curtain	8	5	0	Auto	Diamond/0/4	Same	Buff	-	FFF	-	Shot	Hit/Normal	?	?				
 eugene	0	A50		겨울의 가호	Protection of Winter	84	4	0	Point	Diamond/0/2	Same	Buff	-	FFF	-	Shot	Hit/Normal	?	?				
 eugene	0	B50		백은의 오로라	White Aurora	9	5	0	Auto	Diamond/0/4	Same	Buff	-	FFF	-	Shot	Hit/Normal	?	?				
 grenev	11	A1		저격	Snipe	34	0	0.8	Point	Diamond/1/10	One	DamageHealth	Snipe	FFF	Gun	HitWhite	Hit/Normal	DEFAULT^과부하(8)	DEFAULT^Overload(8)				
@@ -96,7 +86,6 @@ json	10	A8		그림자 일격	Shadow Stab	26	0	0.9	Auto	Straight/1/1	Same	DamageH
 karldrich	9	A4		죽창 찌르기	Bamboo Spear	32	0	0.8	Auto	Straight/1/4	Same	DamageHealth	BambooSpear	TFT	Pierce	HitWhite	Hit/Pierced	DEFAULT	DEFAULT				
 karldrich	10	B10		화염병 투척	Firebomb	36	0	0.3	Point	Diamond/0/4	Diamond/0/1	DamageHealth	-	FFF	BreakingGlassAndFire	HitRed	Hit/Fire	DEFAULT^0.2×공격력의 지속 피해(2턴)를 부여합니다.	DEFAULT^Deal Damage of 0.2×Power at the start of next 2 Turns.				
 kashasty	6	A5		더블 샷	Double Shot	35	0	0.8	Point	Diamond/0/8	One	DamageHealth	DoubleShot	FFF	Gun	HitWhite	Hit/Normal	DEFAULT^1턴 동안 대상의 방어력과 저항력을 <color=#BDB76B>공격에 적용된 전술 보정치 하나</color>당 13+레벨당 0.2 낮춥니다.	DEFAULT^Lower Defense and Resistance of the target by 13+0.2xLevel per every Tactical Bonus of this attack for 1 Turn.				
-kashasty	6	B18		셔플 불릿	Shuffle Bullet	18	3	0	Point	Diamond/1/6	One	Move	-	TTF	Gun	HitArcane	Hit/Normal	대상과 자신의 위치를 바꿉니다.	Exchange positions of the caster and the target.				
 lenien	11	B1		전자기 충격	Shockwave	29	0	0.8	Point	Diamond/0/5	Diamond/0/3	DamageHealth	LighteningShock	FFF	EMShock	HitLightning	Hit/Normal	DEFAULT	DEFAULT				
 lenien	6	C3		자기장 형성	Magnetic Field	25	0	0	Point	Diamond/0/4	One	Buff	LightShield	FFF	EMShock	HitLightning	Hit/Normal	2턴 동안 반경 2타일 이내의 금속 타일에 있는 모든 유닛으로부터 방어력과 저항력을 <color=green>40+레벨당 0.5</color> 흡수하는 효과를 줍니다.	The target absorbs Defense and Resistance from the units in range of 2 from the target by <color=green>40+0.5xLevel</color> for 2 Turns.				
 lenien	6	A6		하전 파동	Charged Wave	29	1	0.5	Point	Diamond/0/4	Diagonal/0/2	DamageHealth	ChargedWave	TTF	ChargedWave	HitLightning	Hit/Normal	<color=yellow>사용 조건: 빈 타일에 사용 불가</color>^DEFAULT^직접 지정받지 않은 대상은 기절(1턴)합니다.	<color=yellow>Require: cannot select empty tile.</color>^DEFAULT^Faint(1 Turn) except for directly targetted unit.				
@@ -115,7 +104,6 @@ luvericha	0	A50		4분 33초	4:33	93	4	0	Auto	Front/1/5/5	Same	DamageAP	-	TFT	-	S
 luvericha	0	C50		환상곡	Fantasie	98	4	0.9	Auto	Diamond/1/2	Same	Buff	-	TFF	-	Shot	Hit/Normal	?	?				
 noel	12	C1		신의 가호	Divine Protection	35	0	0	Point	Diamond/0/4	Diamond/0/1	Buff	LightShield	FFF	Shield	HitHoly	Hit/Normal	1.0×공격력의 보호막(2턴)을 부여합니다.	Give Shield(2 Turns) of 1.0×Power.				
 noel	10	A6		파마의 섬광	Holy Light	40	0	0.9	Auto	Sector/1/4	Same	DamageHealth	HolyShine	TFT	PamaLight	HitHoly	Hit/Normal	DEFAULT^연계 공격일 경우, 침묵(1턴)효과를 부여합니다.	DEFAULT^Silence(1 Turn) if it's Chain Attack.				
-noel	5	B15		언령	Mercy of God	39	3	0	Auto	One	One	Buff	-	FFF	Life	HitHoly	Hit/Normal	다음 자신의 턴까지 모든 유닛의 이탈 기준치를 +10% 높입니다.	Increase ALL units' Retreat Point by 10% until Noel's next turn.				
 noel	12	C18		신의 손길	Blessing	35	0	0.8	Point	Diamond/0/3	One	HealHealth	-	TFF	Heal	HitHoly	Hit/Normal	DEFAULT	DEFAULT				
 ratice	4	B5		접근 거부	Refuse	33	0	1.1	Auto	Straight/1/1	Same	DamageHealth	-	FFF	Slash	HitArcane	Hit/Normal	밀기(1)^DEFAULT^밀려나지 않으면, 30%의 <color=red>추가 피해</color>를 입힙니다.	Push(1)^DEFAULT^If there's no empty tile behind target, Deal <color=red>+30%</color> more Damage.				
 ratice	19	A8		보호의 손길	Protective Hand	25	0	0	Point	Diamond/0/2	One	Buff	LightShield	FFF	Shield	Shot	Hit/Normal	1.2×공격력의 보호막(3턴)	Shield(3 Turns) of 1.2×Power				
@@ -125,7 +113,6 @@ reina	9	B6		화염구	Fireball	36	1	1	Point	Diamond/1/5	Square/0/1	DamageHealth	
 reina	5	C20		마력 연쇄	Mana Chain	0	3	0	Auto	One	One	Buff	-	FFF	Life	Shot	Hit/Normal	다른 유닛으로부터 받은 <color=red>강화 하나</color>당, 0.4×공격력의 강타를 획득합니다.	Smite of 0.4×Power per every <color=red>buff from other units.</color>				
 reina	0	A22		화염낙진	Fire Fallout	48	5	2.1	Auto	Diamond/1/3	Same	DamageHealth	-	TTF	Fire	HitRed	Hit/Fire	--	--				
 reina	0	B22		지옥불꽃	Hellfire	81	6	3.4	Route	Straight/1/5	Diamond/0/1	DamageHealth	-	TTF	Fire	HitRed	Hit/Fire	--	--				
-reina	0	C29		에테르 과부하	Ether Overload	0	5	A0.2	Auto	One	One	HealAP	-	TTF	Heal	Shot	Hit/Normal	--	--				
 reina	0	A50		대재앙	Disaster	65	6	2.3	Auto	Diamond/1/4	Same	DamageHealth	-	TTF	Fire	HitRed	Hit/Fire	--	--				
 reina	0	B50		최후의 불꽃	Final Flame	110	7	4.5	Route	Straight/1/5	Diamond/0/1	DamageHealth	-	TFT	Fire	HitRed	Hit/Fire	--	--				
 sepia	10	C5		반달베기	Halfmoon Slash	29	0	0.6	Auto	Front/1/2/3	Same	DamageHealth	HalfMoonCut	TFT	Slash	HitWhite	Hit/Bashed	DEFAULT^<color=#BDB76B>맞힌 대상 하나</color>당, 0.2×공격력의 보호막(2턴)을 획득합니다.	DEFAULT^Get Shield(2 Turns) of 0.2×Power per every <color=#BDB76B>target</color>.				
@@ -135,12 +122,10 @@ triana	10	B5		얼음날	Ice Blade	25	0	0.5	Auto	Straight/1/2	Same	DamageHealth	I
 triana	6	C8		포획	Capture	26	0	0.6	Route	Straight/1/4	One	DamageHealth	Vine	TFT	Wind	HitGreen	Hit/Normal	당기기 DEFAULT^자신이 나무 속성이면, 피해를 <color=red>2배</color>로 주고 1턴 동안 도발합니다.	Pull^DEFAULT^If Triana has Plant element, <color=red>double</color> the Damage and Taunt(1 Turn) the target.				
 triana	10	A10		열풍	Heat Wave	24	0	0.6	Route	Straight/1/3	One	DamageHealth	FirePillar	FFF	Salamander	HitRed	Hit/Fire	돌진 DEFAULT^자신이 불 속성이면, 피해를 <color=red>2배</color>로 주고 1턴 동안 침묵시킵니다.	Charge^DEFAULT^If Triana has Fire element, <color=red>double</color> the Damage and Give Silence(1 Turn).				
 triana	10	B20		결정화	Crystalize	9	3	0	Auto	Square/0/1	Same	Buff	Crystalize	FFF	Crystalize	Shot	Hit/Normal	2턴 동안 방어력을 317+레벨당 4.2 높입니다.^자신이 물 속성이 아니면, 추가로 의지를 <color=#00FFFF>30</color> 낮춥니다.	Increase Defense by 317+Levelx4.2(2 Turns).^If Triana dosen't have Water element, Decrease Will by <color=#00FFFF>30</color>(2 Turns).				
-triana	0	A22		해방: 폭염	Release: Flame	61	0	1.9	Auto	Front/1/5/3	Same	DamageHealth	ReleaseHeatWave	TFT	Salamander	HitRed	Hit/Fire	?	?				
 triana	0	B22		해방: 얼음 폭풍	Release: Ice Strom	63	0	2.4	Auto	Diamond/1/3	Same	DamageHealth	ReleaseIcedStorm	TFF	-	HitBlue	Hit/Normal	?	?				
 triana	0	C22		해방: 탐식의 덩굴	Release: Ingurgitating Vine	62	0	2.9	Route	AllDirection/1/3	One	DamageHealth	-	TFF	-	HitGreen	Hit/Normal	?	?				
 triana	0	A50		실체화: 샐러맨더	Realize: Salamander	84	2	3.1	Auto	Front/1/5/3	Same	DamageHealth	-	TFT	Salamander	HitRed	Hit/Fire	?	?				
 triana	0	B50		실체화: 펜릴	Realize: Fenrir	84	2	3.4	Auto	Diamond/1/3	Same	DamageHealth	-	TFF	Fenrir	HitBlue	Hit/Normal	?	?				
-triana	0	C50		실체화: 드라이어드	Realize: Dryad	84	2	4.1	Route	AllDirection/1/3	One	DamageHealth	-	TFF	-	HitGreen	Hit/Normal	?	?				
 yeong	7	A3		은빛 베기	Silverly Slash	40	0	0.9	Auto	Sector/1/2	Same	DamageHealth	SilverlySlash	TFT	Slash	HitWhite	Hit/Bashed	DEFAULT^<color=#ff9999ff>방랑자</color> 효과가 있으면, <color=red>20%</color>의 <color=red>추가 피해</color>를 입힙니다.	DEFAULT^<color=red>+20%</color> if yeong has <color=#ff9999ff>Vagabond</color> effect.				
 yeong	10	A12		섬광 찌르기	Flash Sting	43	0	1.2	Auto	Straight/1/3	Same	DamageHealth	FlashSting	TFT	Slash	HitWhite	Hit/Pierced	DEFAULT^자신의 회피율 1%당, 1%의 <color=red>추가 피해</color>를 입힙니다.	DEFAULT^Deal <color=red>+1%</color> more Damage per every <color=red>1% Evasion</color> of caster.				
 yeong	0	A22		배후의 습격	Backstab	50	3	1.8	Point	Diamond/1/2	One	DamageHealth	-	FFF	-	HitWhite	Hit/Normal	--	--				

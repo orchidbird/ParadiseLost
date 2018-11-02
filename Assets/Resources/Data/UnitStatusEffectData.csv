@@ -67,6 +67,8 @@ Buff	eren	광휘	강타	Smite	TRUE	99	1	FALSE	TRUE	1	Smite	Etc	0.1	0.6	FALSE	FAL
 Buff	eren	배척받는 자	공격력 증가	Power Increase	FALSE	99	99	TRUE	FALSE	1	PowerChange	Stack	2	0	TRUE	TRUE													공격력 <color=red>+AMOUNT0</color>	Power <color=red>+AMOUNT0</color>
 Buff	eren	영겁의 지식	공격력 증가	Power Increase	FALSE	99	99	TRUE	FALSE	1	PowerChange	Stack	7	0	TRUE	TRUE													공격력 <color=red>+AMOUNT0</color>	Power <color=red>+AMOUNT0</color>
 Buff	eren	천상의 전령	의지 상승	Will Increase	FALSE	99	99	TRUE	FALSE	1	WillChange	Stack	7	0	FALSE	FALSE													의지 <color=#00FFFF>+AMOUNT0</color>	Will <color=#00FFFF>+AMOUNT0</color>
+Buff	eugene	순백의 방패	순백의 방패	SAME	FALSE	3	1	FALSE	TRUE	1	Aura	O	0	2	FALSE	NONE													반경AMOUNT0 영역 내 유닛들의 저항력을 증가	Increase Resistance of units in a range of AMOUNT0 tile(s) radius.
+Buff	eugene	순백의 방패	방패의 가호	Blessing of shield	FALSE	99	1	TRUE	FALSE	1	DefenseChange	Level	0.5	40	FALSE	FALSE													저항력 <color=green>+AMOUNT0</color>	Resistance <color=green>+AMOUNT0</color>
 Buff	eugene	청명수의 축복	지속 회복	Heal Over Turns	FALSE	2	1	FALSE	TRUE	1	HealOverPhase	Power	0.7	0	FALSE	NONE													턴을 시작할 때, <color=green>AMOUNT0</color>의 회복을 받음	At the start of the turn, get heal of <color=green>AMOUNT0</color>.
 Buff	eugene	여행자의 발걸음	여행자의 발걸음	SAME	FALSE	1	1	FALSE	TRUE	1	MoveCostAccDecrease	X	X	X	FALSE	NONE													이동 소모 행동력의 거리 가중치가 1 감소^(기술을 시전하면 해제)	Whenever moves a tile, AP cost of next tile increases 1 less than normal.^This effect disappears after casting a skill.
 Buff	eugene	길잡이	길잡이	Pathfinder	FALSE	1	1	FALSE	TRUE	1	Etc	O	0	2	FALSE	NONE													반경AMOUNT0 영역에서 턴을 시작한 동료의 의지를 증가	반경AMOUNT0 영역에서 턴을 시작한 동료의 Will를 증가

@@ -25529,7 +25529,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9d7a73a6923db94488394cf91dfd20f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  statusEffectIconPrefab: {fileID: 0}
+  statusEffectIconPrefab: {fileID: 1038705503954990, guid: 4f341fc3f0ab12b49bb2ac0062d1aaf6,
+    type: 2}
   statusEffectIconsParent: {fileID: 641467361}
 --- !u!1 &1295764960
 GameObject:
@@ -39001,8 +39002,8 @@ RectTransform:
   m_Father: {fileID: 521388003}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
@@ -42973,8 +42974,8 @@ RectTransform:
   m_Father: {fileID: 521388003}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}

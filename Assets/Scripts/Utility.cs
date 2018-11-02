@@ -148,19 +148,15 @@ public class Utility : MonoBehaviour {
     }
 
     public static float GetHeightBonus(Unit attacker, Unit defender) {
-		if (!VolatileData.OpenCheck(Setting.heightOpenStage)) {
-            return 1;
-        }
-
-        // 상대가 낮으면 20% 추가, 상대가 높으면 20% 감소
+		// 상대가 낮으면 20% 추가, 상대가 높으면 20% 감소
         int attackerHeight = attacker.GetHeight();
         int defenderHeight = defender.GetHeight();
 
         if (attackerHeight > defenderHeight)
             return 1.2f;
-        else if (attackerHeight < defenderHeight)
+        if (attackerHeight < defenderHeight)
             return 0.8f;
-        else return 1;
+        return 1;
     }
 
     public static Tile GetFarthestTileToUnit(List<Vector2Int> range, Dictionary<Vector2Int, TileWithPath> movableTilesWithPath, Unit unit) {

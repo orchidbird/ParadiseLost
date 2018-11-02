@@ -137,9 +137,6 @@ namespace Battle.Damage{
 			var logManager = LogManager.Instance;
 			var validStatusEffects = new List<UnitStatusEffect>();
 			var actuallyAppliedStatusEffects = new List<UnitStatusEffect>();
-
-			if (!VolatileData.OpenCheck(Setting.statusEffectOpenStage))
-				return actuallyAppliedStatusEffects;
 			
 			foreach (var statusEffect in statusEffects)
 				if (!(statusEffect.IsTypeOf(StatusEffectType.Overload) && caster != target))

@@ -16,6 +16,11 @@ public class UnitInfoExplain : MonoBehaviour, IPointerEnterHandler, IPointerExit
 	public Image IconImage;
 	TextMeshProUGUI textUI;
 
+	void Awake(){
+		if (stat == Stat.Will && !VolatileData.OpenCheck(Setting.WillChangeOpenStage))
+			gameObject.SetActive(false);
+	}
+	
 	void IPointerEnterHandler.OnPointerEnter(PointerEventData eventData){
 		if (SceneManager.GetActiveScene().name != "Battle") return;
 		
@@ -36,7 +41,7 @@ public class UnitInfoExplain : MonoBehaviour, IPointerEnterHandler, IPointerExit
 			
 			if (stat == Stat.Defense){
 				colorCode = "green";
-				textUI.text += floatToPercent(-(float) currentStat / (currentStat + 200), false, 1);
+				textUI.text += floatToPercent(-(float) currentStat / (currentStat + Setting.defenseHalfLevel), false, 1);
 			}else if (stat == Stat.Will){
 				colorCode = "#00FFFF";
 				textUI.text += floatToPercent((100 - currentStat) / (float) currentStat, false, 1);
