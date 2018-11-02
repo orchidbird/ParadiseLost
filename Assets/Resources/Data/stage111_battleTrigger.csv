@@ -1,0 +1,9 @@
+﻿ResultType	reqCount	Reward	Name	Action	Actor/Target/Etc						
+Win	7	80	7페이즈 경과	7 phases over	Phase								
+Lose	3	0	적의 탈출	Enemies escape	Escape	4	2/1	16/1	8/18	10/18	Enemy	
+Bonus	2	20	탈출을 1명 이하로 허용	1 or less enemies escape	Escape	4	2/1	16/1	8/18	10/18	Enemy	Reverse
+Bonus	1	-20	레버 파괴	Lever broken	Neutralize	Any	Name	1	jailLever		
+Bonus	1	-10	적을 처치	Kill enemy	Kill	Any	Enemy
+Bonus	1	-5	벽이 파괴됨	Wall broken	Neutralize	Any	Name	1	wall		
+Trigger	111-0	1	0	레버 파괴	Neutralize	Any	Name	1	jailLever		
+Info	Scene#11-2	One	One

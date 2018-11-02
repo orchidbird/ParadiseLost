@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 03f8fe77e69e54340b873dbd64d601c6
+timeCreated: 1530772520
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: KP KwangMyeong B
+  fontNames:
+  - KP KwangMyeong B
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

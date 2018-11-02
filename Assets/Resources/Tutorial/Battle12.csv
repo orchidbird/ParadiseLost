@@ -1,0 +1,8 @@
+Index	Mission	Etc	
+3	SelectTile	8	3
+6	SelectTile	7	3
+8	SelectSkillByKey	0
+9	SelectDirection	RightUp
+12	OpenDetailInfo	3	3
+15	CloseDetailInfo
+19	End

@@ -1,0 +1,164 @@
+﻿owner	ether	address	required	nameKor	nameEng	TextKor	TextEng
+statue	0	L1		파편	Fragment	파괴될 때 주변 3×3타일의 이동 비용을 20 높입니다.	When Destroyed, Increase the moving costs of nearby 3×3 tiles by 20.
+triana_Rest	0	L1		광폭화	Berserk Mode	체력이 50% 미만일 때 공격력이 <color=red>2배</color>가 되고 방어력이 <color=green>200</color> 높아집니다. 이 상태에서는 적과 동료를 구분하지 않습니다.	Under HP of 50%, Power becomes <color=red>doubled</color> and Defense Increases by <color=green>200</color>. Doesn't distinguish enemies and allies at this state.
+asterCavalry~	0	L3		약점 노출	Weakness Exposure	공격받을 때 방향 보정치를 2배로 적용합니다.	Direction modifier is <color=red>doubled</color> when get attacked.
+monster~	0	L4		완강한 복족류	Stubborn Gastropod	의지가 -<color=#00FFFF>30</color>, 방어력과 저항력 +<color=green>100</color>^<color=yellow>조작 제한 상태일 때 무효화됩니다.</color>	Will -<color=#00FFFF>30</color>, Defense and Resistance +<color=green>100</color>^<color=yellow>This effect will removed after getting Restriction.</color>
+monster~	0	L5		흉포함	Furious	공격받을 때, 공격한 유닛에게 도발됩니다.^주변의 수정이 사라지면 함께 이탈합니다.	After getting attacked, this unit will be taunted by the attacker.^This unit will retreat when the linked crystal disappears
+manastone~	0	L6		마력 맛이 난다	Mana	수집한 유닛의 의지를 3페이즈 동안 50 올립니다.	After collected, Will <color=#00FFFF>+50</color> (3 Turns)
+elven~	0	L8		생명의 갑옷	Vital Armor	나무 속성 유닛에게 공격받을 때 피해량 -<color=red>15%</color>^불 속성 유닛에게 공격받을 때 피해량 +<color=red>15%</color>	Damage taking -<color=red>15%</color> from units with Plant element^Damage taking +<color=red>15%</color> from units with Fire element
+elven~	0	L8		생명 연결	Vital Link	턴을 시작할 때, 모든 동료의 현재 체력 비율이 같아지도록 재분배합니다.	At the start of the turn, Redistribute all allies' HP for the same ratio to Max HP.
+streetLamp	0	L9		에테르 공급	Ether Supply	반경 2타일 안에 있는 유닛의 공격력과 최대 체력이 30% 높아집니다.	Increases the Power and Max Health of units within a range of 2 tiles radius by 30%.
+eichmann	0	L10		연막탄	Smoke Shell	자신과 인접하지 않은 유닛의 공격을 받을 때 반드시 회피합니다.	Evade all attacks from nonadjacent units.
+door~	0	L13		잠금	Locked	직접 공격하거나,^외부의 장치를 통해서 열 수 있습니다.	Can be opened by direct attack or external device.
+explosive	0	L13		폭발성	Explosive	파괴될 때 주변 3×3 영역을 기절(1턴)시키고 <color=red>대상 현재 체력의 60%</color>의 피해를 줍니다.	When Destroyed, Give Faint(1 Turn) and Damage of <color=red>60% of target HP</color> to nearby 3×3 tiles.
+alchemySage	0	L13		화합물 정제	Compound Purification	턴을 시작할 때마다 공격력이 <color=red>10%</color> 높아집니다.	At the every start of the turn, Power increases by <color=red>+10%</color>.
+alchemySage	0	L13		나를 따르라	Follow Me	반경 3타일 이내의 모든 수습생들의 공격력이 <color=red>+20%</color>, <color=green>체력</color>이 <color=green>+20%</color>, 의지가 <color=#00FFFF>+20</color> 높아집니다.	Power <color=red>+20%</color>, <color=green>HP +20%</color>, Will <color=#00FFFF>+20</color> for all apprentices in a range of 3 tiles radius.
+armorSchmidt	0	L14		살아움직이는 갑옷	Animated Armor	발동되면, 반경 5타일 영역 내 적들에게 도발을 부여합니다.	While activated, Taunt enemies within a 5 tiles radius.
+fireSpirit	0	L0		영체	Nonmaterial	<color=green>치유</color>를 받을 때 체력을 회복하는 대신 그만큼의 피해를 받습니다.	When getting healed, receive Damage instead of recovery.
+fireSpirit	0	L16		점멸	Flash	연계가 아닌 공격에 면역입니다.	Immune to ALL attacks without chain.
+fireSpirit	0	L16		휘몰아치는 열기	Stirring Heat	턴을 시작할 때, 반경 2타일 안에 있는 불 속성이 아닌 유닛에게 0.8×공격력의 피해를 줍니다.	At the start of the turn, Deal Damage of 0.8×Power to units without Fire element within a 2 tiles radius.
+freight171~	0	L1		알뜰함	Nifty	수집한 유닛의 의지를 4페이즈 동안 40 올립니다.	After collected, Will <color=#00FFFF>+40</color> (4 Turns)
+carriage01	0	L18		엄폐물	Cover	마차가 공격 범위에 포함되면, 그 공격의 피해가 30% 줄어듭니다.	The damage of all attacks including this unit as target will be decreased by 30%.
+arcadia	0	P0		숲의 후예	Descendants of Forest	나무 속성 타일에서 <color=green>체력 +10%</color>, 공격력 <color=red>+10%</color>, 의지 <color=#00FFFF>+10</color>^불 속성 타일에서 <color=green>체력 -10%</color>, 공격력 <color=red>-10%</color>, 의지 <color=#00FFFF>-10</color>^나무 속성 타일의 이동 소모 행동력이 <color=#00FFFF>2</color> 감소합니다.	<color=green>HP</color> & Power +10%, Will <color=#00FFFF>+10</color> on a Plant element tile^<color=green>HP</color> & Power -10%, Will <color=#00FFFF>-10</color> on a Fire element tile^Use <color=#00FFFF>2</color> less AP for moving on a Plant element tile.
+arcadia	6	B7		광합성	Photosynthesis	나무 속성 타일에 있는 동안 받는 회복량이 50% 늘어납니다.	Heal taking <color=green>+50%</color> while on a Plant-element tile.
+arcadia	11	A18		뿌리 내리기	Root	나무 속성 타일에 있는 동안, 최대 체력이 <color=green>25%</color> 늘어나며 강제 이동에 대해 면역됩니다.	HP <color=green>+25%</color> and Immune to forced move while on a Plant-element tile.
+bianca	0	P0		사뿐사뿐	Light Step	모든 덫의 효과에 면역이며, 덫 타일을 밟아도 발동시키지 않습니다.	Ignore all Traps and their effects.
+bianca	10	A8		관람석 선점	Prepare to Watch	덫을 설치하면, 그 턴 동안 이동에 필요한 행동력이 30% 줄어듭니다.	After setting up a trap, moving cost will be reduced by 30% during the turn.
+bianca	10	C15		의욕 상승	Motivated	덫이 발동할 때마다, 행동력을 <color=#BE81F7>8</color> 회복합니다.	Recover <color=#BE81F7>8</color> AP when a Trap is activated.
+bianca	8	C19		응원 고마워!	Thank you!	비공격 기술의 대상이 되었을 때, 시전자에게 강타(0.5×공격력)를 부여합니다.	After being a target of friendly skill, Give Smite(0.5×Power) to the caster.
+curi	0	P0		정제	Refine	공격할 때 모든 대상이 속성이 같으면, 해당 속성의 '<color=#FF9999>정제</color>(<color=red>공격력 +5%</color>, 5중첩까지 가능)' 효과를 얻습니다.^이 효과는 다른 속성 유닛을 공격하면 사라집니다.	When attack, get '<color=#FF9999>Refine</color>(</color=red>Power +5%</color>, max count 5)' effect If the elements of targets are all same.^This effect will be removed after attacking a unit with different element.
+curi	11	A5		호기심	Curious	첫 5턴 동안 공격력이 <color=red>15%</color> 높아집니다.	Power <color=red>+15%</color> for the first 5 Turns.
+curi	8	A14		동적 평형	Dynamic Balance	체력을 1% 잃을 때마다 행동력을 민첩성의 1%만큼 회복합니다.	Whenever takes Damage 1% of Max HP, Recover AP 1% of Agility.
+curi	7	B16	B3	가연성 부착물	Flammable Attachment	<color=yellow>(향상 - 수상한 덩어리)</color>^대상에게 '가연성 부착물' 효과(유닛이 불 속성 타일에 있을 때, 반경 1타일에 0.3×공격력의 피해를 준 후 사라짐)를 부여합니다.	<color=yellow>(Enhance - Starange Lump)</color>^Give an additional effect to the target. when the unit is in a Fire-element tile, it will deal 0.3×Power of Damage to the range of 1 tile radius and then be removed.
+curi	9	A17		신속 반응	Fast Response	불 속성 타일에 있으면, 의지가 <color=#00FFFF>20</color> 높아집니다.	Will <color=#00FFFF>+20</color> while on a Fire-element tile.
+curi	8	B18	B3	조연성 부착물	Abrasive Attachment	<color=yellow>(향상 - 수상한 덩어리)</color>^피해량이 0.9×공격력으로 줄어드는 대신, 대상에게 20%의 불 속성 약점(2턴)을 부여합니다.	<color=yellow>(Enhance - Strange Lump)</color>^Instead of reducing the damage to 0.9x damage, give the target 20% Fire Weak (2 Turns).
+curi	6	C20		환원	Restoration	금속 속성 타일에 있으면, 방어력이나 저항력을 낮추는 약화를 새로 받지 않습니다.	While on a tile with Metal element, immune to debuffs decreasing Defense or Resistance.
+curi	0	A29		재결정	Recrystalize	ABCD	ABCD
+curi	0	C36		성분 분석	Ingredient Analysis	ABCD	ABCD
+curi	0	A43		제한 구역	Restricted Area	ABCD	ABCD
+darkenir	0	P0		흐름 동화	Flow Assimilation	자신에게 효과를 건 대상에게 해당 효과의 절반을 반사합니다.	Refelect every buff and debuff by half to the caster.
+darkenir	10	C2		무심한 주시	Detached Regard	자신으로부터 3타일 이내의 유닛이 무력화되면, 행동력을 <color=#BE81F7>5</color> 얻습니다.	Recover <color=#BE81F7>5</color> AP whenever a unit in range of 3 tiles radius get neutralized.
+darkenir	12	B5		허상의 이면	Unreal Side	<color=#BDB76B>공격 대상이 받는 효과 하나</color>당, <color=red>13+레벨당 0.2</color>의 저항력을 무시합니다.	All attack will ignore Resistance by <color=red>13+Level×0.2</color> <color=#BDB76B>per every effect of the target</color>.
+darkenir	4	A9		공허의 장벽	Void Wall	자신이 새 약화를 받을 때 지속기간이 1턴이면, 그 효과를 무시합니다.	Ignore new debuffs with consistency of 1 Turn.
+darkenir	10	B15		공허의 순환	Vold Cycle	<color=yellow>(향상 - 에테르 샷)</color>^2명 이상에게 적중하면 강타(대상 하나당 0.2×공격력)를 얻습니다.	<color=yellow>(Enhance - Ether Shot)</color>^If this attack hit 2 or more targets, caster gets Smite(0.2×Power per target).
+darkenir	5	A19		흐름 분쇄	Flow Break	연계 공격에 참여할 때, 대상의 강화를 하나 없앱니다.	Whenever attack with Chain, remove a buff of the target.
+deus	0	P0		약화강화	Empowered Curse	전투 중 발생하는 모든 약화의 수치를 50% 높입니다.	Increase the amount of all debuffs in the game by 50%.
+deus	12	C8		노화	Aging	모든 공격이 2턴 동안 대상의 공격력을 20% 낮춥니다.	All attacks decrease the Power of target by 20%(2 Turns).
+eren	0	P0		에테르 지배	Ether Domination	유닛이 처치될 때마다 <color=#ff9999>흡수</color>(3페이즈, 중첩가능) 효과를 얻습니다.^이 효과가 쌓일수록 다른 기술들이 강해집니다.	Whenever an unit dies, Get <color=#ff9999>Absorpsion</color>(3 Turns, Countable) effect.^<color=yellow>This effect will empower other skills.</color>
+eren	11	B4		흑화	Blacken	공격 대상의 저항력을 <color=green>27+(레벨×흡수 중첩당 0.3)</color> 무시합니다.	All attacks ignore the target's Resistance by <color=green>27+(0.3 per Level × Absorpsion Count)</color>.
+eren	14	B13		초월	Transcendence	자신보다 최대 체력이 낮은 대상을 공격하면 <color=red>15%</color> 더 많은 피해를 줍니다.	Deal <color=red>+15%</color> more Damage to targets with lower Max HP than Eren.
+eren	0	A29		배척받는 자	배척받는 자	ABCD	ABCD
+eren	0	B29		영겁의 지식	영겁의 지식	ABCD	ABCD
+eren	0	B36		진형 붕괴	진형 붕괴	ABCD	ABCD
+eren	0	A43		압도적인 공포	압도적인 공포	ABCD	ABCD
+eren	0	C43		천상의 전령	천상의 전령	ABCD	ABCD
+eugene	0	P0		거울 공명	Mirror Resonance	대상에 자신이나 동료가 포함된 마법 공격의 위력이, <color=#BDB76B>대상 1명</color>당 5%(최대 30%) 줄어듭니다.	Damage of Magic attacks containing any ally as target will decreased by 5% per every <color=#BDB76B>target</color> of the attack(maximum 30%).
+eugene	10	B10		순은의 매듭	White Knot	<color=yellow>(향상 - 순백의 방패)</color>^효과의 지속이 2턴로 줄어드는 대신, 서로 다른 대상으로부터의 효과가 중첩됩니다.	<color=yellow>(Enhance - White Shield)</color>^Reduce the duration of the effect to 2 Turns, but these effects from different objects become compatible.
+eugene	11	C12		여행자의 발걸음	Adventuristic Step	매턴 기술을 시전하기 전까지, 이동 소모 행동력의 거리 가중치가 1 줄어듭니다.	Every turn before casting a skill, moving cost increasing by tile will be 1.
+eugene	0	A29		순수한 물	Pure Water	ABCD	ABCD
+eugene	0	B29		은의 지평선	Silver Horizon	ABCD	ABCD
+eugene	0	C36		야영 전문가	야영 전문가	ABCD	ABCD
+eugene	0	A43		청명수의 은총	청명수의 은총	ABCD	ABCD
+eugene	0	B43		백색 파문	백색 파문	ABCD	ABCD
+eugene	0	C43		길잡이	길잡이	ABCD	ABCD
+grenev	0	P0		고지대 점령	Siege Mode	이동할 때 <color=red>30%</color> 더 많은 행동력을 사용합니다.^이동할 때 높이차 3단계까지 넘어갈 수 있습니다.	Require <color=red>30%</color> more AP for moving.^Can go to 3 level higher tile when move.
+grenev	11	C2		원거리 사격	Long Snipping	<color=#BDB76B>공격 대상과의 거리 1타일</color>당 <color=red>2%</color> 더 많은 피해를 줍니다.	Deal <color=red>+2%</color> more Damage per <color=#BDB76B>1 tile of distance to the target</color>.
+grenev	10	C8		피의 냄새	Bloody Smell	<color=green>대상의 잃은 체력 1%</color>당 <color=red>0.2%</color> 더 많은 피해를 줍니다.	Deal <color=red>+0.2%</color> more Damage per <color=red>lost HP 1% of the target</color>.
+grenev	8	C15		살육의 희열	Killing Joy	유닛을 처치할 때마다 공격력이 <color=red>5%</color> 높아집니다.	Whenever <color=#BDB76B>kills a unit</color>, get <color=red>+5%</color> Power.
+grenev	15	C18		약자멸시	Weak Contempt	자신보다 공격력이 낮은 대상에게 <color=red>20%</color> 더 많은 피해를 줍니다.	Deal <color=red>+20%</color> more Damage to targets with lower Power.
+grenev	0	A29		전망	Observatory	자신보다 높이가 3 이상 낮은 타일에 있는 대상에게 <color=red>50%</color> 더 많은 피해를 줍니다.	Deal <color=red>+50%</color> more Damage to a target on 3 level lower tile.
+grenev	0	B36		암살	Assasinate	은신 상태에서 공격하면 <color=red>50%</color> 더 많은 피해를 줍니다.	Deal <color=red>50%</color> more Damage during Conceal status.
+grenev	0	C36		전쟁광	Warmonger	공격력이 <color=red>15%</color> 높아지는 대신, 최대 체력이 <color=green>15%</color> 줄어듭니다.	Power <color=red>+15%</color>, Max HP <color=green>-15%</color>
+grenev	0	B43		인내심	Endurance	2턴 동안 이동하지 않고 턴을 종료하면 공격력이 <color=red>20%</color> 높아집니다.^이 효과는 다른 타일로 이동할 때 해제됩니다.	If end 2 turns in a row without moving, Power <color=red>+20%</color>^This effect will be removed when moves.
+grenev	0	C43		연쇄살인	Serial Killing	유닛을 처치할 때마다 행동력을 <color=#00FFFF>0.6×민첩성</color> 회복합니다.	Whenever <color=#BDB76B>kills a unit</color>, Recover <color=#00FFFF>0.6×Agility</color> of AP.
+json	0	P0		집중 공격	Concentrated Attack	모든 공격은 표식(1턴, 4개까지 중첩가능) 효과를 주며, 대상은 <color=#BDB76B>표식 하나</color>당 내상(25%) 효과를 받습니다.	All attacks give 'Mark(1 Turn, Heal taking -25%, max count 4)' effect.
+json	10	A6		바람 가르기	Wind Division	이동한 직후의 공격은 소모 행동력이 (<color=#00FFFF>이동한 타일 수x10%</color>)만큼 줄어듭니다.	After moving, the cost of next skill will be decreased by (<color=#00FFFF>moved distance*10%</color>) once.
+json	10	C14		치고 빠지기	Hit and Run	공격하고 나면, 그 턴 동안 이동에 필요한 행동력이 40% 줄어듭니다.	After attack, the cost of moving is decreased by 40% for that turn.
+json	8	B16		비틀린 칼날	Twisted Blade	모든 공격은 <color=#BDB76B>표식 하나</color>당 0.2×공격력의 지속 피해(2턴)를 줍니다.	All attacks deal Damage of 0.2×Power per <color=#BDB76B>Mark count</color> at the start of next 2 Turns.
+json	9	A20		연타	Continuous Hit	표식이 있는 유닛을 공격할 때마다 행동력을 <color=#BE81F7>4</color> 회복합니다.	Recover <color=#BE81F7>4</color> AP After attacking an unit with Mark.
+karldrich	0	P0		모두에게 평등한 죽창	Equalizer	모든 공격이 대상의 방어력을 완전히 무시합니다.	Completely ignores Defense of targets.
+karldrich	10	C7		행동하는 혁명가	Activist	의지가 <color=#00FFFF>10</color> 높아집니다.	Will <color=#00FFFF>+10</color>
+karldrich	9	A14		좌편향	Left Wing	대상이 보는 방향의 왼쪽에서 공격하면 <color=red>15%</color> 더 많은 피해를 줍니다.	Deal <color=red>+15%</color> more Damage when attacks from left side of target.
+karldrich	9	B16		강자멸시	High Rank Hater	자신보다 현재 체력이 높은 대상에게 <color=red>15%</color> 더 많은 피해를 줍니다.	Deal <color=red>+15%</color> more Damage to a target with higher HP.
+karldrich	7	C20		노조결성	Labor Union	공격력이 <color=#BDB76B>반경 2타일 안의 동료 하나</color>당 <color=red>5%</color> 높아집니다.	Power <color=red>+5%</color> per an <color=#BDB76B>ally in a range of 2 tiles radius.</color>
+kashasty	0	P0		전술 지원	Tactical Support	공격할 때 사용한 행동력을 <color=#BDB76B>적용된 전술 보정치 하나</color>당 5% 회복합니다.	Recover <color=#00FFFF>5% of used AP for attack</color> per <color=#BDB76B>Tactical Bonus</color> of the attack.
+kashasty	0	T5		도망자	Fugitive	조작 제한 상태일 때, 피해를 <color=red>2배</color>로 받습니다.	While in Restriction, Take <color=red>double</color> Damage.
+kashasty	9	A9		산탄 장전	Scattering Shot	<color=yellow>(향상 - 더블 샷)</color>^<color=#00FFFF>20%</color> 더 적은 피해를 주지만, 범위가 3×3으로 늘어납니다.	<color=yellow>(Enhance - Double Shot)</color>^Deal <color=red>20%</color> less Damage, but the area becomes 3×3.
+kashasty	10	B13		지원 사격	Assist Shot	반경 8타일 이내의 적이 연계 공격을 받을 때 0.5×공격력의 피해를 줍니다.	Deal Damage of 0.5×Power when an enemy in an area of 8 tiles radius is attacked by Chain.
+kashasty	5	A16		그물탄	Web Bullet	<color=yellow>(향상 - 더블 샷)</color>^피해량이 절반으로 줄어들지만, 대상의 행동력을 <color=#00FFFF>35%</color> 없앱니다.	<color=yellow>(Enhance - Double Shot)</color>^Reduce half of the Damage, but remove <color=#00FFFF>35% of the target's AP</color>.
+kashasty	9	C17		장미 속의 가시	Thorn in Rose	자신이 나무 속성 타일에 있는 동안 방향 보정치가 2배가 됩니다.	While on a Plant-element tile, double the direction bonus.
+kashasty	10	C20		마법공학 스캐너	Arcane Scanner	카샤스티가 연계 공격을 발동시킬 경우, 연계에 들어가는 모든 공격이 자신의 방향 보정치만큼 더 많은 피해를 줍니다.	When activates a Chain attack, all castings of the chain Deal more Damage as much as Direction Bonus of the casting of Kashasty.
+kashasty	0	A29		압축탄	Compressed Shot	ABCD	ABCD
+kashasty	0	C36		마법공학 조준경	Arcane Scope	ABCD	ABCD
+kashasty	9	C8		시들지 않는 의지	Everlasting Will	<color=green>잃은 체력 4%</color>마다 <color=#00FFFF>의지</color>가 1 높아집니다.	Will <color=#00FFFF>+1</color> per <color=green>lost HP 4%</color>.
+kashasty	0	A43		에테르화	Etherize	ABCD	ABCD
+lenien	0	P0		감전	Electromagica	공격 대상이 물 속성 또는 금속 속성 타일에 있으면, 저항력을 <color=green>42+레벨당 0.6</color>(1턴) 낮춥니다.	If target is on a tile with Water of Metal element, decrease Resistance of the target by <color=green>42+Level×0.6</color> for 1 Turn.
+lenien	4	A9		피뢰침	Lightning Rod	턴을 시작할 때, 자신보다 높은 위치에 있는 유닛이 없으면 0.2×공격력의 강타를 얻습니다.^금속 속성 타일에 있으면 <color=red>2배</color>의 효과를 얻습니다.	At the start of turn, If Lenien is one of the units on the highest position, Get Smite(0.2×Power).^If Lenien is on a tile with Metal element, the effect will be <color=red>double</color>d.
+lenien	9	B12		전도체	Conductor	공격 대상이 물 속성 타일에 있으면, 저항력을 <color=green>51+레벨당 0.7</color> 무시합니다.	Ignore Resistance of target on a tile with Water element by <color=green>51+Level×0.7</color>.
+lenien	12	C13		정전기 유도	Static Electricity	금속 속성 유닛에게 공격받으면, 공격자에게 ‘정전기’(2턴)를 부여합니다.^*정전기: 금속 속성 유닛에게 공격하거나 공격받으면, 기절(1턴) 획득 후 이 효과는 사라집니다.	After being attacked by an unit with Metal element, give an effect(2 Turns).^An unit with that effect will get Faint(1 Turn) after attacking or being attacked by a unit with Metal element.
+lenien	10	B16		에너지 변환	Energy Conversion	높은 위치에서 공격할 때 <color=red>높이차x15%</color>만큼 추가 보정을 받습니다.	When attacks target on a lower tile, Deal <color=red>+15%</color> more Damage per one level of height difference.
+lenien	0	B29		연쇄 방전	연쇄 방전	ABCD	ABCD
+lenien	0	C29		자기 부상	자기 부상	ABCD	ABCD
+lenien	0	A36		에테르 전위	에테르 전위	ABCD	ABCD
+lenien	0	C43		입자 가속	입자 가속	ABCD	ABCD
+lucius	0	P0		기사도	Cavalry	적 유닛을 이탈시킬 때마다, 대상의 남은 체력만큼 보호막을 얻습니다.	Whenever makes an unit retreat, gets Shield with amount of the remaining HP of the target.
+lucius	10	B10		배수진	Never Back Off	방어력이 <color=#BDB76B>이동할 수 없는 방향 하나</color>당 <color=green>33+레벨당 0.4</color> 높아집니다.	Defense +<color=green>33+Level×0.4</color> per unmovable direction.
+lucius	6	A14		검사의 직감	Intuition	인접한 유닛이 시전한 공격을 무시합니다.	Ignore all attacks from adjacent units.
+lucius	10	C17	C1	푸른 날개	Blue Wing	<color=yellow>(향상 - 쇄도)</color>^행동력을 <color=#00FFFF>7</color> 적게 사용하지만, 재사용 대기(1턴)가 발생합니다.	<color=yellow>(Enhance - Rush)</color>^Consume <color=#00FFFF>7</color> less AP, but can use only once per turn.
+lucius	8	A20		정면 승부	Face to Face	공격할 때 전술 보정치가 없으면 <color=red>20%</color> 더 많은 피해를 줍니다.	Deal <color=red>+20%</color> more Damage by attacks without any Tactical Bonus.
+luvericha	0	P0		셈여림	Sonic Flow	<color=red>공격</color> 기술을 사용한 후 '<color=#92B4F2>포르테</color>'(공격 위력 +20%, 비공격 기술 위력 -10%), <color=green>비공격</color> 기술을 사용한 후 '<color=#92B4F2>피아노</color>'(비공격 기술 위력 +20%, 공격 위력 -10%) 상태가 됩니다.	After casting a hostile or friendly skill, the same type of skills' amount <color=green>+20%</color>.^But the other type of skills' amount <color=red>-10%<color>.
+luvericha	8	A5	A3	필멸자의 공포	Mortal Fear	<color=yellow>(향상 - 교향곡: 운명)</color>^대상에게 2턴 동안 '두려움'(체력 30% 미만일 때 이탈) 효과를 줍니다. 특별한 유닛에게는 적용되지 않습니다.	<color=yellow>(Enhance - Symphony No.5)</color>^Give an effect to common targets for 2 Turns. Units with the effect retreat under 30% of Max HP.
+luvericha	7	C16		생명의 고동	Heartbeat	받는 회복량이 <color=green>20%</color> 늘어납니다.	Take <color=green>+20%</color> more heal.
+luvericha	8	B18		위기상황	Emergency	현재 체력<color=#BDB76B>이</color> <color=green>40%</color> <color=#BDB76B>이하인 동료 하나</color>당, 의지가 <color=#00FFFF>10</color> 높아집니다.	Will <color=#00FFFF>+10</color> per an <color=#BDB76B>ally with less than 40% of HP</color>.
+luvericha	10	C20		치유의 오오라	Healing Aura	페이즈를 시작할 때, 반경 3타일 안에 있는 모든 유닛이 최대 체력의 <color=green>5%</color>만큼 회복합니다. 자신에게는 적용되지 않습니다.	Units in a range of 3 tiles radius without herself will recover 5% of HP at the start of turn.
+luvericha	0	C29		넘치는 사랑	넘치는 사랑	ABCD	ABCD
+luvericha	0	C36		영혼의 교감	영혼의 교감	ABCD	ABCD
+luvericha	0	B43		헌신	헌신	ABCD	ABCD
+luvericha	0	C43		응급처치	응급처치	ABCD	ABCD
+noel	0	P0		심판의 빛	Judgelight	자신이 부여한 보호막이 피해를 흡수할 때,^공격자에게 <color=red>흡수량만큼</color> 마법 피해를 반사합니다.	Whenever a Shield from Noel reduces Damage, deal that amount of Damage to the attacker.
+noel	10	B11		승리의 함성	Commander	적이 이탈할 때마다 모든 동료가 행동력 <color=#00FFFF>0.1×민첩성</color> 회복합니다.	Whenever an enemy retreats, all allies recover AP of <color=#00FFFF>0.1×Agility</color>.
+noel	10	B2		주교의 권능	Authority of Bishop	자신이 부여한 보호막이 피해에 의해 모두 소진될 때마다, 공격력이 <color=red>5%</color> 높아집니다.	Whenever a Shield from Noel is depleted by attack, Power <color=red>+5%</color>
+ratice	0	P0		속죄양	Scapegoat	옆 타일의 동료가 <color=red>피해</color>를 받을 때, 그 절반을 가져가서 대신 받습니다.	옆 타일의 동료가 <color=red>피해</color>를 받을 때, 그 절반을 가져가서 대신 받습니다.
+ratice	10	A11		일치단결	Unite	반경 2타일 안에 있는 동료와 자신의 공격력과 <color=green>체력</color>을, <color=#BDB76B>영역 안의 동료 하나</color>당 3% 높입니다.	Increase Power and HP of allies in a range of 2 tiles radius by <color=#BDB76B>3%</color> per an <color=#BDB76B>ally in that area</color>.
+ratice	9	B17		흔들림 없는 눈빛	Gaze	정면에서 공격을 받으면 피해가 15% 줄어듭니다.	Take <color=red>15%</color> less Damage by attacks without Direction Bonus.
+ratice	10	A18		수호의 오오라	Protective Aura	반경 2타일 안에 있는 유닛의 방어력이 <color=green>67+레벨당 0.9</color> 늘어납니다.	Increase Defense of Units in a range of 2 tiles radius by <color=green>67+Level×0.9</color>.
+ratice	12	C20		전의 상실	Deprive	공격 대상의 의지를 3페이즈 동안 15 낮춥니다.	All attacks decrease Will of the targets by <colot=#00FFFF>15</color> for 3 Turns.
+reina	0	P0		핀토스의 긍지	Proud of Pintos	전장에 남아 있는 <color=#BDB76B>동료 한 명</color>당, 공격력이 <color=red>2%</color> 높아집니다.	Power <color=red>+2%</color> per an <color=#BDB76B>ally in the stage</color>.
+reina	10	B4		불의 파동	Fire Wave	나무 속성 유닛에게 <color=red>15%</color> 더 많은 피해를 줍니다.	Deal <color=red>+15%</color> more Damage to units with Plant element.
+reina	15	C13		점화	Ignite	<color=#BDB76B>다른 유닛에게 받은 강화 하나</color>당, 공격 대상의 저항력을 <color=green>40+레벨당 0.5</color> 무시합니다.	Ignore Resistance of targets by <color=green>40+Level×0.5</color> per <color=#BDB76B>a buff from other units</color>.
+reina	4	A16		상처 태우기	Burning Scar	모든 공격이 자신이 <color=#BDB76B>다른 유닛에게 받은 강화 하나</color>당, <color=#b2ff66>20%</color>의 <color=#b2ff66>내상</color>(2턴)을 부여합니다.	Targets of any attack from Reina will take <color=#b2ff66>20%</color>(per a <color=#BDB76B>buff from other units</color>) less Healing for 2 Turns.
+reina	10	C18		잉걸불	Everlasting Fire	공격 대상이 나무 속성 타일에 있으면, 1.3×공격력의 지속 피해(2턴)를 부여합니다.	All attacks deal Damage of 1.3×Power at the start of next 2 Turns if the target is on a Plant-element tile.
+reina	0	A29		뭉치면 죽는다	뭉치면 죽는다	ABCD	ABCD
+reina	0	B29		흩어져도 죽는다	흩어져도 죽는다	ABCD	ABCD
+reina	0	A36		잿더미	잿더미	ABCD	ABCD
+reina	0	C36		흐름 변환	흐름 변환	ABCD	ABCD
+reina	0	B43		열상 낙인	열상 낙인	ABCD	ABCD
+reina	0	C43		에테르 순환	에테르 순환	ABCD	ABCD
+sepia	0	P0		통제 구역	Zone Of Control	반경 1타일 안으로 적이 지나갈 수 없게 됩니다.	Enemies cannot pass by tiles in a range of 1 tile radius form Sepia.
+sepia	5	B5		정교한 칼날	Elaborate Blade	공격 범위에 있더라도 동료에게는 피해를 주지 않습니다.	Never deals Damage to allies.
+sepia	7	A15		정찰 복귀	Scout Comeback	이동할 때, 도착점이 동료의 바로 옆 타일이면 행동력을 <color=#BE81F7>30%</color> 더 적게 사용합니다.	If a destination of moving is adjacent to an ally, use <color=#BE81F7>30%</color> less AP for that move.
+sepia	9	B19		신뢰의 끈	Trusty String	2타일 이내의 후면에 동료가 있으면, 방어력이 <color=green>51+레벨당 0.7</color> 높아집니다.	Defense +<color=green>51+Level×0.7</color> per an <color=#BDB76B>ally in a range of 2 tiles backward from Sepia</color>.
+triana	0	P0		감응	Response	속성이 있는 타일 위로 이동할 때, 자신의 속성을 그 속성으로 바꿉니다.	Element of this unit is always same with the tile under the unit.
+triana	8	P2		양분 흡수	Nutrient Absorbtion	턴을 끝낼 때 나무 속성이면, 반경 2타일 이내의 나무 속성 타일 하나당 최대 체력의 <color=green>2%</color>만큼 회복합니다.	At the end of the turn, if Triana has Plant element, recover <color=green>2%</color> of Max health per tile with Plant element in a range of 2 tiles radius.
+triana	0	T16		폭주	Overdrive	모든 조작 제한 효과를 무시합니다.	Ignore All Restriction Effect.
+triana	8	A16		들불	Wildfire	턴을 끝낼 때 불 속성이면, 반경 2타일 이내에 있는 유닛의 공격력을 1턴 동안 <color=red>40%</color> 낮춥니다.	At the end of the turn, if Triana has Fire element, decrease Power of units in a range of 2 tiles radius by <color=red>40%</color> for 1 Turn.
+triana	7	B17		서릿결 방패	Frost Shield	턴을 끝낼 때 물 속성이면, 반경 2타일 이내에 있는 물 속성 타일 하나당 방어력이 30+레벨당 0.4 높아집니다(2턴).	At the end of the turn, if Triana has Water element, increase Defense of Triana by 30+Level×0.4 per a tile with Water element in a range of 2 tiles radius(2 Turns).
+triana	9	A25		정화의 불길	Fire Purify	자신이 불 속성이면, 턴을 마칠 때 반경 2타일 안의 전투 흔적을 1단계 낮춥니다.	자신이 불 속성이면, 턴을 마칠 때 반경 2타일 안의 전투 흔적을 1단계 낮춥니다.
+triana	0	B29		얼어붙은 피	Frozen Blood	ABCD	ABCD
+triana	0	A36		불걸음	Firewalk	ABCD	ABCD
+triana	0	B36		동상	Frostbite	ABCD	ABCD
+triana	0	A43		마그마 폭발	Magma Explosion	ABCD	ABCD
+triana	0	C43		옭아매는 가시	Needle Bind	ABCD	ABCD
+yeong	0	P0		방랑자	Vagabond	턴을 시작한 지점으로부터 반경 2타일 영역을 벗어나면, 2턴 동안 회피율 +15%를 얻습니다.	If you move away from the area around the 2 tiles from the point at the start of turn, gain +15% Dodge for 2 Turns.
+yeong	8	C7		위험 돌파	Breakthrough	<color=red>잃은 체력 5%</color>당 회피율 +1%를 얻습니다.	Evasion <color=#FF9500>+1%</color> per 5% of lost HP.
+yeong	12	C13		기척 감지	Detection	자신으로부터 <color=#BDB76B>3타일 이내의 적 하나</color>당 회피율 +5%를 얻습니다.	Evasion <color=#FF9500>+5%</color> per an <color=#BDB76B>enemy in a range of 3 tiles radius</color>.
+yeong	8	C16		동체 시력	Fuselege Vision	기술을 사용하면, 다음에 받는 공격에 회피율 +15%^이 효과는 중첩되지 않습니다.	after using a skill, gain +15% Dodge for the next time to be attcked.^This effect doesn't stack up.
+yeong	6	B17		어려운 목표물	Hard Target	회피에 성공하면, 공격한 유닛에게 도발(2턴)을 부여합니다.	Whenever succeed to evade, Taunt the attacker for 2 Turns.
+yeong	8	A18		간파	In flow	회피에 성공하면, 다음에 받는 공격에 회피율 +15%를 얻습니다.	After evading an attack, Evasion <color=#FF9500>+15%</color>(Once).
+yeong	5	B20		질풍노도	Windbreak	회피에 성공할 때마다 최대 체력이 3% 늘어납니다.	Whenever evading an attack, Max HP +3%
+yeong	0	B29		유법	유법	ABCD	ABCD
+yeong	0	A36		접근	접근	ABCD	ABCD
+yeong	0	B36		무아지경	무아지경	ABCD	ABCD
+yeong	0	C36		끝없는 단련	끝없는 단련	ABCD	ABCD
+yeong	0	B43		후의 선	후의 선	ABCD	ABCD
+yeong	0	C43		명경지수	명경지수	ABCD	ABCD

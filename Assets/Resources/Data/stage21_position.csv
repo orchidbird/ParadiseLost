@@ -1,0 +1,11 @@
+NameInCode	InitPosotionX	InitPositionY	InitDirection	
+maidRange	8	2	LeftUp	0
+maidRange	8	12	LeftUp	0
+maidRange	6	7	LeftUp	0
+maidSword	10	5	LeftUp	0
+maidSword	10	9	LeftUp	0
+maidSword	12	7	LeftUp	0
+controller	13	7	LeftUp	0
+PCnoel	2	7	RightDown	0
+PCgrenev	3	5	RightDown	0
+PCdarkenir	3	9	RightDown	0

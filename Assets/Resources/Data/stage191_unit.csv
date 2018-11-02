@@ -1,0 +1,5 @@
+﻿NameInCode	Side	BaseHealth	BasePower	BaseDefense	BaseResistance	BaseAgility	UnitClass	Element	IsObject	IsNamed
+snowHippo	Enemy	645	175	59	154	51	Magic	Water	FALSE	FALSE
+agent	Ally	894	174	36	36	58	Melee	None	FALSE	FALSE
+manastone01	Neutral	500	0	50	50	0	None	None	TRUE	FALSE	Collectable
+manastone02	Neutral	500	0	50	50	0	None	None	TRUE	FALSE	Collectable

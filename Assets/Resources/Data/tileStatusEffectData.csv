@@ -1,0 +1,8 @@
+ownerOfSkill	originSkillName	displayNameKor	displayNameEng	isOnce	defaultPhase	maxStack	amountToBeUpdated	isRemovable	numberOfActualElement	statusEffectType_01	amountVar	amountCoef	amountBase	isPercent	isMultiply	statusEffectType_02	amountVar	amountCoef	amountBase	isPercent	isMultiply	statusEffectType_03	amountVar	amountCoef	amountBase	isPercent	isMultiply	korText	engText
+curi	초강산 혼합물	강산 지대	Acidic Area	FALSE	99	1	FALSE	FALSE	1	Etc	O	0	0	FALSE	FALSE														
+eugene	백은의 장막	백은의 장막	SAME	FALSE	2	1	TRUE	FALSE	2	ResistanceChange	Level	1.4	106	FALSE	FALSE	Etc	X	X	X	FALSE	FALSE								
+eugene	백은의 오로라	백은의 오로라	SAME	FALSE	2	1	TRUE	FALSE	2	ResistanceChange	Level	1.7	132	FALSE	FALSE	Etc	X	X	X	FALSE	FALSE								
+bianca	잘근잘근 덫	잘근잘근 덫	SAME	TRUE	99	1	FALSE	FALSE	1	Trap	O	0	1	FALSE	FALSE														
+bianca	짜릿짜릿 지뢰	짜릿짜릿 지뢰	SAME	TRUE	99	1	FALSE	FALSE	1	Trap	O	0	1	FALSE	FALSE														
+bianca	부패진	부패진	SAME	FALSE	3	1	FALSE	TRUE	1	Aura	O	0	1	FALSE	NONE													3x3 영역 내 유닛에 지속 피해	3x3 영역 내 유닛에 지속 피해
+sepia	통제 구역	SAME	SAME	FALSE	99	1	FALSE	TRUE	1	ZOC	O	0	0	FALSE	NONE													라티스의 적은 이동 불가	라티스의 적은 이동 불가

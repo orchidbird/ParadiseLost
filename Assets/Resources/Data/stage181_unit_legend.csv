@@ -1,0 +1,16 @@
+NameInCode	Side	BaseHealth	BasePower	BaseDefense	BaseResistance	BaseAgility	UnitClass	Element	IsObject	IsNamed		
+missionary	Neutral	511	83	80	196	54	Magic	Water	FALSE	FALSE		
+SpearGuard	Enemy	1234	168	127	127	52	Melee	Metal	FALSE	FALSE		
+bianca	Enemy	1538	368	103	103	87	Magic	Metal	FALSE	TRUE		
+darkenir	Enemy	1538	456	57	196	64	Magic	Water	FALSE	TRUE		
+noel	Enemy	1654	270	103	103	75	Magic	Water	FALSE	TRUE		
+sepia	Enemy	2070	334	196	127	72	Melee	Fire	FALSE	TRUE		
+arcadia	Enemy	1924	300	173	173	64	Magic	Plant	FALSE	TRUE		
+grenev	Enemy	1326	510	57	57	75	Melee	Plant	FALSE	TRUE		
+carriageBlue	Neutral	99999	0	0	0	0	None	None	TRUE	FALSE	size	3/1
+carriage01	Neutral	150	0	0	0	0	None	None	TRUE	FALSE	size	3/1
+fence01	Neutral	600	0	0	0	0	None	None	TRUE	FALSE		
+asterTent	Neutral	250	0	0	0	0	None	None	TRUE	FALSE		
+rackSword	Neutral	400	0	0	0	0	None	None	TRUE	FALSE		
+freight	Neutral	400	0	0	0	0	None	None	TRUE	FALSE		
+wall	Neutral	400	0	0	0	0	None	None	TRUE	FALSE		

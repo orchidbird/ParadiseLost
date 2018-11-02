@@ -1,0 +1,10 @@
+﻿ResultType	reqCount	Reward	Name	Action	Actor/Target/Etc
+Spawn	2	0	페이즈마다 추가로 적 등장	Phase	1	unitySpearman01	1	5/1	RightDown	
+MoveCamera	1	0	시작 시 카메라 이동	Start	1|5/16/1|1|6/3/1
+Win	Actor	30	모든 출전 캐릭터가 탈출 지점으로 이동	All player characters move to escape point	Escape	6	2/16	3/16	4/16	6/16	7/16	8/16	PC	
+Lose	1	0	출전 캐릭터 중 한 명의 무력화	Neutralize Any player character	Neutralize	Any	PC		
+Bonus	5	30	5페이즈 이내에 승리	Win in 5 phases	Phase	Reverse				
+Bonus	4	20	벽을 5개 이상 파괴	Destroy more than 4 walls	Neutralize	Any	Name	1	pillar01				
+Bonus	1	-5	병사를 처치	Kill enemy soldier	Neutralize	Any	Name	1	unitySpearman01	Repeat
+Bonus	1	20	노엘을 제압	Neutralize Noel	Neutralize	Any	SpecialEnemy
+Info	Scene#1-3	One	One	

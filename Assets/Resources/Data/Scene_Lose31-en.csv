@@ -1,0 +1,12 @@
+stage3 패배			
+*	BG	Forest	
+*	BGM	BGM_Defeat	
+yeong	-	Gah, now I am captured.
+triana	-	…….
+yeong	-	If you would help just a little, we could evade!
+agent	-	No more quarrels!^We will immediately execute you, since you may flee anytime.
+json	-	Wait, stop! You don't have to kill…….
+blank	-	I tried to dodge his attack,^but with the damn guy beside me blocked my way and I failed to.
+*	SE	Pierce	
+blank	-	……. This was the end of my life, having been struggling for survival.
+*	Script	Title	

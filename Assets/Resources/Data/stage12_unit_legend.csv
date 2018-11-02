@@ -1,0 +1,8 @@
+NameEng	Side	Health	Power	Defense	Resistance	Agility	Class	Element	IsObject	IsNamed		
+unitySpearman01	Enemy	240	72	0	0	69	None	None	FALSE	FALSE		
+agent	Enemy	360	107	0	0	70	None	None	FALSE	FALSE		
+noel	Enemy	510	150	0	0	75	None	None	FALSE	TRUE		
+door	Neutral	99	0	0	0	0	None	None	TRUE	FALSE	size	2/3
+pillar01	Neutral	99	0	0	0	0	None	None	TRUE	FALSE		
+boulder	Neutral	99	0	0	0	0	None	None	TRUE	FALSE		
+statue	Neutral	99	0	0	0	0	None	None	TRUE	FALSE	Deathrattle	

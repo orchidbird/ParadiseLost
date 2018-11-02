@@ -1,0 +1,7 @@
+﻿ResultType	reqCount	Reward	Name	Action	Actor/Target/Etc	
+Win	1	30	적을 무력화	Neutralize any enemy	Neutralize	Any	Enemy
+Lose	1	0	출전 캐릭터가 무력화	Any player character gets neutralized	Neutralize	Any	PC
+Bonus	1	10	레이나를 무력화	Neutralize Reina	Neutralize	Any	Name	1	reina
+Bonus	1	20	남은 적의 체력이 50% 미만	Make HP of the other enemy to under 50%	Extra
+Bonus	1	5	세피아의 보호막으로 피해를 흡수	Absorb damage with shield effect of Sepia	Extra
+Info	Scene#9-2	One	One

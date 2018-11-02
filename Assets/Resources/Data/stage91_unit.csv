@@ -1,0 +1,4 @@
+﻿NameInCode	Side	BaseHealth	BasePower	BaseDefense	BaseResistance	BaseAgility	UnitClass	Element	IsObject	IsNamed
+reina	Enemy	749	172	75	115	57	Magic	Fire	FALSE	TRUE
+lenien	Enemy	865	156	36	36	54	Magic	Metal	FALSE	TRUE
+streetLamp	Neutral	700	0	0	0	0	None	None	TRUE	FALSE

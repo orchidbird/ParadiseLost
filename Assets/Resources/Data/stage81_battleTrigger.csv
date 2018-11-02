@@ -1,0 +1,7 @@
+﻿ResultType	reqCount	Reward	Name	Action	Actor/Target/Etc	
+Win	2	60	적을 2명 이하로 만들기	Make the number of enemies 2 or less	UnderCount	Enemy
+Lose	Target	0	출전 캐릭터가 무력화	Any player character gets neutralized	Neutralize	Any	PC
+Bonus	1	5	병사 생존	Every alive soldier	Extra	Repeat
+Bonus	1	-5	출전 캐릭터가 적을 처치	Any player character killed enemy	Kill	PC	Enemy
+Bonus	1	-10	출전 캐릭터가 숲 타일을 밟음	Any player character steps on forest tile	StepOnTile	숲	PC
+Info	Scene#8-2	One	One

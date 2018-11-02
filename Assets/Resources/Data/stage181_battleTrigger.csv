@@ -1,0 +1,8 @@
+﻿ResultType	reqCount	Reward	Name	Action	Actor/Target/Etc			
+Win	6	30	탈출 지점으로 전원 탈출	All player characters escape	Escape	2	2/10	3/10	Ally
+Win	Target	30	모든 집행관을 무력화	Neutralize All Executors	Neutralize	Any	SpecialEnemy
+Lose	1	0	출전 캐릭터 무력화	Any player character gets neutralized	Neutralize	Any	Ally		
+Bonus	1	10	집행관을 무력화	Neutralize any enemy executors	Neutralize	Any	SpecialEnemy	Repeat
+Bonus	1	2	마차를 이용해서 피해 감소	Reduce damage with carriage	Extra	Repeat
+Bonus	1	-10	유닛 처치	Kill a unit	Kill	PC	Any	Repeat
+Info	Scene#18-2	One	One					

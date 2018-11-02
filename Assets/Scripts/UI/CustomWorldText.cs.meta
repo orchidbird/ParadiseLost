@@ -1,0 +1,34 @@
+fileFormatVersion: 2
+guid: 4a8508de438c848db8ed0567b60006a2
+timeCreated: 1501156426
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - spriteDamage0: {fileID: 21300000, guid: 5852c2f8c92d3ad45883f635958d377a, type: 3}
+  - spriteDamage1: {fileID: 21300000, guid: 72f5f99b4a482c446b297ce185367c78, type: 3}
+  - spriteDamage2: {fileID: 21300000, guid: 9aaf306e2143ef242a78e3b25ec8772b, type: 3}
+  - spriteDamage3: {fileID: 21300000, guid: 0f7856b71c3b0f440a1c881666b0dcc0, type: 3}
+  - spriteDamage4: {fileID: 21300000, guid: 24ed5f2174daa874badbe0b0868dfb30, type: 3}
+  - spriteDamage5: {fileID: 21300000, guid: a35e50b6d5957ab458184e2577d00056, type: 3}
+  - spriteDamage6: {fileID: 21300000, guid: 2b74f6aa0d2d9a64c9bb31a95529a379, type: 3}
+  - spriteDamage7: {fileID: 21300000, guid: 1fa33a8e0f8794d4b80ff5144247757a, type: 3}
+  - spriteDamage8: {fileID: 21300000, guid: c4ed8be2d4812e4488a6a5a89d7eca8e, type: 3}
+  - spriteDamage9: {fileID: 21300000, guid: df51a36e94c74d143b96faf5e2c5302a, type: 3}
+  - spriteRecover0: {fileID: 21300000, guid: e8a37090c2ddc9d45b40bb40dc6711a4, type: 3}
+  - spriteRecover1: {fileID: 21300000, guid: 1abbe5fab0f8103478dced3679b0be7d, type: 3}
+  - spriteRecover2: {fileID: 21300000, guid: 885a6ead83eb49e448bd3c4a04417572, type: 3}
+  - spriteRecover3: {fileID: 21300000, guid: c68e530814509a84eb134157cce6bf86, type: 3}
+  - spriteRecover4: {fileID: 21300000, guid: 592ec37eef0a19c4d9e77451e48ff01f, type: 3}
+  - spriteRecover5: {fileID: 21300000, guid: ddfc882238a600248a30b91ec8b0eb79, type: 3}
+  - spriteRecover6: {fileID: 21300000, guid: 19f5c733b84638d409a64d8a1345547b, type: 3}
+  - spriteRecover7: {fileID: 21300000, guid: 0a482850e8e644c4cadc49f54796cb86, type: 3}
+  - spriteRecover8: {fileID: 21300000, guid: b13ca766295d01d4386374425530dfd1, type: 3}
+  - spriteRecover9: {fileID: 21300000, guid: 2ee40cae582d76d43ad47552500cada8, type: 3}
+  - spriteMinus: {fileID: 21300000, guid: 4045ce1ad1d714ad89cc3d74f362a57b, type: 3}
+  - spritePlus: {fileID: 21300000, guid: 7be5f5b1beba645e0958c69f6a4426e1, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

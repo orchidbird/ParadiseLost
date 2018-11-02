@@ -1,0 +1,31 @@
+﻿Script#3-2			
+*	BG	Forest	
+*	BGM	BGM_Urgent	
+yeong	-	What are you doing?!
+triana	-	……nothing, I just think that I'd better stay here.
+blank	-	He was standing there, with a creepy smile I've never seen before.
+blank	-	Enemies also seemed to notice his abnormality, and focused on attacking me, not him.
+json	-	…….
+blank	-	Their commander was only standing near watching,^He did not seem to be eager to fight.
+yeong	-	(I don't know why he is not attacking, but this is a good chance.^So far it has been testing on each other, but if my tactics run out there will be no way to retreat.)
+yeong	-	(I took him just in case he can prove himself useful, but it seems that this is the end of our journey.)
+blank	-	The duchess, Reina Pintos, was probably dead. ^Even if she made a miraculous exodus, she would never be able to live a noble's life anymore.
+*	Glos	영2
+yeong	-	(Then, our <color=red>contract</color> can call an end. )
+*	SE	Slash	
+blank	-	I swung my sword, aiming Triana's throat. 
+triana	-	?!
+eichmann	-	What the heck is she doing……!
+blank	-	Of course I am not killing him. I am sure that he won't die with this.
+yeong	-	(An automatic defense.)
+blank	-	This has done its role of 'awakening' him.
+*	SE	Wind
+triana	-	Don't come near me……!!
+eichmann	-	What has happend to him?!
+json	-	…….
+blank	-	Unexpected attack between targets, ^ an enemy who has given up everything suddenly participating in combat, 
+blank	-	these make enough gap for escape. 
+eichmann	-	Wait, they are escaping!
+blank	-	With their flinching by my action, we have managed to get out of the siege.
+yeong	-	(……time to search for a detour towards the Federation.)
+*	Era

@@ -1,0 +1,16 @@
+﻿ResultType	reqCount	Reward	Name	Action	Actor/Target/Etc			
+Spawn	1	0	하단 열성신도 등장	Zealot Spawn from South	Phase	1	zealot	2	11/1	RightDown	23/1	LeftUp
+Spawn	8	0	좌측 사제 등장	missionary Spawn from West	Phase	1	missionary	1	2/18	LeftDown
+Spawn	8	0	좌측 열성신도 등장	Zealot Spawn from West	Phase	1	zealot	1	3/17	LeftDown
+Spawn	8	0	좌측 수도사 등장	Monk Spawn from West	Phase	1	monk	1	1/16	LeftDown
+Spawn	8	0	우측 사제 등장	missionary Spawn from West	Phase	1	missionary	1	32/18	LeftDown
+Spawn	8	0	우측 열성신도 등장	Zealot Spawn from West	Phase	1	zealot	1	31/17	LeftDown
+Spawn	8	0	우측 수도사 등장	Monk Spawn from West	Phase	1	monk	1	33/16	LeftDown
+Spawn	2	0	상단 열성신도 등장	Zealot Spawn from North	Phase	2	zealot	2	15/26	LeftDown	19/26	LeftDown
+Bonus	1	3	짐 수거	Pack item	Collect	Ally	Name	1	freight171	Repeat
+Win	10	10	식량, 식수, 선교복 수거	Pack food, water, or disguise	Collect	Any	Name	1	freight171
+Win	5	30	마차 탑승	Depart with Carriage	Escape	6	1/11	2/11	3/11	32/10	32/11	32/12	PC
+Lose	2	0	아군 출전 캐릭터 2명 무력화	2 player character gets neutralized	Neutralize	Any	PC
+Lose	1	0	마차 파괴	Carriage gets neutralized	Neutralize	Enemy	Name	1	carriage01
+Lose	6	0	짐 파괴	Food, water, or disguise gets neutralized	Retreat	Any	Name	1	freight171
+Info	Scene#17-2	Sequence	One					

@@ -1,0 +1,4 @@
+NameInCode	Side	BaseHealth	BasePower	BaseDefense	BaseResistance	BaseAgility	UnitClass	Element	IsObject	IsNamed
+maidRange	Enemy	131	69	0	216	42	Melee	None	FALSE	FALSE
+maidSword	Enemy	136	74	176	0	44	Melee	None	FALSE	FALSE
+controller	Enemy	94	0	3	71	1	Magic	None	TRUE	FALSE

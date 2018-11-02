@@ -1,0 +1,12 @@
+stage4 패배			
+*	BG	Village	
+*	BGM	BGM_Defeat	
+blank	-	Escape has failed.^I should have planned the route more carefully.
+karldrich	-	Damn, I am sorry, but I have to save my life for the revolution……!
+agent	-	Are you also with the Haskell gang?
+karldrich	-	No, I've never seen him before. I will follow you to the office to prove my innocence.
+agent	-	Good, follow me.^Lucius Eckhart Haskell, you will be executed summarily as behest.
+lucius	-	(Maybe I should have put my security on the first place…….)
+*	SE	Pierce	
+blank	-	A merciless swing of the sword stroke my neck.
+*	Script	Title	

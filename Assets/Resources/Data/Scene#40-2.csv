@@ -1,0 +1,24 @@
+﻿Script#80
+*	BG	RockMountain
+*	BGM	BGM_Tense
+lucius	-	괜찮으십니까?!
+blank	-	그러나 대답 대신 조용히, 몸을 타고 흐르는 핏방울만 바닥에 고여갈 뿐이었다.
+darkenir	-	형님!!
+nuhag	-	…….
+ratice	-	……이미 죽었어.
+darkenir	-	뭐라고?!
+*	SE	Bomb
+*	Quiver	On
+blank	-	그 순간 거대한 폭음이 터지고, 땅이 흔들리기 시작했다.
+eren	-	젠장, 이번엔 또 무슨 일이람!
+*	Quiver	Off
+luvericha	-	저쪽!
+blank	-	산 위쪽에서 탁한 빛깔의 연기가 피어오르고 있었다.
+darkenir	-	아니, 저 아래는…….
+blank	-	그는 사색이 되어 외쳤다.
+darkenir	-	주거 밀집 지역이란 말이다!!
+lucius	-	(설마, 놈들이 여기에 없었던 게……!)
+blank	-	우리를 이쪽으로 유인한 후 다른 쪽에서 공작을 할 셈이었나.
+blank	-	폭발로 일부러 산사태를 일으키다니……!
+lucius	-	시간이 없습니다! 빨리 움직이죠!
+*	Script	Scene#41-1

@@ -1,0 +1,7 @@
+NameInCode	Side	BaseHealth	BasePower	BaseDefense	BaseResistance	BaseAgility	UnitClass	Element	IsObject	IsNamed
+asterCavalry01	Ally	405	50	50	32	50	Melee	Metal	FALSE	FALSE
+asterArcher02	Ally	311	46	32	13	41	Melee	Metal	FALSE	FALSE
+elvenTribe01	Enemy	319	67	13	88	50	Melee	Plant	FALSE	FALSE
+elvenArcher01	Enemy	261	76	-6	69	55	Melee	Plant	FALSE	FALSE
+elvenElementalist01	Enemy	364	83	32	107	58	Magic	Plant	FALSE	TRUE
+tree	Neutral	500	0	0	0	0	None	None	TRUE	FALSE

@@ -1,0 +1,6 @@
+NameInCode	Side	BaseHealth	BasePower	BaseDefense	BaseResistance	BaseAgility	UnitClass	Element	IsObject	IsNamed
+asterCavalry01	Enemy	98	99	0	0	51	Melee	Plant	FALSE	FALSE
+asterArcher01	Enemy	94	63	22	5	44	Melee	Plant	FALSE	FALSE
+json	Enemy	354	87	57	40	63	Melee	Fire	FALSE	TRUE
+bush	Neutral	800	0	0	0	0	None	None	TRUE	FALSE
+triana_Rest	Ally	474	68	74	57	49	Melee	Metal	FALSE	TRUE

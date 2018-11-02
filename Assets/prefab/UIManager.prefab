@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &122300
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 486734}
+  - component: {fileID: 11411640}
+  m_Layer: 0
+  m_Name: UIManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &486734
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 122300}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11411640
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 122300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 070a334ea70414203b29e80f4cae8ab5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startFinished: 0
+  battleUICanvas: {fileID: 0}
+  movedUICanvas: {fileID: 0}
+  apBarUI: {fileID: 0}
+  skillViewer: {fileID: 0}
+  unitViewerUI: {fileID: 0}
+  selectedUnitViewerUI: {fileID: 0}
+  tileViewerUI: {fileID: 0}
+  selectDirectionUI: {fileID: 0}
+  skillNamePanelUI: {fileID: 0}
+  phaseUI: {fileID: 0}
+  detailInfoUI: {fileID: 0}
+  placedUnitCheckUI: {fileID: 0}
+  sePanelPrefab: {fileID: 1918958613840120, guid: bdc965dc320e475448fe8c0ac4017ec4,
+    type: 2}
+  sePanelList: {fileID: 0}
+  statusEffectDisplayPanel: {fileID: 0}
+  changeDisplayPanel: {fileID: 0}
+  tutorialReviewPanel: {fileID: 0}
+  logDisplayPanel: {fileID: 0}
+  conditionPanel: {fileID: 0}
+  smallConditionPanel: {fileID: 0}
+  configurationPanel: {fileID: 0}
+  menuPanel: {fileID: 0}
+  menuButton: {fileID: 0}
+  logButton: {fileID: 0}
+  phaseDisplayPanel: {fileID: 0}
+  resultPanel: {fileID: 0}
+  castCheckPanel: {fileID: 0}
+  actionButtonsParent: {fileID: 0}
+  actionButtons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  ActionButtonOnOffLock: 0
+  activateDetailInfoEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  deactivateDetailInfoEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 122300}
+  m_IsPrefabParent: 1

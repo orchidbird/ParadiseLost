@@ -1,0 +1,15 @@
+stage10 패배			
+*	BG	RockMountain_Night	
+*	BGM	BGM_Defeat	
+blank	-	We were seized by the beastmen, and .
+karldrich	-	Damn, was there an error in our plan?!
+*	SE	Pierce	
+curi	-	Aaaaaaaaaaah!
+blank	-	A berserk beastman stabbed Curi.
+lucius	-	Curi!
+*	BGM	BGM_Sad	
+blank	-	Lucius rushed to her side, but she had already passed away.
+lucius	-	Huff, huff…… I can't let you go, Curi…….
+*	SE	Pierce	
+blank	-	Lucius, blinded by wrath, slew the beastman. 
+*	Script	Title	

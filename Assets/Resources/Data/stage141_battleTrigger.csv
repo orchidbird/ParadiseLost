@@ -1,0 +1,12 @@
+ResultType	reqCount	Reward	Name	Action	Actor/Target/Etc									
+Spawn	3	0	그레네브 등장	Phase	10	grenev	1	14/18	LeftDown					
+Spawn	3	0	비앙카 등장	Phase	10	bianca	1	15/18	LeftDown					
+Win	6	30	6페이즈 경과	6 phases over	Phase										
+Lose	2	0	출전 캐릭터 2명 무력화	2 player characters get neutralized	Neutralize	Any	PC								
+Bonus	1	20	슈미트 생존	Schmidt alive	Neutralize	Any	Name	1	schmidt	Reverse					
+Trigger	14-FirstArmor	1	0	시작하면 발동	Start									
+Trigger	14-Armor	1	0	작동장치 발동	Neutralize	Any	Name	5	armorTrigger01	armorTrigger02	armorTrigger03	armorTrigger04	armorTrigger05	Repeat
+Script	1	0	Armor	Start										
+Script	3	0	Ambush	Phase										
+Bonus	1	5	갑옷을 활성화	Activate an armor	Extra	Repeat									
+Info	Scene#14-2	One	One											

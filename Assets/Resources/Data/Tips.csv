@@ -1,0 +1,13 @@
+MinChapter	MaxChapter	Kor	Eng
+1	6	튜토리얼에서 안내를 위해 유도하는 행동은 최선의 수가 아닐 수도 있습니다.	The actions you take to guide you in the tutorial may not be the best choice.
+1	6	Esc를 누르면 튜토리얼을 넘길 수 있습니다. 하지만 처음 보신다면 그러지 마세요.	Press Esc to skip the tutorial. But don't do that is you haven't read it yet.
+1	20	타일 하나를 이동할 때마다 다음 타일의 이동 비용이 2씩 늘어납니다.	Each time you move a tile, the cost of moving the next tile increases by 2.
+1	20	기술 선택 버튼 왼쪽 위의 숫자는 단축키를 의미하며, 대기는 Q키로도 선택할 수 있습니다.	You can also press Q as hotkey for turn end.
+1	20	대부분의 기술 효과는 적과 동료를 구분하지 않고 적용됩니다.	Most effects of skills apply without distinction between enemies and allies.
+2	20	<color=green>방어력 또는 저항력</color>이 X일 때, 해당 피해는 <color=red>{100X / (200+X)}%</color> 줄어듭니다.	When the <color=green>defense or resistance</color> is X, the damage is reduced by <color=red>{100X / (200 + X)}%</color>.
+2	20	A / D키로 화면 방향을 90도씩 바꿀 수 있습니다.	You can change the screen direction by 90 degrees with the A / D key.
+2	20	모든 효과의 지속 턴 수는 그 효과를 받는 유닛이 턴을 종료할 때 차감됩니다.	The number of continuous turns of all effects is subtracted when the unit with that effect ends the turn.
+4	20	<color=#00FFFF>의지</color> 수치가 X일 때, 모든 행동의 소모값은 <color=cyan>(100 / X)배</color>가 됩니다.	When the will value is X, the cost of all actions become <color=cyan>(100 / X)</color> times of original cost.
+4	20	더 높은 위치로 올라갈 때는 해당 타일의 기본 이동 비용을 3배로 적용합니다.	When moving up to a higher location, the basic movement cost of the tile is multiplied by 3.
+5	20	연계를 시도할 때, 오래 누르고 있는 대신 Shift를 누른 채 짧게 누를 수도 있습니다.	When you try chain, you can hold Shift and press briefly instead of holding it for a long time.
+6	20	전투 준비 단계에서는 R키를 눌러서 유닛과 능력을 무작위로 선택할 수 있습니다.	On the Ready stage, press R key to select units and abilities randomly.

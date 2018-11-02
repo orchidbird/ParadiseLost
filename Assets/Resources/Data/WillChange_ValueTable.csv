@@ -1,0 +1,11 @@
+Name	Big	Small	Tough	Fragile	Exhausted	Calm	Combative	Angry	ValueHonor	Sympathy	Bloodlust	Guardian	Saviour	Cooperative	Detached
+Pain	-4	-2	*0	-2											
+Exhausted		0			-1										
+Cheer	5	1				*0									
+Disturbed	-10	-3				*0									
+Angry		0						20							
+Shocked		-10									15				*0
+Guardian		0										3			
+Saviour		0											1		
+Cooperative		0												1	
+DirectNeutralize		0					2								

@@ -1,0 +1,13 @@
+Tough	강인함	Tough	피해를 입어도 의지가 떨어지지 않습니다.	Damage does not decrease the will.
+Fragile	연약	Fragile	피해를 입을 때 의지가 2 추가로 떨어집니다.	When get damaged, the will loss increases by 2.
+Exhausted	탈진	Exhausted	턴을 종료할 때마다 의지가 1 떨어집니다.	At the end of turn, lose the will by 1.
+Calm	평정	Calm	(적과 동료 모두 포함)유닛이 무력화되어도 의지가 변하지 않으며, 두려움의 영향을 받지 않습니다.	Unit neutralization does not affect the will. Ignore the effect of Fear.
+Combative	전투	Combative	적을 직접 공격해서 무력화시킬 때 의지가 2 추가로 올라갑니다.	When this unit neutralize an enemy, get +2 more will.
+Angry	분노	Anger	다른 출전 캐릭터가 무력화될 때 의지가 20 올라갑니다.	When a player character get neutralized, the will increases by 20.
+ValueHonor	명예	Prideful	특별한 적이 존재할 경우, 모든 의지 감소를 절반(반올림)으로 받습니다.	If there is a special enemy in field, all will reduction is taken in half(rounded).
+Sympathy	감수성	Sympathy	전투의 흔적에 의한 의지 저하가 2배로 적용됩니다.	The trail of battle reduces the will by double.
+Bloodlust	전쟁광	Blood Lust	유닛을 직접 처치하면 의지가 떨어지는 대신 그만큼 올라가며, 흔적의 영향을 받지 않습니다.	When this unit kill a unit directly, get +5 will instead of losing it.
+Detached	무심	Detached	유닛을 직접 처치하거나 흔적 근처에 있어도 의지가 떨어지지 않습니다.	Doesn't lose the will by killing and the trail of battle.
+Guardian	수호자	Guardian	주변 2타일 이내에 동료가 있는 상태에서 적을 무력화하면 의지가 3 올라갑니다.	When an ally is a range of 2 tiles radius from this unit, get +3 more will by neutralizing enemy.
+Saviour	구원자	Saviour	동료에게 체력 회복이나 강화를 부여할 때 의지가 1 올라갑니다.	when this unit give heal or buff to an ally, get +1 will.
+Cooperative	협동심	Cooperative	동료로부터 체력 회복이나 강화를 받을 때 의지가 1 올라갑니다.	when this unit get heal or buff from an ally, get +1 will.

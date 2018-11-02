@@ -1,0 +1,17 @@
+Script#1-2			
+*	BG	PartyRoom	
+*	BGM	BGM_Urgent	
+eichmann	-	Damn, we can't let them flee……!
+json	-	Hey! You alright?
+eichmann	-	Yes, s, sir, I am okay. Please, they are……!
+noel	-	Jason, stay here! I am going with them!
+reina	shout	Where's the end to these people?!
+*	FO		
+*	BG	Garden	
+*	FI		
+lucius	-	Wait, a dead end!
+reina	-	What?!
+noel	-	This marks the end to your escape. Now leave thyself to thy fate, and you shall die without pain.
+blank	-	Enemies at front, and on our back stands a wa... a statue?
+reina	-	Well, seems like blowing it up is the only option!
+*	Battle	12	

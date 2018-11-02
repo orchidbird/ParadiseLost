@@ -1,0 +1,27 @@
+﻿korName,EngName,Identifier,BaseAPCost
+카펫,Carpet,N01,3
+대리석,Marble,N02,3
+땅,Land,N03,3
+석재,Stone,N04,3
+자갈길,Pebble,N05,3
+물,Water,W01,9999
+얕은 물,Shallow Water,W02,5
+빙하,Glacier,W03,7
+눈 덮인 땅,Snow,W04,6
+풀밭,Field,P01,3
+잔디,Grass,P02,4
+숲,Forest,P03,5
+나무바닥,Wood Floor,P04,3
+시장바닥,Market,P05,8
+나무상자,Wood box,P06,7
+나무,Wood,P07,9999
+수풀,Bush,P09,30
+돌바닥,Stone Floor,M01,3
+비포장도로,Off-road,M02,5
+포장도로,Road,M03,3
+철길,Railway,M04,3
+잡동사니 더미,Oddments,M05,8
+모닥불,Fire,F01,4
+용암,Lava,F02,6
+모루,Anvil,F03,5
+붉은 흙바닥,Red Dirt,F04,3

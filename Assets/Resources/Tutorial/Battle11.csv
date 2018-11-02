@@ -1,0 +1,7 @@
+Index	Mission	Etc	
+2	SelectTile	7	3	깜빡이는 타일을^클릭해서 이동해보세요.	Click the tile with highlight to move.
+5	CancelMoveOrSkill	false
+6	SelectSkill	0	true
+7	SelectAnyDirection
+9	Standby	true
+13	End	false

@@ -1,0 +1,10 @@
+﻿ResultType	reqCount	Reward	Name	Action	Actor/Target/Etc			
+Win	Target	66	에히만을 무력화	Neutralize eichmann	Neutralize	Any	Name	1	eichmann
+Lose	Target	0	모든 출전 캐릭터 무력화	All player characters get neutalized	Neutralize	Any	PC
+Bonus	1	-10	출전 캐릭터 무력화	Any player character gets neutralized	Neutralize	Any	PC	Repeat
+Bonus	1	-1	출전 캐릭터가 피해를 입음	Any player character gets damage	Damage	Any	PC	Repeat
+Bonus	1	2	천막 파괴	Break tent	Neutralize	PC	Name	1	asterTent	Repeat
+Bonus	1	6	잔디 타일을 밟음	Any player character steps on grass tile	StepOnTile	잔디	PC
+Bonus	1	6	얕은 물 타일을 밟음	Any player character steps on Shallow water tile	StepOnTile	얕은 물	PC
+Bonus	1	6	나무 바닥 타일을 밟음	Any player character steps on Wood floor tile	StepOnTile	나무 바닥	PC
+Info	Scene#10-3	One	One

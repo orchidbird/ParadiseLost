@@ -1,0 +1,5 @@
+﻿name	phase	range												
+manastone~	1	1	채굴	Mining	수정을 채굴합니다.	Get crystal.
+record01	2	1	수색	Search	기록을 회수합니다.	Withdraw record.								
+armorTrigger~	1	1	작동	Activate	갑옷을 발동시킵니다.	Activate armor.
+freight171	1	1	짐 싸기	Wrap	짐을 회수합니다.	Get luggage.	

@@ -1,0 +1,10 @@
+stage1-1 패배			
+*	BG	PartyRoom	
+*	BGM	BGM_Defeat	
+blank	-	한 명이 제압당하자 다른 한 명만으로 포위를 뚫기엔 역부족이었다.
+reina	-	크윽……!
+lucius	-	이걸로 끝인가…….
+eichmann	-	내 손으로 반역자들의 우두머리 둘을 처형하다니, 영광이로군!
+*	SE	Pierce	
+blank	-	곧바로 요원의 검이 내 심장에 꽂혔다.
+*	Script	Title	

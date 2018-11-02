@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 8da6d288c8ecb4e29bc8164416a87780
+timeCreated: 1518686388
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: KoPubBatang_Pro
+  fontNames:
+  - KoPubBatang_Pro
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 6dd57a29c37e641d080a49130f455d5c, type: 3}
+  - {fileID: 12800000, guid: 2b07a84bf0c61431f8266904bb5cfd02, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

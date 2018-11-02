@@ -1,0 +1,12 @@
+ResultType	reqCount	Reward	Name	Action	Actor/Target/Etc						
+Spawn	20	0	기술이 20번 시전될 때마다 수도사 생성	Cast	Any	20	monk	1	10/9	RightUp	
+Spawn	3	0	3페이즈가 지날 때마다 정령 생성	Phase	3	fireSpirit	1	10/9	RightUp		
+Spawn	15	0	기술이 15번 시전될 때마다 시민 생성	Cast	Any	15	citizen	1	5/13	LeftDown	
+Spawn	1	0	중립 유닛이 죽을 때마다 새 정령 생성	Kill	Any	NeutralChar	1	fireSpirit	1	10/9	RightDown
+Win	1	40	트리아나를 제압	Neutralize Triana	Neutralize	Any	SpecialEnemy				
+Lose	3	0	출전 캐릭터 무력화	Any player character gets neutralized	Neutralize	Any	Ally				
+Script	1	0	TrianaInfo	Start							
+Bonus	5	20	5페이즈 이내에 승리	Win in 5 phases	Phase	Reverse					
+Bonus	1	10	불의 정령을 무력화	Neutralize a fire spirit	Neutralize	Any	Name	1	fireSpirit	Repeat	
+Bonus	1	-15	중립 유닛의 사망	Dead neutral unit	Kill	Any	NeutralChar	Repeat			
+Info	Scene#16-2	One	One								

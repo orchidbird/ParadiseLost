@@ -1,0 +1,23 @@
+﻿Script#2				
+*	BG	City		
+*	BGM	BGM_Solve		
+blank	-	Breaking through the siege, the outside had little guards.^They seemed not to predict the siege to fail.
+lucius	-	Is everything fine, Duchess of Pintos?	
+reina	-	More or less, I would say.
+blank	-	Making our ways through this obstacle, would his hostility diminish just by a little?
+blank	-	His words had been much politer compared to the speech in the ballroom.
+reina	-	That's something I did not expect from a person who had treated me like a nobody a few minutes ago?	
+lucius	-	……Though temporary, we are at allies now.^If so, it is a rational move to care for you regardless of who you are.	
+reina	-	(What a rigid person he is…….^Well, he has trusted the Emperor despite their disagreement on issues for years. What a fool.)	
+reina	-	Well the alliance is over now.^Nevertheless, I show my gratitude for your cooperation.	
+lucius	-	What are you planning to do now?	
+reina	-	I don't think I have the obligation to tell you,^but I am goint to tell you something as an "ally".	
+*	Glos	루시안 하스켈1
+reina	-	<color=red>What happened three years ago</color>, that wasn't intentional.	
+reina	-	Nonetheless the responsibility on negligence is on me.^As the Head of Pintos, I hereby present my sincere apology.
+lucius	-	Not intentional? What do you mean by……
+blank	-	This clears our debt. We don't have to see each other from now on, I guess. 
+reina	-	Well, excuse me.
+blank	-	I turned away from Lucius, and stared at the Crystal of Pintos on my ring.
+reina	-	(Finding a shelter is the first thing I should do. Then……^I shall rebuild our clan.)
+*	Script	Scene#2-1

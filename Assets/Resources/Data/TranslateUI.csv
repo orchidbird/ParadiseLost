@@ -1,0 +1,99 @@
+codeName	Kor	Eng
+WinCondition	승리 조건	Objectives
+LoseCondition	패배 조건	Failure
+Start	시 작	Start
+Language	Language	언 어
+OK	확인	OK
+Cancel	취소	Cancel
+Quit	종 료	Quit
+Range	사거리	Range
+Area	범위	Area
+Phase	페이즈	Phase
+Ask_SkipDialogue	이번 장면을 건너뜁니다.	Go to next scene.
+Ask_Retry	방금 전투에 다시 도전할까요?	Retry the battle?
+SkipDialogue_Battle	대화를 종료합니다.	End dialogue.
+Config_DamageShowDuration	피해량 연출 시간	Duration for^damage view
+Config_BGM	배경음악	Background Music
+Config_SoundEffect	효과음	Sound Effect
+Config_AITime	AI 행동^연출 시간	Duration for^AI action view
+Config_IgnoreWarn	경고 무시	Skip warning
+Config_IgnoreWarn_Restart	전투 재시작	Restart Battle
+Config_IgnoreWarn_DifficultyChange	난이도 변경	Change difficulty
+Config_IgnoreWarn_Title	타이틀 화면으로	Go to title Scene
+Config_IgnoreWarn_InvalidCasting	대상 없이 기술 사용	Casting skill with no target
+Config_RedBlood	처치 흔적을 붉게 표시	Make kill vestiges red
+DialogueType_Person	인물	Person
+DialogueType_Group	단체	Group
+DialogueType_Location	장소	Location
+DialogueType_Etc	기타	Etc
+Difficulty_Announce	난이도를 선택하세요	Select Difficulty
+Difficulty_Easy	입문	Intro
+Difficulty_Easy_Explain	<color=cyan>세계관</color>과 <color=cyan>이야기</color>를 편하게 <color=cyan>감상</color>할 수 있습니다.	<color=cyan>Appreciate</color> the world and stories of <Monads>.
+Difficulty_Normal	모험가	Adventurer
+Difficulty_Normal_Explain	<color=yellow>보통 수준</color>의 지적 과제가 제공됩니다.	<color=yellow>Normal-level</color> intellectual tasks will be provided.
+Difficulty_Hard	지략가	Tactician
+Difficulty_Hard_Explain	<color=#ff9500>턴제 게임</color>과 <color=#ff9500>전술적 사고</color>에 익숙한 사람에게 적절합니다.	Suitable for people who are familiar with <color=#ff9500>turn-based tactics</color>.
+Difficulty_Legend	전설	Legend
+Difficulty_Legend_Explain	<color=red>실수가 곧 패배</color>로 직결되며, <color=red>실패</color>를 거듭하며 <color=red>도전</color>하게 됩니다.^*<color=red>첫 시도라면 권장하지 않습니다</color>!	<color=red>Mistake means failure</color>, you will repeat <color=red>fail and challenge</color>.^*<color=red>NOT recommended for first trial</color>!
+PowerExplain	공격력: 기술 위력을 결정	Power: Affects Power of Skills
+DefenseExplain	방어력: 받는 물리 피해 	Defense: Incoming Melee Damage 
+ResistanceExplain	저항력: 받는 마법 피해 	Resistance: Incoming Magic Damage 
+WillExplain	의지: 소모 행동력 	Will: AP Consumption 
+AgilityExplain	민첩성: 	Agility: 
+MeleeExplain	물리 계열: 공격할 때 대상의 방어력을 적용	Melee Type: Apply target's Defense to Damage.
+MagicExplain	마법 계열: 공격할 때 대상의 저항력을 적용	Magic Type: Apply target's Resistance to Damage.
+FireExplain	불 속성 타일에 있는 동안 공격력 +20%	Power +20% on Fire tile
+MetalExplain	금속 속성 타일에 있는 동안 방어력, 저항력 +	Defense & Resistance +
+PlantExplain	나무 속성 타일에서 턴을 시작하면 체력 10% 회복	Heal 10% every start of turn on Plant tile
+WaterExplain	물 속성 타일에 있는 동안 의지 +15	Will +15 on Water tile
+PositionReset	초기화	Reset
+PositionConfirm	확정	Start
+Menu_Config	설정	Configuration
+Menu_Title	나가기	Title Scene
+Menu_Difficulty	난이도 변경	Change Difficulty
+Menu_SaveLoad	저장 / 불러오기	Save / Load
+Menu_TutorialReview	도움말	Review Tutorial
+Menu_Restart	전투 재시작	Restart Battle
+Menu_Challenge	도전 모드	Challenge Mode
+SkipTutorial	(Esc를 누르면 안내를 종료합니다)	(Press ESC to skip tutorial)
+Warning_DontAskAgain	더 이상 이 메시지를 표시하지 않음^(설정에서 다시 활성화 가능)	Don't ask again^(Can re-activate at configuration)
+Warning_Restart	이번 전투를 처음부터 진행합니다.^정말 재시작하시겠습니까?	Restart current battle?
+Warning_Title	전투 도중에는 저장할 수 없습니다.^정말 나가시겠습니까?	Cannot save during a battle.^Really want to exit?
+Warning_DifficultyChange	이번 전투를 처음부터 진행합니다.^정말 난이도를 바꾸시겠습니까?	Restart current battle.^Really change difficulty?
+Warning_InvalidCasting	적절한 대상이 없습니다.^정말로 시전하시겠습니까?	This casting has no proper target.^Would you really continue?
+Tutorial_ApDelete	행동력 소실	AP Loss
+Tutorial_BattleReady	전투 준비	Ready for Battle
+Tutorial_BloodEffect	흔적의 영향	Effect of blood
+Tutorial_Charge	돌진	Charge
+Tutorial_Challenge	도전 모드	Challenge Mode
+Tutorial_Critical	치명적 일격	Critical Attack
+Tutorial_Defense	방어력과 저항력	Defense & Resistance
+Tutorial_Direction	방향 보정	Direction bonus
+Tutorial_DOT	지속 피해	Damage Over Time
+Tutorial_Era	막간	Interlude
+Tutorial_Fear	두려움	Fear
+Tutorial_FriendlyFire	무차별 공격	Targets of attack
+Tutorial_Height	타일의 높이	Height of tile
+Tutorial_KillIcon	처치 표시	Killing
+Tutorial_Phase	페이즈	Phase
+Tutorial_Preview	기술 시전 미리보기	Casting Preview
+Tutorial_RangeType_Auto	기술의 범위	Skill Area
+Tutorial_RangeType_Point	사거리와 기술 범위	Range & Area
+Tutorial_StatusEffect	지속 효과	Status Effect
+Tutorial_StatusEffect_Level	효과의 향상	Status Effect Upgrade
+Tutorial_Will_Down	의지 저하	Will Fall
+Tutorial_Will_Pain	의지 변동(피격)	Will Change(by damage)
+Tutorial_Will_Skill	의지 변동(능력)	Will Change(by skill)
+WillChangeType_Angry	분노(특성)	Anger(Characteristic)
+WillChangeType_Blood	전투의 흔적	Trace of Battle
+WillChangeType_Cheer	적 무력화	Enemy Neutralization
+WillChangeType_Chain	연계	Chain attack
+WillChangeType_Cooperative	협동심(특성)	Cooperative(Characteristic)
+WillChangeType_DirectNeutralize	전투(특성)	Combative(Characteristic)
+WillChangeType_Disturbed	동료 무력화	Ally Neutralization
+WillChangeType_Exhausted	탈진(특성)	Exhausted(Characteristic)
+WillChangeType_Guardian	수호자(특성)	Guardian(Characteristic)
+WillChangeType_Pain	피격	Attacked
+WillChangeType_Sympathy	감수성(특성)	Sensibility(Characteristic)
+WillChangeType_Saviour	구원자(특성)	Saviour(Characteristic)
+WillChangeType_Shocked	유닛 처치	Killing Unit

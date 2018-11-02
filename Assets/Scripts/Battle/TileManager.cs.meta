@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 76af2cb8647b1476483e75b1e2c0e757
+timeCreated: 1449758567
+licenseType: Free
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - tilePrefab: {instanceID: 0}
+  - tileHeightPrefab: {fileID: 1458772175303534, guid: 786185c049303ce4d9f47c65af6e2b15,
+      type: 2}
+  - preSelectedMouseOverTile: {instanceID: 0}
+  - mouseOverUnit: {instanceID: 0}
+  - TileColorMaterialForMove: {instanceID: 0}
+  - TileColorMaterialForRange1: {instanceID: 0}
+  - TileColorMaterialForRange2: {instanceID: 0}
+  - TileColorMaterialForChain: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

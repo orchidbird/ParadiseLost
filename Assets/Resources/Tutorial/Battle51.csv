@@ -1,0 +1,10 @@
+Index	Mission	Etc		
+2	SelectTile	3	20
+3	SelectSkill	1
+5	SelectDirection	RightDown	적의 <color=#9a6110>도주 경로</color>에^덫을 설치해보세요.	Trap the enemy's escape route.
+6	Standby
+8	SelectSkill	0
+9	SelectTileLong	4	21
+10	SelectSkill	0
+11	SelectDirection	LeftUp
+15	End

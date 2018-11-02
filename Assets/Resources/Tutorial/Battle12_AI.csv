@@ -1,0 +1,11 @@
+Action	Etc
+UseSkill	0	0/1	RightUp
+Move	0	2
+Standby 				
+Move	-2	0		
+UseSkill	0	-2/0	LeftUp
+Standby 				
+Move	-4	0		
+Standby 				
+Move	0	-1		
+Standby				

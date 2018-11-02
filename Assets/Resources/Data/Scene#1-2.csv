@@ -1,0 +1,17 @@
+﻿Script#1-2			
+*	BG	PartyRoom	
+*	BGM	BGM_Urgent	
+eichmann	-	제길, 이렇게 놓치다니……!
+json	-	이봐! 괜찮은 건가?
+eichmann	-	저, 저는 괜찮으니, 어서 놈들을……!
+noel	-	제이선은 그쪽을 돌보도록! 우리가 간다!
+reina	shout	뭐가 이렇게 많아?!
+*	FO		
+*	BG	Garden	
+*	FI		
+lucius	surprised	잠깐, 막다른 길이다!
+reina	shout	뭐라고?!
+noel	-	도망도 여기까지군. 이제 그만 운명에 순응하라, 그리하면 불쌍한 너희도 고통 없이 편해질 터이니.
+blank	-	앞에는 목숨을 노리는 위험한 적들, 뒤에는 막다른 벽……이 아니라 동상?
+reina	shout	이렇게 된 이상 부수고 지나가자고!
+*	Battle	12	

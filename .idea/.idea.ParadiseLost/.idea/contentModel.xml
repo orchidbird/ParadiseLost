@@ -1,0 +1,941 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Nansae\.Rider2017.3\system\resharper-host\local\Transient\ReSharperHost\v11\SolutionCaches\_ParadiseLost.680181417.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Nansae\Desktop\ParadiseLost" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="ChainCutScene.cs" t="Include" />
+        <e p="ChangeColor.cs" t="Include" />
+        <e p="CustomCursor.cs" t="Include" />
+        <e p="Demigiant" t="Include">
+          <e p="DemiLib" t="Include">
+            <e p="Core" t="Include">
+              <e p="DemiLib.xml" t="Include" />
+              <e p="Editor" t="Include">
+                <e p="DemiEditor.xml" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="DOTween" t="Include">
+            <e p="DOTween43.xml" t="Include" />
+            <e p="DOTween46.xml" t="Include" />
+            <e p="DOTween50.xml" t="Include" />
+            <e p="readme.txt" t="Include" />
+          </e>
+          <e p="DOTweenPro" t="Include">
+            <e p="DOTweenAnimation.cs" t="Include" />
+            <e p="Editor" t="Include">
+              <e p="DOTweenAnimationInspector.cs" t="Include" />
+            </e>
+            <e p="readme.txt" t="Include" />
+          </e>
+          <e p="readme_DOTweenPro.txt" t="Include" />
+        </e>
+        <e p="DifficultyButton.cs" t="Include" />
+        <e p="Editor" t="Include">
+          <e p="CrossPlatformInput" t="Include">
+            <e p="CrossPlatformInputInitialize.cs" t="Include" />
+          </e>
+          <e p="Steamworks.NET" t="Include">
+            <e p="RedistCopy.cs" t="Include" />
+            <e p="RedistInstall.cs" t="Include" />
+          </e>
+          <e p="TexturePostProcessor.cs" t="Include" />
+        </e>
+        <e p="Hit &amp; Slashes Vol.3" t="Include">
+          <e p="Demo Scene" t="Include">
+            <e p="ButtonAnimation.cs" t="Include" />
+            <e p="GameManager.cs" t="Include" />
+          </e>
+          <e p="SelfDestruct.cs" t="Include" />
+        </e>
+        <e p="Particlecollection_Line" t="Include">
+          <e p="Plugins" t="Include">
+            <e p="Effect" t="Include">
+              <e p="Editor" t="Include">
+                <e p="EffectControllerInspector.cs" t="Include" />
+                <e p="EffectToolBar.cs" t="Include" />
+                <e p="RenderEffectInspector.cs" t="Include" />
+                <e p="ShaderCustomEditor" t="Include">
+                  <e p="ShaderMaterialsEditor.cs" t="Include" />
+                </e>
+                <e p="XUIUtils.cs" t="Include" />
+              </e>
+              <e p="Script" t="Include">
+                <e p="CameraTarget.cs" t="Include" />
+                <e p="EffectController.cs" t="Include" />
+                <e p="EffectDemo.cs" t="Include" />
+                <e p="EffectShaderPropertyStr.cs" t="Include" />
+                <e p="RenderEffect.cs" t="Include" />
+                <e p="TransformExtension.cs" t="Include" />
+              </e>
+              <e p="Shader" t="Include">
+                <e p="effect_distortion_mask.shader" t="Include" />
+                <e p="ParticleAddEffect.shader" t="Include" />
+                <e p="ParticleAddSoftEffect.shader" t="Include" />
+                <e p="ParticleBlendEffect.shader" t="Include" />
+                <e p="ParticlePremultiplyBlend.shader" t="Include" />
+                <e p="Toon Additive.shader" t="Include" />
+                <e p="Toon Blended Premmultiply.shader" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="READ ME.txt" t="Include" />
+        </e>
+        <e p="Plugins" t="Include">
+          <e p="Android" t="Include">
+            <e p="RefreshGalleryWrapper.cs" t="Include" />
+          </e>
+          <e p="DarkTonic" t="Include">
+            <e p="MasterAudio" t="Include">
+              <e p="ExampleScenes" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="MA_Bootstrapper.cs" t="Include" />
+                  <e p="MA_DestroyFinishedParticle.cs" t="Include" />
+                  <e p="MA_EnemyOne.cs" t="Include" />
+                  <e p="MA_EnemySpawner.cs" t="Include" />
+                  <e p="MA_GameScene.cs" t="Include" />
+                  <e p="MA_Laser.cs" t="Include" />
+                  <e p="MA_LocalizationUI.cs" t="Include" />
+                  <e p="MA_PlayerControl.cs" t="Include" />
+                  <e p="MA_PlayerSpawnerControl.cs" t="Include" />
+                  <e p="MA_SampleICustomEventReceiver.cs" t="Include" />
+                  <e p="MA_TestUI.cs" t="Include" />
+                </e>
+              </e>
+              <e p="ReleaseNotes.txt" t="Include" />
+              <e p="Scripts" t="Include">
+                <e p="Events" t="Include">
+                  <e p="AmbientSound.cs" t="Include" />
+                  <e p="ButtonClicker.cs" t="Include" />
+                  <e p="EventSounds.cs" t="Include" />
+                  <e p="FootstepSounds.cs" t="Include" />
+                  <e p="MechanimStateCustomEvents.cs" t="Include" />
+                  <e p="MechanimStateSounds.cs" t="Include" />
+                </e>
+                <e p="ResultObjects" t="Include">
+                  <e p="PlaySoundResult.cs" t="Include" />
+                </e>
+                <e p="Settings" t="Include">
+                  <e p="AudioEvent.cs" t="Include" />
+                  <e p="AudioEventGroup.cs" t="Include" />
+                  <e p="AudioScriptOrder.cs" t="Include" />
+                  <e p="BusFadeInfo.cs" t="Include" />
+                  <e p="BusPitchGlideInfo.cs" t="Include" />
+                  <e p="CustomEvent.cs" t="Include" />
+                  <e p="CustomEventCategory.cs" t="Include" />
+                  <e p="CustomEventToFireInfo.cs" t="Include" />
+                  <e p="DuckGroupInfo.cs" t="Include" />
+                  <e p="DynamicGroupVariation.cs" t="Include" />
+                  <e p="DynamicSoundGroup.cs" t="Include" />
+                  <e p="FootstepGroup.cs" t="Include" />
+                  <e p="GroupBus.cs" t="Include" />
+                  <e p="GroupFadeInfo.cs" t="Include" />
+                  <e p="GroupPitchGlideInfo.cs" t="Include" />
+                  <e p="ICustomEventReceiver.cs" t="Include" />
+                  <e p="MasterAudioGroup.cs" t="Include" />
+                  <e p="MasterAudioSettings.cs" t="Include" />
+                  <e p="MasterCustomEventAttribute.cs" t="Include" />
+                  <e p="MusicSetting.cs" t="Include" />
+                  <e p="OcclusionFreqChangeInfo.cs" t="Include" />
+                  <e p="SoundGroupAttribute.cs" t="Include" />
+                  <e p="SoundGroupVariation.cs" t="Include" />
+                  <e p="SoundGroupVariationUpdater.cs" t="Include" />
+                </e>
+                <e p="Singleton" t="Include">
+                  <e p="AudioLoaderOptimizer.cs" t="Include" />
+                  <e p="AudioPrioritizer.cs" t="Include" />
+                  <e p="AudioResourceOptimizer.cs" t="Include" />
+                  <e p="MasterAudio.cs" t="Include" />
+                  <e p="PersistentAudioSettings.cs" t="Include" />
+                  <e p="SingletonScriptable.cs" t="Include" />
+                  <e p="SoundGroupOrganizer.cs" t="Include" />
+                </e>
+                <e p="Utility" t="Include">
+                  <e p="AmbientUtil.cs" t="Include" />
+                  <e p="ArrayListUtil.cs" t="Include" />
+                  <e p="AudioTransformExtensions.cs" t="Include" />
+                  <e p="AudioTransformTracker.cs" t="Include" />
+                  <e p="AudioUtil.cs" t="Include" />
+                  <e p="CoroutineHelper.cs" t="Include" />
+                  <e p="DelayBetweenSongs.cs" t="Include" />
+                  <e p="DTMonoHelper.cs" t="Include" />
+                  <e p="DynamicSoundGroupCreator.cs" t="Include" />
+                  <e p="ListenerFollower.cs" t="Include" />
+                  <e p="PlayerPrefs.cs" t="Include" />
+                  <e p="PlaylistController.cs" t="Include" />
+                  <e p="SpatializerHelper.cs" t="Include" />
+                  <e p="TransformFollower.cs" t="Include" />
+                  <e p="UtilStrings.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+          </e>
+          <e p="Editor" t="Include">
+            <e p="JetBrains" t="Include">
+              <e p="Unity3DRider.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Pixelplacement" t="Include">
+            <e p="iTween" t="Include">
+              <e p="iTween.cs" t="Include" />
+              <e p="Sample" t="Include">
+                <e p="MoveSample.cs" t="Include" />
+                <e p="RotateSample.cs" t="Include" />
+                <e p="SampleInfo.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="RelationsInspector" t="Include">
+            <e p="AutoBackendAttributes.cs" t="Include" />
+          </e>
+          <e p="Steamworks.NET" t="Include">
+            <e p="autogen" t="Include">
+              <e p="isteamapplist.cs" t="Include" />
+              <e p="isteamapps.cs" t="Include" />
+              <e p="isteamclient.cs" t="Include" />
+              <e p="isteamcontroller.cs" t="Include" />
+              <e p="isteamfriends.cs" t="Include" />
+              <e p="isteamgameserver.cs" t="Include" />
+              <e p="isteamgameserverapps.cs" t="Include" />
+              <e p="isteamgameserverclient.cs" t="Include" />
+              <e p="isteamgameserverhttp.cs" t="Include" />
+              <e p="isteamgameserverinventory.cs" t="Include" />
+              <e p="isteamgameservernetworking.cs" t="Include" />
+              <e p="isteamgameserverstats.cs" t="Include" />
+              <e p="isteamgameserverugc.cs" t="Include" />
+              <e p="isteamgameserverutils.cs" t="Include" />
+              <e p="isteamhtmlsurface.cs" t="Include" />
+              <e p="isteamhttp.cs" t="Include" />
+              <e p="isteaminventory.cs" t="Include" />
+              <e p="isteammatchmaking.cs" t="Include" />
+              <e p="isteammusic.cs" t="Include" />
+              <e p="isteammusicremote.cs" t="Include" />
+              <e p="isteamnetworking.cs" t="Include" />
+              <e p="isteamparentalsettings.cs" t="Include" />
+              <e p="isteamremotestorage.cs" t="Include" />
+              <e p="isteamscreenshots.cs" t="Include" />
+              <e p="isteamugc.cs" t="Include" />
+              <e p="isteamunifiedmessages.cs" t="Include" />
+              <e p="isteamuser.cs" t="Include" />
+              <e p="isteamuserstats.cs" t="Include" />
+              <e p="isteamutils.cs" t="Include" />
+              <e p="isteamvideo.cs" t="Include" />
+              <e p="NativeMethods.cs" t="Include" />
+              <e p="SteamCallbacks.cs" t="Include" />
+              <e p="SteamConstants.cs" t="Include" />
+              <e p="SteamEnums.cs" t="Include" />
+              <e p="SteamStructs.cs" t="Include" />
+            </e>
+            <e p="CallbackDispatcher.cs" t="Include" />
+            <e p="CallbackIdentity.cs" t="Include" />
+            <e p="InteropHelp.cs" t="Include" />
+            <e p="ISteamMatchmakingResponses.cs" t="Include" />
+            <e p="Packsize.cs" t="Include" />
+            <e p="redist" t="Include">
+              <e p="steam_appid.txt" t="Include" />
+            </e>
+            <e p="Steam.cs" t="Include" />
+            <e p="types" t="Include">
+              <e p="MatchmakingTypes" t="Include">
+                <e p="gameserveritem_t.cs" t="Include" />
+                <e p="servernetadr_t.cs" t="Include" />
+              </e>
+              <e p="SteamClient" t="Include">
+                <e p="HSteamPipe.cs" t="Include" />
+                <e p="HSteamUser.cs" t="Include" />
+                <e p="SteamAPI_CheckCallbackRegistered_t.cs" t="Include" />
+                <e p="SteamAPIWarningMessageHook_t.cs" t="Include" />
+              </e>
+              <e p="SteamClientPublic" t="Include">
+                <e p="CGameID.cs" t="Include" />
+                <e p="CSteamID.cs" t="Include" />
+                <e p="HAuthTicket.cs" t="Include" />
+              </e>
+              <e p="SteamController" t="Include">
+                <e p="ControllerActionSetHandle_t.cs" t="Include" />
+                <e p="ControllerAnalogActionHandle_t.cs" t="Include" />
+                <e p="ControllerDigitalActionHandle_t.cs" t="Include" />
+                <e p="ControllerHandle_t.cs" t="Include" />
+              </e>
+              <e p="SteamFriends" t="Include">
+                <e p="FriendsGroupID_t.cs" t="Include" />
+              </e>
+              <e p="SteamHTMLSurface" t="Include">
+                <e p="HHTMLBrowser.cs" t="Include" />
+              </e>
+              <e p="SteamHTTP" t="Include">
+                <e p="HTTPCookieContainerHandle.cs" t="Include" />
+                <e p="HTTPRequestHandle.cs" t="Include" />
+              </e>
+              <e p="SteamInventory" t="Include">
+                <e p="SteamInventoryResult_t.cs" t="Include" />
+                <e p="SteamItemDef_t.cs" t="Include" />
+                <e p="SteamItemInstanceID_t.cs" t="Include" />
+              </e>
+              <e p="SteamMatchmaking" t="Include">
+                <e p="HServerListRequest.cs" t="Include" />
+                <e p="HServerQuery.cs" t="Include" />
+              </e>
+              <e p="SteamNetworking" t="Include">
+                <e p="SNetListenSocket_t.cs" t="Include" />
+                <e p="SNetSocket_t.cs" t="Include" />
+              </e>
+              <e p="SteamRemoteStorage" t="Include">
+                <e p="PublishedFileId_t.cs" t="Include" />
+                <e p="PublishedFileUpdateHandle_t.cs" t="Include" />
+                <e p="UGCFileWriteStreamHandle_t.cs" t="Include" />
+                <e p="UGCHandle_t.cs" t="Include" />
+              </e>
+              <e p="SteamScreenshots" t="Include">
+                <e p="ScreenshotHandle.cs" t="Include" />
+              </e>
+              <e p="SteamTypes" t="Include">
+                <e p="AccountID_t.cs" t="Include" />
+                <e p="AppId_t.cs" t="Include" />
+                <e p="DepotId_t.cs" t="Include" />
+                <e p="ManifestId_t.cs" t="Include" />
+                <e p="SteamAPICall_t.cs" t="Include" />
+              </e>
+              <e p="SteamUGC" t="Include">
+                <e p="UGCQueryHandle_t.cs" t="Include" />
+                <e p="UGCUpdateHandle_t.cs" t="Include" />
+              </e>
+              <e p="SteamUnifiedMessages" t="Include">
+                <e p="ClientUnifiedMessageHandle.cs" t="Include" />
+              </e>
+              <e p="SteamUserStats" t="Include">
+                <e p="SteamLeaderboard_t.cs" t="Include" />
+                <e p="SteamLeaderboardEntries_t.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
+        <e p="Resources" t="Include">
+          <e p="Fonts" t="Include">
+            <e p="Hangul.txt" t="Include" />
+          </e>
+          <e p="Shader" t="Include">
+            <e p="ActionButtonCooldown.shader" t="Include" />
+            <e p="BloodyScreen.shader" t="Include" />
+            <e p="ColorDamage.shader" t="Include" />
+            <e p="DiagonalColor.shader" t="Include" />
+            <e p="Dissolve.shader" t="Include" />
+            <e p="FogOfWar.shader" t="Include" />
+            <e p="GlowBorder.shader" t="Include" />
+            <e p="grayscale.shader" t="Include" />
+            <e p="HighlightBorder.shader" t="Include" />
+            <e p="HighlightBorder_Gradtion.shader" t="Include" />
+            <e p="HighlightBorder_Outside.shader" t="Include" />
+            <e p="HSLRangeShader.shader" t="Include" />
+            <e p="HSVRangeShader.shader" t="Include" />
+            <e p="LeftToRight.shader" t="Include" />
+            <e p="Monotone.shader" t="Include" />
+          </e>
+          <e p="VisualEffect" t="Include">
+            <e p="UETools" t="Include">
+              <e p="Magic_Particle_Effects" t="Include">
+                <e p="readme.txt" t="Include" />
+                <e p="Scripts" t="Include">
+                  <e p="CameraMovement.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+          </e>
+        </e>
+        <e p="ScreenShotMaker" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="GoToSceneScript.cs" t="Include" />
+            <e p="ScreenShotMaker.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="Battle" t="Include">
+            <e p="ActiveSkill.cs" t="Include" />
+            <e p="AIData.cs" t="Include" />
+            <e p="AIInfo.cs" t="Include" />
+            <e p="AIScenario.cs" t="Include" />
+            <e p="APAction.cs" t="Include" />
+            <e p="APText.cs" t="Include" />
+            <e p="Aura.cs" t="Include" />
+            <e p="BattleData.cs" t="Include" />
+            <e p="BattleManager.cs" t="Include" />
+            <e p="BattleReadyPanel.cs" t="Include" />
+            <e p="BattleTrigger.cs" t="Include" />
+            <e p="BattleTriggerManager.cs" t="Include" />
+            <e p="BattleTriggers" t="Include">
+              <e p="S111_0_BattleTrigger.cs" t="Include" />
+              <e p="S141_Armor_BattleTrigger.cs" t="Include" />
+              <e p="S141_FirstArmor_BattleTrigger.cs" t="Include" />
+              <e p="S171_Pack_BattleTrigger.cs" t="Include" />
+              <e p="S191_0_BattleTrigger.cs" t="Include" />
+            </e>
+            <e p="CameraWork.cs" t="Include" />
+            <e p="Casting.cs" t="Include" />
+            <e p="CastingApply.cs" t="Include" />
+            <e p="Chain.cs" t="Include" />
+            <e p="ChainList.cs" t="Include" />
+            <e p="Collectable.cs" t="Include" />
+            <e p="ConfigurationPanel.cs" t="Include" />
+            <e p="Damage" t="Include">
+              <e p="DamageCalculator.cs" t="Include" />
+              <e p="StatusEffector.cs" t="Include" />
+            </e>
+            <e p="EffectBehaviour.cs" t="Include" />
+            <e p="EffectLog.cs" t="Include" />
+            <e p="EffectPlayer.cs" t="Include" />
+            <e p="Entity.cs" t="Include" />
+            <e p="EventLog.cs" t="Include" />
+            <e p="GameDataManager.cs" t="Include" />
+            <e p="HealthViewer.cs" t="Include" />
+            <e p="Log.cs" t="Include" />
+            <e p="LogExplainObject.cs" t="Include" />
+            <e p="LogManager.cs" t="Include" />
+            <e p="PassiveSkill.cs" t="Include" />
+            <e p="PathFinder.cs" t="Include" />
+            <e p="PhaseDisplay.cs" t="Include" />
+            <e p="Skill.cs" t="Include" />
+            <e p="SkillLocation.cs" t="Include" />
+            <e p="Skills" t="Include">
+              <e p="AI" t="Include">
+                <e p="AttachStatusEffectToDestroyer_SkillLogic.cs" t="Include" />
+                <e p="BasicChargeSkillLogic.cs" t="Include" />
+                <e p="ExplosiveSkillLogic.cs" t="Include" />
+                <e p="FragmentSkillLogic.cs" t="Include" />
+                <e p="S101_SkillLogic.cs" t="Include" />
+                <e p="S102_eichmann_SkillLogic0.cs" t="Include" />
+                <e p="S102_eichmann_SkillLogic1.cs" t="Include" />
+                <e p="S131_Sage_Compound_SkillLogic.cs" t="Include" />
+                <e p="S131_Sage_Leader_SkillLogic.cs" t="Include" />
+                <e p="S141_Armor_SkillLogic.cs" t="Include" />
+                <e p="S161_Monk_Shield_SkillLogic.cs" t="Include" />
+                <e p="S161_Spirit_Flash_SkillLogic.cs" t="Include" />
+                <e p="S161_Spirit_Nonmaterial_SkillLogic.cs" t="Include" />
+                <e p="S181_2_SkillLogic.cs" t="Include" />
+                <e p="S181_SkillLogic.cs" t="Include" />
+                <e p="S191_0_SkillLogic.cs" t="Include" />
+                <e p="S31_Cavalry_SkillLogic.cs" t="Include" />
+                <e p="S31_SkillLogic.cs" t="Include" />
+                <e p="S51_SkillLogic.cs" t="Include" />
+                <e p="S61_SkillLogic0.cs" t="Include" />
+                <e p="S61_SkillLogic1.cs" t="Include" />
+                <e p="S81_Link_SkillLogic.cs" t="Include" />
+                <e p="S81_SkillLogic0.cs" t="Include" />
+                <e p="S81_SkillLogic2.cs" t="Include" />
+                <e p="Stage_16_0_SkillLogic.cs" t="Include" />
+                <e p="Stage_18_0_SkillLogic.cs" t="Include" />
+                <e p="Stage_20_1_SkillLogic.cs" t="Include" />
+                <e p="Stage_20_2_SkillLogic.cs" t="Include" />
+              </e>
+              <e p="Arcadia" t="Include">
+                <e p="ApplyOnPlantTile.cs" t="Include" />
+                <e p="Arcadia_1_m_SkillLogic.cs" t="Include" />
+                <e p="Arcadia_C1_SkillLogic.cs" t="Include" />
+                <e p="Arcadia_Weathering_SkillLogic.cs" t="Include" />
+              </e>
+              <e p="AttachAura.cs" t="Include" />
+              <e p="AttachAuraOnStart.cs" t="Include" />
+              <e p="AttachingSEOnStartSkillLogic.cs" t="Include" />
+              <e p="BaseActiveSkillLogic.cs" t="Include" />
+              <e p="BaseCommonSkillLogic.cs" t="Include" />
+              <e p="BasePassiveSkillLogic.cs" t="Include" />
+              <e p="Bianca" t="Include">
+                <e p="Bianca_1_r_SkillLogic.cs" t="Include" />
+                <e p="Bianca_2_l_SkillLogic.cs" t="Include" />
+                <e p="Bianca_2_r_SkillLogic.cs" t="Include" />
+                <e p="Bianca_3_l_SkillLogic.cs" t="Include" />
+                <e p="Bianca_3_r_SkillLogic.cs" t="Include" />
+                <e p="Bianca_B8_SkillLogic.cs" t="Include" />
+                <e p="Bianca_ChewingTrap_SkillLogic.cs" t="Include" />
+                <e p="Bianca_Unique_SkillLogic.cs" t="Include" />
+              </e>
+              <e p="Curi" t="Include">
+                <e p="Curi_0_1_SkillLogic.cs" t="Include" />
+                <e p="Curi_1_l_SkillLogic.cs" t="Include" />
+                <e p="Curi_2_l_SkillLogic.cs" t="Include" />
+                <e p="Curi_3_l_SkillLogic.cs" t="Include" />
+                <e p="Curi_3_r_SkillLogic.cs" t="Include" />
+                <e p="Curi_4_l_SkillLogic.cs" t="Include" />
+                <e p="Curi_4_m_SkillLogic.cs" t="Include" />
+                <e p="Curi_4_r_SkillLogic.cs" t="Include" />
+                <e p="Curi_5_l_SkillLogic.cs" t="Include" />
+                <e p="Curi_6_m_SkillLogic.cs" t="Include" />
+                <e p="Curi_6_r_SkillLogic.cs" t="Include" />
+                <e p="Curi_7_l_SkillLogic.cs" t="Include" />
+                <e p="Curi_8_m_SkillLogic.cs" t="Include" />
+                <e p="Curi_B15_SkillLogic.cs" t="Include" />
+                <e p="Curi_B8_SkillLogic.cs" t="Include" />
+                <e p="Curi_C43_SkillLogic.cs" t="Include" />
+                <e p="Curi_FlammableAttachment_SkillLogic.cs" t="Include" />
+              </e>
+              <e p="Darkenir" t="Include">
+                <e p="Darkenir_1_l_SkillLogic.cs" t="Include" />
+                <e p="Darkenir_2_m_SkillLogic.cs" t="Include" />
+                <e p="Darkenir_2_r_SkillLogic.cs" t="Include" />
+                <e p="Darkenir_3_m_SkillLogic.cs" t="Include" />
+                <e p="Darkenir_3_r_SkillLogic.cs" t="Include" />
+                <e p="Darkenir_A8_SkillLogic.cs" t="Include" />
+                <e p="Darkenir_EtherShot_SkillLogic.cs" t="Include" />
+                <e p="Darkenir_Unique_SkillLogic.cs" t="Include" />
+              </e>
+              <e p="Deus" t="Include">
+                <e p="Deus_0_1_SkillLogic.cs" t="Include" />
+                <e p="Deus_1_l_SkillLogic.cs" t="Include" />
+                <e p="Deus_1_m_SkillLogic.cs" t="Include" />
+                <e p="Deus_1_r_SkillLogic.cs" t="Include" />
+                <e p="Deus_2_m_SkillLogic.cs" t="Include" />
+                <e p="Deus_2_r_SkillLogic.cs" t="Include" />
+                <e p="Deus_3_m_SkillLogic.cs" t="Include" />
+              </e>
+              <e p="Eren" t="Include">
+                <e p="Eren_0_1_SkillLogic.cs" t="Include" />
+                <e p="Eren_2_l_SkillLogic.cs" t="Include" />
+                <e p="Eren_2_r_SkillLogic.cs" t="Include" />
+                <e p="Eren_3_l_SkillLogic.cs" t="Include" />
+                <e p="Eren_3_m_SkillLogic.cs" t="Include" />
+                <e p="Eren_5_l_SkillLogic.cs" t="Include" />
+                <e p="Eren_5_m_SkillLogic.cs" t="Include" />
+                <e p="Eren_6_m_SkillLogic.cs" t="Include" />
+                <e p="Eren_6_r_SkillLogic.cs" t="Include" />
+                <e p="Eren_7_l_SkillLogic.cs" t="Include" />
+                <e p="Eren_7_r_SkillLogic.cs" t="Include" />
+                <e p="Eren_C1_SkillLogic.cs" t="Include" />
+                <e p="Eren_DarkArrow_SkillLogic.cs" t="Include" />
+              </e>
+              <e p="Eugene" t="Include">
+                <e p="Eugene_1_l_SkillLogic.cs" t="Include" />
+                <e p="Eugene_2_r_SkillLogic.cs" t="Include" />
+                <e p="Eugene_3_m_SkillLogic.cs" t="Include" />
+                <e p="Eugene_3_r_SkillLogic.cs" t="Include" />
+                <e p="Eugene_4_l_SkillLogic.cs" t="Include" />
+                <e p="Eugene_4_m_SkillLogic.cs" t="Include" />
+                <e p="Eugene_5_l_SkillLogic.cs" t="Include" />
+                <e p="Eugene_5_m_SkillLogic.cs" t="Include" />
+                <e p="Eugene_6_r_SkillLogic.cs" t="Include" />
+                <e p="Eugene_7_l_SkillLogic.cs" t="Include" />
+                <e p="Eugene_7_r_SkillLogic.cs" t="Include" />
+                <e p="Eugene_8_l_SkillLogic.cs" t="Include" />
+                <e p="Eugene_B50_SkillLogic.cs" t="Include" />
+                <e p="Eugene_B8_SkillLogic.cs" t="Include" />
+                <e p="Eugene_P0_SkillLogic.cs" t="Include" />
+              </e>
+              <e p="Grenev" t="Include">
+                <e p="Grenev_1_l_SkillLogic.cs" t="Include" />
+                <e p="Grenev_1_r_SkillLogic.cs" t="Include" />
+                <e p="Grenev_2_l_SkillLogic.cs" t="Include" />
+                <e p="Grenev_2_r_SkillLogic.cs" t="Include" />
+                <e p="Grenev_3_m_SkillLogic.cs" t="Include" />
+                <e p="Grenev_3_r_SkillLogic.cs" t="Include" />
+                <e p="Grenev_4_l_SkillLogic.cs" t="Include" />
+                <e p="Grenev_5_l_SkillLogic.cs" t="Include" />
+                <e p="Grenev_5_m_SkillLogic.cs" t="Include" />
+                <e p="Grenev_6_m_SkillLogic.cs" t="Include" />
+                <e p="Grenev_6_r_SkillLogic.cs" t="Include" />
+                <e p="Grenev_7_l_SkillLogic.cs" t="Include" />
+                <e p="Grenev_7_m_SkillLogic.cs" t="Include" />
+                <e p="Grenev_7_r_SkillLogic.cs" t="Include" />
+                <e p="Grenev_8_l_SkillLogic.cs" t="Include" />
+                <e p="Grenev_A15_SkillLogic.cs" t="Include" />
+                <e p="Grenev_B1_SkillLogic.cs" t="Include" />
+                <e p="Grenev_P0_SkillLogic.cs" t="Include" />
+              </e>
+              <e p="IgnoreRestrictionSkillLogic.cs" t="Include" />
+              <e p="Json" t="Include">
+                <e p="Json_2_m_SkillLogic.cs" t="Include" />
+                <e p="Json_2_r_SkillLogic.cs" t="Include" />
+                <e p="Json_3_l_SkillLogic.cs" t="Include" />
+                <e p="Json_Dagger_SkillLogic.cs" t="Include" />
+                <e p="Json_Shadow_SkillLogic.cs" t="Include" />
+                <e p="Json_Unique_SkillLogic.cs" t="Include" />
+                <e p="Json_WindDivision_SkillLogic.cs" t="Include" />
+              </e>
+              <e p="Karldrich" t="Include">
+                <e p="Karldrich_0_1_SkillLogic.cs" t="Include" />
+                <e p="Karldrich_1_l_SkillLogic.cs" t="Include" />
+                <e p="Karldrich_1_r_SkillLogic.cs" t="Include" />
+                <e p="Karldrich_2_m_SkillLogic.cs" t="Include" />
+                <e p="Karldrich_2_r_SkillLogic.cs" t="Include" />
+                <e p="Karldrich_3_m_SkillLogic.cs" t="Include" />
+                <e p="Karldrich_LeftWing_SkillLogic.cs" t="Include" />
+              </e>
+              <e p="Kashasty" t="Include">
+                <e p="Kashasty_3_l_SkillLogic.cs" t="Include" />
+                <e p="Kashasty_B15_SkillLogic.cs" t="Include" />
+                <e p="Kashasty_B8_SkillLogic.cs" t="Include" />
+                <e p="Kashasty_C1_SkillLogic.cs" t="Include" />
+                <e p="Kashasty_C36_SkillLogic.cs" t="Include" />
+                <e p="Kashasty_DoubleShot_SkillLogic.cs" t="Include" />
+                <e p="Kashasty_Scanner_SkillLogic.cs" t="Include" />
+                <e p="Kashasty_Unique_SkillLogic.cs" t="Include" />
+              </e>
+              <e p="Lenien" t="Include">
+                <e p="Lenien_1_m_SkillLogic.cs" t="Include" />
+                <e p="Lenien_2_r_SkillLogic.cs" t="Include" />
+                <e p="Lenien_5_l_SkillLogic.cs" t="Include" />
+                <e p="Lenien_5_m_SkillLogic.cs" t="Include" />
+                <e p="Lenien_5_r_SkillLogic.cs" t="Include" />
+                <e p="Lenien_6_l_SkillLogic.cs" t="Include" />
+                <e p="Lenien_7_l_SkillLogic.cs" t="Include" />
+                <e p="Lenien_A1_SkillLogic.cs" t="Include" />
+                <e p="Lenien_B8_SkillLogic.cs" t="Include" />
+                <e p="Lenien_C1_SkillLogic.cs" t="Include" />
+                <e p="Lenien_Rod_SkillLogic.cs" t="Include" />
+                <e p="Lenien_Static_SkillLogic.cs" t="Include" />
+                <e p="Lenien_Unique_SkillLogic.cs" t="Include" />
+              </e>
+              <e p="ListPassiveSkillLogic.cs" t="Include" />
+              <e p="Lucius" t="Include">
+                <e p="Lucius_2_m_SkillLogic.cs" t="Include" />
+                <e p="Lucius_A20_SkillLogic.cs" t="Include" />
+                <e p="Lucius_B10_SkillLogic.cs" t="Include" />
+                <e p="Lucius_BlueSlash_SkillLogic.cs" t="Include" />
+                <e p="Lucius_C17_SkillLogic.cs" t="Include" />
+                <e p="Lucius_C1_SkillLogic.cs" t="Include" />
+                <e p="Lucius_Intuition_SkillLogic.cs" t="Include" />
+                <e p="Lucius_Unique_SkillLogic.cs" t="Include" />
+              </e>
+              <e p="Luvericha" t="Include">
+                <e p="Luvericha_1_r_SkillLogic.cs" t="Include" />
+                <e p="Luvericha_2_r_SkillLogic.cs" t="Include" />
+                <e p="Luvericha_3_r_SkillLogic.cs" t="Include" />
+                <e p="Luvericha_4_l_SkillLogic.cs" t="Include" />
+                <e p="Luvericha_5_m_SkillLogic.cs" t="Include" />
+                <e p="Luvericha_5_r_SkillLogic.cs" t="Include" />
+                <e p="Luvericha_6_l_SkillLogic.cs" t="Include" />
+                <e p="Luvericha_7_m_SkillLogic.cs" t="Include" />
+                <e p="Luvericha_7_r_SkillLogic.cs" t="Include" />
+                <e p="Luvericha_8_l_SkillLogic.cs" t="Include" />
+                <e p="Luvericha_B15_SkillLogic.cs" t="Include" />
+                <e p="Luvericha_B8_SkillLogic.cs" t="Include" />
+                <e p="Luvericha_C22_SkillLogic.cs" t="Include" />
+                <e p="Luvericha_C50_SkillLogic.cs" t="Include" />
+                <e p="Luvericha_Soul_SkillLogic.cs" t="Include" />
+                <e p="Luvericha_Symphony_SkillLogic.cs" t="Include" />
+                <e p="Luvericha_Unique_SkillLogic.cs" t="Include" />
+              </e>
+              <e p="Noel" t="Include">
+                <e p="Noel_0_l_SkillLogic.cs" t="Include" />
+                <e p="Noel_1_r_SkillLogic.cs" t="Include" />
+                <e p="Noel_2_m_SkillLogic.cs" t="Include" />
+                <e p="Noel_2_r_SkillLogic.cs" t="Include" />
+                <e p="Noel_3_m_SkillLogic.cs" t="Include" />
+                <e p="Noel_3_r_SkillLogic.cs" t="Include" />
+                <e p="Noel_A1_SkillLogic.cs" t="Include" />
+              </e>
+              <e p="Ratice" t="Include">
+                <e p="Ratice_1_l_SkillLogic.cs" t="Include" />
+                <e p="Ratice_1_m_SkillLogic.cs" t="Include" />
+                <e p="Ratice_1_r_SkillLogic.cs" t="Include" />
+                <e p="Ratice_2_l_SkillLogic.cs" t="Include" />
+                <e p="Ratice_2_m_SkillLogic.cs" t="Include" />
+                <e p="Ratice_3_r_SkillLogic.cs" t="Include" />
+                <e p="Ratice_Unique_SkillLogic.cs" t="Include" />
+                <e p="Ratice_Unite_SkillLogic.cs" t="Include" />
+              </e>
+              <e p="Reina" t="Include">
+                <e p="Reina_1_m_SkillLogic.cs" t="Include" />
+                <e p="Reina_2_l_SkillLogic.cs" t="Include" />
+                <e p="Reina_2_m_SkillLogic.cs" t="Include" />
+                <e p="Reina_3_l_SkillLogic.cs" t="Include" />
+                <e p="Reina_3_m_SkillLogic.cs" t="Include" />
+                <e p="Reina_4_m_SkillLogic.cs" t="Include" />
+                <e p="Reina_5_l_SkillLogic.cs" t="Include" />
+                <e p="Reina_5_m_SkillLogic.cs" t="Include" />
+                <e p="Reina_7_m_SkillLogic.cs" t="Include" />
+                <e p="Reina_A1_SkillLogic.cs" t="Include" />
+                <e p="Reina_C15_SkillLogic.cs" t="Include" />
+                <e p="Reina_P0_SkillLogic.cs" t="Include" />
+              </e>
+              <e p="Sepia" t="Include">
+                <e p="Sepia_1_m_SkillLogic.cs" t="Include" />
+                <e p="Sepia_2_m_SkillLogic.cs" t="Include" />
+                <e p="Sepia_A15_SkillLogic.cs" t="Include" />
+                <e p="Sepia_A8_SkillLogic.cs" t="Include" />
+                <e p="Sepia_Blockade_SkillLogic.cs" t="Include" />
+                <e p="Sepia_HalfMoon_SkillLogic.cs" t="Include" />
+                <e p="Sepia_Unique_SkillLogic.cs" t="Include" />
+              </e>
+              <e p="SkillLogicFactory.cs" t="Include" />
+              <e p="Triana" t="Include">
+                <e p="FireSpiritPassive.cs" t="Include" />
+                <e p="Triana_Capture_SkillLogic.cs" t="Include" />
+                <e p="Triana_Crystalize_SkillLogic.cs" t="Include" />
+                <e p="Triana_HeatWave_SkillLogic.cs" t="Include" />
+                <e p="Triana_IceBlade_SkillLogic.cs" t="Include" />
+                <e p="Triana_Passives_SkillLogic.cs" t="Include" />
+              </e>
+              <e p="Yeong" t="Include">
+                <e p="Yeong_0_l_SkillLogic.cs" t="Include" />
+                <e p="Yeong_1_l_SkillLogic.cs" t="Include" />
+                <e p="Yeong_1_r_SkillLogic.cs" t="Include" />
+                <e p="Yeong_2_l_SkillLogic.cs" t="Include" />
+                <e p="Yeong_2_m_SkillLogic.cs" t="Include" />
+                <e p="Yeong_2_r_SkillLogic.cs" t="Include" />
+                <e p="Yeong_3_m_SkillLogic.cs" t="Include" />
+                <e p="Yeong_5_m_SkillLogic.cs" t="Include" />
+                <e p="Yeong_5_r_SkillLogic.cs" t="Include" />
+                <e p="Yeong_6_m_SkillLogic.cs" t="Include" />
+                <e p="Yeong_6_r_SkillLogic.cs" t="Include" />
+                <e p="Yeong_7_r_SkillLogic.cs" t="Include" />
+                <e p="Yeong_HardTarget_SkillLogic.cs" t="Include" />
+              </e>
+            </e>
+            <e p="SkillViewer.cs" t="Include" />
+            <e p="StatusEffect.cs" t="Include" />
+            <e p="StatusEffectInfo.cs" t="Include" />
+            <e p="Tile.cs" t="Include" />
+            <e p="TileInfo.cs" t="Include" />
+            <e p="TileManager.cs" t="Include" />
+            <e p="TileStatusEffect.cs" t="Include" />
+            <e p="TileWithPath.cs" t="Include" />
+            <e p="Trap.cs" t="Include" />
+            <e p="Turn" t="Include">
+              <e p="AI.cs" t="Include" />
+              <e p="ObjectUnitBehaviour.cs" t="Include" />
+              <e p="SkillAndChainStates.cs" t="Include" />
+              <e p="SpecialAIs" t="Include">
+                <e p="NeverMoveAI.cs" t="Include" />
+                <e p="S101_AI_Stel_Elder.cs" t="Include" />
+                <e p="S141_AI_Schmidt.cs" t="Include" />
+                <e p="S161_AI_Citizen.cs" t="Include" />
+                <e p="S161_AI_Monk.cs" t="Include" />
+                <e p="S181_AI_Missionary.cs" t="Include" />
+                <e p="S31_AI_Triana.cs" t="Include" />
+                <e p="S71_AI_Holder.cs" t="Include" />
+                <e p="SpecialAI_Bianca.cs" t="Include" />
+                <e p="Stage_11_AI_Spy.cs" t="Include" />
+              </e>
+            </e>
+            <e p="UI" t="Include">
+              <e p="ActionButton.cs" t="Include" />
+              <e p="APBarPanel" t="Include">
+                <e p="UnitWrapper.cs" t="Include" />
+              </e>
+              <e p="APBarPanel.cs" t="Include" />
+              <e p="ArrowButton.cs" t="Include" />
+              <e p="BattleUIManager.cs" t="Include" />
+              <e p="ConditionPanel.cs" t="Include" />
+              <e p="ConditionText.cs" t="Include" />
+              <e p="DefaultPosition.cs" t="Include" />
+              <e p="LogDisplay.cs" t="Include" />
+              <e p="LogDisplayPanel.cs" t="Include" />
+              <e p="NotImplementedDebugPanel.cs" t="Include" />
+              <e p="OrderPortraitSlot.cs" t="Include" />
+              <e p="SaveNotifier.cs" t="Include" />
+              <e p="SelectDirectionUI.cs" t="Include" />
+              <e p="StatusEffectDisplayPanel.cs" t="Include" />
+              <e p="StatusEffectIcon.cs" t="Include" />
+              <e p="TileViewer.cs" t="Include" />
+              <e p="UIManager.cs" t="Include" />
+              <e p="UnitViewer.cs" t="Include" />
+            </e>
+            <e p="Unit.cs" t="Include" />
+            <e p="UnitGenInfo.cs" t="Include" />
+            <e p="UnitInfo.cs" t="Include" />
+            <e p="UnitManager.cs" t="Include" />
+            <e p="UnitStatusEffect.cs" t="Include" />
+          </e>
+          <e p="Challenge" t="Include">
+            <e p="ArchiveManager.cs" t="Include" />
+          </e>
+          <e p="Dialogue" t="Include">
+            <e p="DialogueData.cs" t="Include" />
+            <e p="DialogueDebugPanel.cs" t="Include" />
+            <e p="DialogueLog.cs" t="Include" />
+            <e p="DialogueManager.cs" t="Include" />
+          </e>
+          <e p="Enums.cs" t="Include" />
+          <e p="EtherText.cs" t="Include" />
+          <e p="Formula.cs" t="Include" />
+          <e p="GameData.cs" t="Include" />
+          <e p="Graphic" t="Include">
+            <e p="TextMeshOutline.cs" t="Include" />
+          </e>
+          <e p="HighlightBorder.cs" t="Include" />
+          <e p="LoadingScreen.cs" t="Include" />
+          <e p="LogTracker.cs" t="Include" />
+          <e p="Magnifier.cs" t="Include" />
+          <e p="MapBriefingManager.cs" t="Include" />
+          <e p="MenuButton.cs" t="Include" />
+          <e p="Methods.cs" t="Include" />
+          <e p="Parser.cs" t="Include" />
+          <e p="PlacedUnitCheckPanel.cs" t="Include" />
+          <e p="RaycastUI.cs" t="Include" />
+          <e p="ReadyManager.cs" t="Include" />
+          <e p="RectPosition.cs" t="Include" />
+          <e p="RightScreen_BattleReady.cs" t="Include" />
+          <e p="Save" t="Include">
+            <e p="PlayLog.cs" t="Include" />
+            <e p="SaveDataPath.cs" t="Include" />
+            <e p="SaveFile.cs" t="Include" />
+          </e>
+          <e p="SaveSlotPanel.cs" t="Include" />
+          <e p="SceneLoader.cs" t="Include" />
+          <e p="SelectableUnitCounter.cs" t="Include" />
+          <e p="Setting.cs" t="Include" />
+          <e p="SkillInfoButton.cs" t="Include" />
+          <e p="SkillSelectButton.cs" t="Include" />
+          <e p="SoundManager.cs" t="Include" />
+          <e p="SteamAchievementManager.cs" t="Include" />
+          <e p="Steamworks.NET" t="Include">
+            <e p="SteamManager.cs" t="Include" />
+          </e>
+          <e p="StringParser.cs" t="Include" />
+          <e p="Test.cs" t="Include" />
+          <e p="TileInBriefing.cs" t="Include" />
+          <e p="TimeCheck.cs" t="Include" />
+          <e p="TitleManager.cs" t="Include" />
+          <e p="TutorialController.cs" t="Include" />
+          <e p="TutorialReviewPanel.cs" t="Include" />
+          <e p="TutorialScenario.cs" t="Include" />
+          <e p="UI" t="Include">
+            <e p="AvailableUnitButton.cs" t="Include" />
+            <e p="BattleWarning.cs" t="Include" />
+            <e p="BGLoader.cs" t="Include" />
+            <e p="BlinkingObject.cs" t="Include" />
+            <e p="ClickEffect.cs" t="Include" />
+            <e p="CustomNumberText.cs" t="Include" />
+            <e p="CustomUIText.cs" t="Include" />
+            <e p="CustomWorldText.cs" t="Include" />
+            <e p="DetailInfoPanel.cs" t="Include" />
+            <e p="Editor" t="Include">
+              <e p="CustomUITextInspector.cs" t="Include" />
+            </e>
+            <e p="EnterToClickButton.cs" t="Include" />
+            <e p="EraLocation.cs" t="Include" />
+            <e p="EraManager.cs" t="Include" />
+            <e p="EraPortrait.cs" t="Include" />
+            <e p="EraTextManager.cs" t="Include" />
+            <e p="Glossary.cs" t="Include" />
+            <e p="Gradient.cs" t="Include" />
+            <e p="MouseOverUI.cs" t="Include" />
+            <e p="ResultPanel.cs" t="Include" />
+            <e p="ShowKeywordExplain.cs" t="Include" />
+            <e p="SimpleButton.cs" t="Include" />
+            <e p="StandardPointPanel.cs" t="Include" />
+            <e p="TemporaryObject.cs" t="Include" />
+            <e p="ToggleImage.cs" t="Include" />
+            <e p="TogglePosition.cs" t="Include" />
+            <e p="TranslateUI.cs" t="Include" />
+            <e p="TutorialManager.cs" t="Include" />
+            <e p="UIStack.cs" t="Include" />
+            <e p="Warning.cs" t="Include" />
+          </e>
+          <e p="UnitInfoExplain.cs" t="Include" />
+          <e p="Util" t="Include">
+            <e p="CameraMover.cs" t="Include" />
+            <e p="Configuration.cs" t="Include" />
+            <e p="Dictionary_extension.cs" t="Include" />
+            <e p="DontDestroyOnLoad.cs" t="Include" />
+            <e p="SortHelper.cs" t="Include" />
+            <e p="TimeStopper.cs" t="Include" />
+          </e>
+          <e p="Utility.cs" t="Include" />
+        </e>
+        <e p="SuperScrollView" t="Include">
+          <e p="Demo" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="BottomToTopDemoScript.cs" t="Include" />
+              <e p="ChangeItemHeightDemoScript.cs" t="Include" />
+              <e p="ChatMsgDataSourceMgr.cs" t="Include" />
+              <e p="ChatMsgListViewDemoScript.cs" t="Include" />
+              <e p="ClickAndLoadMoreDemoScript.cs" t="Include" />
+              <e p="DataSourceMgr.cs" t="Include" />
+              <e p="DeleteItemDemoScript.cs" t="Include" />
+              <e p="DragChangSizeScript.cs" t="Include" />
+              <e p="FPSDisplay.cs" t="Include" />
+              <e p="GridViewDeleteItemDemoScript.cs" t="Include" />
+              <e p="GridViewDemoScript.cs" t="Include" />
+              <e p="GridViewSampleDemo.cs" t="Include" />
+              <e p="HorizontalGalleryDemoScript.cs" t="Include" />
+              <e p="LeftToRightDemoScript.cs" t="Include" />
+              <e p="ListItem0.cs" t="Include" />
+              <e p="ListItem1.cs" t="Include" />
+              <e p="ListItem10.cs" t="Include" />
+              <e p="ListItem11.cs" t="Include" />
+              <e p="ListItem12.cs" t="Include" />
+              <e p="ListItem13.cs" t="Include" />
+              <e p="ListItem14.cs" t="Include" />
+              <e p="ListItem15.cs" t="Include" />
+              <e p="ListItem16.cs" t="Include" />
+              <e p="ListItem2.cs" t="Include" />
+              <e p="ListItem3.cs" t="Include" />
+              <e p="ListItem4.cs" t="Include" />
+              <e p="ListItem5.cs" t="Include" />
+              <e p="ListItem6.cs" t="Include" />
+              <e p="ListItem7.cs" t="Include" />
+              <e p="ListItem8.cs" t="Include" />
+              <e p="ListItem9.cs" t="Include" />
+              <e p="MenuSceneScript.cs" t="Include" />
+              <e p="PageViewDemoScript.cs" t="Include" />
+              <e p="PullToLoadMoreDemoScript.cs" t="Include" />
+              <e p="PullToRefreshAndLoadMoreDemoScript.cs" t="Include" />
+              <e p="PullToRefreshDemoScript.cs" t="Include" />
+              <e p="ResManager.cs" t="Include" />
+              <e p="ResponsiveGridViewDemoScript.cs" t="Include" />
+              <e p="RightToLeftDemoScript.cs" t="Include" />
+              <e p="RightToLeftPullToLoadMoreDemoScript.cs" t="Include" />
+              <e p="RotateScript.cs" t="Include" />
+              <e p="SpinDatePickerDemoScript.cs" t="Include" />
+              <e p="TopToBottomDemoScript.cs" t="Include" />
+              <e p="TreeViewDataSourceMgr.cs" t="Include" />
+              <e p="TreeViewDemoScript.cs" t="Include" />
+              <e p="TreeViewItemCountMgr.cs" t="Include" />
+              <e p="TreeViewWithStickyHeadDemoScript.cs" t="Include" />
+              <e p="VerticalGalleryDemoScript.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Editor" t="Include">
+            <e p="LoopListViewEditor2.cs" t="Include" />
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="ClickEventListener.cs" t="Include" />
+            <e p="ItemPosMgr.cs" t="Include" />
+            <e p="LoopListView2.cs" t="Include" />
+            <e p="LoopListViewItem2.cs" t="Include" />
+            <e p="Version 2.2.txt" t="Include" />
+          </e>
+        </e>
+        <e p="TextMesh Pro" t="Include">
+          <e p="Resources" t="Include">
+            <e p="LineBreaking Following Characters.txt" t="Include" />
+            <e p="LineBreaking Leading Characters.txt" t="Include" />
+            <e p="Shaders" t="Include">
+              <e p="TMP_Bitmap-Mobile.shader" t="Include" />
+              <e p="TMP_Bitmap.shader" t="Include" />
+              <e p="TMP_SDF Overlay.shader" t="Include" />
+              <e p="TMP_SDF-Mobile Masking.shader" t="Include" />
+              <e p="TMP_SDF-Mobile Overlay.shader" t="Include" />
+              <e p="TMP_SDF-Mobile.shader" t="Include" />
+              <e p="TMP_SDF-Surface-Mobile.shader" t="Include" />
+              <e p="TMP_SDF-Surface.shader" t="Include" />
+              <e p="TMP_SDF.shader" t="Include" />
+              <e p="TMP_Sprite.shader" t="Include" />
+              <e p="TMPro.cginc" t="Include" />
+              <e p="TMPro_Properties.cginc" t="Include" />
+              <e p="TMPro_Surface.cginc" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="VSCode" t="Include">
+          <e p="Plugins" t="Include">
+            <e p="Editor" t="Include">
+              <e p="VSCode.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="Library" t="ExcludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="ParadiseLost.sln" t="IncludeFlat" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
+    </e>
+  </component>
+</project>

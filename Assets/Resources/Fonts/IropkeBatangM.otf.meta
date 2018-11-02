@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 3e0ab2a4ba33049289dd716c2b6f5fe3
+timeCreated: 1518686671
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Iropke Batang OTF
+  fontNames:
+  - Iropke Batang OTF
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

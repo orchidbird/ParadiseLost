@@ -1,0 +1,83 @@
+﻿Scene#2-1			
+*	BG	MeetingRoom	
+*	BGM	BGM_Normal	
+*	Glos	친위국 집행부1
+blank	-	<color=yellow>518 IC, 1/19, <color=red>Executive Branch</color> Meeting Room</color>
+noel	-	Mission failed.
+blank	-	Not only have we missed many of them, ^but also, our main goal, to seize Lucius Haskell and Reina Pintos, has failed.
+sepia	-	……It is undeniable that the operation ended up as a terrible failure.^There can be no excuse.
+arcadia	-	It is fortunate to capture a spySword resource, though.
+darkenir	-	Underestimation has contributed to our failure. We could not take the possibility of their escape with only two persons into consideration. 
+grenev	-	Hmph, that's because of the long-lasting peace. You all went dull after idling around.
+bianca	shout	Still! How can we end up capturing only a few,^with all those forces and preparation and ambush?!
+noel	-	(……Headache again.^My stamina is no longer like before, this may be a sign of my aging.)
+noel	-	Analyzing attributes is important, but we have not gathered here for such purpose.
+*	Glos	집행관1	
+bianca	yell	Yes!! Of course!^Then, what shall we <color=red>Executors</color> do?
+noel	-	An investigation shall begin on the estate of Pintos tomorrow.^The goal is to acquire the body of Monad his majesty.
+noel	-	It is at their home ground. Make sure that you are fully prepared.
+sepia	-	Your wish shall have every attention of ours.
+noel	-	The emperor his majesty has also ordered to capture those escaped…….
+bianca	yell	Me! I'll go! I am going! Rapid movements and tracking traces are my specialities!
+darkenir	-	That sure is reasonable…… but will one person be sufficient for the job?
+darkenir	-	Failures must be fully analyzed and reflections must be applied for the next move. Fangs of foes are sharper than our prediction.
+bianca	smile	They are injured escapees! Plus, their numbers are few.
+json	-	Don't forget that your forces are weighted towards tracking and support.^If you find the target, it would be better to contact nearby forces for a joint attack.
+blank	-	Though usually speechless, he has advised Bianca at the right time.^Now we don't have to further persuade her.
+darkenir	-	The idea is sure brilliant. That will be sufficient. 
+noel	-	Our current priority is to incapacitate their leaders,^Lucius Haskell and Reina Pintos.
+noel	-	The remaining forces will collapse naturally without leaders.
+arcadia	-	If they split their ways, Bianca will not be able to chase down both Then.
+arcadia	-	Even if they are together, it will be tough for Bianca's forces to defeat them both.
+sepia	-	Which means that at least one more person should join the mission:^one responsible for Reina Pintos, and the other for Lucius Haskell.
+json	-	……I will participate in the mission.
+*	Glos	제이선 어셈블리1	
+noel	-	<color=red>You</color>?
+blank	-	It is rare of him to show his enthusiasm. It is a good news for an administrator, nonetheless.
+noel	-	Then, I shall report the participants to the Director.^You shall start preparing for your mission, Bianca and Jason.
+*	FO		
+*	BG	Garden	
+*	BGM	Epic_Monarch	
+*	FI		
+blank	-	<color=yellow>518 IC, 1/20, Estate of Pintos</color>
+noel	-	(Haskell, Pintos…… Losing everything upon greed over more power despite their wealth, how foolish one's desire can be.)
+blank	-	Bianca and Jason have led their troops to the tracking mission,^and the rest of the Headquarters have arrived at the Pintos estate to retrieve the body of Monad.
+noel	-	(Shall eternal peace brought onto this world, my God.)
+darkenir	-	Final check complete, everything is ready.
+noel	-	Capture the servants rather than kill.^However, summary conviction is allowed on those who resist.
+blank	-	Sacrifice should be minimized, no matter which side.^However, the Executors and agents' safety should be the top priority.
+grenev	-	Mission understood! 
+*	FO		
+*	BG	PartyRoom	
+*	BGM	BGM_Tense
+*	FI		
+blank	-	Stepping into the mansion with the signal,^a whispering voice stirred Noel's head.
+*	SE	Whisper	
+?monad	-	(You, seem to possess special powers.)
+noel	surprised	Who is that!
+?monad	-	(The mundanes are not allowed to hear my voice.)
+darkenir	-	What has happened?
+noel	-	……nothing, nothing.
+*	SE	Whisper
+*	Disapp	right	
+?monad	-	(Power so strong to block my manipulation…… an authorized on to negotiate with me on equal terms.)
+?monad	-	(Your power should have been mine. You shall devote your power to my hand, and in return your grants shall flourish.)
+*	SE	Whisper
+?monad	-	(You shall defeat senility, you shall remain strong, you shall gain brightness to know everything.)
+*	Glos	신성력1	
+noel	-	(Special power? You mean <color=red>the Power of God</color>?)
+?monad	-	(Power of God……? Ah, yes. That's what Aquinas' fraud have said.)
+noel	-	(How dare you blaspheme Apostle Aquinas.)
+?monad	-	(His gibberish still holds validity after five hundred years?^Hah, I should have uprooted his cult.)
+noel	-	(……being an arrogant heretic, who are you?)
+monad	-	(Monad is my name, the name with the power which you call "the Power of God".)
+noel	surprised	(Monad?! You?)
+monad	-	(Come to the underground dungeon, where what you seek lies silent.)
+blank	-	Is he the founder of this Empire, now distorted by evil experiments of rebels, who have remained in this world for five hundred years?
+noel	-	(……I must refuse. Now, requiescat in pace. )
+monad	-	(Ridiculous.)
+*	SE	Whisper	
+blank	-	That was his final word. 
+*	SE	PullSword	
+blank	-	At the same time, the maids drew out their weapons and started advancing towards the Executors. 
+*	Battle	21

@@ -1,0 +1,67 @@
+공격력	<sprite=0>공격력
+Power	<sprite=0>Power
+방어력	<sprite=1><color=green>방어력</color>
+Defense	<sprite=1><color=green>Defense</color>
+저항력	<sprite=2><color=green>저항력</color>
+Resistance	<sprite=2><color=green>Resistance</color>
+민첩성	<color=#BE81F7>민첩성</color>
+Agility	<color=#BE81F7>Agility</color>
+행동력	<color=#BE81F7>행동력</color>
+AP	<color=#BE81F7>AP</color>
+의지	<sprite=3><color=#00FFFF>의지</color>
+Will	<sprite=3><color=#00FFFF>Will</color>
+불 속성	<sprite=4><color=red>불</color> 속성
+Fire element	<sprite=4><color=red>Fire</color> element
+물 속성	<sprite=5><color=#00FFFF>물</color> 속성
+Water element	<sprite=5><color=#00FFFF>Water</color> element
+나무 속성	<sprite=6><color=green>나무</color> 속성
+Plant element	<sprite=6><color=green>Plant</color> element
+금속 속성	<sprite=7><color=#AAAAAA>금속</color> 속성
+Metal element	<sprite=7><color=#AAAAAA>Metal</color> element
+자동형	<sprite=8>자동형
+Automatic type	<sprite=8>Automatic type
+지정형	<sprite=9>지정형
+Point type	<sprite=9>Point type
+돌진	<color=#92B4F2>돌진</color>
+Charge	<color=#92B4F2>Charge</color>
+밀기	<color=#92B4F2>밀기</color>
+Push	<color=#92B4F2>Push</color>
+당기기	<color=#92B4F2>당기기</color>
+Pull	<color=#92B4F2>Pull</color>
+속박	<sprite=10><color=#b2ff66>속박</color>
+Bind	<sprite=10><color=#b2ff66>Bind</color>
+침묵	<sprite=11><color=#b2ff66>침묵</color>
+Silence	<sprite=11><color=#b2ff66>Silence</color>
+기절	<sprite=12><color=#b2ff66>기절</color>
+Faint	<sprite=12><color=#b2ff66>Faint</color>
+도발	<sprite=13><color=#b2ff66>도발</color>
+Taunt	<sprite=13><color=#b2ff66>Taunt</color>
+최대 체력	<sprite=14><color=green>최대 체력</color>
+Max HP	<sprite=14><color=green>Max HP</color>
+현재 체력	<color=green>현재 체력</color>
+Current HP	<color=green>Current HP</color>
+강타	<color=#b2ff66>강타</color>
+Smite	<color=#b2ff66>Smite</color>
+보호막	<color=#b2ff66>보호막</color>
+Shield	<color=#b2ff66>Shield</color>
+조작 제한	<color=#b2ff66>조작 제한</color>
+Restrition	<color=#b2ff66>Restrition</color>
+과부하	<color=#BE81F7>과부하</color>
+Overload	<color=#BE81F7>Overload</color>
+면역	<color=#BE81F7>면역</color>
+Immune	<color=#BE81F7>Immune</color>
+피해량	<color=red>피해량</color>
+피해	<color=red>피해</color>
+Damage	<color=red>Damage</color>
+지속 피해	<color=red>지속 피해</color>
+DOT	<color=red>DOT</color>
+피해 추가	<color=red>피해 추가</color>
+Additive damage	<color=red>Additive Damage</color>
+피해 감소	<color=red>피해 감소</color>
+Damage reduction	<color=red>피해 감소</color>
+회복량	<color=green>회복량</color>
+Healing	<color=green>Healing</color>
+지속 회복	<color=green>지속 회복</color>
+HOT	<color=green>HOT</color>
+회복 추가	<color=green>회복 추가</color>
+Additive heal	<color=green>Additive heal</color>

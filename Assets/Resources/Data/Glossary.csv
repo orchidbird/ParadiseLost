@@ -1,0 +1,77 @@
+﻿Type	Index	Name	Level1	Level2	Level3
+Person	0	툼나	유니티 제국의 황제. 황권을 견제하기 위해 만들어진 귀족회마저 자기편으로 장악하여 명실상부한 절대권력을 행사하고 있으며, 이 과정에서 협력하지 않은 하스켈과 핀토스 두 가문에 대해서는 불편한 관계가 되었다. 전쟁을 준비 중이라는 소문이 돌고 있다.	유니티 제국의 황제. 황권을 견제하기 위해 만들어진 귀족회마저 자기편으로 장악하여 명실상부한 절대권력을 행사하고 있다고 알려져 있지만, 실제로는 정신이 불안정하여 어셈블리 자작가에 의존하며 조종받고 있으며 그들의 뜻에 따라 전쟁을 추진하고 있다.
+Person	0	Tumna	Emperor of Unity Empire. The noble society, which was created to constrain power of emperor, was ruled by his own side and now he has absolute power. In this process, it became an inconvenient relationship between Haskell and Pintos. There is a rumor that he is preparing for a war.	Emperor of Unity Empire. Although he is known as taking control of the nobles society. But actually his mind is unstable, dependent on viscount clan of Assembly, and he is pursuing the war according to their will.
+Person	1	제이선 어셈블리	친위국 집행관 중 한 명. 말수가 적고 평소에는 시키는 역할만 수행하면서 임무에 소극적인 태도를 보이고 있었지만, 도망친 적을 추적하는 임무를 자진해서 맡았다.
+Person	1	Jason Assembly	One of the Executors of the bodyguard agency. Although he had few words and usually had a passive attitude while performing his role as a facilitator, he voluntarily assumed the task of tracking the escaped enemy.
+Person	2	모나드	유니티 제국을 세운 최초의 황제. 상징적인 존재로 여겨진다. 그의 능력에 대해서는 믿기 힘든 전설이 셀 수 없이 많지만, 어디까지가 진실이고 어디까지가 과장인지는 아무도 모른다.
+Person	2	Monad	The first emperor to set up the Unity empire. He is considered to be symbolic. There are countless incredible legends about his power, but no one knows what is real and what is exaggerated.
+Person	3	루시안 하스켈	루키어스 하스켈의 동생. 3년 전 핀토스 공작가에서 초대한 연회에 참석했다가 목숨을 잃었다.	루키어스 하스켈의 동생. 하스켈 공작가에서 강조하는 검과 수련보다는 사교나 예술 등을 좋아하고 어려운 상황에 처한 평민들을 자주 도와줘서 순박한 성격이라는 평이 많았지만, 3년 전 핀토스 공작가에서 초대한 연회에 참석했다가 목숨을 잃었다.
+Person	3	Lucian Haskell	Little brother of Lucius Haskell. Three years ago, he attended a banquet invited by Pintos and lost his life.	Little brother of Lucius Haskell. He liked society and art rather than the core value of Haskell, swordmanship and training, and often helped the common people in difficult situations. But three years ago, he attended a banquet invited by Pintos and lost his life.
+Person	4	아론	레이나 핀토스의 사촌. 전 대표의 친아들이지만 대표 자리를 이어받지 못해 불만을 품고 있다.	-
+Person	4	Aron	Reina Pintos' cousin. He is dissatisfied with the fact that he didn't take over the representative seat even though he was the former president's son.	-
+Person	5	레이나 닐 핀토스	핀토스 가문의 현 대표.	-	
+Person	5	Reina Nil Pintos	핀토스 가문의 현 대표.	-	
+Person	6	영	핀토스 공작가에 자객으로 보내졌지만 실패하고, 레이나 핀토스의 제안을 받아들여 신변 보장을 조건으로 그의 경호를 담당하는 가신이 되었다.	-
+Person	6	Yeong	She was sent to Pintos Peacock as an assassin, but failed. Then she accepted the suggestion of Reina Pintos and became a vassal of her guard, subject to personal guarantees.	-
+Person	7	카샤스티 루나 러브레이스	러브레이스 가의 후계자로서 대표 자리를 이어받을 예정이었지만 스스로 거절하고 핀토스의 가신이 되었다.	-	
+Person	7	카샤스티 루나 러브레이스	러브레이스 가의 후계자로서 대표 자리를 이어받을 예정이었지만 스스로 거절하고 핀토스의 가신이 되었다.	-	
+Person	8	트리아나 페르단트	핀토스 공작가의 가신 중 하나. 핀토스 가문에 오기 직전 불의의 사고에 휘말려 위축되어 있다.	핀토스 공작가의 가신 중 하나. 스스로 행동하는 경우는 거의 없지만 정령의 힘을 사용할 수 있다.
+Person	8	트리아나 페르단트	핀토스 공작가의 가신 중 하나. 핀토스 가문에 오기 직전 불의의 사고에 휘말려 위축되어 있다.	핀토스 공작가의 가신 중 하나. 스스로 행동하는 경우는 거의 없지만 정령의 힘을 사용할 수 있다.
+Person	9	루키어스 하스켈	하스켈 공작가의 현 대표로 제국에서 으뜸가는 검술로 유명하다. 루시안 하스켈의 사망 후, 남몰래 황제에게 핀토스 공작가를 고발했다.
+Person	9	Lucius Haskell	Known as the foremost swordsman in the empire. After the death of Lucian Haskell, he secretly accused Pintos duke.
+Person	10	큐리 디아즈	루키어스 하스켈의 지지자인 슈미트 디아즈의 딸. 어릴 때 돈을 노린 괴한에게 유괴되어 루키어스 하스켈에게 구출된 적이 있다.
+Person	10	Curi Diaz	The daughter of Schmidt Diaz, Lucius Haskell's supporter. She was kidnapped by an aggressor who had wanted schmidt's money, and was rescued by Lucius Haskell.
+Person	11	에렌 오블리비언	선대 대표 시절부터 있던 핀토스의 가신. 그럼에도 불구하고 성년식조차 치르지 않은 듯한 겉모습은 본인 외에 누구도 모르는 수수께끼이며, 외부인에게는 실제 나이를 속이고 있다.	-
+Person	11	에렌 오블리비언	선대 대표 시절부터 있던 핀토스의 가신. 그럼에도 불구하고 성년식조차 치르지 않은 듯한 겉모습은 본인 외에 누구도 모르는 수수께끼이며, 외부인에게는 실제 나이를 속이고 있다.	-
+Person	12	셀다	툼나 황제의 동생. 황위 계승 경쟁에서 밀려나 성도에서 은거하고 있다.	-	
+Person	12	셀다	툼나 황제의 동생. 황위 계승 경쟁에서 밀려나 성도에서 은거하고 있다.	-	
+Group	0	유니티 제국	대륙의 서쪽 절반 정도를 차지하고 있으며, 다른 모든 나라의 총합을 상회하는 규모와 힘을 보유하고 있는 강대국이자 이야기의 주요 무대. 과거에는 귀족이 영지를 직접 다스렸으나, 중앙 집권 체제가 완성되면서 모든 귀족은 영지를 반납하고 해당 지역의 세금 중 일부만 수취하고 있다. 지금은 황실에서 파견한 지방관이 통치를 전담한다.
+Group	0	Unity empire	The main stage of the story. It occupies about half of the western part of the continent, and has a size and power exceeding the sum of all other countries. Nobles ruled their lands directly in the past, but with the completion of the central administration system, all nobles returned their estates and received only some of their taxes. Now, the provincial office sent from the imperial office is dedicated to the government.
+Group	1	핀토스 공작가	유니티 제국의 양대 가문 중 하나. 제국에서 가장 뛰어난 마술사들을 배출하고 있다.	유니티 제국의 양대 가문 중 하나. 대대로 제국에서 가장 뛰어난 마술사를 배출해 왔지만, 알려지지 않은 에테르 기술로 만들어낸 사병을 숨기고 있었다.	
+Group	1	Duke clan of Pintos	One of the most honorable Two Clans in Unity Empire. They emit Greatest magicians for the empire.	One of the most honorable Two Clans in Unity Empire. They provided Greatest magicians for the empire, but were hiding a soldier made with unknown ether technology.
+Group	2	하스켈 공작가	유니티 제국의 양대 가문 중 하나로, 고유의 검술을 바탕으로 제국에서 가장 뛰어난 전사들을 배출하고 있다. 3년 전 발생한 불의의 사건으로 인해 핀토스와의 관계를 단절하였으며, 황제와도 불편한 관계를 유지하고 있다.	유니티 제국의 양대 가문 중 하나로, 고유의 검술을 바탕으로 제국에서 가장 뛰어난 전사들을 배출하고 있다. 3년 전 발생한 불의의 사건으로 인해 핀토스와의 관계를 단절하였으며, 황제와도 불편한 관계를 유지하고 있다. 수련과 노력을 중시하기 때문에, 선천적으로 얻을 수 있는 이능력은 정도가 아니라며 배척하고 있다.
+Group	2	Duke clan of Haskell	One of the most honorable Two Clans in Unity Empire. Based on its own swordsmanship, they emit the best warriors in the empire. Due to the incident that occurred three years ago, the relationship with Pintos was cut off, and the relationship with the emperor was also inconvenient.	One of the most honorable Two Clans in Unity Empire. Based on its own swordsmanship, they emit the best warriors in the empire. Due to the incident that occurred three years ago, the relationship with Pintos was cut off, and the relationship with the emperor was also inconvenient. Because it attaches importance to effort, they reject to use talent.
+Group	3	친위국	툼나 황제가 설립한 친위대로 시작했으나 점차 권한이 확대되어 지금은 대부분의 실권을 차지하고 있다. 집행부, 정보부, 연구부, 재무부, 인사부 등으로 구성되어 있다.	툼나 황제가 설립한 친위대로 시작했으나 점차 권한이 확대되어 지금은 대부분의 실권을 차지하고 있다. 집행부, 정보부, 연구부, 재무부, 인사부 등으로 구성되어 있다.
+Group	3	Bodyguard agency	It started as a bodyguards founded by Emperor Tumna, but it has gradually expanded its authority and now occupies most of its power. It is consisted of Executive, intelligence, research, finance, and human resources, etc.	It started as a bodyguards founded by Emperor Tumna, but it has gradually expanded its authority and now occupies most of its power. It is consisted of Executive, intelligence, research, finance, and human resources, etc.
+Group	4	친위국 집행부	친위국의 큰 부서 중 하나. 평소에는 대기하다가 상부에서 돌발적으로 지시하는 다양한 임무를 수행하며, 주로 무력 행사가 필요한 상황에서 동원된다.	-	
+Group	4	Executive branch	One of the departments in Bodyguard agency. Normally, they perform various duties that are suddenly instructed from the upper part while waiting, and they are mobilized mainly in situations where they need to exercise force.	-	
+Group	5	러브레이스 후작가	유니티 제국의 신흥 귀족 가문. 본래 평민이었지만 시대의 흐름을 읽고 산업에 투자하여 막강한 부를 거머쥔 후 귀족 지위를 얻었다. 카샤스티 루나 러브레이스가 정식 후계자였으나 스스로 거절하고 핀토스의 가신이 되었으며, 후계자 자리는 동생에게 넘어갔다.
+Group	5	Marquis clan of Lovelace	An emerging noble clan of the Unity Empire. They were originally a commoner, but gained a strong fortune and an aristocratic status after reading the trends of industry. Kashasty Lovelace was a formal successor, but refused herself and became a vassal of Pintos. Her successor was handed over to her younger sister.
+Group	6	요정	숲이나 늪지, 화산지대 등 인간의 손이 닿지 않은 지역에 사는 종족. 그 구성원은 누구나 '자연'을 다루는 이능력을 쓸 수 있다.	숲이나 늪지, 화산지대 등 인간의 손이 닿지 않은 지역에 사는 종족. 그 구성원은 누구나 '자연'을 다루는 이능력을 쓸 수 있다. 인간들의 개척에 의해 터전을 잃은 경우 인간들과 섞여 생활하기도 하지만, 미개인이라며 경멸하는 사람이 꽤 많다.
+Group	6	Fairy	People who live in areas that are out of human reach, such as forests, swamps, and volcanic areas. Everyone can use this ability to deal with nature.	People who live in areas that are out of human reach, such as forests, swamps, and volcanic areas. Everyone can use this ability to deal with nature. If you lose your home due to human exploitation, you can mix with humans, but there are quite a few who despise it as a savage.
+Location	0	콜로헤임	유니티 제국 중서부에 위치한 주. 모나폴리를 포함하고 있어서 다른 지역에 비해 많이 발전되어 있다.
+Location	0	Coloheim	Located in the Midwest of the Unity Empire. It contains monapoly and is much more developed than other regions.
+Location	1	자바 연방 공화국	유니티 제국의 동쪽 국경을 접하고 있는 국가. 남부와 북부의 연방 형태로 이루어져 있다.	-	
+Location	1	자바 연방 공화국	유니티 제국의 동쪽 국경을 접하고 있는 국가. 남부와 북부의 연방 형태로 이루어져 있다.	-	
+Location	2	루아 왕국	유니티나 자바에 비하면 비교적 작은 국가로, 한때 유니티 제국의 식민지였으나 자바 연방 공화국과 동시에 독립하였다.	대륙 남부의 사막지대에 위치한 국가. 유니티 제국이나 자바 연방 공화국에 비하면 규모는 작다. 한때 유니티 제국의 식민지였으나 자바 연방 공화국과 동시에 독립하였다. 산업보다는 수렵/목축, 공연예술 등으로 알려져 있다.
+Location	2	Lua Kingdom	유니티나 자바에 비하면 비교적 작은 국가로, 한때 유니티 제국의 식민지였으나 자바 연방 공화국과 동시에 독립하였다.	A country located in the desert zone of southern continent. Compared to the Unity empire or the Java republic, the scale is small. It was once a colony of the Unity Empire, but it became independent at the same time with Java. It is known as hunting / livestock, performing arts rather than industry.
+Location	3	플레이아데스	스텔라리엔, 속칭 수인으로 이루어진 국가. 유니티 제국과 자바 연방 공화국의 중간쯤에 위치해 있다. 두 국가 모두의 침략을 받다가, 유니티 제국에게 보호를 받는 대신 자치령이 되는 길을 선택했다.
+Location	3	Pleiades	Stellarion, a nation of tribal people with animal feature. It is located between the Unity Empire and the Federal Republic of Java. After receiving the invasion of both nations, instead of being protected by the Unity Empire, they chose to become self-governing.
+Location	4	텔루르 산	콜로헤임 동남쪽 경계로부터 도보로 며칠 정도 떨어진 거리에 있는 산. 핀토스 공작가가 소유하고 있었다.	-
+Location	4	텔루르 산	콜로헤임 동남쪽 경계로부터 도보로 며칠 정도 떨어진 거리에 있는 산. 핀토스 공작가가 소유하고 있었다.	-
+Location	5	모나폴리	유니티 제국의 수도. 황궁을 비롯하여 국가의 핵심 시설이 집중되어 있으며 고위 귀족들도 다수 거주한다.
+Location	5	Monapoli	The capital of the Unity empire. The central facilities of the country including the Imperial Palace are concentrated, and many high-ranking nobles live there.
+Location	6	마뉴부르크	하스켈 공작가의 옛 영지. 지금은 중앙에서 파견한 지방관이 다스리고 있다. 자원이 풍부하며 검을 비롯한 수공업이 융성해 있다.	-
+Location	6	마뉴부르크	하스켈 공작가의 옛 영지. 지금은 중앙에서 파견한 지방관이 다스리고 있다. 자원이 풍부하며 검을 비롯한 수공업이 융성해 있다.	-
+Etc	0	마법	에테르를 '흐름'으로 변환하여 새로운 현상을 일으키는 능력. 주변의 에테르를 한곳으로 모은 후 원하는 형태로 변형시키는 방식으로 사용한다.	비교적 쉽게 따라할 수 있고 효율이 괜찮은 주문은 마도서의 형태로 많은 마법사들에게 공유되고 있으며, 이를 '범용 주문'이라고 한다. 자신만의 뛰어난 주문을 창안하는 것은 마법사로서 명예로운 일이지만, 그만큼 어렵기 때문에 입문자는 반드시 범용 주문부터 시작한다.
+Etc	0	Magic	The ability to convert an ether into a 'flow' and cause a new phenomenon. Collect the surrounding ether in one place and use it in a way that transforms it into the desired form.	The ability to convert an ether into a 'flow' and cause a new phenomenon. Collect the surrounding ether in one place and use it in a way that transforms it into the desired form. A relatively easy to follow and efficient spell is shared by many mages in the form of a book, called a "general spell". It is an honor to be a magician to invent one's own superior spells, but since it is so difficult, the beginner must start with a general spell.
+Etc	1	에테르	마법의 기초가 되는 존재. 세계 어디에나 공기 중에 흩어져 있지만 농도는 장소에 따라 다를 수 있다. 인체에도 이 에테르를 축적할 수 있으며 이를 두고 특별히 '마력'이라 부르는데, 체내의 에테르를 사용하면 주변에서 모으는 과정을 생략하기 때문에 주문 발동까지 걸리는 시간이 더 짧으며 위력도 강하다.
+Etc	1	Ether	Being the foundation of magic. They are scattered in the air, but the concentration can vary from place to place. Can be accumulated in the human body, and it is called 'Mana' especially. Caster use the ether in the body to shorten the process of gathering around, so it takes less time to activate the order and has a strong power.
+Etc	2	이능력	후천적인 학습으로 익힐 수 있는 마법과 달리 선천적으로만 발생하며, 물질을 만들어낼 수 없다는 마법의 제약을 벗어난다. 그러나 술자의 역량에 따라 다양하게 사용할 수 있는 마법과 달리 한 가지 능력으로 한정된다. 이능력이 있는 사람은 극히 드물다.	-
+Etc	2	Talent	Unlike the magic, talent can produce the material but it is limited to only one field. People with talent are extremely rare.	-
+Etc	3	신성력	상상하는 것만으로 원하는 현상을 현실에 구현하는 능력. 마법과 마찬가지로 에테르가 필요하기 때문에 만능은 아니지만, 사람들은 그 신비함을 신의 기적으로 여겨 '신성력'이라는 이름을 붙였다. 선천적으로만 얻을 수 있는 능력이기 때문에, 신성력 보유자들은 대개 성직자의 길을 선택한다.
+Etc	3	Divine power	The ability to realize any phenomenon by simply imagining. It is not all-purpose because it needs ether(just like magic), but people have called the mystery of God a miracle and called it "Divine Power." Because it is the ability to be born only, divine power holders usually choose the path of the clergy.
+Etc	4	범용 주문	에테르의 흐름을 제어하는 방법에 따라 마법 주문의 형태는 무궁무진하게 존재할 수 있지만, 비교적 쉽게 따라할 수 있고 효율이 괜찮은 주문은 마도서의 형태로 많은 마법사들에게 공유되고 있으며, 이를 '범용 주문'이라고 한다. 자신만의 뛰어난 주문을 발견하는 것은 마법사로서 명예로운 일이지만, 그만큼 어렵기 때문에 입문자는 반드시 범용 주문부터 시작한다.	-	
+Etc	4	범용 주문	에테르의 흐름을 제어하는 방법에 따라 마법 주문의 형태는 무궁무진하게 존재할 수 있지만, 비교적 쉽게 따라할 수 있고 효율이 괜찮은 주문은 마도서의 형태로 많은 마법사들에게 공유되고 있으며, 이를 '범용 주문'이라고 한다. 자신만의 뛰어난 주문을 발견하는 것은 마법사로서 명예로운 일이지만, 그만큼 어렵기 때문에 입문자는 반드시 범용 주문부터 시작한다.	-	
+Etc	5	정령	자연의 기운이 충만한 지역에 존재하는 지적 생명체. 인간이 대적할 수 없는 초월적인 힘을 지녔다고 알려져 있었으나, 문명이 점차 발전하면서 하나둘씩 정복당하고 있다.	-
+Etc	5	정령	자연의 기운이 충만한 지역에 존재하는 지적 생명체. 인간이 대적할 수 없는 초월적인 힘을 지녔다고 알려져 있었으나, 문명이 점차 발전하면서 하나둘씩 정복당하고 있다.	-
+Etc	6	집행관	집행부의 중간 관리직. 집행부 평요원으로 구성된 자신만의 부대를 이끌 권한이 주어진다.
+Etc	6	Executor	The middle management of the executive branch. Authority to lead his own troops, composed of the executive agents.
+Etc	7	수정	에테르를 함유하고 있는 광물. 회로를 적절히 연결하면 안에 있는 에테르를 사용하여 스스로 동작하는 마법 상품을 만들 수 있다.	에테르를 함유하고 있는 광물. 회로를 적절히 연결하면 안에 있는 에테르를 사용하여 스스로 동작하는 마법 상품을 만들 수 있다. 유니티 제국에는 풍부하지만 자바 연방 공화국은 매장량이 희박해서 별로 생산되지 않는다.
+Etc	7	Crystal	Minerals containing ether. By connecting the circuit properly to use the ether inside, a magical item works by itself can be created.	Minerals containing ether. By connecting the circuit properly to use the ether inside, a magical item works by itself can be created. It is abundant intThe Unity empire, but the Java Republics do not produce much because their reserves are scarce.
+Etc	8	괴수	동물이 돌연변이를 일으켜 새로운 종으로 갈라져나간 것. 세계에는 수많은 형태의 괴수들이 있지만 원래 종보다 육체와 마력이 강하고 호전적이며 에테르의 흐름에 민감하다는 공통점이 있다. 발생 원인은 불명.
+Etc	8	Monster	Some animals have mutated and split into new species. There are many types of monsters in the world, but all of them are stronger, more aggressive, and sensitive to the flow of ether than the original species. The cause is unknown.
+Etc	9	핀토스의 반지	혈족과 가신을 포함한 핀토스 공작가의 구성원만 소지할 수 있는 증표. 통신기로서의 기능도 겸하고 있다.	-
+Etc	9	핀토스의 반지	혈족과 가신을 포함한 핀토스 공작가의 구성원만 소지할 수 있는 증표. 통신기로서의 기능도 겸하고 있다.	-
+Etc	10	주	유니티 제국의 가장 큰 행정 단위.	유니티 제국의 가장 큰 행정 단위. 제국 전체는 총 26개의 주로 이루어져 있다.	-
+Etc	10	주	유니티 제국의 가장 큰 행정 단위.	유니티 제국의 가장 큰 행정 단위. 제국 전체는 총 26개의 주로 이루어져 있다.	-

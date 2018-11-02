@@ -1,0 +1,47 @@
+Keyword	Explain
+돌진	시전자가 경로를 따라 높이 제한을 무시하고 이동하며, 대상이 없으면 사용할 수 없습니다.
+Charge	Caster moves along the path.
+당기기	대상을 자신의 바로 앞까지 당겨옵니다.
+Pull	Target moves along the path.
+밀기	대상을 정해진 칸수만큼 밀어냅니다.
+Push	Target moves in the caster's looking direction.
+보호막	사라지기 전까지 정해진 양의 피해를 받아내며, 약화 부여를 무시합니다.
+Shield	Alleviates damage by a fixed amount, and Invalidate all debuffs until it disappears.
+덫 설치	빈 타일에만 설치되며, 유닛이 이 타일로 이동할 때 발동하여 주변 3x3 영역에 영향을 미칩니다.
+Trap	Installed only in empty tile. Activated When an unit moves on that tile, then affects the area of 3x3 from that tile.
+마법진 설치	빈 타일에만 사용할 수 있으며, 지속이 끝날 때까지 주변 3x3 영역에 영향을 미칩니다.
+Magic Circle	Installed only in empty tile. Affects the area of 3x3 from that tile until disappears.
+강타	대상의 다음 번 공격 기술이 추가 피해를 줍니다.
+Smite	Increases the damage of next attack.
+은신	적에게 공격 대상으로 인식되지 않습니다.
+Conceal	AI enemies ignore the unit.
+도발	AI는 시전자를 최우선으로 공격합니다.
+Taunt	AI attacks the unit with top priority.
+면역	특정 효과를 무시합니다.
+Immune	Ignores certain effects.
+약점	조건에 맞는 유닛으로부터 더 많은 피해를 받습니다.
+Weak	Get more damages from units with certain condition.
+내상	받는 회복량이 줄어듭니다.
+Wound	Get less heal.
+침묵	기술을 사용할 수 없게 됩니다.
+Silence	Cannot use skills.
+속박	이동할 수 없게 됩니다.
+Bind	Cannot move.
+기절	어떠한 행동도 할 수 없게 되며, 차례가 되면 즉시 턴을 종료합니다.
+Faint	Cannot do any action, ends the turn immediately.
+향상	특정 기술을 더욱 발전시킵니다.
+Enhance	Upgrade a certain skill.
+전술 보정치	방향과 높이 등 피해량을 변동시키는 요인입니다.
+Tactical Bonus	Factors affect damages such as direction and height.
+집중	다음 X번째 자신의 턴을 시작할 때 발동합니다. 다른 행동을 할 수 없으며 도중에 공격을 받으면 취소됩니다.
+Concentration	Activated at the start of turn. Cancelled when get attacked.
+과부하	한 턴에 여러 번 시전하면 정해진 값만큼 소모 행동력이 계속 증가합니다. 턴을 종료할 때 초기화됩니다.
+Overload	AP cost Increases whenever the skill is used. Reset at the end of the turn.
+강화	유닛이 받는 유리한 효과입니다.
+Buff	Advantage of an unit.
+약화	유닛이 받는 불리한 효과입니다.
+Debuff	Disadvantage of an unit.
+회피율	공격받을 때, 모든 회피율을 합한 확률로 공격을 무시합니다.
+Evasion	When get attacked, Ignore the attack with a chance of sum of all evasions.
+이탈 기준치	일반 유닛은 체력이 이 값 이하로 떨어지면 이탈합니다(기본 20%).
+Retreat Point	Common unit retreats when HP is under this point(basically 20%).

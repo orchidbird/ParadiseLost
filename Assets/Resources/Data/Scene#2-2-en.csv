@@ -1,0 +1,38 @@
+﻿Script#4			
+*	BG	PartyRoom	
+*	BGM	BGM_Solve
+noel	-	There must be underground chambers! Focus on searching for entrances! 
+sepia	-	Understood!
+arcadia	-	……I shall also assist the investigation.
+*	Glos	핀토스 공작가2
+darkenir	-	<color=red>These</color> remnants seem to be useful.
+blank	-	Dolls have stopped operating were lying on the ground.
+blank	-	Their joints were bent in absurd angles, and unidentified powder instead of blood was oozing out of their bodies, creating a grotesque scenary. Some dolls were less damaged than others. 
+noel	-	(Instictive rejection was my first impression……^but this may be a new oppotunity for humankind.)
+blank	-	If delicate movements like attacking moving opponents are possible, these dolls can substitute human and take part in harsh labour.
+blank	-	Starvation will be eradicated if these dolls can farm.
+blank	-	Mankind will be able to focus on sophiscated issues once they no longer suffer from labour for survival.
+blank	-	Won't the Research Department finally achieve this goal if they acquire these samples?
+grenev	-	Eww, Darkenir, stop that.^Nothing is more terrible than a future battlefield packed with these stuff instead of people?
+noel	-	(Battlefields.)
+blank	-	It is a long journey to establish the one and only order on this world.^It will be perfect if the people no longer have to bleed.
+noel	-	(You rebels, for what reason do you…….)
+arcadia	-	Target found!
+grenev	-	Wow, really? Let me take a look, too. Show us the way!
+*	FO
+*	BG	Prison
+*	BGM	BGM_Sad
+*	FI
+blank	-	The shape of a human was hanging upside down from the ceiling.^The human only seen from portraits or statues. 
+noel	-	So this is the Founding Emperor, what a grotesque view.
+darkenir	-	Err, a terrible headache is striking me since I have come underground.
+grenev	-	Is that so? The air down here sure stinks, but not that bad.
+sepia	-	We have destroyed suspicious devices as well.
+arcadia	-	……that's weird. I am also suffering from the same symptom.
+*	SE	Whisper	
+monad	-	(You…… a nuisance…… Your power is blocking me from tracing my prey……)
+monad	-	(If you are not handing in, then move away…….)
+blank	-	A shudder went through my body. The reason for that headache is……?
+noel	-	Anyone with any suspicious symptoms, leave here immediately!^Others prepare for transportation of the target!
+noel	surprised	(What were you trying to create in the end?)
+*	Era

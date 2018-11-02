@@ -1,0 +1,10 @@
+ResultType	reqCount	Reward	Name	Action	Actor/Target/Etc							
+Win	13	55	13명 이상의 수인족을 무력화	Neutralize enemies	Neutralize	Any	Enemy						
+Win	1	50	수인족 장로를 무력화	Neutralize the elder	Neutralize	Any	SpecialEnemy				
+Lose	8	0	적의 탈출	Enemies escape	Escape	7	6/26	7/26	8/26	1/18	2/18	13/17	13/18	Enemy	
+Bonus	1	4	경로를 방해해 공격을 유도	Block the route and get attacked by enemy	Damage	Enemy	Ally	Repeat					
+Bonus	1	5	덫으로 적을 속박	Make an enemy get binded	Extra	Repeat							
+Bonus	1	5	계절풍으로 적을 당겨오기	Pull an enemy with monsoon	Extra	Repeat							
+Bonus	1	-5	수인족이 탈출	Any enemy escapes	Escape	5	6/26	7/26	8/26	1/18	13/17	Enemy	Repeat
+Script	1	0	Furry	StepOnTile	얕은 물	PC						
+Info	Scene#15-2	One	One									

@@ -1,0 +1,13 @@
+stage7 패배			
+*	BG	Forest	
+*	BGM	BGM_Defeat	
+*	SE	Pierce	
+json	-	으……으윽…….
+agent	-	집행관님, 괜찮으십니까!
+blank	-	치명상을 입었다. 살아서 빠져나가긴 그른 것 같군.
+triana	-	…….
+blank	-	내 죽음에 관심조차 보이지 않는 포로의 한심한 눈빛.
+json	-	(이런 허무한 죽음이라니.)
+json	-	(친구가 별로 없어서인지, 생각나는 건 증오하던 가족들 뿐이다.)
+json	-	(형은 제 한 몸도 지키지 못한 형편없는 녀석이라고 비웃겠지…….)
+*	Script	Title	
