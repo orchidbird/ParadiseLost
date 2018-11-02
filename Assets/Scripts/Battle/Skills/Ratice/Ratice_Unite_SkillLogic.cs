@@ -12,7 +12,7 @@ namespace Battle.Skills {
 		}
 
 		public override bool IsAuraTarget(Unit unit){
-			return unit.IsAllyTo(passiveSkill.Owner);
+			return unit.IsAllyTo(passiveSkill.owner);
 		}
 	}
 }

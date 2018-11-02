@@ -7780,7 +7780,8 @@ MonoBehaviour:
   phaseUI: {fileID: 680909715}
   detailInfoUI: {fileID: 614078568}
   placedUnitCheckUI: {fileID: 1271338679}
-  sePanelPrefab: {fileID: 0}
+  sePanelPrefab: {fileID: 1918958613840120, guid: bdc965dc320e475448fe8c0ac4017ec4,
+    type: 2}
   sePanelList: {fileID: 521388002}
   statusEffectDisplayPanel: {fileID: 639184550}
   changeDisplayPanel: {fileID: 384867598}
@@ -16481,7 +16482,8 @@ MonoBehaviour:
   defenseText: {fileID: 1846133779}
   WillText: {fileID: 1186016348}
   unitImage: {fileID: 1121067347}
-  statusEffectIconPrefab: {fileID: 0}
+  statusEffectIconPrefab: {fileID: 1038705503954990, guid: 4f341fc3f0ab12b49bb2ac0062d1aaf6,
+    type: 2}
   statusEffectIconsParent: {fileID: 615083972}
   HpBar: {fileID: 208914703}
   CurrentApBar: {fileID: 1468961450}
@@ -19467,7 +19469,8 @@ MonoBehaviour:
   defenseText: {fileID: 331358381}
   WillText: {fileID: 36885763}
   unitImage: {fileID: 131156792}
-  statusEffectIconPrefab: {fileID: 0}
+  statusEffectIconPrefab: {fileID: 1038705503954990, guid: 4f341fc3f0ab12b49bb2ac0062d1aaf6,
+    type: 2}
   statusEffectIconsParent: {fileID: 976743685}
   HpBar: {fileID: 1293058766}
   CurrentApBar: {fileID: 1573245898}

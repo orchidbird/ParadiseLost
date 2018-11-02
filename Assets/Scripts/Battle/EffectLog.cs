@@ -487,7 +487,7 @@ public class StatusEffectLog : EffectLog {
 								ownerTile.StatusEffectList.Add(tileStatusEffect);
 								ownerTile.SetTrapImage(Resources.Load<Sprite>("TileImage/Trap"));
 							}
-						}else if (statusEffect.IsTypeOf(StatusEffectType.Aura) && statusEffect.GetOriginSkill().Owner.CodeName == "bianca"){
+						}else if (statusEffect.IsTypeOf(StatusEffectType.Aura) && statusEffect.GetOriginSkill().owner.CodeName == "bianca"){
 							if (!ownerTile.IsUnitOnTile()){
 								ownerTile.StatusEffectList.Add(tileStatusEffect);
 								ownerTile.SetTrapImage(Resources.Load<Sprite>("TileImage/MagicCircle"));

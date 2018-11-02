@@ -130,16 +130,8 @@ public class UnitManager : MonoBehaviour{
 		}
 	}
 
-    /*public void UpdateFogOfWar(){
-        var TM = TileManager.Instance;
-	    if (!TM.fogUsed)
-		    return;
-
-		Dictionary<Tile, FogType> originalFogTypesDict = new Dictionary<Tile, FogType>();
-		foreach (var tile in TM.GetAllTiles().Values) {
-			originalFogTypesDict.Add(tile, tile.fogType);
-			tile.SetFogType(tile.GetInitialFogType());
-		}
+    public void UpdateFogOfWar(){
+		var originalFogTypesDict = new Dictionary<Tile, FogType>();
         foreach (var unit in GetAllUnits())
 	        unit.RemoveFogsInSight();
 		//위에서 안개 정보가 바뀐 후에 투명도를 맞춰야 하므로, 같은 GetAllUnits() 기반이더라도 합치지 말 것!
@@ -153,7 +145,7 @@ public class UnitManager : MonoBehaviour{
 				break;
 			}
 		}
-    }*/
+    }
 
     public void DeactivateAllDamageTextObjects(){
         foreach(var unit in allUnits)
@@ -290,18 +282,18 @@ public class UnitManager : MonoBehaviour{
 
 	public void GenerateUnitAutomatically(){
 		for (int i = 0; i < 3; i++){
-			GeneratePC(true);
+			GenerateUnit(true);
 		}
-		GeneratePC(false);
+		GenerateUnit(false);
 
-        //UpdateFogOfWar();*/
+        UpdateFogOfWar();
     }
 
 	private string GetRandomCharacterName{get{
 		return Generic.PickRandom(new List<string> {"reina", "lucius", "yeong", "karldrich", "noel"});
 	}}
 
-	void GeneratePC(bool isPC){
+	void GenerateUnit(bool isPC){
         var unit = Instantiate(unitPrefab).GetComponent<Unit>();
 		string codeName;
 		do{

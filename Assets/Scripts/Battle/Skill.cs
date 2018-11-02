@@ -9,8 +9,8 @@ using Convert = System.Convert;
 
 public class Skill{
     //기본 정보
-    public string owner;
-	public Unit Owner{get { return UnitManager.Instance.GetAnUnit(owner); }}
+    public string ownerName;
+	public Unit owner;
     public int ether;
 	public string address;
 	public string required;
@@ -34,13 +34,13 @@ public class Skill{
 	
     //기술,특성의 공통되는 부분을 받아온다
     public void GetCommonSkillData(StringParser parser){
-        owner = parser.ConsumeString();
+        ownerName = parser.ConsumeString();
         ether = parser.ConsumeInt();
 	    address = parser.ConsumeString();
 	    required = parser.ConsumeString();
 		korName = parser.ConsumeString();
 	    engName = parser.ConsumeString();
-        icon = Resources.Load<Sprite> ("Icon/Skill/" + _String.GeneralName(owner) + "/" + engName) ?? VolatileData.GetIcon(IconSprites.Transparent);
+        icon = Resources.Load<Sprite> ("Icon/Skill/" + _String.GeneralName(ownerName) + "/" + engName) ?? VolatileData.GetIcon(IconSprites.Transparent);
     }
 
     public void GetCommonSkillExplanationText(StringParser parser) {
@@ -73,14 +73,14 @@ public class Skill{
     }
 
     public static Skill Find(List<Skill> list, string owner, string location){
-        return list.Find(skill => skill.owner == owner && skill.address == location);
+        return list.Find(skill => skill.ownerName == owner && skill.address == location);
     }
-	public Skill RequiredSkill{get { return Find(TableData.AllSkills, owner, required); }}
+	public Skill RequiredSkill{get { return Find(TableData.AllSkills, ownerName, required); }}
 	
 	public void ApplyUnitStatusEffectList(List<UnitStatusEffectInfo> statusEffectInfoList){
 		unitStatusEffectList.Clear();
 		foreach (var SEInfo in statusEffectInfoList) {
-			if(SEInfo.GetOriginSkillName().Equals(korName) && SEInfo.GetOwnerOfSkill() == owner 
+			if(SEInfo.GetOriginSkillName().Equals(korName) && SEInfo.GetOwnerOfSkill() == ownerName 
 			    && !unitStatusEffectList.Contains(SEInfo)) {    //같은 스킬을 가진 유닛이 여러 개일 때 중복으로 들어가는 것 방지
 				unitStatusEffectList.Add(SEInfo);
 			}

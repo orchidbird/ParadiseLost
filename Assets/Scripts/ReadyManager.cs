@@ -94,7 +94,7 @@ public class ReadyManager : MonoBehaviour{
 		}
 	    
 	    foreach (var skillName in RecordData.customSkillTrees[unit.CodeName]){
-		    var selectedSkill = TableData.AllSkills.Find(skill => _String.Match(skill.owner, unit.CodeName) && skill.korName == skillName);
+		    var selectedSkill = TableData.AllSkills.Find(skill => _String.Match(skill.ownerName, unit.CodeName) && skill.korName == skillName);
 		    if (selectedSkill != null && selectedSkill.RequireLevel <= RecordData.level && 
 		        unit.SumOfCost + selectedSkill.ether <= MaxEther && !unit.selectedSkills.Contains(selectedSkill)) {
 			    unit.selectedSkills.Add(selectedSkill);
@@ -225,7 +225,7 @@ public class ReadyManager : MonoBehaviour{
 				
 				if(pickableSkills.Count == 0) break;
 				var skillToPick = Generic.PickRandom(pickableSkills);
-				var skillOwner = pickedList.Find(cand => cand.CodeName == skillToPick.owner);
+				var skillOwner = pickedList.Find(cand => cand.CodeName == skillToPick.ownerName);
 				Debug.Assert(skillOwner != null, skillToPick.Name + "의 주인이 없음!");
 				skillOwner.selectedSkills.Add(skillToPick);
 				pickableSkills.Remove(skillToPick);

@@ -337,7 +337,7 @@ namespace GameData{
 		    if (unitAllSkillDict == null)
 			    unitAllSkillDict = new Dictionary<string, List<Skill>>();
 		    if (!unitAllSkillDict.ContainsKey(unitName))
-			    unitAllSkillDict.Add(unitName, TableData.AllSkills.FindAll(skill => _String.Match(skill.owner, unitName)));
+			    unitAllSkillDict.Add(unitName, TableData.AllSkills.FindAll(skill => _String.Match(skill.ownerName, unitName)));
 		    return unitAllSkillDict[unitName];
 	    }
 	    

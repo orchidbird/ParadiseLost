@@ -1248,7 +1248,7 @@ public class Unit : Entity{
 		if (TileUnderUnit == null)
 			return false;
 		FogType fogType = TileUnderUnit.fogType;
-		return fogType == FogType.Black || (fogType == FogType.Gray && !IsObject);
+		return fogType == FogType.Black/* || (fogType == FogType.Gray && !IsObject)*/;
 	}
 
 	void DisplayChainIcon(bool onoff){
@@ -1290,31 +1290,19 @@ public class Unit : Entity{
 		return Random.Range(minValue, maxValue+1);
 	}
 
-	void AddActiveSkill(ActiveSkill skill, List<UnitStatusEffectInfo> statusEffectInfoList,
-		List<TileStatusEffectInfo> tileStatusEffectInfoList)
-	{
+	void AddSkill(Skill skill, List<UnitStatusEffectInfo> statusEffectInfoList, List<TileStatusEffectInfo> tileStatusEffectInfoList){
 		skill.ApplyUnitStatusEffectList(statusEffectInfoList);
 		skill.ApplyTileStatusEffectList(tileStatusEffectInfoList);
-		activeSkillList.Add(skill);
+		if(skill is ActiveSkill)
+			activeSkillList.Add((ActiveSkill)skill);
+		else
+			passiveSkillList.Add((PassiveSkill)skill);
+		skill.owner = this;
 	}
 
-	void AddPassiveSkill(PassiveSkill skill, List<UnitStatusEffectInfo> statusEffectInfoList,
-		List<TileStatusEffectInfo> tileStatusEffectInfoList)
-	{
-		skill.ApplyUnitStatusEffectList(statusEffectInfoList);
-		skill.ApplyTileStatusEffectList(tileStatusEffectInfoList);
-		passiveSkillList.Add(skill);
-	}
-
-	public void ApplySkillList(List<Skill> skills, List<UnitStatusEffectInfo> statusEffectInfoList,
-		List<TileStatusEffectInfo> tileStatusEffectInfoList)
-	{
-		foreach (var skill in skills){
-			if (skill is ActiveSkill)			
-				AddActiveSkill((ActiveSkill) skill, statusEffectInfoList, tileStatusEffectInfoList);
-			else if (skill is PassiveSkill)
-				AddPassiveSkill((PassiveSkill) skill, statusEffectInfoList, tileStatusEffectInfoList);
-		}
+	public void ApplySkillList(List<Skill> skills, List<UnitStatusEffectInfo> statusEffectInfoList, List<TileStatusEffectInfo> tileStatusEffectInfoList){
+		foreach (var skill in skills)
+			AddSkill(skill, statusEffectInfoList, tileStatusEffectInfoList);
 	}
 
 	public void LoadSprites(string spriteName = ""){

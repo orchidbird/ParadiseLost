@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Battle.Damage;
-using UnityEngine;
-using Enums;
+﻿using Enums;
 
 namespace Battle.Skills{
 	public class Lenien_C1_SkillLogic : BaseActiveSkillLogic {
@@ -23,7 +19,7 @@ namespace Battle.Skills{
 			int stack = activeSkill.intTemp;
 			int level = GameData.RecordData.level;
 			float total = stack * (level * 0.5f + 40);
-			if (aura.GetAmountOfType (StatusEffectType.DefenseChange) != total) {
+			if (aura.GetAmountOfType (StatusEffectType.DefenseChange) != total){
 				aura.SetAmountOfType (StatusEffectType.DefenseChange, total);
 			}
 			activeSkill.intTemp = 0;

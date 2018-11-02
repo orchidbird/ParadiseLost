@@ -129,7 +129,7 @@ public class SkillViewer : SkillUI{
             result = ((int)new Formula(FormulaVarType.Power, coef, basic).Result(owner)).ToString();
         else if(ownerInfo != null)
             result = new Formula(FormulaVarType.Power, coef, basic).Result(ownerInfo);
-        else result = new Formula(FormulaVarType.Power, coef, basic).Result(mySkill.owner);
+        else result = new Formula(FormulaVarType.Power, coef, basic).Result(mySkill.ownerName);
 	    return match + "</color>(<color=red>" + result + "</color>)";
     }
 	
@@ -147,7 +147,7 @@ public class SkillViewer : SkillUI{
         else if (ownerInfo != null)
             result = new Formula(FormulaVarType.Level, coef, basic).Result(ownerInfo);
         else
-	        result = new Formula(FormulaVarType.Level, coef, basic).Result(mySkill.owner);
+	        result = new Formula(FormulaVarType.Level, coef, basic).Result(mySkill.ownerName);
         return /*match.Groups[1]*/ "<color=green>" + result + "</color>";
     }
 
@@ -158,7 +158,7 @@ public class SkillViewer : SkillUI{
 			else if(ownerInfo != null)
 				text = text.Replace("VALUE" + (i + 1), mySkill.textValueFormulas[i].Result(ownerInfo));
 			else
-				text = text.Replace("VALUE" + (i + 1), mySkill.textValueFormulas[i].Result(mySkill.owner));
+				text = text.Replace("VALUE" + (i + 1), mySkill.textValueFormulas[i].Result(mySkill.ownerName));
 		}
 
         text = Regex.Replace(text, @"([\-0-9.]+)×(<sprite=[0-9]+>)?공격력\s*\+?([\-0-9.]*)", AddSkillValueTextByPower); // ex) "0.8x공격력"

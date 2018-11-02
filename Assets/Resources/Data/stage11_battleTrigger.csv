@@ -1,6 +1,6 @@
 ﻿ResultType	reqCount	Reward	Name	Action	Actor/Target/Etc			
 Win	Target	30	모든 적 무력화	Neutralize all enemies	Neutralize	Any	Enemy		
-Lose	1	0	출전 캐릭터 중 한 명의 무력화	Neutralize Any player character	Neutralize	Any	PC		
+Lose	Target	0	출전 캐릭터 중 한 명의 무력화	Neutralize Any player character	Neutralize	Any	PC		
 Bonus	4	20	4페이즈 이내에 승리	Win in 4 phases	Phase	Reverse			
 Bonus	3	15	3페이즈 이내에 승리	Win in 3 phases	Phase	Reverse			
 Bonus	1	20	피해를 입은 출전 캐릭터 1명 이하	One player character is not damaged	Extra

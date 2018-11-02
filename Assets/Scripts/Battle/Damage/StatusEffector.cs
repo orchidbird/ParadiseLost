@@ -28,9 +28,9 @@ namespace Battle.Damage{
 		public static void AttachGeneralRestriction(StatusEffectType restrictionType, Skill originSkill, Unit target, bool byCasting, int durationPhase = 1){
 			var seInfo = USEInfoList.Find(se => se.GetOriginSkillName() == "공용" && se.actuals[0].statusEffectType == restrictionType);
 			Debug.Assert(seInfo != null);
-			var SE = new UnitStatusEffect(seInfo, originSkill.Owner, target, originSkill);
+			var SE = new UnitStatusEffect(seInfo, originSkill.owner, target, originSkill);
 			SE.SetRemainPhase(durationPhase);
-			AttachAndReturnUSE(originSkill.Owner, new List<UnitStatusEffect> {SE}, target, byCasting);
+			AttachAndReturnUSE(originSkill.owner, new List<UnitStatusEffect> {SE}, target, byCasting);
 		}
 		
 		static bool ignoredByShield(UnitStatusEffect statusEffect, Unit target){

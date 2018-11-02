@@ -260,7 +260,7 @@ public class TileManager : MonoBehaviour {
             tile.Value.UpdateRemainPhaseAtPhaseEnd();
     }
 
-	public readonly static int mapSize = 10;
+	public readonly static int mapSize = 11;
 	void GenerateTiles(){
 		for (int x = 1; x <= mapSize; x++)
 			for (int y = 1; y <= mapSize; y++)
@@ -279,6 +279,7 @@ public class TileManager : MonoBehaviour {
 		tile.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("TileImage/metal_01");
 		tiles.Add(new Vector2Int(x, y), tile);
 		tile.APAtStandardHeight = 3;
+		tile.fogType = FogType.Black;
 	}
 	
 	public void GenerateMap(){

@@ -45,7 +45,7 @@ public class SkillSelectButton : SkillUI, IPointerDownHandler{
 	    EtherText.text = _String.NumberToSprite(inputSkill.ether);
         iconSlot.sprite = inputSkill.icon;
 
-        Candidate owner = RM.candidates.Find(unit => unit.CodeName == inputSkill.owner);
+        Candidate owner = RM.candidates.Find(unit => unit.CodeName == inputSkill.ownerName);
 	    transform.Find("ActiveSkillFrame").GetComponent<Image>().enabled = inputSkill is ActiveSkill; 
 	    transform.Find("PassiveSkillFrame").GetComponent<Image>().enabled = inputSkill is PassiveSkill; 
 		if (owner != null)
@@ -61,7 +61,7 @@ public class SkillSelectButton : SkillUI, IPointerDownHandler{
 		    }
 
 		    recentStageString = RM.StageAvailablePCTable[i][0];
-		    if (StageData.CandidatesOfStage(RM.StageAvailablePCTable[i]).Contains(inputSkill.owner))
+		    if (StageData.CandidatesOfStage(RM.StageAvailablePCTable[i]).Contains(inputSkill.ownerName))
 			    break;
 	    }
 
@@ -72,7 +72,7 @@ public class SkillSelectButton : SkillUI, IPointerDownHandler{
     }
 
     void IPointerDownHandler.OnPointerDown(PointerEventData eventData){
-        Candidate owner = RM.candidates.Find(unit => unit.CodeName == mySkill.owner);
+        Candidate owner = RM.candidates.Find(unit => unit.CodeName == mySkill.ownerName);
         if(mySkill.RequireLevel > RecordData.level || mySkill.RequireLevel == 0 || owner == null) return;
         
 	    if(owner.selectedSkills.Exists(skill => skill.korName == mySkill.korName)){

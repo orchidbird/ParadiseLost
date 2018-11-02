@@ -59,7 +59,7 @@ public class Tile : Entity, IPointerEnterHandler, IPointerExitHandler, IPointerD
 
 	List<Tile> tilesInSightDistance;
 	public List<Tile> TilesInSightDistance{get{
-		return tilesInSightDistance ?? (tilesInSightDistance = TilesInDistance(6, -1));
+		return tilesInSightDistance ?? (tilesInSightDistance = TilesInDistance(5, -1));
 	}}
 
 	public void FillHeight(){

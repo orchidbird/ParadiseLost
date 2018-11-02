@@ -61,7 +61,7 @@ public class LogManager : MonoBehaviour {
 		
 	    BattleUIManager.Instance.UpdateSmallConditionTexts();
 	    UnitManager.Instance.ResetLatelyHitUnits();
-	    //UnitManager.Instance.UpdateFogOfWar();
+	    UnitManager.Instance.UpdateFogOfWar();
 	    foreach (var chain in ChainList.GetChainList())
 		    chain.Casting.ResetRealRange();
 
