@@ -325,11 +325,21 @@ public class UnitManager : MonoBehaviour{
         //UpdateFogOfWar();*/
     }
 
-	private Unit GenerateUnit(){
+	private string GetRandomCharacterName{get{
+		return Generic.PickRandom(new List<string> {"reina", "lucius", "yeong", "karldrich", "noel"});
+	}}
+
+	void GenerateUnit(){
         var unit = Instantiate(unitPrefab).GetComponent<Unit>();
+		string codeName;
+		do{
+			codeName = GetRandomCharacterName;
+		} while (GetAllUnits().Any(item => item.codeName == codeName));
+
+		unit.codeName = codeName;
 		unit.InitializeStats();
         unit.transform.SetParent(transform);
-		unit.LoadSprites("reina");
+		unit.LoadSprites();
         unit.SetDirection(Direction.RightDown);
 		var location = new Vector2Int(Random.Range(1, TileManager.mapSize+1), Random.Range(1, TileManager.mapSize+1));
         unit.SetPivot(location);    // 유닛이 생성되자마자 fogOfWar 아래에 있으면 숨겨야 하는데,
@@ -340,18 +350,7 @@ public class UnitManager : MonoBehaviour{
 		ApplyAIInfo(unit);
 		
 		//스킬 입혀주는 부분
-		/*var skills = new List<Skill>();
-		 if((!unit.IsPC || !VolatileData.OpenCheck(Setting.readySceneOpenStage))){
-			var mySkills = VolatileData.SkillsOf(unitInfo.codeName, unit.IsPC);
-			if(VolatileData.OpenCheck(Setting.passiveOpenStage))
-				skills.AddRange(mySkills);
-			else
-				foreach (var skill in mySkills)
-					if(skill is ActiveSkill)
-						skills.Add(skill);
-		}else
-			skills = ReadyManager.Instance.pickedList.Find(cand => cand.CodeName == unitInfo.codeName).selectedSkills;
-		
+		var skills = new List<Skill> {Generic.PickRandom(TableData.ActiveSkills), Generic.PickRandom(TableData.PassiveSkills)};
         unit.ApplySkillList(skills, StatusEffector.USEInfoList, StatusEffector.TSEInfoList);
         if(unit.HasAction) unitsActThisPhase.Add(unit);
 
@@ -359,8 +358,9 @@ public class UnitManager : MonoBehaviour{
         if(unit.IsPC){
             var skillNameList = unit.GetPassiveSkillList().FindAll(skill => skill.RequireLevel > 0).Select(skill => skill.Name).ToList();
             skillNameList.AddRange(unit.GetActiveSkillList().Select(skill => skill.GetName()));
+	        Debug.Log(unit.CodeName + "의 스킬 정보 등록");
             PCSelectedSkillList.Add(unit.CodeName, skillNameList);
-        }*/
+        }
 
         //평균 위치 계산하고, 소속 타일 중 가장 앞에 있는 것보다 position.z를 0.05f 당김
         var tiles = unit.TilesUnderUnit;
@@ -371,8 +371,6 @@ public class UnitManager : MonoBehaviour{
         });
         var averagePos = Utility.AveragePos(tiles);
 		unit.transform.position = new Vector3(averagePos.x, averagePos.y, zValue - 0.05f);
-        
-        return unit;
     }
 
     /*public void GenerateUnitsAtPosition(string codeName, List<Vector2Int> positions, List<Direction> directions){

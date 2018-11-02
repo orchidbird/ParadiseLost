@@ -353,10 +353,19 @@ namespace GameData{
 
 	public static class TableData{
 		static List<Skill> allSkills;
+		static List<ActiveSkill> activeSkills;
+		static List<PassiveSkill> passiveSkills;
+
+		public static List<ActiveSkill> ActiveSkills{
+			get { return activeSkills ?? (activeSkills = Parser.GetParsedData<ActiveSkill>()); }
+		}
+		public static List<PassiveSkill> PassiveSkills{
+			get { return passiveSkills ?? (passiveSkills = Parser.GetParsedData<PassiveSkill>()); }
+		}
 		public static List<Skill> AllSkills{get{
 			if (allSkills != null) return allSkills;
-			var actives = Parser.GetParsedData<ActiveSkill>().Cast<Skill>();
-			var passives = Parser.GetParsedData<PassiveSkill>().Cast<Skill>();
+			var actives = activeSkills.Cast<Skill>();
+			var passives = passiveSkills.Cast<Skill>();
 			return allSkills = actives.Union(passives).ToList();
 		}}
 	}
