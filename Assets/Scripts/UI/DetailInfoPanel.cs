@@ -96,14 +96,10 @@ public class UnitInfoUI : MonoBehaviour{
 	public Text ApText;
 	public Text powerText;
 	public Text defenseText;
-	public Text resistText;
 	public Text WillText;
 
-	public Image classImage;
-    public Image elementImage;
-
 	void Awake(){
-		if(statTextDict.Count < 6){
+		if(statTextDict.Count < 5){
 			statTextDict.Add(Stat.CurrentHP, HpText);
 			statTextDict.Add(Stat.CurrentAP, ApText);
 			statTextDict.Add(Stat.Power, powerText);

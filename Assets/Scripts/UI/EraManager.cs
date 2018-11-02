@@ -98,8 +98,6 @@ public class EraManager : MonoBehaviour {
 			TutorialManager.Instance.Activate("Era");
 		if(lastStageNum == StageNum.S6_1)
 			TutorialManager.Instance.Activate("Challenge");
-		if(!VolatileData.OpenCheck(Setting.challengeModeOpenStage))
-			ChallengeModeButton.SetActive(false);
 	}
 
 	void Update(){

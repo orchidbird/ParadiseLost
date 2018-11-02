@@ -95,9 +95,4 @@ public class Skill{
 			}
 		}
 	}
-
-	public bool IsOpened{get{
-			if ((int)VolatileData.progress.stageNumber / 10 < RequireLevel) return false;
-			return this is ActiveSkill || VolatileData.progress.stageNumber >= Setting.passiveOpenStage;
-	}}
 }

@@ -10,7 +10,6 @@ using Battle.Turn;
 using GameData;
 using Save;
 using DG.Tweening;
-using Camerawork;
 using UtilityMethods;
 
 public class BattleManager : MonoBehaviour{
@@ -22,7 +21,7 @@ public class BattleManager : MonoBehaviour{
     public Image bloodyScreen;
     public ClickEffect clickEffect;
 
-    void Awake (){
+    void Awake(){
 		if (instance != null && instance != this) {
 			Destroy (gameObject);
 			return;
@@ -154,7 +153,7 @@ public class BattleManager : MonoBehaviour{
 					yield return unit.GetAI().UnitTurn();
                 }else{
 					if (!stageTutoStarted){
-						TutorialController.gameObject.SetActive(true);
+						//TutorialController.gameObject.SetActive(true);
 						stageTutoStarted = true;
 					}
 					yield return ActionAtTurn(unit);
@@ -314,7 +313,7 @@ public class BattleManager : MonoBehaviour{
 					BattleData.currentState = CurrentState.AfterAction;
 					var destPos = BattleData.move.selectedTilePosition;
 					MoveToTile (destPos, movableTilesWithPath);
-				}else if(clickedTile.IsUnitOnTile() && VolatileData.OpenCheck(Setting.detailInfoOpenStage)){
+				}else if(clickedTile.IsUnitOnTile()){
 					SoundManager.Instance.PlaySE ("Click");
 					UIM.ActivateDetailInfoUI (clickedTile.GetUnitOnTile ());
 				}else
@@ -322,10 +321,10 @@ public class BattleManager : MonoBehaviour{
 			}else if(triggers.skillSelected.Triggered){
 				yield return SkillAndChainStates.SelectSkillApplyArea();
 				UIM.PreviewAp(null);				
-            }else if (triggers.actionCommand.Data == ActionCommand.Standby){
+            }else if(triggers.actionCommand.Data == ActionCommand.Standby){
 				BattleData.currentState = CurrentState.AfterAction;
                 WaitTimeForStandby(unit);
-			}else if (triggers.actionCommand.Data == ActionCommand.Collect) {
+			}else if(triggers.actionCommand.Data == ActionCommand.Collect) {
                 BattleData.currentState = CurrentState.AfterAction;
                 LM.Record(new CollectStartLog(unit, BattleData.NearestCollectable.unit));
                 BattleData.turnUnit.CollectNearestCollectable();

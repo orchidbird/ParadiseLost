@@ -15,13 +15,6 @@ public class UnitInfoExplain : MonoBehaviour, IPointerEnterHandler, IPointerExit
 	public GameObject ExplainPanel;
 	public Image IconImage;
 	TextMeshProUGUI textUI;
-	
-	void Awake(){
-		if ((stat == Stat.Defense) && !VolatileData.OpenCheck(Setting.classOpenStage))
-			gameObject.SetActive(false);
-		if (stat == Stat.Will && !VolatileData.OpenCheck(Setting.WillChangeOpenStage))
-			gameObject.SetActive(false);
-	}
 
 	void IPointerEnterHandler.OnPointerEnter(PointerEventData eventData){
 		if (SceneManager.GetActiveScene().name != "Battle") return;

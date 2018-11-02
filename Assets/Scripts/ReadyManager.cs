@@ -28,9 +28,9 @@ public class Candidate{
 	}
 	
 	public bool IsThisPickable(Skill skill){
-		return skill.IsOpened && Manager.RemainEther >= skill.ether 
-				&& !selectedSkills.Exists(_skill => _skill.korName == skill.korName)
-		        && (string.IsNullOrEmpty(skill.required) || selectedSkills.Exists(item => item.address == skill.required));
+		return Manager.RemainEther >= skill.ether 
+		       && !selectedSkills.Exists(_skill => _skill.korName == skill.korName)
+		       && (string.IsNullOrEmpty(skill.required) || selectedSkills.Exists(item => item.address == skill.required));
 	}
 	public int SumOfCost{get{return selectedSkills.Count == 0 ? 0 : selectedSkills.Sum(skill => skill.ether);}}
 }

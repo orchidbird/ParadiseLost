@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using Enums;
 using GameData;
 using UnityEngine;
@@ -37,6 +36,7 @@ public class TutorialManager : MonoBehaviour{
 	}
 
 	public bool AllowTutorial(bool interactive){
+		return false;
 		return BattleData.currentPhase > 0 && 
 			   (interactive && AllowInteractiveTutorial || !interactive && AllowPassiveTutorial);
 	}
@@ -59,6 +59,7 @@ public class TutorialManager : MonoBehaviour{
 	}
 	//UI.Button에서 참조
 	public void Activate(string title, bool queued = false, bool review = false){//Queue 기능을 통해 호출될 경우.
+		return;
 		if (SceneManager.GetActiveScene().name == "Battle" && !AllowTutorial(false)
 		    || !review && RecordData.alreadyReadTutorials.Contains(title)
 		    || subjectQueue.Contains(title))

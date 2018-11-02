@@ -9,7 +9,7 @@ using GameData;
 using UtilityMethods;
 
 public class Tile : Entity, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler, IPointerUpHandler {
-	public int APAtStandardHeight = 2;
+	public int APAtStandardHeight = 3;
 	public Vector2Int location;
 	public void SetLocation(Vector2Int input) {location = input;}
 	public Vector2Int Location{get { return location; }}

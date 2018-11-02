@@ -481,7 +481,6 @@ public class Unit : Entity{
 		float beforePercentage = GetHP / (float) GetMaxHealth();
 		foreach (var stat in EnumUtil.statsToUpdate)
 			actualStats[stat] = (int)Math.Round(CalculateThroughChangeList(GetBaseStat(stat), GetStatChangeList(stat)));
-
 		hp = (int) Math.Round(GetMaxHealth() * beforePercentage);
 	}
 
@@ -1267,7 +1266,7 @@ public class Unit : Entity{
 		baseStats.Add(Stat.Power, RandomIntOfVariation(10, 1.2f));
 		baseStats.Add(Stat.Defense, RandomIntOfVariation(32, 1.2f));
 		baseStats.Add(Stat.Agility, RandomIntOfVariation(50, 1.1f));
-		baseStats.Add(Stat.Will, RandomIntOfVariation(10, 1.1f));
+		baseStats.Add(Stat.Will, RandomIntOfVariation(100, 1.1f));
 		baseStats.Add(Stat.Level, 1);
 		foreach (var kv in baseStats)
 			actualStats.Add(kv.Key, kv.Value);
@@ -1302,7 +1301,7 @@ public class Unit : Entity{
 		foreach (var skill in skills){
 			if (skill is ActiveSkill)			
 				AddActiveSkill((ActiveSkill) skill, statusEffectInfoList, tileStatusEffectInfoList);
-			else if (skill is PassiveSkill && VolatileData.OpenCheck(Setting.passiveOpenStage))
+			else if (skill is PassiveSkill)
 				AddPassiveSkill((PassiveSkill) skill, statusEffectInfoList, tileStatusEffectInfoList);
 		}
 	}

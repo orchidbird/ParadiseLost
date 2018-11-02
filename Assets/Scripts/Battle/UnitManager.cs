@@ -341,9 +341,10 @@ public class UnitManager : MonoBehaviour{
         unit.transform.SetParent(transform);
 		unit.LoadSprites();
         unit.SetDirection(Direction.RightDown);
-		var location = new Vector2Int(Random.Range(1, TileManager.mapSize+1), Random.Range(1, TileManager.mapSize+1));
-        unit.SetPivot(location);    // 유닛이 생성되자마자 fogOfWar 아래에 있으면 숨겨야 하는데,
-                                    // pivot 세팅은 다음 프레임에 이루어지므로 미리 하지 않으면 숨겨지지 않는다.
+
+		// 유닛이 생성되자마자 fogOfWar 아래에 있으면 숨겨야 하는데,
+		// pivot 세팅은 다음 프레임에 이루어지므로 미리 하지 않으면 숨겨지지 않는다.
+        unit.SetPivot(Generic.PickRandom(TileManager.Instance.GetAllTiles().Values.ToList()).Location);
 	
         //AIInfo가 allUnits를 참조하고 unitsActThisPhase.Add 여부가 AI를 참조하므로, 아래 문단 내 순서를 함부로 바꾸지 말 것!
         allUnits.Add(unit);

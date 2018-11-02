@@ -42,42 +42,31 @@ public class SkillSelectButton : SkillUI, IPointerDownHandler{
 	        return;
         }
 	    
-	    if(!inputSkill.IsOpened){
-            iconSlot.sprite = GetNotLearnedSkillIcon();
-            EtherText.text = "";
-	        transform.Find("PassiveSkillFrame").GetComponent<Image>().enabled = false;
-	        transform.Find("ActiveSkillFrame").GetComponent<Image>().enabled = false;
-		    transform.Find("Notification").GetComponent<Image>().enabled = false;
-		    var displayChapter = Math.Max(inputSkill.RequireLevel, (int)Setting.passiveOpenStage / 10);
-		    skillNameText.text = "??? (" + Language.Select(displayChapter + "장)", "Chapter " + displayChapter + ")");
-		    selected = false;
-	    }else{
-	        EtherText.text = _String.NumberToSprite(inputSkill.ether);
-            iconSlot.sprite = inputSkill.icon;
+	    EtherText.text = _String.NumberToSprite(inputSkill.ether);
+        iconSlot.sprite = inputSkill.icon;
 
-            Candidate owner = RM.candidates.Find(unit => unit.CodeName == inputSkill.owner);
-	        transform.Find("ActiveSkillFrame").GetComponent<Image>().enabled = inputSkill is ActiveSkill; 
-	        transform.Find("PassiveSkillFrame").GetComponent<Image>().enabled = inputSkill is PassiveSkill; 
-			if (owner != null)
-                selected = owner.selectedSkills.Any(skill => skill.korName == inputSkill.korName);
+        Candidate owner = RM.candidates.Find(unit => unit.CodeName == inputSkill.owner);
+	    transform.Find("ActiveSkillFrame").GetComponent<Image>().enabled = inputSkill is ActiveSkill; 
+	    transform.Find("PassiveSkillFrame").GetComponent<Image>().enabled = inputSkill is PassiveSkill; 
+		if (owner != null)
+            selected = owner.selectedSkills.Any(skill => skill.korName == inputSkill.korName);
 	        
-	        int i = RM.StageAvailablePCTable.FindIndex(array =>
-		        array[0] == ((int) VolatileData.progress.stageNumber).ToString()) -1;
-	        var recentStageString = RM.StageAvailablePCTable[i][0];
-	        for (; i >= 0; i--){
-		        if (i == 0){
-			        recentStageString = "-10";
-			        break;
-		        }
-			        
-		        recentStageString = RM.StageAvailablePCTable[i][0];
-		        if (StageData.CandidatesOfStage(RM.StageAvailablePCTable[i]).Contains(inputSkill.owner))
-			        break;
-	        }
-	        
-		    transform.Find("Notification").GetComponent<Image>().enabled = inputSkill.RequireLevel > int.Parse(recentStageString) / 10;
-		    skillNameText.text = mySkill.Name;
-        }
+	    int i = RM.StageAvailablePCTable.FindIndex(array =>
+		    array[0] == ((int) VolatileData.progress.stageNumber).ToString()) -1;
+	    var recentStageString = RM.StageAvailablePCTable[i][0];
+	    for (; i >= 0; i--){
+		    if (i == 0){
+			    recentStageString = "-10";
+			    break;
+		    }
+
+		    recentStageString = RM.StageAvailablePCTable[i][0];
+		    if (StageData.CandidatesOfStage(RM.StageAvailablePCTable[i]).Contains(inputSkill.owner))
+			    break;
+	    }
+
+	    transform.Find("Notification").GetComponent<Image>().enabled = inputSkill.RequireLevel > int.Parse(recentStageString) / 10;
+		skillNameText.text = mySkill.Name;
 
 		name = "SkillSelectButton(" + mySkill.Name + ")";
     }

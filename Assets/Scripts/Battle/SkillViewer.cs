@@ -59,14 +59,6 @@ public class SkillViewer : SkillUI{
         this.ownerInfo = ownerInfo;
         this.owner = owner;
 		mySkill = skill;
-
-		if (!skill.IsOpened){
-			Initialize();
-			var displayChapter = Math.Max(skill.RequireLevel, (int)Setting.passiveOpenStage / 10);
-			explainText.text = "??? (" + Language.Select(displayChapter + "장에서 개방됩니다" , "Opened At Chapter " + displayChapter) + ")";
-			return;
-		}
-		
 		cooldownText.text = "";
 
 		if(mySkill is ActiveSkill){

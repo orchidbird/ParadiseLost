@@ -36,7 +36,7 @@ Difficulty_Hard_Explain	<color=#ff9500>턴제 게임</color>과 <color=#ff9500>�
 Difficulty_Legend	전설	Legend
 Difficulty_Legend_Explain	<color=red>실수가 곧 패배</color>로 직결되며, <color=red>실패</color>를 거듭하며 <color=red>도전</color>하게 됩니다.^*<color=red>첫 시도라면 권장하지 않습니다</color>!	<color=red>Mistake means failure</color>, you will repeat <color=red>fail and challenge</color>.^*<color=red>NOT recommended for first trial</color>!
 PowerExplain	공격력: 기술 위력을 결정	Power: Affects Power of Skills
-DefenseExplain	방어력: 받는 물리 피해 	Defense: Incoming Melee Damage 
+DefenseExplain	방어력: 받는 피해량 	Defense: Incoming Damage 
 ResistanceExplain	저항력: 받는 마법 피해 	Resistance: Incoming Magic Damage 
 WillExplain	의지: 소모 행동력 	Will: AP Consumption 
 AgilityExplain	민첩성: 	Agility: 
