@@ -1,0 +1,59 @@
+# =============== #
+#
+# Unity generated #
+# =============== #
+Temp/
+Obj/
+UnityGenerated/
+Library/
+build/
+UnityPackageManager/
+
+# ================== #
+# Sunblime generated #
+# ================== #
+*.sublime-workspace
+
+# ===================================== #
+# Visual Studio / MonoDevelop generated #
+# ===================================== #
+ExportedObj/
+*.svd
+*.userprefs
+*.csproj
+*.pidb
+*.suo
+*.sln
+*.user
+*.unityproj
+*.booproj
+.vs
+
+# ============ #
+# OS generated #
+# ============ #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+*Thumbs.db*
+*.app
+
+# ignore per project vimrc
+.vimrc
+.vscode/
+
+# etc
+*.numbers*
+
+# ================== #
+# rider-ide generate #
+# ================== #
+.idea/
+Assets/Plugins/Editor*
+
+Assets/~/
+ProjectSettings/ProjectVersion.txt

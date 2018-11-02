@@ -488,11 +488,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61b58b73c3dc04e42911ca7a216d537b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  element: 0
   APAtStandardHeight: 0
+  location: {x: 0, y: 0}
   height: 0
-  displayName: 
-  position: {x: 0, y: 0}
   fogType: 0
   fogOfWarPlane: {fileID: 1692683023739864}
   sprite: {fileID: 21205522}
@@ -505,6 +503,7 @@ MonoBehaviour:
   blood: {fileID: 212212030080382964}
   Override: {fileID: 212967185515042282}
   isBloody: 0
+  displayName: 
   LeftClickEnd:
     m_PersistentCalls:
       m_Calls: []
@@ -588,7 +587,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1f3af2f5cab834472b574400c502ff9e, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

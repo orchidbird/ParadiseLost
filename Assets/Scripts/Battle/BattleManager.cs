@@ -35,6 +35,7 @@ public class BattleManager : MonoBehaviour{
 	    LogManager.SetInstance();
 	    TileManager.SetInstance();
 		TileManager.Instance.GenerateMap();
+	    StartCoroutine(MoveCameraToTileAveragePosAndZoomOut());
 		SkillLocation.tileManager = TileManager.Instance;
 	}
 
