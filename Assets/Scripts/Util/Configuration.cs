@@ -8,7 +8,7 @@ public class Configuration {
     public static float NPCBehaviourDuration = 0.3f;          // NPC 행동 연출 시간(최대 0.5초)
 	
 	public static bool showRealBlood;
-	public static Dictionary<Warning.WarningType, bool> ignoreWarning = new Dictionary<Warning.WarningType, bool>(){
+	public static readonly Dictionary<Warning.WarningType, bool> ignoreWarning = new Dictionary<Warning.WarningType, bool>(){
 		{Warning.WarningType.InvalidCasting, false},
 		{Warning.WarningType.DifficultyChange, false},
 		{Warning.WarningType.Restart, false},

@@ -1,6 +1,3 @@
-using UnityEngine;
-using System.Linq;
-
 namespace Battle.Skills
 {
 public class Eren_3_m_SkillLogic : BasePassiveSkillLogic {

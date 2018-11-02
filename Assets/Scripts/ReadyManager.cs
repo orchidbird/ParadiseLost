@@ -108,8 +108,6 @@ public class ReadyManager : MonoBehaviour{
 
 	void Start(){
 		GeneratePCUnitButtons();
-		if (!VolatileData.stageData.IsTwoSideStage())
-			GenerateNPCUnitButtons();
 		
 		DontDestroyOnLoad(gameObject);
 		RecentUnitButton = unitButtons.First();
@@ -136,7 +134,7 @@ public class ReadyManager : MonoBehaviour{
 			var unitButton = Instantiate(characterButtonPrefab, CharacterButtons.transform).GetComponent<AvailableUnitButton>();
 			var candidate = new Candidate (selectableUnitNames [i]);
 			candidates.Add(candidate);
-			unitButton.Initialize (true, candidate, isFixed: isAllPickStage || (i < fixedMemberNum));
+			//unitButton.Initialize (true, candidate, isFixed: isAllPickStage || (i < fixedMemberNum));
 			unitButtons.Add(unitButton);
 			LoadSkillTree(unitButton.candidate);
 			if(RecordData.recentPicks.Contains(unitButton.codeName) && !VolatileData.stageData.IsTwoSideStage())
@@ -144,7 +142,7 @@ public class ReadyManager : MonoBehaviour{
 		}
     }
 
-	private void GenerateNPCUnitButtons(){
+	/*private void GenerateNPCUnitButtons(){
 		Debug.Log("Generate NPC Button");
         VolatileData.stageData.Load(true);  // 재도전했을 시 Battle 씬에서 unitInfo가 오염되었으므로 다시 로드한다. 
         var unitInfos = VolatileData.stageData.GetUnitInfos();
@@ -161,7 +159,7 @@ public class ReadyManager : MonoBehaviour{
             unitButton.Initialize(false, info : kv.Value);
             unitButtons.Add(unitButton);
         }
-    }
+    }*/
 	
     public void ActivateUnitButtons(bool PC, bool activate) {
         unitButtons.FindAll(button => button.isPC == PC).ForEach(button => button.gameObject.SetActive(activate));

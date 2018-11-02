@@ -49,9 +49,6 @@ public static class SkillLogicFactory{
             case "단검술":
 				skillLogic = new Grenev_B1_SkillLogic();
             break;
-            case "집중":
-                skillLogic = new Grenev_2_l_SkillLogic();
-            break;
             case "암살 표식":
                 skillLogic = new Grenev_3_m_SkillLogic();
             break;
@@ -216,9 +213,6 @@ public static class SkillLogicFactory{
 			case "죽음의 화살": case "죽음의 화살_test":
             skillLogic = new Eren_3_l_SkillLogic();
             break;
-			case "치유의 빛":
-            skillLogic = new Eren_6_r_SkillLogic();
-            break;
 
             //유진
             case "얼음 파편":
@@ -233,14 +227,8 @@ public static class SkillLogicFactory{
             case "얼음의 가호":
             skillLogic = new Eugene_4_l_SkillLogic();
             break;
-            case "백은의 장막":
-            skillLogic = new Eugene_4_m_SkillLogic();
-            break;
             case "겨울의 가호":
             skillLogic = new Eugene_8_l_SkillLogic();
-            break;
-            case "백은의 오로라":
-            skillLogic = new Eugene_B50_SkillLogic();
             break;
 
 			//라티스
@@ -292,12 +280,6 @@ public static class SkillLogicFactory{
             //큐리
             case "수상한 덩어리":
             skillLogic = new Curi_FlammableAttachment_SkillLogic();
-            break;
-            case "동기화 점액":
-            skillLogic = new Curi_4_l_SkillLogic();
-            break;
-            case "산성 혼합물":
-            skillLogic = new Curi_B22_SkillLogic();
             break;
             case "인간 중정석 폭탄":
             skillLogic = new Curi_4_r_SkillLogic();
@@ -558,9 +540,6 @@ public static class SkillLogicFactory{
 			case "피뢰침":
 			passiveSkillLogic = new Lenien_Rod_SkillLogic();
 			break;
-			case "정전기 유도":
-			passiveSkillLogic = new Lenien_Static_SkillLogic();
-			break;
 			case "연쇄 방전":
 			passiveSkillLogic = new Lenien_5_m_SkillLogic();
 			break;
@@ -786,9 +765,6 @@ public static class SkillLogicFactory{
             break;
 
             // 큐리
-            case "정제":
-            passiveSkillLogic = new Curi_0_1_SkillLogic();
-            break;
             case "호기심":
             passiveSkillLogic = new Curi_1_1_SkillLogic();
             break;

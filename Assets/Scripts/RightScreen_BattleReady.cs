@@ -31,7 +31,7 @@ public class RightScreen_BattleReady : MonoBehaviour {
 	}
 
     // NPC용
-    public void SetCommonUnitInfoUI(UnitInfo unitInfo) {
+    /*public void SetCommonUnitInfoUI(UnitInfo unitInfo) {
         unitName.text = unitInfo.nameKor;
         unitImage.sprite = VolatileData.GetUnitSprite(unitInfo.codeName, unitInfo.side == Side.Ally)[2];
 	    
@@ -39,7 +39,7 @@ public class RightScreen_BattleReady : MonoBehaviour {
 		    kv.Value.GetComponentInChildren<Text>().text = unitInfo.baseStats[kv.Key].ToString();
 		    OnOffGraphBars(kv.Value, false);
 	    }
-    }
+    }*/
 
 	void OnOffGraphBars(Transform statTransform, bool isActive){
 		statTransform.Find("AmountLevel").gameObject.SetActive(isActive);

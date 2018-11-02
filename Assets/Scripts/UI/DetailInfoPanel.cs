@@ -17,7 +17,7 @@ public class DetailInfoPanel : UnitInfoUI{
 	public TextMeshProUGUI WillCharacteristic;
 
 	public void InitializeInBattleScene(){
-		SetIllust(unit.myInfo);
+		//SetIllust(unit.myInfo);
 		SetCommonUnitInfoUI();
         SetSkillButtons(unit.GetActiveSkillList(), unit.GetPassiveSkillList());
 		
@@ -34,7 +34,7 @@ public class DetailInfoPanel : UnitInfoUI{
 		}else
 			WillCharacteristic.transform.parent.gameObject.SetActive(false);
 	}
-	public void InitializeInReadyScene(UnitInfo info){
+	/*public void InitializeInReadyScene(UnitInfo info){
 		SetIllust(info);
 		SetCommonUnitInfoUIWithUnitInfo(info);
 		var skills = VolatileData.SkillsOf(info.codeName, false);
@@ -48,7 +48,7 @@ public class DetailInfoPanel : UnitInfoUI{
 	void SetIllust(UnitInfo info){
 		illust.sprite = VolatileData.GetSpriteOf(SpriteType.Illust, _String.GeneralName(info.codeName)) ??
 		                VolatileData.GetIcon(IconSprites.Transparent);
-	}
+	}*/
 
 	void SetSkillButtons(List<ActiveSkill> actives, List<PassiveSkill> passives, UnitInfo info = null){
 		Debug.Log("Passive : " + passives.Count + ", Active : " + actives.Count);
@@ -108,7 +108,6 @@ public class UnitInfoUI : MonoBehaviour{
 			statTextDict.Add(Stat.CurrentAP, ApText);
 			statTextDict.Add(Stat.Power, powerText);
 			statTextDict.Add(Stat.Defense, defenseText);
-			statTextDict.Add(Stat.Resistance, resistText);
 			statTextDict.Add(Stat.Will, WillText);
 		}
 		AfterAwake();
@@ -117,17 +116,15 @@ public class UnitInfoUI : MonoBehaviour{
 	public virtual void AfterAwake(){}
 
 	protected void SetCommonUnitInfoUI(){
-		unitName.text = UnitInfo.ConvertName(unit.myInfo.codeName);
+		unitName.text = UnitInfo.ConvertName(unit.codeName);
 		HpText.text = unit.GetHP + " / " + unit.GetStat(Stat.MaxHealth);
 		ApText.text = unit.GetCurrentActivityPoint() + " / " + unit.GetStat(Stat.Agility);
 		UpdateStat(Stat.Power);
 		UpdateStat(Stat.Defense);
-		UpdateStat(Stat.Resistance);
 		UpdateStat(Stat.Will);
-		Utility.SetPropertyImages(classImage, elementImage, unit.myInfo);
 	}
 
-	protected void SetCommonUnitInfoUIWithUnitInfo(UnitInfo info){
+	/*protected void SetCommonUnitInfoUIWithUnitInfo(UnitInfo info){
 		unitName.text = UnitInfo.ConvertName(info.codeName);
 		HpText.text = info.baseStats[Stat.MaxHealth].ToString();
 		ApText.text = info.baseStats[Stat.Agility].ToString();
@@ -137,7 +134,7 @@ public class UnitInfoUI : MonoBehaviour{
 		}
 		WillText.gameObject.SetActive(false);
 		Utility.SetPropertyImages(classImage, elementImage, info);
-	}
+	}*/
 
 	void UpdateStat(Stat statType){
 		int actual = unit.GetStat(statType);

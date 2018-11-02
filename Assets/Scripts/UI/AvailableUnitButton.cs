@@ -18,7 +18,7 @@ public class AvailableUnitButton : MonoBehaviour, IPointerDownHandler, IPointerE
 	
 	public bool isPC;
 	public bool isFixed;
-	public string codeName{get { return isPC ? candidate.CodeName : unitInfo.codeName; }}
+	public string codeName{get { return candidate.CodeName; }}
     
     public UnitInfo unitInfo;
 	public Candidate candidate;
@@ -35,7 +35,7 @@ public class AvailableUnitButton : MonoBehaviour, IPointerDownHandler, IPointerE
 	}
 
     // PC일 경우 이름과 unitInfo를 넣어주고, PC가 아닐 경우 unitInfo만 넣어줄 것
-	public void Initialize(bool isPC, Candidate candidate = null, UnitInfo info = null, bool isFixed = false) {
+	/*public void Initialize(bool isPC, Candidate candidate = null, UnitInfo info = null, bool isFixed = false) {
 		this.isPC = isPC;
         unitInfo = info;
 		this.isFixed = isFixed;
@@ -81,7 +81,7 @@ public class AvailableUnitButton : MonoBehaviour, IPointerDownHandler, IPointerE
 			HpBar.anchoredPosition = new Vector2(-10, 11);
 			ElementOrb.rectTransform.anchoredPosition = new Vector2(94, -12);
 		}
-	}
+	}*/
 
 	public void ActiveHighlight(bool onoff = true) {
 		highlightImage.enabled = onoff;
@@ -123,10 +123,10 @@ public class AvailableUnitButton : MonoBehaviour, IPointerDownHandler, IPointerE
 			}
 		}
 		
-		UpdateRightPanel();
+		//UpdateRightPanel();
 	}
 
-    public void UpdateRightPanel() {
+    /*public void UpdateRightPanel() {
         if (RM == null) { RM = ReadyManager.Instance; }
         RM.RecentUnitButton = this;
 
@@ -139,7 +139,7 @@ public class AvailableUnitButton : MonoBehaviour, IPointerDownHandler, IPointerE
 		    UIManager.Instance.PushUI(ReadyManager.Instance.detailPanel.gameObject);
 		    ReadyManager.Instance.detailPanel.InitializeInReadyScene(unitInfo);
 	    }
-    }
+    }*/
 
     public void SetGray(bool gray){
 		if (gray && !isFixed) {

@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using Battle.Damage;
-
-namespace Battle.Skills {
+﻿namespace Battle.Skills {
     class Grenev_1_r_SkillLogic : BasePassiveSkillLogic{
 	    public override void OnCastingAmountCalculation(CastingApply castingApply){
 		    float lostHpRatio = 1 - castingApply.Target.GetHpRatio();

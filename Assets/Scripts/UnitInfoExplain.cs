@@ -17,7 +17,7 @@ public class UnitInfoExplain : MonoBehaviour, IPointerEnterHandler, IPointerExit
 	TextMeshProUGUI textUI;
 	
 	void Awake(){
-		if ((stat == Stat.Defense || stat == Stat.Resistance) && !VolatileData.OpenCheck(Setting.classOpenStage))
+		if ((stat == Stat.Defense) && !VolatileData.OpenCheck(Setting.classOpenStage))
 			gameObject.SetActive(false);
 		if (stat == Stat.Will && !VolatileData.OpenCheck(Setting.WillChangeOpenStage))
 			gameObject.SetActive(false);
@@ -41,7 +41,7 @@ public class UnitInfoExplain : MonoBehaviour, IPointerEnterHandler, IPointerExit
 			if(stat != Stat.None)
 				textUI.text = Language.Find(stat + "Explain");
 			
-			if (stat == Stat.Defense || stat == Stat.Resistance){
+			if (stat == Stat.Defense){
 				colorCode = "green";
 				textUI.text += floatToPercent(-(float) currentStat / (currentStat + 200), false, 1);
 			}else if (stat == Stat.Will){

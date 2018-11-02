@@ -408,7 +408,7 @@ namespace GameData{
 		    loadedStage = VolatileData.progress.stageNumber;
 	        _genInfos = Parser.GetParsedData<UnitGenInfo>();
             _battleTriggers = Parser.GetParsedData<BattleTrigger>();
-            _unitInfos = Parser.GetParsedData<UnitInfo>();
+            //_unitInfos = Parser.GetParsedData<UnitInfo>();
             _tileInfos = Parser.GetParsedTileInfo();
             _aiInfos = Parser.GetParsedData<AIInfo>();
 			_cameraWorkInfos = Parser.GetParsedData<CameraWork>();

@@ -7,7 +7,7 @@ namespace Battle.Skills {
             List<Tile> tiles = TileManager.Instance.TilesInRange(range, caster.Pos, Direction.Down, 1);
 			List<Unit> targets = new List<Unit> ();
             foreach(var tile in tiles)
-				if (tile.IsUnitOnTile() && tile.GetUnitOnTile().GetElement() != Element.Fire)
+				if (tile.IsUnitOnTile())
 					targets.Add (tile.GetUnitOnTile ());
 
 			if (targets.Count <= 0) return;

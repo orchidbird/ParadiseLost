@@ -1,9 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Configuration;
+﻿using System.Collections.Generic;
 using System.Linq;
 using Battle.Turn;
-using UnityEngine;
 using Enums;
 
 public class Casting {

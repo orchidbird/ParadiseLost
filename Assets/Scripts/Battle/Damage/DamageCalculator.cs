@@ -79,15 +79,6 @@ namespace Battle {
 			
 			foreach (var smite in caster.statusEffectList.FindAll(se => se.actuals.Any(actual => actual.statusEffectType == StatusEffectType.Smite)))
 				attackDamage.absoluteModifiers.Add(smite.GetOriginSkill().icon, (int)smite.GetAmount(0));
-			
-            Element casterElement = caster.GetElement();
-			if(casterElement != Element.None){
-				StatusEffectType casterElementWeakness = EnumConverter.ToStatusEffectType(casterElement);
-				if (target.HasStatusEffect(casterElementWeakness)){
-					float elementBonus = target.CalculateActualAmount(1, casterElementWeakness);
-					attackDamage.relativeModifiers.Add(Resources.Load<Sprite>("Icon/" + casterElement), elementBonus); //attackDamage.RelativeModifier *= elementBonus;
-				}
-			}
 
 			// 해당 기술의 추가데미지 계산
 			SkillLogicFactory.Get(appliedSkill).ApplyAdditionalDamage(castingApply);
@@ -198,38 +189,17 @@ namespace Battle {
 			return smiteAmount;
 		}
 
-		public static float CalculateReflectDamage(float attackDamage, Unit target, Unit reflectTarget, UnitClass damageType)
-		{
+		public static float CalculateReflectDamage(float attackDamage, Unit target, Unit reflectTarget){
 			float reflectAmount = 0;
 			foreach (var statusEffect in target.statusEffectList)
-			{
-				bool canReflect = statusEffect.IsTypeOf(StatusEffectType.Reflect) ||
-					(statusEffect.IsTypeOf(StatusEffectType.MagicReflect) && damageType == UnitClass.Magic) ||
-					(statusEffect.IsTypeOf(StatusEffectType.MeleeReflect) && damageType == UnitClass.Melee);
-				if (canReflect)
-				{
-					float reflectPercent = statusEffect.GetAmountOfType(StatusEffectType.Reflect);
-					if(damageType == UnitClass.Magic) reflectPercent += statusEffect.GetAmountOfType(StatusEffectType.MagicReflect);
-					if(damageType == UnitClass.Melee) reflectPercent += statusEffect.GetAmountOfType(StatusEffectType.MeleeReflect);
-					reflectAmount += attackDamage * reflectPercent/100;
-				}
-			}
+				if (statusEffect.IsTypeOf(StatusEffectType.Reflect))
+					reflectAmount += attackDamage * statusEffect.GetAmountOfType(StatusEffectType.Reflect)/100;
 			return reflectAmount;
 		}
 
-		public static float ApplyDefenseAndResistance(float damage, UnitClass damageType, float defense, float resistance) {
-			if(damageType == UnitClass.None){return damage;}
-			else if (damageType == UnitClass.Melee) {
-				// 실제 피해 = 원래 피해 x 200/(200+방어력)
-				// 방어력이 -180 이하일 시 -180으로 적용
-				if (defense <= -180) damage = damage * 10;
-				else damage = damage * 200.0f / (200.0f + defense);
-			} else if (damageType == UnitClass.Magic) {
-				if (resistance <= -180) damage = damage * 10;
-				else damage = damage * 200.0f / (200.0f + resistance);
-			}
-			//Debug.Log("resultDamage applying defense and resistance applied : " + damage);
-			return damage;
+		public static float ApplyDefense(float damage, float defense){
+			if (defense <= -180) return damage * 10;
+			return damage * 200.0f / (200.0f + defense);
 		}
 		public static float CalculateDefense(ActiveSkill appliedSkill, Unit target, Unit caster) {
 			float defense = target.GetStat(Stat.Defense);
@@ -247,23 +217,6 @@ namespace Battle {
 			// 특성에 의한 방어 무시 (절대값)
 			defense = SkillLogicFactory.Get(casterPassiveSkills).ApplyIgnoreDefenceAbsoluteValueByEachPassive(appliedSkill, target, caster, defense);
 			return defense;
-		}
-		public static float CalculateResistance(ActiveSkill appliedSkill, Unit target, Unit caster) {
-			float resistance = target.GetStat(Stat.Resistance);
-
-			// 기술에 의한 저항 무시 (상대값)
-			resistance = SkillLogicFactory.Get(appliedSkill).ApplyIgnoreResistanceRelativeValueBySkill(resistance, caster, target);
-
-			// 특성에 의한 저항 무시 (상대값)
-			List<PassiveSkill> casterPassiveSkills = caster.GetPassiveSkillList();
-			resistance = SkillLogicFactory.Get(casterPassiveSkills).ApplyIgnoreResistanceRelativeValueByEachPassive(appliedSkill, target, caster, resistance);
-
-			// 기술에 의한 저항 무시 (절대값)
-			resistance = SkillLogicFactory.Get(appliedSkill).ApplyIgnoreResistanceAbsoluteValueBySkill(resistance, caster, target);
-
-			// 특성에 의한 저항 무시 (절대값)
-			resistance = SkillLogicFactory.Get(casterPassiveSkills).ApplyIgnoreResistanceAbsoluteValueByEachPassive(appliedSkill, target, caster, resistance);
-			return resistance;
 		}
 	}
 }

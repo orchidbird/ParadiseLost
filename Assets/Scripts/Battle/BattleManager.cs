@@ -35,7 +35,6 @@ public class BattleManager : MonoBehaviour{
 	    LogManager.SetInstance();
 	    TileManager.SetInstance();
 		TileManager.Instance.GenerateMap();
-	    StartCoroutine(MoveCameraToTileAveragePosAndZoomOut());
 		SkillLocation.tileManager = TileManager.Instance;
 	}
 
@@ -43,9 +42,13 @@ public class BattleManager : MonoBehaviour{
 		var UM = UnitManager.Instance;
 		SoundManager.Instance.PlayBGM ("BGM_Urgent");
 		bloodyScreen.material.SetFloat("_HP_Percent", 1);
+		
+		yield return MoveCameraToTileAveragePosAndZoomOut();
+		UM.AutomaticGeneration();
+		BattleUIInitialize();
+		
 		UM.ReadAfterGeneration();
 		StartCoroutine (TurnManager ());
-		yield break;
     }
 
 	IEnumerator WaitForClickingConditionPanel() {
@@ -539,16 +542,6 @@ public class BattleManager : MonoBehaviour{
 			FindObjectOfType<TutorialController>().CurrentScenario.UpdateAspect();
 		}
     }
-
-	public void OnMouseEnterHandlerFromTile(Vector2 position){
-		if (BattleData.isWaitingUserInput && BattleData.unitToGenerate != null)
-			UnitManager.Instance.ShowAfterImageOfGeneration (position);
-	}
-
-	public void OnMouseExitHandlerFromTile(){
-		if (BattleData.isWaitingUserInput && BattleData.unitToGenerate != null)
-			UnitManager.Instance.DestroyAfterImageOfGeneration ();
-	}
 
 	public void OnMouseDownHandlerFromTile(Vector2Int position){
 		//Debug.Log("타일 클릭됨");

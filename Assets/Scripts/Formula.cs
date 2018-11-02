@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Enums;
+﻿using Enums;
 using GameData;
-using UnityEngine;
 
 public class Formula {
     // 스킬의 데미지 계산 등에 사용되는 변수타입, 계수, 기본값 등을 담는 클래스
@@ -34,6 +29,7 @@ public class Formula {
         }
         return Substitute(value);
     }
+    
     public string Result(string unitName) {
         Stat statType = EnumConverter.ToStat(type);
         if (statType != Stat.None)
@@ -45,8 +41,8 @@ public class Formula {
         if (statType != Stat.None) {
             if (statType == Stat.Level)
                 return ((int)Substitute(RecordData.level)).ToString();
-            else
-                return ((int)Substitute(unitInfo.baseStats[statType])).ToString();
+            //else
+              //  return ((int)Substitute(unitInfo.baseStats[statType])).ToString();
         }
         return "";
     }

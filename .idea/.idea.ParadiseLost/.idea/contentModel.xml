@@ -367,13 +367,6 @@
             <e p="BattleReadyPanel.cs" t="Include" />
             <e p="BattleTrigger.cs" t="Include" />
             <e p="BattleTriggerManager.cs" t="Include" />
-            <e p="BattleTriggers" t="Include">
-              <e p="S111_0_BattleTrigger.cs" t="Include" />
-              <e p="S141_Armor_BattleTrigger.cs" t="Include" />
-              <e p="S141_FirstArmor_BattleTrigger.cs" t="Include" />
-              <e p="S171_Pack_BattleTrigger.cs" t="Include" />
-              <e p="S191_0_BattleTrigger.cs" t="Include" />
-            </e>
             <e p="CameraWork.cs" t="Include" />
             <e p="Casting.cs" t="Include" />
             <e p="CastingApply.cs" t="Include" />
@@ -454,13 +447,10 @@
                 <e p="Bianca_Unique_SkillLogic.cs" t="Include" />
               </e>
               <e p="Curi" t="Include">
-                <e p="Curi_0_1_SkillLogic.cs" t="Include" />
                 <e p="Curi_1_l_SkillLogic.cs" t="Include" />
                 <e p="Curi_2_l_SkillLogic.cs" t="Include" />
                 <e p="Curi_3_l_SkillLogic.cs" t="Include" />
                 <e p="Curi_3_r_SkillLogic.cs" t="Include" />
-                <e p="Curi_4_l_SkillLogic.cs" t="Include" />
-                <e p="Curi_4_m_SkillLogic.cs" t="Include" />
                 <e p="Curi_4_r_SkillLogic.cs" t="Include" />
                 <e p="Curi_5_l_SkillLogic.cs" t="Include" />
                 <e p="Curi_6_m_SkillLogic.cs" t="Include" />
@@ -486,10 +476,7 @@
                 <e p="Deus_0_1_SkillLogic.cs" t="Include" />
                 <e p="Deus_1_l_SkillLogic.cs" t="Include" />
                 <e p="Deus_1_m_SkillLogic.cs" t="Include" />
-                <e p="Deus_1_r_SkillLogic.cs" t="Include" />
-                <e p="Deus_2_m_SkillLogic.cs" t="Include" />
                 <e p="Deus_2_r_SkillLogic.cs" t="Include" />
-                <e p="Deus_3_m_SkillLogic.cs" t="Include" />
               </e>
               <e p="Eren" t="Include">
                 <e p="Eren_0_1_SkillLogic.cs" t="Include" />
@@ -500,7 +487,6 @@
                 <e p="Eren_5_l_SkillLogic.cs" t="Include" />
                 <e p="Eren_5_m_SkillLogic.cs" t="Include" />
                 <e p="Eren_6_m_SkillLogic.cs" t="Include" />
-                <e p="Eren_6_r_SkillLogic.cs" t="Include" />
                 <e p="Eren_7_l_SkillLogic.cs" t="Include" />
                 <e p="Eren_7_r_SkillLogic.cs" t="Include" />
                 <e p="Eren_C1_SkillLogic.cs" t="Include" />
@@ -512,21 +498,18 @@
                 <e p="Eugene_3_m_SkillLogic.cs" t="Include" />
                 <e p="Eugene_3_r_SkillLogic.cs" t="Include" />
                 <e p="Eugene_4_l_SkillLogic.cs" t="Include" />
-                <e p="Eugene_4_m_SkillLogic.cs" t="Include" />
                 <e p="Eugene_5_l_SkillLogic.cs" t="Include" />
                 <e p="Eugene_5_m_SkillLogic.cs" t="Include" />
                 <e p="Eugene_6_r_SkillLogic.cs" t="Include" />
                 <e p="Eugene_7_l_SkillLogic.cs" t="Include" />
                 <e p="Eugene_7_r_SkillLogic.cs" t="Include" />
                 <e p="Eugene_8_l_SkillLogic.cs" t="Include" />
-                <e p="Eugene_B50_SkillLogic.cs" t="Include" />
                 <e p="Eugene_B8_SkillLogic.cs" t="Include" />
                 <e p="Eugene_P0_SkillLogic.cs" t="Include" />
               </e>
               <e p="Grenev" t="Include">
                 <e p="Grenev_1_l_SkillLogic.cs" t="Include" />
                 <e p="Grenev_1_r_SkillLogic.cs" t="Include" />
-                <e p="Grenev_2_l_SkillLogic.cs" t="Include" />
                 <e p="Grenev_2_r_SkillLogic.cs" t="Include" />
                 <e p="Grenev_3_m_SkillLogic.cs" t="Include" />
                 <e p="Grenev_3_r_SkillLogic.cs" t="Include" />
@@ -584,7 +567,6 @@
                 <e p="Lenien_B8_SkillLogic.cs" t="Include" />
                 <e p="Lenien_C1_SkillLogic.cs" t="Include" />
                 <e p="Lenien_Rod_SkillLogic.cs" t="Include" />
-                <e p="Lenien_Static_SkillLogic.cs" t="Include" />
                 <e p="Lenien_Unique_SkillLogic.cs" t="Include" />
               </e>
               <e p="ListPassiveSkillLogic.cs" t="Include" />

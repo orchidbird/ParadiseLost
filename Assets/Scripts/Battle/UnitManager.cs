@@ -218,7 +218,7 @@ public class UnitManager : MonoBehaviour{
 
 			if (actionType != TrigActionType.Escape) {
 				if (destroyedUnit.IsEnemyTo (unit)){
-					unit.ChangeWill(WillChangeType.Cheer, destroyedUnit.IsNamed ? BigSmall.Big : BigSmall.Small);
+					unit.ChangeWill(WillChangeType.Cheer, BigSmall.Small);
 					if(unit == BattleData.turnUnit)
 						unit.ChangeWill(WillChangeType.DirectNeutralize, BigSmall.None);
 				} else if (!destroyedUnit.IsObject && destroyedUnit.IsAllyTo(unit)){
@@ -253,9 +253,9 @@ public class UnitManager : MonoBehaviour{
 		    BattleManager.Instance.unitDestroyedDuringOwnTurn = target;
 	    }
 	    
-	    foreach (var guard in GetAllUnits().FindAll(item => item.CodeName == target.myInfo.connectedName))
+	    foreach (var guard in GetAllUnits().FindAll(item => item.CodeName == target.connectedName))
 		    LogManager.Instance.Record(new UnitDestroyLog(guard, TrigActionType.Retreat));
-	    foreach (var holdee in GetAllUnits().FindAll(item => item.CodeName == target.myInfo.holdName)){
+	    foreach (var holdee in GetAllUnits().FindAll(item => item.CodeName == target.holdName)){
 			holdee.GetAI()._AIData.SetActive(true);
 		    holdee.RemoveStatusEffect(holdee.statusEffectList.Find(se => se.GetOriginSkillName() == "붙잡힘"));
 	    }
@@ -307,7 +307,10 @@ public class UnitManager : MonoBehaviour{
 	}
 
 	public void AutomaticGeneration(bool onlyPC = false){
-        genInfos = VolatileData.stageData.GetUnitGenInfos();
+		for (int i = 0; i < 3; i++){
+			GenerateUnit();
+		}
+        /*genInfos = VolatileData.stageData.GetUnitGenInfos();
 
 		foreach (var genInfo in genInfos){
 			if (genInfo.IsNonFixedPosPC) continue;
@@ -319,32 +322,26 @@ public class UnitManager : MonoBehaviour{
 				ReadyManager.Instance.candidates.RemoveAll (_candi => "PC" + _candi.CodeName == genInfo.CodeName);
 		}
 
-        //UpdateFogOfWar();
+        //UpdateFogOfWar();*/
     }
 
-	private Unit GenerateUnitWith(UnitGenInfo genInfo, bool isSelectedFromReadyScene){
+	private Unit GenerateUnit(){
         var unit = Instantiate(unitPrefab).GetComponent<Unit>();
-		genInfo.alreadyGenerated = true;
-		var unitInfo = genInfo.CodeName.StartsWith("PC")
-			? new UnitInfo(genInfo.CodeName.Substring(2), true)
-			: VolatileData.stageData.GetUnitInfos().Find(info => info.codeName == genInfo.CodeName);
-		Debug.Assert(unitInfo != null, genInfo.CodeName + "에 해당하는 unitInfo 없음!");
-		unit.SetInfo(unitInfo);
-		unit.genInfo = genInfo;
-		
+		unit.InitializeStats();
         unit.transform.SetParent(transform);
-		unit.LoadSprites();
-        unit.SetDirection(genInfo.Direction);
-        unit.SetPivot(genInfo.Position);    // 유닛이 생성되자마자 fogOfWar 아래에 있으면 숨겨야 하는데,
-                                            // pivot 세팅은 다음 프레임에 이루어지므로 미리 하지 않으면 숨겨지지 않는다.
+		unit.LoadSprites("reina");
+        unit.SetDirection(Direction.RightDown);
+		var location = new Vector2Int(Random.Range(1, TileManager.mapSize+1), Random.Range(1, TileManager.mapSize+1));
+        unit.SetPivot(location);    // 유닛이 생성되자마자 fogOfWar 아래에 있으면 숨겨야 하는데,
+                                    // pivot 세팅은 다음 프레임에 이루어지므로 미리 하지 않으면 숨겨지지 않는다.
 	
         //AIInfo가 allUnits를 참조하고 unitsActThisPhase.Add 여부가 AI를 참조하므로, 아래 문단 내 순서를 함부로 바꾸지 말 것!
         allUnits.Add(unit);
 		ApplyAIInfo(unit);
 		
-		var skills = new List<Skill>();
-		//Debug.Log(isSelectedFromReadyScene + " / " + unit.IsPC + " / " + VolatileData.OpenCheck(Setting.readySceneOpenStage));
-		if(!isSelectedFromReadyScene && (!unit.IsPC || !VolatileData.OpenCheck(Setting.readySceneOpenStage))){
+		//스킬 입혀주는 부분
+		/*var skills = new List<Skill>();
+		 if((!unit.IsPC || !VolatileData.OpenCheck(Setting.readySceneOpenStage))){
 			var mySkills = VolatileData.SkillsOf(unitInfo.codeName, unit.IsPC);
 			if(VolatileData.OpenCheck(Setting.passiveOpenStage))
 				skills.AddRange(mySkills);
@@ -358,12 +355,12 @@ public class UnitManager : MonoBehaviour{
         unit.ApplySkillList(skills, StatusEffector.USEInfoList, StatusEffector.TSEInfoList);
         if(unit.HasAction) unitsActThisPhase.Add(unit);
 
-		unit.healthViewer.SetInitHealth(unit.myInfo.baseStats[Stat.MaxHealth], unit);
+		unit.healthViewer.SetInitHealth(unit.baseStats[Stat.MaxHealth], unit);
         if(unit.IsPC){
             var skillNameList = unit.GetPassiveSkillList().FindAll(skill => skill.RequireLevel > 0).Select(skill => skill.Name).ToList();
             skillNameList.AddRange(unit.GetActiveSkillList().Select(skill => skill.GetName()));
             PCSelectedSkillList.Add(unit.CodeName, skillNameList);
-        }
+        }*/
 
         //평균 위치 계산하고, 소속 타일 중 가장 앞에 있는 것보다 position.z를 0.05f 당김
         var tiles = unit.TilesUnderUnit;
@@ -378,159 +375,7 @@ public class UnitManager : MonoBehaviour{
         return unit;
     }
 
-	Unit GenerateVirtualUnitWith(UnitGenInfo genInfo){
-		var unit = Instantiate(unitPrefab).GetComponent<Unit>();
-		unit.SetInfo(genInfo.CodeName.StartsWith("PC") ? new UnitInfo(genInfo.CodeName.Substring(2), true) : VolatileData.stageData.GetUnitInfos().Find(info => info.codeName == genInfo.CodeName));
-		unit.genInfo = genInfo;
-
-		unit.transform.SetParent(transform);
-		unit.SetDirection(genInfo.Direction);
-		unit.SetPivot(genInfo.Position);
-
-		var tiles = unit.TilesUnderUnit;
-		float zValue = tiles[0].transform.position.z;
-		tiles.ForEach(tile => {
-			if(tile.transform.position.z < zValue) {zValue = tile.transform.position.z;}
-		});
-		var averagePos = Utility.AveragePos(tiles);
-		unit.transform.position = new Vector3(averagePos.x, averagePos.y, zValue - 0.05f);
-
-		return unit;
-	}
-
-    public IEnumerator ManualGeneration(){
-	    var RM = FindObjectOfType<ReadyManager>();
-		if(!Utility.needsManualGeneration || RM == null) yield break;
-			
-		BattleUIManager.Instance.EnablePlacedUnitCheckUI();
-		
-        if (Utility.needsManualGeneration){
-            ReadyForManualGeneration();
-            yield return GenerateUnitsManually();
-        }
-
-	    TileManager.Instance.ClearAllTileColors();
-	    Destroy(RM.gameObject);
-        yield return null;
-	    for (int i = 0; i < GetAllUnits().Count; i++)
-		    GetAllUnits()[i].RemoveFogsInSight();
-    }
-
-	private IEnumerator GenerateUnitsManually(){
-        var triggers = BattleManager.Instance.triggers;
-		var pickedList = ReadyManager.Instance.pickedList;
-		var TM = TileManager.Instance;
-		
-		playButton.SetActive (false);
-
-        while(generatedPC < pickedList.Count){
-			var presentUnit = pickedList [generatedPC];
-			FindObjectOfType<PlacedUnitCheckPanel>().HighlightPortrait(presentUnit.CodeName);
-			BattleData.isWaitingUserInput = true;
-			BattleData.unitToGenerate = presentUnit;
-
-	        if (VolatileData.gameMode == GameMode.AllStageTest)
-		        BattleManager.Instance.OnMouseDownHandlerFromTile(Generic.PickRandom(TileManager.Instance.GetTilesInGlobalRange().FindAll(tile => tile.IsPreSelected())).Pos);
-	        else
-				yield return EventTrigger.WaitOr(triggers.resetUnitInput, triggers.tileSelected);
-	        
-            if (triggers.resetUnitInput.Triggered) {
-                PCSelectedSkillList = new Dictionary<string, List<string>>();
-				BattleData.unitToGenerate = null;
-				DestroyAfterImageOfGeneration ();
-                yield return GenerateUnitsManually();
-                yield break;
-            }
-
-			BattleData.isWaitingUserInput = false;
-
-			BattleData.unitToGenerate = null;
-			DestroyAfterImageOfGeneration ();
-		
-			Vector2Int triggeredPos = BattleData.move.selectedTilePosition;
-	        UnitGenInfo genInfo = genInfos.Find(item => item.Position == triggeredPos);
-			genInfo.CodeName = "PC" + presentUnit.CodeName;
-
-			GenerateUnitWith(genInfo, true);
-
-	        var triggeredTiles = new List<Tile> {TileManager.Instance.GetTile(triggeredPos)};
-	        TM.DepaintTiles(triggeredTiles, TM.TileColorMaterialForMove);
-			TM.DepreselectTiles(triggeredTiles);
-            generatedPC += 1;
-
-			SoundManager.Instance.PlaySE ("Click");
-        }
-
-		playButton.SetActive (true);
-
-        // 배치 가능 위치 지우고 턴 시작
-		var placingPanel = FindObjectOfType<PlacedUnitCheckPanel>();
-		if (placingPanel != null){
-			placingPanel.text.text = Language.Select("배치를 이대로 확정할까요?", "Confirm the locations?");
-			if (VolatileData.gameMode == GameMode.AllStageTest){
-				Destroy(placingPanel.gameObject);
-				yield break;
-			}
-		}
-		
-		yield return EventTrigger.WaitOr(triggers.resetUnitInput, triggers.finishUnitInput);
-		if (!triggers.resetUnitInput.Triggered) yield break;
-		
-		PCSelectedSkillList = new Dictionary<string, List<string>>();
-		BattleData.unitToGenerate = null;
-		DestroyAfterImageOfGeneration ();
-		yield return GenerateUnitsManually();
-	}
-
-	Unit virtualUnit;
-	public void ShowAfterImageOfGeneration(Vector2 pos){
-		if (virtualUnit != null)
-			return;
-		UnitGenInfo genInfo = genInfos.Find(item => item.Position == pos);
-		genInfo.CodeName = "PC" + BattleData.unitToGenerate.CodeName;
-		virtualUnit = GenerateVirtualUnitWith (genInfo);
-		virtualUnit.SetAlpha (0.5f);
-	}
-	public void DestroyAfterImageOfGeneration(){
-		if (virtualUnit == null) return;
-		genInfos.Find(item => item.Position == virtualUnit.Pos).CodeName = "selected";
-		Destroy (virtualUnit.gameObject);
-		virtualUnit = null;
-	}
-
-    //초기화 버튼 눌렀을 때 호출
-	public void ResetManualGeneration(){
-		SoundManager.Instance.PlaySE ("Cancel");
-        generatedPC = 0;
-        FindObjectOfType<PlacedUnitCheckPanel>().ResetHighlight();
-		foreach (var image in FindObjectOfType<PlacedUnitCheckPanel>().unitPortraitList){
-			var generatedUnit = GetAllUnits().Find(unit => unit.IsPC && image.sprite.name.EndsWith(unit.CodeName));
-			if(generatedUnit == null) break;
-			
-			generatedUnit.genInfo.CodeName = "selected";
-			allUnits.Remove(generatedUnit);
-			Destroy(generatedUnit.gameObject);
-		}
-
-        TileManager.Instance.ClearAllTileColors();
-        TileManager.Instance.DepreselectAllTiles();
-        ReadyForManualGeneration();
-        BattleData.triggers.resetUnitInput.Trigger();
-    }
-    
-    void ReadyForManualGeneration(){
-		var selectableTileList = new List<Tile>();
-	    var TM = TileManager.Instance;
-		genInfos.FindAll(genInfo => genInfo.IsNonFixedPosPC).ForEach(genInfo => selectableTileList.Add(TileManager.Instance.GetTile(genInfo.Position)));
-		TM.PaintTiles(selectableTileList, TM.TileColorMaterialForMove);
-		TM.PreselectTiles(selectableTileList);
-    }
-
-    public void FinishManualGeneration(){
-        BattleData.triggers.finishUnitInput.Trigger();
-    }
-
-    public void GenerateUnitsAtPosition(string codeName, List<Vector2Int> positions, List<Direction> directions){
+    /*public void GenerateUnitsAtPosition(string codeName, List<Vector2Int> positions, List<Direction> directions){
         //codeName인 유닛을 positions에, directions의 방향으로 생성
         for (int i = 0; i < positions.Count; i++) {
             UnitInfo unitInfo = VolatileData.stageData.GetUnitInfos().Find(info => info.codeName == codeName);
@@ -548,7 +393,7 @@ public class UnitManager : MonoBehaviour{
             } while (position == null);
 
 	        var genInfo = new UnitGenInfo((Vector2Int) position, directions[i]) {CodeName = unitInfo.codeName};
-	        var unit = GenerateUnitWith(genInfo, false);
+	        var unit = GenerateUnit(genInfo, false);
 
 	        if (TileManager.Instance.GetTile(genInfo.Position).fogType != FogType.None) continue;
 			if(regenEffect == null) regenEffect = Resources.Load("VisualEffect/Prefab/ControllerActive") as GameObject;
@@ -556,7 +401,7 @@ public class UnitManager : MonoBehaviour{
 	        LogManager.Instance.Record(new CameraMoveLog(unit.transform.position, Setting.basicCameraMoveDuration));
 	        LogManager.Instance.Record(new CameraMoveLog(null, 0.5f));
         }
-    }
+    }*/
 	static GameObject regenEffect;
 
 	public void AllPassiveSkillsTriggerOnStageStart(){
@@ -635,7 +480,7 @@ public class UnitManager : MonoBehaviour{
 		    var units = GetAllUnits().FindAll(unit => _String.Match(unit.CodeName, row[0]));
 		    foreach (var unit in units){
 			    Collectables.Add(new Collectable(unit, row));
-			    unit.myInfo.objectTag = ObjectTag.Collectable;
+			    unit.objectTag = ObjectTag.Collectable;
 			    unit.SetSpecialObjectIcon();
 		    }
 	    }
@@ -654,8 +499,8 @@ public class UnitManager : MonoBehaviour{
         foreach(var unit in GetAllUnits()){
 	        if (unit.CodeName == POVName)
 		        StatusEffector.AttachAndReturnUSE(unit, new List<UnitStatusEffect> { new UnitStatusEffect(POVBuff, unit) }, unit, false);
-	        if (unit.myInfo.holdName == "") continue;
-	        var target = GetAllUnits().Find(_unit => _unit.CodeName == unit.myInfo.holdName);
+	        if (unit.holdName == "") continue;
+	        var target = GetAllUnits().Find(_unit => _unit.CodeName == unit.holdName);
 	        if(target != null)
 		        StatusEffector.AttachAndReturnUSE(unit, new List<UnitStatusEffect> { new UnitStatusEffect(HoldedDebuff, unit, target) }, target, false);
         }

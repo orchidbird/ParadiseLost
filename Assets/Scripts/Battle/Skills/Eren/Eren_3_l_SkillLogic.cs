@@ -1,10 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using Enums;
-using System.Linq;
-
-namespace Battle.Skills
+﻿namespace Battle.Skills
 {
 public class Eren_3_l_SkillLogic : BaseActiveSkillLogic {
 	public override void ApplyAdditionalDamage(CastingApply castingApply)

@@ -24,8 +24,6 @@ public class MapBriefingManager : MonoBehaviour {
         var tileInfos = VolatileData.stageData.GetTileInfos();
         AdjustScaleAndCalculatePos(tileInfos);
         GenerateTileImages(tileInfos, parent);
-		if (!VolatileData.stageData.IsTwoSideStage ())
-			GenerateUnitImages (parent);
     }
 
     void AdjustScaleAndCalculatePos(List<TileInfo> tileInfoList) {
@@ -84,7 +82,7 @@ public class MapBriefingManager : MonoBehaviour {
 	    return result;
     }
 
-    void GenerateUnitImages(GameObject parent) {
+    /*void GenerateUnitImages(GameObject parent) {
         EraseAllUnitImages();
 	    
 	    var genInfos = VolatileData.stageData.GetUnitGenInfos();
@@ -101,9 +99,8 @@ public class MapBriefingManager : MonoBehaviour {
 	        if(!tileImagesDict.ContainsKey(genInfo.Position)) Debug.Log(genInfo.Position + "에 존재하지 않음!");
 	        tileImagesDict[genInfo.Position].GetComponent<TileInBriefing>().ActivateHighlightWall(true);
         }
-
     }
-    GameObject GenerateUnitImage(UnitGenInfo genInfo){
+    /*GameObject GenerateUnitImage(UnitGenInfo genInfo){
 	    var unitInfo = UnitInfo.FindByGenInfo(genInfo);
         var position = genInfo.Position;
         if(genInfo.IsNonFixedPosPC || !tileImagesDict.ContainsKey(position) || tileImagesDict[position].GetComponent<TileInBriefing>().FogOfWar.activeSelf) return null;
@@ -158,7 +155,7 @@ public class MapBriefingManager : MonoBehaviour {
         unitImage.sprite = sprite;
         unitImage.transform.localScale = new Vector2(2 * scale, 2 * scale);
         return unitImage.gameObject;
-    }
+    }*/
 	
     public void EraseAllTileImages() {
         foreach (var tileImage in tileImagesDict)

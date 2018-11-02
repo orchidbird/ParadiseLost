@@ -1,7 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using GameData;
-using UtilityMethods;
 
 public class EtherText : MonoBehaviour{
 	public ReadyManager Manager;

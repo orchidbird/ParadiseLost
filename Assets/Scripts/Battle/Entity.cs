@@ -1,16 +1,7 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Battle;
-using Battle.Damage;
-using Battle.Skills;
-using Battle.Turn;
-using DG.Tweening;
-using Enums;
-using GameData;
 using UnityEngine;
-using UnityEngine.UI;
 using UtilityMethods;
 
 public class Entity : MonoBehaviour{

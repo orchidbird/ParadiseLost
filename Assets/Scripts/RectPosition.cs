@@ -1,6 +1,4 @@
-﻿using Enums;
-using UnityEngine.UI;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class RectPosition {
     public Transform anchorTransform;

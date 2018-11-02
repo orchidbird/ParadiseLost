@@ -117,8 +117,8 @@ public class BattleTrigger{
 					            : directionCandidates[randomIndex]);
 			            }
 			            //codeName List에서 무작위로 하나 생성.
-			            var spawnUnitName = spawnCandidates[UnityEngine.Random.Range(0, spawnCandidates.Count)];
-			            UnitManager.Instance.GenerateUnitsAtPosition(spawnUnitName, targetTiles, directions);
+			            //var spawnUnitName = spawnCandidates[UnityEngine.Random.Range(0, spawnCandidates.Count)];
+			            //UnitManager.Instance.GenerateUnitsAtPosition(spawnUnitName, targetTiles, directions);
 		            };
 		            break;
 	            case TrigResultType.MoveCamera:
@@ -195,32 +195,8 @@ public class BattleTrigger{
 class BattleTriggerFactory {
     public static BattleTrigger Get(string data) {
         StringParser commaParser = new StringParser(data, '\t');
-        TrigResultType resultType = commaParser.ConsumeEnum<TrigResultType>();
-        BattleTrigger trigger;
-        if(resultType != TrigResultType.Trigger)
-			trigger = new BattleTrigger(resultType, commaParser);
-        else {
-            string triggerName = commaParser.ConsumeString();
-            switch(triggerName){
-			case "111-0":
-                trigger = new S111_0_BattleTrigger(resultType, commaParser);
-                break;
-			case "14-FirstArmor":
-				trigger = new S141_FirstArmor_BattleTrigger(resultType, commaParser);
-				break;
-			case "14-Armor":
-				trigger = new S141_Armor_BattleTrigger (resultType, commaParser);
-				break;
-			case "19-0":
-				trigger = new S191_0_BattleTrigger(resultType, commaParser);
-				break;
-			default:
-				trigger = new BattleTrigger (resultType, commaParser);
-				break;
-            }
-        }
-        
-        trigger.result = resultType;
-        return trigger;
+        var resultType = commaParser.ConsumeEnum<TrigResultType>();
+	    var trigger = new BattleTrigger(resultType, commaParser) {result = resultType};
+	    return trigger;
     }
 }

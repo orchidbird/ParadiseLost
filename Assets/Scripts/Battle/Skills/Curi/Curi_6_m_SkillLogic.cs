@@ -8,9 +8,8 @@ namespace Battle.Skills {
             Unit target = castingApply.Target;
             Unit caster = castingApply.Caster;
             float defense = target.GetStat(Stat.Defense);
-            float resistance = target.GetStat(Stat.Resistance);
             if (target == caster)
-				target.ApplyDamageByNonCasting(target.GetMaxHealth() * 0.1f, caster, true, -defense, -resistance);
+				target.ApplyDamageByNonCasting(target.GetMaxHealth() * 0.1f, caster, true, -defense);
         }
     }
 }

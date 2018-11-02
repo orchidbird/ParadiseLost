@@ -155,7 +155,7 @@ namespace UtilityMethods{
 				int signOfValueInRoot = valueInRoot > 0 ? 1 : -1;
 				return (-5.08f + (float)Math.Sqrt(Math.Abs(valueInRoot))*signOfValueInRoot) / 0.344f;
 			}
-			if(statType == Stat.Defense || statType == Stat.Resistance)
+			if(statType == Stat.Defense)
 				return (input - 64) / 3.5f;
 			if(statType == Stat.Agility)
 				return (input - 50) / 0.85f;

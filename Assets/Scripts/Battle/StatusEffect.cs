@@ -216,9 +216,6 @@ public class StatusEffect{
         return text;
     }
     public Sprite GetSprite() {
-        if (GetOwnerOfSkill() == "tile" && this is UnitStatusEffect)
-            return VolatileData.GetIcon(((UnitStatusEffect)this).GetOwner().GetElement());
-        
 	    Skill originSkill = GetOriginSkill();
         if (originSkill != null)
             return originSkill.icon;

@@ -1,6 +1,3 @@
-using UnityEngine;
-using System.Linq;
-
 namespace Battle.Skills
 {
 public class Eren_2_l_SkillLogic : BasePassiveSkillLogic {
@@ -17,5 +14,4 @@ public class Eren_2_l_SkillLogic : BasePassiveSkillLogic {
 		resistance -= baseAmountPerLevel + (GameData.RecordData.level * ignoreAmountPerStack * stack);
 		return resistance;
 	}
-}
-}
+}}

@@ -52,7 +52,6 @@ public class LogDisplay : MonoBehaviour {
         image.sprite = skill.icon;
         obj.skill = skill;
         obj.caster = caster;
-        obj.casterInfo = caster.myInfo;
         obj.GetComponent<RectTransform>().sizeDelta = new Vector2(40, 40);
         return obj;
     }

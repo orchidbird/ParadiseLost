@@ -36,7 +36,7 @@ public class LogManager : MonoBehaviour {
 
 	    log.Initialize();
 	    
-		if (!duringPreview) {
+		/*if (!duringPreview) {
 			var logDisplay = Instantiate (logDisplayPrefab).GetComponent<LogDisplay> ();
 			int numLog = BattleData.logDisplayList.Count;
 
@@ -44,7 +44,7 @@ public class LogManager : MonoBehaviour {
 			log.logDisplay = logDisplay;
 			BattleData.logDisplayList.Add (logDisplay);
 			logDisplayPanel.AddLogDisplay (logDisplay, numLog + 1, DisplayThisLog (log));
-		}
+		}*/
 
 	    if (execution && log is EventLog)
 		    StartCoroutine(ExecuteLastEventLogAndConsequences(log.logDisplay.name + "의 즉각 실행 요청"));

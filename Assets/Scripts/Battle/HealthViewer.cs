@@ -110,38 +110,27 @@ public class HealthViewer : MonoBehaviour { //Unit뿐 아니라 LogDisplay에서
 	        currentHealthBar.GetComponent<Image>().color = HpColorOfUnit(target);
 
 		if(HpBarFrame == null) return;
-		HpBarFrame.sprite = HpFrameOf(target.myInfo);
-		SetOrbColor(target);
-		if (target.GetUnitClass() == UnitClass.Magic)
-			HpBarOrb.transform.localPosition = new Vector3(0.462f, -0.005f, HpBarOrb.transform.localPosition.z);
+		HpBarFrame.sprite = HpFrameOf(target);
 	}
 
-	public static Sprite HpFrameOf(UnitInfo info){
+	public static Sprite HpFrameOf(Unit unit){
 		var spriteAddress = "Battle/HpBar";
-		if (info.isNamed) spriteAddress += "Special";
-		spriteAddress += info.GetUnitClass;
+		if (unit.IsPC) spriteAddress += "Special";
+		spriteAddress += "Melee";
 		return Resources.Load<Sprite>(spriteAddress);
 	}
 
-	public static Sprite GetElementSprite(UnitInfo info){
-		return info.GetElement == Element.None ? VolatileData.GetIcon(IconSprites.Transparent) : Resources.Load<Sprite>("Battle/Orb" + info.GetElement);
-	}
-
-	public void SetOrbColor(Unit target){
-		HpBarOrb.sprite = GetElementSprite(target.myInfo);
-	}
-
 	public static Color HpColorOfUnit(Unit unit){
-		if(unit.myInfo.side == Side.Ally) {
+		if(unit.GetSide() == Side.Ally) {
 			if (unit.IsAI || unit.IsObject)
 				return new Color (100f/255f, 160f/255f, 1);
 			return new Color (45f/255f, 80f/255f, 200f/255f);
 		}
 		
-		if(unit.myInfo.side == Side.Neutral)
+		if(unit.GetSide() == Side.Neutral)
 			return Color.gray;
-		return unit.IsNamed ? new Color (255f / 255f, 130f / 255f, 0f / 255f) : new Color (1, 200f / 255f, 50f / 255f);
-    }
+		return new Color(255f / 255f, 130f / 255f, 0f / 255f);
+	}
 
     readonly Color shieldBarColor = new Color(0.8f, 0.8f, 0.8f);
     readonly Color recoverBarColor = new Color(0f, 1.0f, 0.25f);

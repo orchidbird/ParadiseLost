@@ -1,9 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using Enums;
-using System.Linq;
-using Battle.Damage;
+﻿using Enums;
 
 namespace Battle.Skills
 {

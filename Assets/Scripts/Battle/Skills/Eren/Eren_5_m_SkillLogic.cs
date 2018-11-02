@@ -1,8 +1,3 @@
-using UnityEngine;
-using System.Linq;
-using Battle.Damage;
-using System.Collections.Generic;
-
 namespace Battle.Skills
 {
 	public class Eren_5_m_SkillLogic : AttachOnStart {

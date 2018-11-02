@@ -25,7 +25,6 @@ namespace Battle.Skills{
 			float total = stack * (level * 0.5f + 40);
 			if (aura.GetAmountOfType (StatusEffectType.DefenseChange) != total) {
 				aura.SetAmountOfType (StatusEffectType.DefenseChange, total);
-				aura.SetAmountOfType (StatusEffectType.ResistanceChange, total);
 			}
 			activeSkill.intTemp = 0;
 		}

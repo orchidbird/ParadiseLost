@@ -17,7 +17,6 @@ public class EffectLog : Log {
 		return parentEvent.actor;
 	}}
 
-	public UnitInfo actorInfo{get { return parentEvent.actorInfo; }}
 	// 이 effect가 발생한 타일들. AI를 activate시킬 때 사용한다.
 	public List<Tile> tiles = new List<Tile>();
     public virtual bool isMeaningless(){
@@ -147,7 +146,7 @@ public class WillChangeLog : EffectLog{
 		this.unit = unit;
 
 		if (VolatileData.OpenCheck(Setting.WillCharacteristicOpenStage)){
-			var characteristics = unit.myInfo.WillCharacteristics.Where(kv => kv.Value).ToList().ConvertAll(kv => kv.Key);
+			var characteristics = unit.WillCharacteristics.Where(kv => kv.Value).ToList().ConvertAll(kv => kv.Key);
 			foreach (var c in characteristics){
 				var index = ValueTable[0].ToList().FindIndex(v => c.ToString() == v);
 				//Debug.Log(unit.CodeName + "의 특성 " + c + ": " + index);
@@ -159,11 +158,7 @@ public class WillChangeLog : EffectLog{
 					amount *= int.Parse(modifier.Substring(1));
 				else
 					amount += int.Parse(modifier);
-			}
-			
-			if (unit.HasWillCharacteristic(WillCharacteristic.ValueHonor) && amount < 0
-			    && UnitManager.GetAllUnits().Any(_unit => _unit.IsSpecialEnemy))
-				amount = (amount - 1) / 2;	
+			}	
 		}
 		
 		ApplyFear();
@@ -506,8 +501,6 @@ public class StatusEffectLog : EffectLog {
         }
 	    
 	    TutorialManager.Instance.ReserveTutorial("StatusEffect");
-	    if(statusEffect.IsTypeOf(StatusEffectType.DefenseChange) || statusEffect.IsTypeOf(StatusEffectType.ResistanceChange))
-		    TutorialManager.Instance.ReserveTutorial("StatusEffect_Level");
 	    if(statusEffect.GetOriginSkillName() != "두려움" && statusEffect.IsTypeOf(StatusEffectType.WillChange))
 		    TutorialManager.Instance.ReserveTutorial("Will_Skill");
         yield break;

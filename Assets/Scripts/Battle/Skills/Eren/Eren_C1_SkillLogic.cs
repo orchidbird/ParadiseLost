@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using Enums;
-using UnityEngine;
+﻿using Enums;
 
 namespace Battle.Skills
 {

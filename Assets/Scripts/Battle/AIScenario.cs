@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
 using Enums;
-using BattleUI;
 
 public class AIScenario{
 	public enum ScenarioAct{ Move, UseSkill, Standby, SkipTurn }

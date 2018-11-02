@@ -18,7 +18,7 @@ namespace Battle.Skills {
             Unit caster = castingApply.Caster;
             Unit target = castingApply.Target;
             if (isHealthRatioSmallEnough(target)) {
-                target.ApplyDamageByNonCasting(target.GetHP, caster, true, -target.GetStat(Stat.Defense), -target.GetStat(Stat.Resistance), true);
+                target.ApplyDamageByNonCasting(target.GetHP, caster, true, -target.GetStat(Stat.Defense), true);
             }
         }
         public override void ApplyAdditionalDamage(CastingApply castingApply) {

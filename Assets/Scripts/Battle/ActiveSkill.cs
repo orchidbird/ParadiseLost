@@ -272,34 +272,27 @@ public class ActiveSkill : Skill{
 			unit.GetListPassiveSkillLogic().OnAnyCastingDamage(castingApply, chainCombo);
 		
 		DamageCalculator.AttackDamage attackDamage = castingApply.GetDamage();
-		UnitClass damageType = caster.GetUnitClass();
-		bool canReflect = target.HasStatusEffect(StatusEffectType.Reflect) ||
-			(target.HasStatusEffect(StatusEffectType.MagicReflect) && damageType == UnitClass.Magic) ||
-			(target.HasStatusEffect(StatusEffectType.MeleeReflect) && damageType == UnitClass.Melee);
+		bool canReflect = target.HasStatusEffect(StatusEffectType.Reflect);
 		float reflectAmount = 0;
 		if (canReflect && !duringAIDecision) {
-			reflectAmount = DamageCalculator.CalculateReflectDamage(attackDamage.resultDamage, target, caster, damageType);
+			reflectAmount = DamageCalculator.CalculateReflectDamage(attackDamage.resultDamage, target, caster);
 			attackDamage.resultDamage -= reflectAmount;
 		}
         
 		target.ApplyDamageByCasting(castingApply, true, duringAIDecision);
 		if(canReflect && !duringAIDecision)  reflectDamage(caster, target, reflectAmount);
 	}
-	private static void reflectDamage(Unit caster, Unit target, float reflectAmount) {
-		UnitClass damageType = caster.GetUnitClass();
+	static void reflectDamage(Unit caster, Unit target, float reflectAmount) {
 		caster.ApplyDamageByNonCasting(reflectAmount, target, true);
 
 		foreach (var statusEffect in target.statusEffectList) {
-			bool canReflect = statusEffect.IsTypeOf(StatusEffectType.Reflect) ||
-				(statusEffect.IsTypeOf(StatusEffectType.MagicReflect) && damageType == UnitClass.Magic) ||
-				(statusEffect.IsTypeOf(StatusEffectType.MeleeReflect) && damageType == UnitClass.Melee);
-			if (canReflect) {
-                Skill originSkill = statusEffect.GetOriginSkill();
-				if (originSkill is ActiveSkill)
-					((ActiveSkill)originSkill).SkillLogic.TriggerStatusEffectAtReflection(target, statusEffect, caster);
-				if (statusEffect.GetIsOnce())
-					target.RemoveStatusEffect(statusEffect);
-			}
+			if (!statusEffect.IsTypeOf(StatusEffectType.Reflect)) continue;
+			
+			Skill originSkill = statusEffect.GetOriginSkill();
+			if (originSkill is ActiveSkill)
+				((ActiveSkill)originSkill).SkillLogic.TriggerStatusEffectAtReflection(target, statusEffect, caster);
+			if (statusEffect.GetIsOnce())
+				target.RemoveStatusEffect(statusEffect);
 		}
 	}
 

@@ -9,15 +9,11 @@ using GameData;
 //EffectLog와 달리 어떤 일이 발생했다는 사실만 기록.
 public class EventLog : Log {
     public Unit actor;
-	public UnitInfo actorInfo;
     public List<EffectLog> effectLogList = new List<EffectLog>();  // 이 Event로부터 발생한 Effect들
     public List<EffectLog> GetEffectLogList() { return effectLogList; }
 	public bool FullExecuted{get { return executed && GetEffectLogList().All(log => log.executed); }}
-
-	public void SetActor(Unit unit){
-		actor = unit;
-		actorInfo = unit.myInfo;
-	}
+	public void SetActor(Unit unit){actor = unit;}
+	
     public override IEnumerator Execute(){
         var BTM = BattleTriggerManager.Instance;
         for (int i = 0; i < effectLogList.Count; i++) {

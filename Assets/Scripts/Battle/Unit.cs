@@ -13,6 +13,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UtilityMethods;
 using Color = UnityEngine.Color;
+using Random = UnityEngine.Random;
 
 public class HitInfo{
 	public readonly Unit caster;
@@ -54,17 +55,25 @@ public class Unit : Entity{
 	public int movedTileCount;
 	public float previousMoveCost;
 	AI _AI;
-	public UnitInfo myInfo;
-	public UnitGenInfo genInfo;
 
 	// 스킬리스트
 	List<ActiveSkill> activeSkillList = new List<ActiveSkill>();
 	List<PassiveSkill> passiveSkillList = new List<PassiveSkill>();
+	public Dictionary<WillCharacteristic, bool> WillCharacteristics = new Dictionary<WillCharacteristic, bool>();
 
+	public string codeName;
+	public string holdName;
+	public string connectedName;
+	public string nameKor;
+	public Side side;
+	public bool isObject;
+	
 	// 사용한 스킬 정보 저장(쿨타임 산정용)
 	Dictionary<string, int> usedSkillDict = new Dictionary<string, int>();
 	public Dictionary<Stat, int> actualStats = new Dictionary<Stat, int>();
+	public Dictionary<Stat, int> baseStats = new Dictionary<Stat, int>();
 
+	public Vector2 size = new Vector2(1, 1);
 	Vector2Int pivot; //Variable한 위치 개념. IsLarge일 경우 가장 소속 타일 중 가장 x/y값이 작은 곳을 따름. 아니면 그냥 자기 위치.
 
 	// 유닛이 해당 페이즈에서 처음 있었던 위치 - 영 패시브에서 체크
@@ -107,7 +116,7 @@ public class Unit : Entity{
 	}
 
 	public int GetBaseStat(Stat stat){
-		return myInfo.baseStats.ContainsKey(stat) ? myInfo.baseStats[stat] : 0;
+		return baseStats.ContainsKey(stat) ? baseStats[stat] : 0;
 	}
 
 	public float GetEvasionChance(){
@@ -205,13 +214,9 @@ public class Unit : Entity{
 		return Math.Min(ratio, 1);
 	}
 
-	public int GetCurrentActivityPoint()
-	{
+	public int GetCurrentActivityPoint(){
 		return activityPoint;
 	}
-
-	public UnitClass GetUnitClass() {return myInfo.GetUnitClass;}
-	public Element GetElement() {return myInfo.GetElement;}
 
 	public Tile TileUnderUnit{
 		get { return TileManager.Instance.GetTile(pivot); }
@@ -220,8 +225,8 @@ public class Unit : Entity{
 	public List<Tile> TilesUnderUnit{get{
 		var result = new List<Tile>();
 		if (IsLarge){
-			for (int x = 0; x < myInfo.size.x; x++)
-				for (int y = 0; y < myInfo.size.y; y++){
+			for (int x = 0; x < size.x; x++)
+				for (int y = 0; y < size.y; y++){
 					if (direction == Direction.RightDown || direction == Direction.LeftUp)
 						result.Add(TileManager.Instance.GetTile(pivot + new Vector2Int(x, y)));
 					else
@@ -239,34 +244,29 @@ public class Unit : Entity{
 		return TileUnderUnit.GetHeight();
 	}
 
-	public string CodeName
-	{
-		get { return myInfo.codeName; }
+	public string CodeName{
+		get { return codeName; }
 	}
 
-	public string GetNameKor()
-	{
-		return myInfo.nameKor;
+	public string GetNameKor(){
+		return nameKor;
 	}
 
-	public Side GetSide()
-	{
-		return myInfo.side;
-	}
+	public Side GetSide() {return side;}
 
 	public Side GetEnemySide(){
-		return myInfo.side == Side.Ally ? Side.Enemy : Side.Ally;
+		return side == Side.Ally ? Side.Enemy : Side.Ally;
 	}
 
 	public List<Unit> GetAllies{get { return UnitManager.GetAllUnits().FindAll(unit => unit.IsAllyTo(this)); }}
 	public List<Unit> GetEnemies{get{return UnitManager.GetAllUnits().FindAll(unit => unit.IsEnemyTo(this));}}
 	
 	public bool IsAllyTo(Unit unit){
-		return myInfo.side == unit.GetSide();
+		return side == unit.GetSide();
 	}
 	public bool IsEnemyTo(Unit unit){
-		return (myInfo.side == Side.Ally && unit.GetSide() == Side.Enemy) ||
-		       (myInfo.side == Side.Enemy && unit.GetSide() == Side.Ally);
+		return (side == Side.Ally && unit.GetSide() == Side.Enemy) ||
+		       (side == Side.Enemy && unit.GetSide() == Side.Ally);
 	}
 
 	public bool IsSeenAsEnemyToThisAIUnit(Unit unit)
@@ -287,9 +287,8 @@ public class Unit : Entity{
 	//지형지물은 AI로 분류되지 않으므로 PC인지 확인하려면 !IsAI가 아니라 IsPC(=!isAI && !isObject로 아래에 get 함수로 있음)의 return 값을 받아야 한다
 	public bool IsAI{get { return _AI != null; }} 
 
-	public bool IsPC
-	{
-		get { return (!IsAI) && (!myInfo.isObject); }
+	public bool IsPC{
+		get { return !IsAI && (!isObject); }
 	}
 
 	public bool IsAllyNPC
@@ -297,38 +296,25 @@ public class Unit : Entity{
 		get { return GetSide() == Side.Ally && IsAI; }
 	}
 
-	public bool IsObject{get { return myInfo.isObject; }}
+	public bool IsObject{get { return isObject; }}
+	public ObjectTag objectTag;
 
-	public ObjectTag objectTag {
-		get { return myInfo.objectTag; }
-	}
-
-	bool IsKillable{get { return !IsNamed && !IsPC && !IsObject; }}
+	bool IsKillable{get { return !IsObject; }}
 
 	public bool HasAction{
 		get { return IsAI || !IsObject; }
 	}
 
-	public bool IsNamed
-	{
-		get { return myInfo.isNamed; }
-	}
-
-	public bool IsSpecialEnemy
-	{
-		get { return IsNamed && GetSide() == Side.Enemy; }
-	}
-
 	public bool RetreatBefore0HP{
-		get { return VolatileData.OpenCheck(Setting.retreatOpenStage) && !IsNamed && !IsObject; }
+		get { return VolatileData.OpenCheck(Setting.retreatOpenStage) && !IsObject; }
 	}
 
 	public Dictionary<WillChangeType, int> willHistoryDict = new Dictionary<WillChangeType, int>();
 	public bool HasWillCharacteristic(WillCharacteristic c){
 		if (!VolatileData.OpenCheck(Setting.WillCharacteristicOpenStage)) return false;
 		
-		if (myInfo.WillCharacteristics.ContainsKey(c))
-			return myInfo.WillCharacteristics[c];
+		if (WillCharacteristics.ContainsKey(c))
+			return WillCharacteristics[c];
 
 		Debug.Log(name + " doesn't have data of WillCharacteristic " + c);
 		return false;
@@ -336,8 +322,7 @@ public class Unit : Entity{
 
 	//public Vector2 Pos{get{return pivot + myInfo.size - new Vector2(1, 1);}}
 
-	bool IsLarge{get { return myInfo.IsLarge; }}
-
+	public bool IsLarge{get{return size != new Vector2(1, 1);}}
 	public void SetPivot(Vector2Int position){
 		pivot = position;
 	}
@@ -637,8 +622,6 @@ public class Unit : Entity{
 			appliedChangeList.Add(new ValueChange(true, passiveSkillLogics.GetAdditionalRelativePowerBonus(this) - 1));
 		if (statusEffectType == StatusEffectType.DefenseChange)
 			appliedChangeList.Add(new ValueChange(false, passiveSkillLogics.GetAdditionalAbsoluteDefenseBonus(this)));
-		if (statusEffectType == StatusEffectType.ResistanceChange)
-			appliedChangeList.Add(new ValueChange(false, passiveSkillLogics.GetAdditionalAbsoluteResistanceBonus(this)));
 
 		// 효과로 인한 변동값 계산
 		foreach (var statusEffect in statusEffectList){
@@ -704,8 +687,7 @@ public class Unit : Entity{
 			TutorialManager.Instance.Activate("Direction");
 		if(castingApply.GetDamage().relativeModifiers.Count(kv => (kv.Key.name == "Direction" || kv.Key.name == "Height") && kv.Value > 1) > 1)
 			TutorialManager.Instance.Activate("Critical");
-		if(caster.GetUnitClass() == UnitClass.Melee && castingApply.Target.GetStat(Stat.Defense) > 150
-		   || caster.GetUnitClass() == UnitClass.Magic && castingApply.Target.GetStat(Stat.Resistance) > 150)
+		if(castingApply.Target.GetStat(Stat.Defense) > 150)
 			TutorialManager.Instance.Activate("Defense");
 	}
 
@@ -715,36 +697,31 @@ public class Unit : Entity{
 		DamageCalculator.AttackDamage damage = castingApply.GetDamage();
 		if (isHealth){
 			if (!duringAIDecision) // AI는 반사에 의한 피해 경감은 고려하지 않음
-				damage.resultDamage -= DamageCalculator.CalculateReflectDamage (damage.resultDamage, this, caster, caster.GetUnitClass ());
+				damage.resultDamage -= DamageCalculator.CalculateReflectDamage (damage.resultDamage, this, caster);
 
 			damage.resultDamage = CalculateActualAmount(damage.resultDamage, StatusEffectType.TakenDamageChange);
 			float defense = DamageCalculator.CalculateDefense(appliedSkill, this, caster);
-			float resistance = DamageCalculator.CalculateResistance(appliedSkill, this, caster);
-			damage.resultDamage =
-				DamageCalculator.ApplyDefenseAndResistance(damage.resultDamage, caster.GetUnitClass(), defense, resistance);
+			damage.resultDamage = DamageCalculator.ApplyDefense(damage.resultDamage, defense);
 		}
 
 		//Debug.Log(castingApply.Caster.CodeName + "이 발동한 공격 피해량은 " + damage.resultDamage);
 		return damage;
 	}
 
-	public void ApplyDamageByNonCasting(float originalDamage, Unit caster, bool isHealth, float additionalDefense = 0, float additionalResistance = 0, bool ignoreShield = false){
-		int realDamage = CalculateDamageByNonCasting(originalDamage, caster, additionalDefense, additionalResistance, isHealth);
+	public void ApplyDamageByNonCasting(float originalDamage, Unit caster, bool isHealth, float additionalDefense = 0, bool ignoreShield = false){
+		int realDamage = CalculateDamageByNonCasting(originalDamage, caster, additionalDefense, isHealth);
 		DamageCalculator.AttackDamage damage = new DamageCalculator.AttackDamage(realDamage);
 		ApplyDamage(damage, caster, isHealth, ignoreShield, null, false, false);
 	}
 
-	public int CalculateDamageByNonCasting(float originalDamage, Unit caster, float additionalDefense,
-		float additionalResistance, bool isHealth)
-	{
+	public int CalculateDamageByNonCasting(float originalDamage, Unit caster, float additionalDefense, bool isHealth){
 		float damage = originalDamage;
 		if (isHealth){
 			// 피격자의 효과/특성으로 인한 대미지 증감 효과 적용 - 미완성
 			damage = CalculateActualAmount(damage, StatusEffectType.TakenDamageChange);
 			// 방어력 및 저항력 적용
 			float defense = GetStat(Stat.Defense) + additionalDefense;
-			float resistance = GetStat(Stat.Resistance) + additionalResistance;
-			damage = DamageCalculator.ApplyDefenseAndResistance(damage, caster.GetUnitClass(), defense, resistance);
+			damage = DamageCalculator.ApplyDefense(damage, defense);
 		}
 
 		return (int) Math.Round(damage);
@@ -964,7 +941,7 @@ public class Unit : Entity{
 	}
 
 	public void RegenerateActionPoint(){
-		if (!myInfo.isObject && IsActive)
+		if (!isObject && IsActive)
 			activityPoint += GetStat(Stat.Agility);
 	}
 	public bool IsActive{get{return !IsAI || GetAI().IsActive;}}
@@ -1100,18 +1077,11 @@ public class Unit : Entity{
 		}
 	}
 
-	void UpdateColorsForElement(){
-		ParticleSystem.MainModule mainModule = tileBuffEffect.main;
-		mainModule.startColor = Utility.getColorOfElement(myInfo.GetElement);
-		healthViewer.SetOrbColor(this);
-	}
-
 	void TriggerTileStatusEffectAtTurnEnd(){
 		foreach (var tile in TileManager.Instance.GetAllTiles().Values){
 			foreach (var tileStatusEffect in tile.GetStatusEffectList()){
 				Skill originSkill = tileStatusEffect.GetOriginSkill();
-				if (originSkill is ActiveSkill)
-				{
+				if (originSkill is ActiveSkill){
 					((ActiveSkill) originSkill).SkillLogic.TriggerTileStatusEffectAtTurnEnd(this, tile, tileStatusEffect);
 				}
 			}
@@ -1171,7 +1141,7 @@ public class Unit : Entity{
 				float damage = se.GetAmount(i);
 				Unit caster = se.GetCaster();
 
-				ApplyDamageByNonCasting(damage, caster, true, -GetStat(Stat.Defense), -GetStat(Stat.Resistance));
+				ApplyDamageByNonCasting(damage, caster, true, -GetStat(Stat.Defense));
 				TutorialManager.subjectQueue.Enqueue("DOT");
 			}
 		}
@@ -1286,24 +1256,28 @@ public class Unit : Entity{
 		chainAttackerIcon.SetActive(onoff);
 	}
 
-	public void ShowFaintTurnSkipIcon(bool onoff)
-	{
+	public void ShowFaintTurnSkipIcon(bool onoff){
 		faintTurnSkipIcon.SetActive(onoff);
 	}
 
-
-	public void SetInfo(UnitInfo info){
-		myInfo = info;
-		
+	public void InitializeStats(){
+		baseStats.Clear();
 		actualStats.Clear();
-		actualStats.Add(Stat.MaxHealth, myInfo.baseStats[Stat.MaxHealth]);
-		actualStats.Add(Stat.Power, myInfo.baseStats[Stat.Power]);
-		actualStats.Add(Stat.Defense, myInfo.baseStats[Stat.Defense]);
-		actualStats.Add(Stat.Resistance, myInfo.baseStats[Stat.Resistance]);
-		actualStats.Add(Stat.Agility, myInfo.baseStats[Stat.Agility]);
-		actualStats.Add(Stat.Will, myInfo.baseStats[Stat.Will]);
-		actualStats.Add(Stat.Level, RecordData.level);
+		baseStats.Add(Stat.MaxHealth, RandomIntOfVariation(50, 1.2f));
+		baseStats.Add(Stat.Power, RandomIntOfVariation(10, 1.2f));
+		baseStats.Add(Stat.Defense, RandomIntOfVariation(32, 1.2f));
+		baseStats.Add(Stat.Agility, RandomIntOfVariation(50, 1.1f));
+		baseStats.Add(Stat.Will, RandomIntOfVariation(10, 1.1f));
+		baseStats.Add(Stat.Level, 1);
+		foreach (var kv in baseStats)
+			actualStats.Add(kv.Key, kv.Value);
 		hp = actualStats[Stat.MaxHealth];
+	}
+
+	int RandomIntOfVariation(int basePoint, float maxRatio){
+		var minValue = (int)Math.Round(basePoint * maxRatio);
+		var maxValue = (int)Math.Round(basePoint / maxRatio);
+		return Random.Range(minValue, maxValue+1);
 	}
 
 	void AddActiveSkill(ActiveSkill skill, List<UnitStatusEffectInfo> statusEffectInfoList,
@@ -1384,17 +1358,11 @@ public class Unit : Entity{
 	}
 
 	void Start(){
-		gameObject.name = myInfo.codeName;
+		gameObject.name = codeName;
 		startPositionOfPhase = pivot;
 		HideAfterImage();
 		hp = GetMaxHealth();
 		activityPoint = GetStat(Stat.Agility);
-		//Info에 넣어뒀던 변동사항 적용
-		foreach (KeyValuePair<Stat, int> change in genInfo.InitStatChanges)
-			if (change.Key == Stat.CurrentHP)
-				hp = GetMaxHealth() * (100 - change.Value) / 100;
-			else if (change.Key == Stat.CurrentAP)
-				activityPoint += change.Value;
 
 		statusEffectList = new List<UnitStatusEffect>();
 		latelyHitInfos = new List<HitInfo>();
@@ -1406,7 +1374,7 @@ public class Unit : Entity{
 		WillChangeTextObject.SetActive(false);
 
 		SetSpecialObjectIcon();
-		myInfo.CheckPropertyStage();
+		//myInfo.CheckPropertyStage();
 		
 		CheckAndHideObjectHealth();
 		overrideImage.material = new Material(Shader.Find("Custom/HSVRangeShader"));
@@ -1417,7 +1385,7 @@ public class Unit : Entity{
 		if (Input.GetKeyDown(KeyCode.G))
 			RegenerateActionPoint();
 
-		if (Input.GetKeyDown(KeyCode.L)){
+		/*if (Input.GetKeyDown(KeyCode.L)){
 			string log = myInfo.nameKor + "\n";
 			foreach (var skill in activeSkillList)
 				log += skill.GetName() + "\n";
@@ -1431,7 +1399,7 @@ public class Unit : Entity{
 			}
 
 			Debug.LogError(passiveLog);
-		}
+		}*/
 
 		if (WillChangeAmounts.Count > 0 && !WillChangeTextObject.activeSelf)
 			StartCoroutine(DisplayNextWillChangeText(WillChangeAmounts.Dequeue()));

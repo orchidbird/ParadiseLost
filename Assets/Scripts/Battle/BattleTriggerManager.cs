@@ -154,15 +154,15 @@ public class BattleTriggerManager : MonoBehaviour {
 			                                                                  && log.GetShieldChangeAmount() < 0));
 
 		} else if (stage == StageNum.S12_1) {
-			repeatCounts.Add(exTrigs[0], LogsOfType<HPChangeLog>().FindAll(log => log.actorInfo.side == Side.Ally && log.damage.relativeModifiers.Any(kv => kv.Key.name == "Height" && kv.Value > 1)).Count); //HeightModifier > 1.0f)).Count);
+			repeatCounts.Add(exTrigs[0], LogsOfType<HPChangeLog>().FindAll(log => log.actor.GetSide() == Side.Ally && log.damage.relativeModifiers.Any(kv => kv.Key.name == "Height" && kv.Value > 1)).Count); //HeightModifier > 1.0f)).Count);
 		} else if (stage == StageNum.S13_1) {
-			repeatCounts.Add(exTrigs[0], LogsOfType<HPChangeLog>().FindAll(log => log.actorInfo.side == Side.Ally && log.damage.relativeModifiers.Any(kv => kv.Key.name == "Height" && kv.Value > 1)).Count);
+			repeatCounts.Add(exTrigs[0], LogsOfType<HPChangeLog>().FindAll(log => log.actor.GetSide() == Side.Ally && log.damage.relativeModifiers.Any(kv => kv.Key.name == "Height" && kv.Value > 1)).Count);
 		}  else if (stage == StageNum.S14_1) {
 			repeatCounts.Add(exTrigs[0], LogsOfType<StatusEffectLog>().FindAll(log => log.statusEffect.GetCaster().CodeName == "armorSchmidt"
 			                                                                          && log.type == StatusEffectChangeType.Attach && log.statusEffect.IsTypeOf(StatusEffectType.EnemyAura)).Count);
 		}else if (stage == StageNum.S15_1) {
 			repeatCounts.Add(exTrigs[0], LogsOfType<StatusEffectLog>().FindAll(log => log.statusEffect.GetCaster().CodeName == "bianca" && log.statusEffect.DisplayName(true) == "속박").Count);
-			repeatCounts.Add(exTrigs[1], LogsOfType<PositionChangeLog>().FindAll(log => log.actorInfo.codeName == "arcadia" && log.forced).Count);
+			repeatCounts.Add(exTrigs[1], LogsOfType<PositionChangeLog>().FindAll(log => log.actor.codeName == "arcadia" && log.forced).Count);
 		} else if (stage == StageNum.S16_1) {
 			repeatCounts.Add(exTrigs[0], units.FindAll(unit => unit.GetSide() == Side.Neutral && unit.GetHpRatio() >= 1 && !unit.IsObject).Count);
 		} else if (stage == StageNum.S18_1) {
@@ -271,8 +271,7 @@ public class BattleTriggerManager : MonoBehaviour {
 			|| (unitType == TrigUnitType.PC && unit.IsPC && unit.GetSide() == Side.Ally)
 			|| (unitType == TrigUnitType.NeutralChar && !unit.IsObject  && unit.GetSide() == Side.Neutral)
 			|| (unitType == TrigUnitType.EnemyChar && !unit.IsObject && unit.GetSide() == Side.Enemy)
-			|| (unitType == TrigUnitType.AllyNPC && unit.IsAllyNPC)
-			|| (unitType == TrigUnitType.SpecialEnemy && unit.IsSpecialEnemy);
+			|| (unitType == TrigUnitType.AllyNPC && unit.IsAllyNPC);
 	}
 
 	bool CheckActionType(BattleTrigger trigger, TrigActionType actionType){

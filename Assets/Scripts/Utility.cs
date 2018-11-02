@@ -363,31 +363,6 @@ public class Utility : MonoBehaviour {
         return enumInput;
     }
 
-    public static void SetPropertyImages(Image classImg, Image ElemImg, string unitName) {
-        SetPropertyImage(classImg, UnitInfo.GetProperty<UnitClass>(unitName));
-        SetPropertyImage(ElemImg, UnitInfo.GetProperty<Element>(unitName));
-    }
-
-    //Battle씬에서는 PC가 아닐 가능성이 있으므로 string 대신 Unit으로 Input할 것.
-    public static void SetPropertyImages(Image classImg, Image elemImg, UnitInfo info){
-        SetPropertyImage(classImg, info.GetUnitClass);
-        SetPropertyImage(elemImg, info.GetElement);
-    }
-
-    public static Color getColorOfElement(Element element) {
-        switch (element) {
-        case Element.Fire:
-            return new Color(1, 0.125f, 0);
-        case Element.Metal:
-            return new Color(0.5f, 0.5f, 0.5f);
-        case Element.Plant:
-            return new Color(0, 0.75f, 0.125f);
-        case Element.Water:
-            return new Color(0.25f, 0.625f, 0.875f);
-        }
-        return new Color(0, 0, 0);
-    }
-
     public static IEnumerator WaitForFewFrames(int frameCount) {
         for (int i = 0; i < frameCount; i++) {
             yield return null;

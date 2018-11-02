@@ -58,7 +58,7 @@ namespace Battle.Turn
 			var targets = UnitManager.GetAllUnits().FindAll(unit => unit.GetSide() == Side.Ally);
 			foreach(var target in targets){
 				float damageAmount = target.GetMaxHealth()*0.15f;
-				target.ApplyDamageByNonCasting (damageAmount, objectUnit, true, -target.GetStat (Stat.Defense), -target.GetStat (Stat.Resistance));
+				target.ApplyDamageByNonCasting (damageAmount, objectUnit, true, -target.GetStat (Stat.Defense));
 			}
 
 			yield return LogManager.Instance.ExecuteLastEventLogAndConsequences();

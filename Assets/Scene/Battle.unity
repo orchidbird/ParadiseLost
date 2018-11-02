@@ -40502,7 +40502,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playButton: {fileID: 795239115}
-  unitPrefab: {fileID: 0}
+  unitPrefab: {fileID: 150070, guid: fa2ee4f44b516443d8f2b2288c1f8e3b, type: 2}
   unitsActThisPhase: []
   unitsActNextPhase: []
 --- !u!4 &1806072435

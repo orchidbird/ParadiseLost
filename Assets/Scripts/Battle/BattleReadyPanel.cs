@@ -5,8 +5,6 @@ using UnityEngine.UI;
 using GameData;
 using System.Linq;
 using Enums;
-using UtilityMethods;
-using Language = UtilityMethods.Language;
 
 public class BattleReadyPanel : MonoBehaviour{
 	public enum PanelType{Ether, Briefing}
@@ -95,7 +93,7 @@ public class BattleReadyPanel : MonoBehaviour{
             RM.ActivateUnitButtons(PC: false, activate: false);
             MBM.EraseAllTileImages();
             MBM.EraseAllUnitImages();
-            unitButtons.FindAll(button => button.gameObject.activeSelf)[0].UpdateRightPanel();
+            //unitButtons.FindAll(button => button.gameObject.activeSelf)[0].UpdateRightPanel();
             
             SetAllSkillSelectButtons();
 	        unitButtons.ForEach(button => button.UpdateGray());

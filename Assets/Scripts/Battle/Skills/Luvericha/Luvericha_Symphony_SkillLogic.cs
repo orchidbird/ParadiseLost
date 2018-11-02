@@ -6,7 +6,7 @@
         }
 
 	    public override bool TriggerStatusEffectAppliedByCasting(UnitStatusEffect statusEffect, CastingApply castingApply,  int chain){
-		    return !castingApply.Target.IsNamed && castingApply.Caster.GetPassiveSkillList().Exists(ps => ps.required == activeSkill.address);
+		    return castingApply.Caster.GetPassiveSkillList().Exists(ps => ps.required == activeSkill.address);
 	    }
     }
 }

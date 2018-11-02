@@ -6,7 +6,6 @@ using GameData;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Camerawork;
-using UtilityMethods;
 using Language = UtilityMethods.Language;
 
 public class Parser : MonoBehaviour{
@@ -67,8 +66,6 @@ public class Parser : MonoBehaviour{
 			return (T)(object)BattleTriggerFactory.Get(rowData);
 		if (typeof(T) == typeof(AIInfo))
 			return (T)(object)new AIInfo(rowData);
-		if (typeof(T) == typeof(UnitInfo))
-			return (T)(object)new UnitInfo(rowData, false);
 		if (typeof(T) == typeof(UnitGenInfo))
 			return (T)(object)new UnitGenInfo(rowData);
 		if(typeof(T) == typeof(CameraWork))
@@ -102,9 +99,6 @@ public class Parser : MonoBehaviour{
         else if(typeof(T) == typeof(TileInfo)) {address = "Data/" + stageName + "_map";}
 		else if(typeof(T) == typeof(CameraWork)) { address = "Data/" + stageName + "_cameraWork";}
         else if(typeof(T) == typeof(StageInfo)) {address = "Data/StageInfo";}
-        else if (typeof(T) == typeof(UnitInfo)){
-	        return GetAddressWithDifficulty(dataAddressIncludingAB(stageName, "unit"));
-        }
 		if(address == "") {Debug.LogError("Invalid Input : " + typeof(T));}
 		try {
 			return Resources.Load<TextAsset>(address);
@@ -112,26 +106,6 @@ public class Parser : MonoBehaviour{
 			Debug.Log(typeof(T) + " of " + stageName + " not found. returning null");
 			return null;
 		}
-	}
-
-	static TextAsset GetAddressWithDifficulty(string input){
-		var defaultResult = Resources.Load<TextAsset>(input);
-		if (VolatileData.difficulty == Difficulty.Adventurer)
-			return defaultResult;
-		if (VolatileData.difficulty == Difficulty.Intro)
-			return GetTextAssetOfDifficulty(input, "easy", defaultResult);
-		if (VolatileData.difficulty == Difficulty.Tactician)
-			return GetTextAssetOfDifficulty(input, "hard", defaultResult);
-		if (VolatileData.difficulty == Difficulty.Legend)
-			return GetTextAssetOfDifficulty(input, "legend", defaultResult);
-		Debug.LogError("난이도 설정 오류!");
-		return null;
-	}
-
-	static TextAsset GetTextAssetOfDifficulty(string input, string difficultyCode, TextAsset defaultResult){
-		var result = Resources.Load<TextAsset>(input + "_" + difficultyCode) ?? defaultResult;
-		UnitInfo.SetDifficultyFactors(result != defaultResult);
-		return result;
 	}
 	
 	public static List<TileInfo> GetParsedTileInfo(){

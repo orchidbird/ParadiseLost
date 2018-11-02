@@ -123,8 +123,6 @@ public class ArchiveManager : MonoBehaviour {
         RenewBestRecordPCPortraits();
         RenewBestRecordTotalScore();
 		CountUnitNum();
-        RenewAllyPortraits();
-        RenewEnemyPortraits();
         RenewBattleTriggers();
     }
     void RenewAvailablePCPortraits() {
@@ -183,47 +181,7 @@ public class ArchiveManager : MonoBehaviour {
 			else unitNumDict[unitName]++;
 		}
 	}
-    void RenewAllyPortraits() {
-        GameObject allyPortraits = allyPortraitPanel.GetComponentInChildren<HorizontalLayoutGroup>().gameObject;
-        foreach (Transform child in allyPortraits.transform)
-            Destroy(child.gameObject);
-        List<string> allyNames = VolatileData.stageData.GetUnitInfos().Where(unitInfo => unitInfo.side == Side.Ally
-                    && !(unitInfo.nameKor.StartsWith("PC") || unitInfo.nameKor == "unselected"))
-                    .Select(unitInfo => unitInfo.codeName).ToList();
-        if (allyNames.Count != 0) {
-            allyPortraitPanel.SetActive(true);
-            AdjustExplanationPanelSize(false);
-
-            foreach (var name in allyNames) {
-                Sprite unitPortraitSprite = VolatileData.GetSpriteOf(SpriteType.Portrait, name);
-                GameObject portrait = Instantiate(portraitPrefab);
-				portrait.transform.Find("UnitPortraitMask").Find("PortraitImage").GetComponent<Image>().sprite = unitPortraitSprite;
-                portrait.GetComponentInChildren<CustomNumberText>().PrintText(unitNumDict[name].ToString(), Color.white);
-                portrait.transform.SetParent(allyPortraits.transform);
-            }
-        } else {
-            allyPortraitPanel.SetActive(false);
-            AdjustExplanationPanelSize(true);
-        }
-    }
-    void RenewEnemyPortraits() {
-        GameObject enemyPortraits = enemyPortraitPanel.GetComponentInChildren<HorizontalLayoutGroup>().gameObject;
-        foreach (Transform child in enemyPortraits.transform)
-            Destroy(child.gameObject);
-        List<string> enemyNames = VolatileData.stageData.GetUnitInfos().Where(unitInfo => unitInfo.side == Side.Enemy)
-                .Select(unitInfo => unitInfo.codeName).ToList();
-        foreach (var name in enemyNames) {
-            Sprite unitPortraitSprite = VolatileData.GetSpriteOf(SpriteType.Portrait, name);
-	        if (!unitNumDict.ContainsKey(name)){
-		        Debug.Log(name + "의 Key가 존재하지 않음!");
-		        continue;
-	        }
-            GameObject portrait = Instantiate(portraitPrefab);
-			portrait.transform.Find("UnitPortraitMask").Find("PortraitImage").GetComponent<Image>().sprite = unitPortraitSprite;
-            portrait.GetComponentInChildren<CustomNumberText>().PrintText(unitNumDict[name].ToString(), Color.white);
-            portrait.transform.SetParent(enemyPortraits.transform);
-        }
-    }
+    
     void RenewBattleTriggers() {
         Dictionary<string, bool> everAchievedTriggers = RecordData.GetTriggersAchievedAtLeastOnce(selectedStage);
 

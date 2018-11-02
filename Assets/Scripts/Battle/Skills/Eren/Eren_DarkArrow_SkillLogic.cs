@@ -1,9 +1,4 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
-using Enums;
-using System.Linq;
-
-namespace Battle.Skills {
+﻿namespace Battle.Skills {
     public class Eren_DarkArrow_SkillLogic : BaseActiveSkillLogic {
         public override void ApplyAdditionalDamage(CastingApply castingApply){
 	        UnitStatusEffect uniqueStatusEffect = castingApply.Caster.GetSEofDisplayNameKor("흡수");

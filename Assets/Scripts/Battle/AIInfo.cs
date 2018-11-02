@@ -24,7 +24,7 @@ public class VigilArea {
 	}
 	public void InstatiateArea(Unit unit){
 		if (near) mid += unit.Pos;
-		if (dir == Direction.None) dir = unit.genInfo.Direction;
+		if (dir == Direction.None) dir = unit.GetDir();
 		area = TileManager.Instance.TilesInRange(range, mid, dir, -1);
 	}
 

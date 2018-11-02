@@ -90,11 +90,11 @@ namespace BattleUI{
 		}
 		
 		public Sprite BgSpriteOfUnit(Unit unit){
-			if(unit.myInfo.side == Side.Ally)
+			if(unit.GetSide() == Side.Ally)
 				return unit.IsAI ? aiAllyBg : allyBg;
-			if(unit.myInfo.side == Side.Neutral)
+			if(unit.GetSide() == Side.Neutral)
 				return neutralBg;
-			return unit.IsNamed ? namedBossBg : bossBg;
+			return namedBossBg;
 		}
 
 		void Start(){

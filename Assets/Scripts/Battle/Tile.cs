@@ -151,9 +151,6 @@ public class Tile : Entity, IPointerEnterHandler, IPointerExitHandler, IPointerD
 			TM.mouseOverUnit = null;
         
 		UM.SetTileViewer(this);
-
-		if (isPreSelected)
-			BattleManager.Instance.OnMouseEnterHandlerFromTile(location);
 	}
     void IPointerExitHandler.OnPointerExit(PointerEventData pointerData){
 		clickStarted = false;
@@ -174,9 +171,6 @@ public class Tile : Entity, IPointerEnterHandler, IPointerExitHandler, IPointerD
 		}
 
         UIM.DisableTileViewerUI();
-
-		if (isPreSelected)
-			BattleManager.Instance.OnMouseExitHandlerFromTile();
 	}
 	public void UpdateRealPosition() {
 		transform.position = TileManager.CalculateRealTilePosition(location, height);

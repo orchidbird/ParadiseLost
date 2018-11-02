@@ -259,11 +259,11 @@ public class TileManager : MonoBehaviour {
         foreach (var tile in GetAllTiles())
             tile.Value.UpdateRemainPhaseAtPhaseEnd();
     }
-	public bool fogUsed;
 
+	public readonly static int mapSize = 10;
 	void GenerateTiles(){
-		for (int x = 1; x <= 10; x++)
-			for (int y = 1; y <= 10; y++)
+		for (int x = 1; x <= mapSize; x++)
+			for (int y = 1; y <= mapSize; y++)
 				GenerateTile(x, y);
 	}
 	void GenerateTile (int x, int y){

@@ -13,7 +13,7 @@ namespace Enums {
 		};
 
 		public static List<Stat> statsToUpdate = new List<Stat>{
-			Stat.MaxHealth, Stat.Power, Stat.Defense, Stat.Resistance, Stat.Will
+			Stat.MaxHealth, Stat.Power, Stat.Defense, Stat.Will
 		};
         public static IconSprites GetccIcon(StatusEffectType ccType){
 	        if (ccTypeList.Contains(ccType))
@@ -82,7 +82,7 @@ namespace Enums {
     public enum ActionButtonType { Skill, Standby, Collect, Absent };
 	
     public enum Stat{
-        MaxHealth = 1, Power = 2, Defense = 3, Resistance = 4, Agility = 5,
+        MaxHealth = 1, Power = 2, Defense = 3, Agility = 4,
         CurrentHP = 6, Will = 7, CurrentAP = 8, // 이 셋은 엄밀히 말해 Stat은 아니지만 대미지/효과 계산에 포함되므로 추가
         Level = 9,
 		None = 10 // 대미지 없음, 고정값, 또는 기타 특수한 경우
@@ -100,22 +100,21 @@ namespace Enums {
 
     public enum StatusEffectChangeType {Attach, Remove, AmountChange, DurationChange, StackChange}
 	public enum StatusEffectType{
-        MaxHealthChange, PowerChange, DefenseChange, ResistanceChange, AgilityChange, WillChange, EvasionChange,
+        MaxHealthChange, PowerChange, DefenseChange, AgilityChange, WillChange, EvasionChange,
         Smite, Shield,
         RequireMoveAPChange, RequireSkillAPChange, // 각각 이동/기술에 필요한 행동력 소모 증감('의지'의 하위 개념)
 		MoveCostAccDecrease, //  이동 소모 행동력의 거리 가중치가 1 감소(유진-여행자의 발걸음)
 		EaseMoveHeightConstraint, // 이동할 때 높이차 무시
         DamageChange, TakenDamageChange, // 주는/받는 피해량 증감
         HealChange, TakenHealChange, // 주는/받는 회복량 증감
-		FireWeakness, WaterWeakness, PlantWeakness, MetalWeakness, //각 속성 시전자로부터 받는 속성피해 증가
 		DamageOverPhase, HealOverPhase, // 지속 피해/회복
 		RetreatHPChange, // 이탈 기준 HP 변경
 		Overload, // 기술 과부하(같은 턴에 여러 번 사용하면 소모 행동력 증가) 또는 기술 시전으로 인해 자기한테 붙는 불리한 효과. 보호막이 있어도 무조건 붙음
 		//이 위까지는 값이 0일 때 무효 처리되며, 아래부터는 0이어도 유효하다
 		Silence, Bind, Faint, Collect, //침묵/속박/기절/수집
-        MeleeReflect, MagicReflect, Stealth, Trap, MagicCircle, Aura, AllyAura, EnemyAura, Taunt,
+        Stealth, Trap, MagicCircle, Aura, AllyAura, EnemyAura, Taunt,
 		Reflect, // 반사: 받는 피해의 일부만큼 공격자에게 피해
-		MeleeImmune, MagicImmune, AllImmune, ForceMoveImmune, // 각각 물리/마법/모든 피해/강제이동 면역
+		AllImmune, ForceMoveImmune, // 각각 물리/마법/모든 피해/강제이동 면역
 		ZOC, // 효과의 주인에게 적일 경우 해당 효과가 붙은 타일로 이동 불가(세피아 고유 특성)
 		Pacifist, // 이 효과가 붙은 유닛이 공격해서 체력이 0 이하가 된 유닛은 처치 대신 이탈(노엘의 '언령' 효과)
         Etc // 위 분류에 해당하지 않는 효과
@@ -152,8 +151,6 @@ namespace Enums {
                 return Stat.Power;
             case StatusEffectType.DefenseChange:
                 return Stat.Defense;
-            case StatusEffectType.ResistanceChange:
-                return Stat.Resistance;
             case StatusEffectType.AgilityChange:
                 return Stat.Agility;
 			case StatusEffectType.WillChange:
@@ -169,8 +166,6 @@ namespace Enums {
                 return StatusEffectType.PowerChange;
             case Stat.Defense:
                 return StatusEffectType.DefenseChange;
-            case Stat.Resistance:
-                return StatusEffectType.ResistanceChange;
             case Stat.Agility:
                 return StatusEffectType.AgilityChange;
 			case Stat.Will:
@@ -180,19 +175,7 @@ namespace Enums {
             }
             return StatusEffectType.Etc;
         }
-        public static StatusEffectType ToStatusEffectType(Element element) {
-            switch (element) {
-            case Element.Fire:
-                return StatusEffectType.FireWeakness;
-            case Element.Metal:
-                return StatusEffectType.MetalWeakness;
-            case Element.Plant:
-                return StatusEffectType.PlantWeakness;
-            case Element.Water:
-                return StatusEffectType.WaterWeakness;
-            }
-            return StatusEffectType.Etc;
-        }
+
         public static Direction GetOpposite(Direction direction) {
             switch(direction) {
             case Direction.Right:
@@ -220,8 +203,6 @@ namespace Enums {
                 return Stat.Power;
             case FormulaVarType.Defense:
                 return Stat.Defense;
-            case FormulaVarType.Resistance:
-                return Stat.Resistance;
             case FormulaVarType.Agility:
                 return Stat.Agility;
             case FormulaVarType.MaxHealth:
