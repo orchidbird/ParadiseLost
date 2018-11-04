@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using Battle.Damage;
+﻿using Battle.Damage;
 using Enums;
 
 namespace Battle.Skills {

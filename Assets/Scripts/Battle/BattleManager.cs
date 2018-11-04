@@ -510,12 +510,7 @@ public class BattleManager : MonoBehaviour{
 			Debug.LogError("Input P -> Pause Game");
 	}
 
-	public bool AllowCameraChange{get{
-			//Debug.Log(BattleData.isWaitingUserInput +"/"+ cameraMover.Movable +"/"+ (BattleData.TutoState == TutorialState.None) +"/"+ VolatileData.OpenCheck(Setting.cameraMoveOpenStage));
-			return BattleData.isWaitingUserInput && cameraMover.Movable && BattleData.TutoState == TutorialState.None
-			       && VolatileData.OpenCheck(Setting.cameraMoveOpenStage);
-		}
-	}
+	public bool AllowCameraChange{get{return BattleData.isWaitingUserInput && cameraMover.Movable && BattleData.TutoState == TutorialState.None;}}
 	private void ChangeAspect(int direction) { // direction = 1 : 반시계 방향, direction = -1 : 시계방향
 		if(!AllowCameraChange) return;
 		
@@ -537,9 +532,8 @@ public class BattleManager : MonoBehaviour{
 		}
         cameraMover.CalculateBoundary();
 
-		if(BattleData.TutoState == TutorialState.Active && FindObjectOfType<TutorialController>().CurrentScenario != null){
+		if(BattleData.TutoState == TutorialState.Active && FindObjectOfType<TutorialController>().CurrentScenario != null)
 			FindObjectOfType<TutorialController>().CurrentScenario.UpdateAspect();
-		}
     }
 
 	public void OnMouseDownHandlerFromTile(Vector2Int position){

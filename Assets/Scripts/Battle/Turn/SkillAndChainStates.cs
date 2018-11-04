@@ -324,10 +324,9 @@ namespace Battle.Turn {
 		}
 		//연계'대기' 가능한 상태인가?
 		private static bool CheckWaitChainPossible (Casting casting) {
-			var caster = casting.Caster;
-			if (!VolatileData.OpenCheck(Setting.chainOpenStage) || !casting.Skill.IsOffensive ())
-				return false;
+			if (!casting.Skill.IsOffensive ()) return false;
 
+			var caster = casting.Caster;
 			// 타일 조건 - 시전자가 있는 타일에 연계 대기 불가능 효과가 걸려있으면 연계대기 불가
 			bool tileStatusConditionPossible = true;
 			Tile tileUnderCaster = caster.TileUnderUnit;

@@ -373,8 +373,8 @@ public class Utility : MonoBehaviour {
         return newList;
     }
 
-    public static List<Unit> UnitsInRange(List<Tile> input) {
-        return input.ConvertAll(tile => tile.GetUnitOnTile()).FindAll(unit => unit != null);
+    public static List<Unit> UnitsInRange(List<Tile> input){
+        return input.FindAll(tile => tile.IsUnitOnTile()).ConvertAll(tile => tile.GetUnitOnTile());
     }
 
     public static List<T> DeleteNull<T>(List<T> input) {

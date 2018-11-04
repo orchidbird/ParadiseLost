@@ -9,4 +9,7 @@ eugene	0	B22		백은의 장막	White Curtain	8	5	0	Auto	Diamond/0/4	Same	Buff	-	
 kashasty	6	B18		셔플 불릿	Shuffle Bullet	18	3	0	Point	Diamond/1/6	One	Move	-	TTF	Gun	HitArcane	Hit/Normal	대상과 자신의 위치를 바꿉니다.	Exchange positions of the caster and the target.				
 noel	5	B15		언령	Mercy of God	39	3	0	Auto	One	One	Buff	-	FFF	Life	HitHoly	Hit/Normal	다음 자신의 턴까지 모든 유닛의 이탈 기준치를 +10% 높입니다.	Increase ALL units' Retreat Point by 10% until Noel's next turn.				
 reina	0	C29		에테르 과부하	Ether Overload	0	5	A0.2	Auto	One	One	HealAP	-	TTF	Heal	Shot	Hit/Normal	--	--				
+triana-stage17	0	L1		해방: 폭염	Release: Flame	61	0	1.9	Auto	Front/1/5/3	Same	DamageHealth	-	FFF	Salamander	HitRed	Hit/Fire	<color=yellow>사용 조건: 자신이 불 속성</color>^DEFAULT^자신을 금속 속성으로 전환합니다.	<color=yellow>Require: Triana must have Fire element.</color>^DEFAULT				
+triana	0	B22		해방: 얼음 폭풍	Release: Ice Strom	63	0	2.4	Auto	Diamond/1/3	Same	DamageHealth	ReleaseIcedStorm	TFF	-	HitBlue	Hit/Normal	?	?				
+triana	0	C22		해방: 탐식의 덩굴	Release: Ingurgitating Vine	62	0	2.9	Route	AllDirection/1/3	One	DamageHealth	-	TFF	-	HitGreen	Hit/Normal	?	?				
 triana	0	C50		실체화: 드라이어드	Realize: Dryad	84	2	4.1	Route	AllDirection/1/3	One	DamageHealth	-	TFF	-	HitGreen	Hit/Normal	?	?				

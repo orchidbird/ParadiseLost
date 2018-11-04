@@ -319,12 +319,14 @@ public class UnitManager : MonoBehaviour{
 		}
 
 		var skills = new List<Skill>();
-		if (!unit.IsPC){
+		if (unit.IsPC){
+			skills.Add(TableData.ActiveSkills.Find(skill => skill.korName == "순간 이동"));
+			skills.Add(Generic.PickRandom(TableData.ActiveSkills.FindAll(skill => !skills.Contains(skill) && skill.GetCooldown() < 2)));
+		}else{
 			skills.Add(TableData.ActiveSkills.Find(skill => skill.korName == "화염 폭발"));
 			skills.Add(TableData.ActiveSkills.Find(skill => skill.korName == "쇄도"));
 			skills.Add(Generic.PickRandom(TableData.ActiveSkills.FindAll(skill => !skills.Contains(skill))));
-		}else
-			skills.Add(Generic.PickRandom(TableData.ActiveSkills.FindAll(skill => skill.GetCooldown() < 2)));
+		}
 		skills.Add(Generic.PickRandom(TableData.PassiveSkills));
 		
         unit.ApplySkillList(skills, StatusEffector.USEInfoList, StatusEffector.TSEInfoList);
@@ -467,12 +469,12 @@ public class UnitManager : MonoBehaviour{
 	}
 
     public void ApplyUSEsAtBattleStart(){
-	    var POVBuff = StatusEffector.FindUSE("주인공");
+	    //var POVBuff = StatusEffector.FindUSE("주인공");
 	    var HoldedDebuff = StatusEffector.FindUSE("붙잡힘");
 	    var POVName = VolatileData.GetStageData(VolatileData.progress.stageNumber, StageInfoType.POV);
         foreach(var unit in GetAllUnits()){
-	        if (unit.CodeName == POVName)
-		        StatusEffector.AttachAndReturnUSE(unit, new List<UnitStatusEffect> { new UnitStatusEffect(POVBuff, unit) }, unit, false);
+	        //if (unit.CodeName == POVName)
+		    //    StatusEffector.AttachAndReturnUSE(unit, new List<UnitStatusEffect> { new UnitStatusEffect(POVBuff, unit) }, unit, false);
 	        if (unit.holdName == "") continue;
 	        var target = GetAllUnits().Find(_unit => _unit.CodeName == unit.holdName);
 	        if(target != null)

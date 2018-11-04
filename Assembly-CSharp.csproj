@@ -134,9 +134,9 @@
     <Compile Include="Assets\Scripts\Battle\Skills\AI\Stage_20_1_SkillLogic.cs" />
     <Compile Include="Assets\Scripts\Battle\Skills\AI\Stage_20_2_SkillLogic.cs" />
     <Compile Include="Assets\Scripts\Battle\Skills\Arcadia\ApplyOnPlantTile.cs" />
-    <Compile Include="Assets\Scripts\Battle\Skills\Arcadia\Arcadia_1_m_SkillLogic.cs" />
     <Compile Include="Assets\Scripts\Battle\Skills\Arcadia\Arcadia_C1_SkillLogic.cs" />
     <Compile Include="Assets\Scripts\Battle\Skills\Arcadia\Arcadia_Weathering_SkillLogic.cs" />
+    <Compile Include="Assets\Scripts\Battle\Skills\Arcadia\Blink_SkillLogic.cs" />
     <Compile Include="Assets\Scripts\Battle\Skills\AttachAura.cs" />
     <Compile Include="Assets\Scripts\Battle\Skills\AttachAuraOnStart.cs" />
     <Compile Include="Assets\Scripts\Battle\Skills\AttachingSEOnStartSkillLogic.cs" />
@@ -217,7 +217,7 @@
     <Compile Include="Assets\Scripts\Battle\Skills\Grenev\Grenev_7_r_SkillLogic.cs" />
     <Compile Include="Assets\Scripts\Battle\Skills\Grenev\Grenev_8_l_SkillLogic.cs" />
     <Compile Include="Assets\Scripts\Battle\Skills\Grenev\Grenev_A15_SkillLogic.cs" />
-    <Compile Include="Assets\Scripts\Battle\Skills\Grenev\Grenev_B1_SkillLogic.cs" />
+    <Compile Include="Assets\Scripts\Battle\Skills\Grenev\Grenev_Dagger_SkillLogic.cs" />
     <Compile Include="Assets\Scripts\Battle\Skills\Grenev\Grenev_P0_SkillLogic.cs" />
     <Compile Include="Assets\Scripts\Battle\Skills\IgnoreRestrictionSkillLogic.cs" />
     <Compile Include="Assets\Scripts\Battle\Skills\Json\Json_2_m_SkillLogic.cs" />
@@ -235,12 +235,12 @@
     <Compile Include="Assets\Scripts\Battle\Skills\Karldrich\Karldrich_3_m_SkillLogic.cs" />
     <Compile Include="Assets\Scripts\Battle\Skills\Karldrich\Karldrich_LeftWing_SkillLogic.cs" />
     <Compile Include="Assets\Scripts\Battle\Skills\Kashasty\Kashasty_3_l_SkillLogic.cs" />
-    <Compile Include="Assets\Scripts\Battle\Skills\Kashasty\Kashasty_B15_SkillLogic.cs" />
     <Compile Include="Assets\Scripts\Battle\Skills\Kashasty\Kashasty_B8_SkillLogic.cs" />
     <Compile Include="Assets\Scripts\Battle\Skills\Kashasty\Kashasty_C1_SkillLogic.cs" />
     <Compile Include="Assets\Scripts\Battle\Skills\Kashasty\Kashasty_C36_SkillLogic.cs" />
     <Compile Include="Assets\Scripts\Battle\Skills\Kashasty\Kashasty_DoubleShot_SkillLogic.cs" />
     <Compile Include="Assets\Scripts\Battle\Skills\Kashasty\Kashasty_Scanner_SkillLogic.cs" />
+    <Compile Include="Assets\Scripts\Battle\Skills\Kashasty\Kashasty_Shuffle_SkillLogic.cs" />
     <Compile Include="Assets\Scripts\Battle\Skills\Kashasty\Kashasty_Unique_SkillLogic.cs" />
     <Compile Include="Assets\Scripts\Battle\Skills\Lenien\Lenien_1_m_SkillLogic.cs" />
     <Compile Include="Assets\Scripts\Battle\Skills\Lenien\Lenien_2_r_SkillLogic.cs" />

@@ -4,12 +4,10 @@ using Enums;
 public class Setting{
 	//기능 통제
 	public static readonly StageNum directionOpenStage = StageNum.S1_1;
-	public static readonly StageNum cameraMoveOpenStage = StageNum.S1_2;
 	public static readonly StageNum classOpenStage = StageNum.S2_1;
 	public static readonly StageNum elementOpenStage = StageNum.S3_1;
 	public static readonly StageNum retreatOpenStage = StageNum.S4_1;
 	public static readonly StageNum WillChangeOpenStage = StageNum.S4_1;
-	public static readonly StageNum chainOpenStage = StageNum.S5_1;
 	public static readonly StageNum readySceneOpenStage = StageNum.S6_1; //능력 선택과 동시에 개방
 	public static readonly StageNum WillCharacteristicOpenStage = StageNum.S7_1;
 	public static readonly StageNum manualGenerationOpenStage = StageNum.S9_1;

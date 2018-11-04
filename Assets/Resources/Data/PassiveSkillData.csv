@@ -12,11 +12,10 @@ eichmann	0	L10		연막탄	Smoke Shell	자신과 인접하지 않은 유닛의 �
 door~	0	L13		잠금	Locked	직접 공격하거나,^외부의 장치를 통해서 열 수 있습니다.	Can be opened by direct attack or external device.
 explosive	0	L13		폭발성	Explosive	파괴될 때 주변 3×3 영역을 기절(1턴)시키고 <color=red>대상 현재 체력의 60%</color>의 피해를 줍니다.	When Destroyed, Give Faint(1 Turn) and Damage of <color=red>60% of target HP</color> to nearby 3×3 tiles.
 alchemySage	0	L13		화합물 정제	Compound Purification	턴을 시작할 때마다 공격력이 <color=red>10%</color> 높아집니다.	At the every start of the turn, Power increases by <color=red>+10%</color>.
-alchemySage	0	L13		나를 따르라	Follow Me	반경 3타일 이내의 모든 수습생들의 공격력이 <color=red>+20%</color>, <color=green>체력</color>이 <color=green>+20%</color>, 의지가 <color=#00FFFF>+20</color> 높아집니다.	Power <color=red>+20%</color>, <color=green>HP +20%</color>, Will <color=#00FFFF>+20</color> for all apprentices in a range of 3 tiles radius.
 armorSchmidt	0	L14		살아움직이는 갑옷	Animated Armor	발동되면, 반경 5타일 영역 내 적들에게 도발을 부여합니다.	While activated, Taunt enemies within a 5 tiles radius.
 fireSpirit	0	L0		영체	Nonmaterial	<color=green>치유</color>를 받을 때 체력을 회복하는 대신 그만큼의 피해를 받습니다.	When getting healed, receive Damage instead of recovery.
 fireSpirit	0	L16		점멸	Flash	연계가 아닌 공격에 면역입니다.	Immune to ALL attacks without chain.
-fireSpirit	0	L16		휘몰아치는 열기	Stirring Heat	턴을 시작할 때, 반경 2타일 안에 있는 불 속성이 아닌 유닛에게 0.8×공격력의 피해를 줍니다.	At the start of the turn, Deal Damage of 0.8×Power to units without Fire element within a 2 tiles radius.
+fireSpirit	0	L16		휘몰아치는 열기	Stirring Heat	턴을 시작할 때, 반경 2타일 영역의 유닛에게 0.4×공격력의 피해를 줍니다.	At the start of the turn, Deal Damage of 0.8×Power to units without Fire element within a 2 tiles radius.
 freight171~	0	L1		알뜰함	Nifty	수집한 유닛의 의지를 4페이즈 동안 40 올립니다.	After collected, Will <color=#00FFFF>+40</color> (4 Turns)
 carriage01	0	L18		엄폐물	Cover	마차가 공격 범위에 포함되면, 그 공격의 피해가 30% 줄어듭니다.	The damage of all attacks including this unit as target will be decreased by 30%.
 arcadia	0	P0		숲의 후예	Descendants of Forest	나무 속성 타일에서 <color=green>체력 +10%</color>, 공격력 <color=red>+10%</color>, 의지 <color=#00FFFF>+10</color>^불 속성 타일에서 <color=green>체력 -10%</color>, 공격력 <color=red>-10%</color>, 의지 <color=#00FFFF>-10</color>^나무 속성 타일의 이동 소모 행동력이 <color=#00FFFF>2</color> 감소합니다.	<color=green>HP</color> & Power +10%, Will <color=#00FFFF>+10</color> on a Plant element tile^<color=green>HP</color> & Power -10%, Will <color=#00FFFF>-10</color> on a Fire element tile^Use <color=#00FFFF>2</color> less AP for moving on a Plant element tile.
@@ -29,7 +28,6 @@ bianca	8	C19		응원 고마워!	Thank you!	비공격 기술의 대상이 되었�
 curi	11	A5		호기심	Curious	첫 5턴 동안 공격력이 <color=red>15%</color> 높아집니다.	Power <color=red>+15%</color> for the first 5 Turns.
 curi	8	A14		동적 평형	Dynamic Balance	체력을 1% 잃을 때마다 행동력을 민첩성의 1%만큼 회복합니다.	Whenever takes Damage 1% of Max HP, Recover AP 1% of Agility.
 curi	7	B16	B3	가연성 부착물	Flammable Attachment	<color=yellow>(향상 - 수상한 덩어리)</color>^대상에게 '가연성 부착물' 효과(유닛이 불 속성 타일에 있을 때, 반경 1타일에 0.3×공격력의 피해를 준 후 사라짐)를 부여합니다.	<color=yellow>(Enhance - Starange Lump)</color>^Give an additional effect to the target. when the unit is in a Fire-element tile, it will deal 0.3×Power of Damage to the range of 1 tile radius and then be removed.
-curi	9	A17		신속 반응	Fast Response	불 속성 타일에 있으면, 의지가 <color=#00FFFF>20</color> 높아집니다.	Will <color=#00FFFF>+20</color> while on a Fire-element tile.
 curi	8	B18	B3	조연성 부착물	Abrasive Attachment	<color=yellow>(향상 - 수상한 덩어리)</color>^피해량이 0.9×공격력으로 줄어드는 대신, 대상에게 20%의 불 속성 약점(2턴)을 부여합니다.	<color=yellow>(Enhance - Strange Lump)</color>^Instead of reducing the damage to 0.9x damage, give the target 20% Fire Weak (2 Turns).
 curi	6	C20		환원	Restoration	금속 속성 타일에 있으면, 방어력이나 저항력을 낮추는 약화를 새로 받지 않습니다.	While on a tile with Metal element, immune to debuffs decreasing Defense or Resistance.
 curi	0	A29		재결정	Recrystalize	ABCD	ABCD
@@ -51,7 +49,6 @@ eren	0	B29		영겁의 지식	영겁의 지식	ABCD	ABCD
 eren	0	B36		진형 붕괴	진형 붕괴	ABCD	ABCD
 eren	0	C43		천상의 전령	천상의 전령	ABCD	ABCD
 eugene	0	P0		거울 공명	Mirror Resonance	대상에 자신이나 동료가 포함된 마법 공격의 위력이, <color=#BDB76B>대상 1명</color>당 5%(최대 30%) 줄어듭니다.	Damage of Magic attacks containing any ally as target will decreased by 5% per every <color=#BDB76B>target</color> of the attack(maximum 30%).
-eugene	10	B10	B7	순은의 매듭	White Knot	<color=yellow>(향상 - 순백의 방패)</color>^효과의 지속이 2턴로 줄어드는 대신, 서로 다른 대상으로부터의 효과가 중첩됩니다.	<color=yellow>(Enhance - White Shield)</color>^Reduce the duration of the effect to 2 Turns, but these effects from different objects become compatible.
 eugene	11	C12		여행자의 발걸음	Adventuristic Step	매턴 기술을 시전하기 전까지, 이동 소모 행동력의 거리 가중치가 1 줄어듭니다.	Every turn before casting a skill, moving cost increasing by tile will be 1.
 eugene	0	A29		순수한 물	Pure Water	ABCD	ABCD
 eugene	0	B29		은의 지평선	Silver Horizon	ABCD	ABCD
@@ -91,11 +88,11 @@ kashasty	0	C36		마법공학 조준경	Arcane Scope	ABCD	ABCD
 kashasty	9	C8		시들지 않는 의지	Everlasting Will	<color=green>잃은 체력 4%</color>마다 <color=#00FFFF>의지</color>가 1 높아집니다.	Will <color=#00FFFF>+1</color> per <color=green>lost HP 4%</color>.
 kashasty	0	A43		에테르화	Etherize	ABCD	ABCD
 lenien	0	P0		감전	Electromagica	공격 대상이 물 속성 또는 금속 속성 타일에 있으면, 저항력을 <color=green>42+레벨당 0.6</color>(1턴) 낮춥니다.	If target is on a tile with Water of Metal element, decrease Resistance of the target by <color=green>42+Level×0.6</color> for 1 Turn.
-lenien	4	A9		피뢰침	Lightning Rod	턴을 시작할 때, 자신보다 높은 위치에 있는 유닛이 없으면 0.2×공격력의 강타를 얻습니다.^금속 속성 타일에 있으면 <color=red>2배</color>의 효과를 얻습니다.	At the start of turn, If Lenien is one of the units on the highest position, Get Smite(0.2×Power).^If Lenien is on a tile with Metal element, the effect will be <color=red>double</color>d.
+lenien	4	A9		피뢰침	Lightning Rod	턴을 시작할 때, 자신보다 높은 위치에 있는 유닛이 없으면 0.3×공격력의 강타를 얻습니다.	At the start of turn, If Lenien is one of the units on the highest position, Get Smite(0.2×Power).^If Lenien is on a tile with Metal element, the effect will be <color=red>double</color>d.
 lenien	9	B12		전도체	Conductor	공격 대상이 물 속성 타일에 있으면, 저항력을 <color=green>51+레벨당 0.7</color> 무시합니다.	Ignore Resistance of target on a tile with Water element by <color=green>51+Level×0.7</color>.
 lenien	12	C13		정전기 유도	Static Electricity	금속 속성 유닛에게 공격받으면, 공격자에게 ‘정전기’(2턴)를 부여합니다.^*정전기: 금속 속성 유닛에게 공격하거나 공격받으면, 기절(1턴) 획득 후 이 효과는 사라집니다.	After being attacked by an unit with Metal element, give an effect(2 Turns).^An unit with that effect will get Faint(1 Turn) after attacking or being attacked by a unit with Metal element.
 lenien	10	B16		에너지 변환	Energy Conversion	높은 위치에서 공격할 때 <color=red>높이차x15%</color>만큼 추가 보정을 받습니다.	When attacks target on a lower tile, Deal <color=red>+15%</color> more Damage per one level of height difference.
-lenien	0	B29		연쇄 방전	연쇄 방전	ABCD	ABCD
+lenien	0	B29		연쇄 방전	연쇄 방전	공격이 대상 1명당 5%의 추가 피해를 줍니다.	ABCD
 lenien	0	C29		자기 부상	자기 부상	ABCD	ABCD
 lenien	0	A36		에테르 전위	에테르 전위	ABCD	ABCD
 lenien	0	C43		입자 가속	입자 가속	ABCD	ABCD
@@ -157,6 +154,6 @@ yeong	5	B20		질풍노도	Windbreak	회피에 성공할 때마다 최대 체력�
 yeong	0	B29		유법	유법	ABCD	ABCD
 yeong	0	A36		접근	접근	ABCD	ABCD
 yeong	0	B36		무아지경	무아지경	ABCD	ABCD
-yeong	0	C36		끝없는 단련	끝없는 단련	ABCD	ABCD
+yeong	0	C36		끝없는 단련	끝없는 단련	피해를 받으면, 다음에 받는 공격에 회피율 +15%를 얻습니다.	ABCD
 yeong	0	B43		후의 선	후의 선	ABCD	ABCD
 yeong	0	C43		명경지수	명경지수	ABCD	ABCD

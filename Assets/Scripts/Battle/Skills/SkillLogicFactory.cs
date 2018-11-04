@@ -10,7 +10,10 @@ public static class SkillLogicFactory{
         BaseActiveSkillLogic skillLogic;
 			switch (skill.GetName()) {
 
-			// AI
+			// AI 또는 기타
+			case "순간 이동":
+				skillLogic = new Blink_SkillLogic();
+				break;
 			case "돌진":
 				skillLogic = new BasicChargeSkillLogic ();
 				break;
@@ -47,7 +50,7 @@ public static class SkillLogicFactory{
 				skillLogic = new Grenev_1_l_SkillLogic ();
             break;
             case "단검술":
-				skillLogic = new Grenev_B1_SkillLogic();
+				skillLogic = new Grenev_Dagger_SkillLogic();
             break;
             case "암살 표식":
                 skillLogic = new Grenev_3_m_SkillLogic();
@@ -182,9 +185,6 @@ public static class SkillLogicFactory{
             break;
 
             //아르카디아
-            case "생명의 요람":
-            skillLogic = new Arcadia_1_m_SkillLogic();
-            break;
             case "계절풍":
             skillLogic = new Arcadia_C1_SkillLogic();
             break;
@@ -255,7 +255,7 @@ public static class SkillLogicFactory{
             skillLogic = new Kashasty_DoubleShot_SkillLogic();
             break;
             case "셔플 불릿":
-            skillLogic = new Kashasty_B15_SkillLogic();
+            skillLogic = new Kashasty_Shuffle_SkillLogic();
             break;
 
             //칼드리치

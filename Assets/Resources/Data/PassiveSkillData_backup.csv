@@ -1,3 +1,6 @@
 ﻿owner	ether	address	required	nameKor	nameEng	TextKor	TextEng
+alchemySage	0	L13		나를 따르라	Follow Me	반경 3타일 이내의 자신을 제외한 동료의 공격력 <color=red>+10%</color>, <color=green>체력</color> <color=green>+10%</color>, 의지가 <color=#00FFFF>+10</color> 높아집니다.	Power <color=red>+20%</color>, <color=green>HP +20%</color>, Will <color=#00FFFF>+20</color> for all apprentices in a range of 3 tiles radius.
 curi	0	P0		정제	Refine	공격할 때 모든 대상이 속성이 같으면, 해당 속성의 '<color=#FF9999>정제</color>(<color=red>공격력 +5%</color>, 5중첩까지 가능)' 효과를 얻습니다.^이 효과는 다른 속성 유닛을 공격하면 사라집니다.	When attack, get '<color=#FF9999>Refine</color>(</color=red>Power +5%</color>, max count 5)' effect If the elements of targets are all same.^This effect will be removed after attacking a unit with different element.
+curi	9	A17		신속 반응	Fast Response	불 속성 타일에 있으면, 의지가 <color=#00FFFF>20</color> 높아집니다.	Will <color=#00FFFF>+20</color> while on a Fire-element tile.
 eren	0	A43		압도적인 공포	압도적인 공포	ABCD	ABCD
+eugene	10	B10	B7	순은의 매듭	White Knot	<color=yellow>(향상 - 순백의 방패)</color>^효과의 지속이 2턴로 줄어드는 대신, 서로 다른 대상으로부터의 효과가 중첩됩니다.	<color=yellow>(Enhance - White Shield)</color>^Reduce the duration of the effect to 2 Turns, but these effects from different objects become compatible.

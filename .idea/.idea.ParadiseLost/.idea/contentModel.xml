@@ -426,9 +426,9 @@
               </e>
               <e p="Arcadia" t="Include">
                 <e p="ApplyOnPlantTile.cs" t="Include" />
-                <e p="Arcadia_1_m_SkillLogic.cs" t="Include" />
                 <e p="Arcadia_C1_SkillLogic.cs" t="Include" />
                 <e p="Arcadia_Weathering_SkillLogic.cs" t="Include" />
+                <e p="Blink_SkillLogic.cs" t="Include" />
               </e>
               <e p="AttachAura.cs" t="Include" />
               <e p="AttachAuraOnStart.cs" t="Include" />
@@ -523,7 +523,7 @@
                 <e p="Grenev_7_r_SkillLogic.cs" t="Include" />
                 <e p="Grenev_8_l_SkillLogic.cs" t="Include" />
                 <e p="Grenev_A15_SkillLogic.cs" t="Include" />
-                <e p="Grenev_B1_SkillLogic.cs" t="Include" />
+                <e p="Grenev_Dagger_SkillLogic.cs" t="Include" />
                 <e p="Grenev_P0_SkillLogic.cs" t="Include" />
               </e>
               <e p="IgnoreRestrictionSkillLogic.cs" t="Include" />
@@ -547,12 +547,12 @@
               </e>
               <e p="Kashasty" t="Include">
                 <e p="Kashasty_3_l_SkillLogic.cs" t="Include" />
-                <e p="Kashasty_B15_SkillLogic.cs" t="Include" />
                 <e p="Kashasty_B8_SkillLogic.cs" t="Include" />
                 <e p="Kashasty_C1_SkillLogic.cs" t="Include" />
                 <e p="Kashasty_C36_SkillLogic.cs" t="Include" />
                 <e p="Kashasty_DoubleShot_SkillLogic.cs" t="Include" />
                 <e p="Kashasty_Scanner_SkillLogic.cs" t="Include" />
+                <e p="Kashasty_Shuffle_SkillLogic.cs" t="Include" />
                 <e p="Kashasty_Unique_SkillLogic.cs" t="Include" />
               </e>
               <e p="Lenien" t="Include">

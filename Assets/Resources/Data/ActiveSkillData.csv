@@ -1,4 +1,5 @@
 ﻿owner	ether	address	required	nameKor	nameEng	ReqAP	cooldown	coef	RangeType	FirstRange	SecondRange	skillApplyType	CastVEName	Area/Move/Dir	CastSEName	HitVeName	HitSeName	explainKor	explainEng	AdditiveValues	ValueType	ValueCoef	ValueBase
+common	0	P0		순간 이동	Blink	30	2	0	Point	Diamond/1/3	One	Move	-	FFF	-	-	-	3타일 이내의 빈 타일로 이동합니다.	Move to an empty tile in range of 3 tiles radius.
 ~Spear~	0	L1		찌르기	Pierce	42	0	1	Auto	Straight/1/2	Same	DamageHealth	Melee	FFF	Pierce	HitWhite	Hit/Pierced	DEFAULT	DEFAULT				
 unitySpearman01	0	L13		구급 치료	First aid	40	0	0.4	Auto	One	One	HealHealth	-	FFF	Heal	Shot	Hit/Normal	DEFAULT	DEFAULT				
 agent	0	L1		창술	Lance	42	0	1	Point	Diamond/1/2	One	DamageHealth	Melee	FFF	Pierce	HitWhite	Hit/Pierced	DEFAULT	DEFAULT				
@@ -30,7 +31,6 @@ eichmann	0	L1		갈고리 칼춤	Hook Wield	50	0	1.4	Auto	AllDirection/1/1	Same	D
 alchemy~	0	L12		혼합물 투척	Throwing Mixture	40	0	1	Point	Diamond/0/4	Diamond/0/1	DamageHealth	-	FFF	AlkaliBomb	HitArcane	Hit/Normal	DEFAULT	DEFAULT				
 alchemySage	0	L13		치료약 살포	Remedy Sparge	40	2	0.5	Point	Diamond/0/4	Diamond/0/2	HealHealth	-	FFF	AlkaliBomb	Shot	Hit/Normal	DEFAULT	DEFAULT				
 schmidt	0	L1		방패치기	Shield Slam	38	0	0.8	Auto	Front/1/1/3	Same	DamageHealth	MeleeArea	TFF	Tap	HitWhite	Hit/Striked	DEFAULT^<color=#92B4F2>밀기(1)</color>^밀려나지 않으면, +(0.2×공격력)의 <color=red>추가 피해</color>를 입힙니다.	DEFAULT^<color=#92B4F2>Push(1)</color>^If there's no tile behind target, deal (0.2×Power)<color=red>more Damage</color>.				
-triana-stage17	0	L1		해방: 폭염	Release: Flame	61	0	1.9	Auto	Front/1/5/3	Same	DamageHealth	-	FFF	Salamander	HitRed	Hit/Fire	<color=yellow>사용 조건: 자신이 불 속성</color>^DEFAULT^자신을 금속 속성으로 전환합니다.	<color=yellow>Require: Triana must have Fire element.</color>^DEFAULT				
 triana-stage17	0	L1		열풍	Heat Wave	30	0	1	Auto	Front/1/1/3	Same	DamageHealth	-	FFF	Salamander	HitRed	Hit/Fire	DEFAULT^자신이 불 속성이면, <color=#92B4F2>밀기(5)</color>	DEFAULT^If caster has Fire element, <color=#92B4F2>Push(5)</color>				
 fireSpirit	0	L1		정령의 발길	Spirit's Step	50	0	1	Auto	Front/1/2/3	Same	DamageHealth	-	FFF	Salamander	Shot	Hit/Normal	DEFAULT^범위 내 타일을 자신과 같은 속성으로 전환합니다.	DEFAULT^Change elements of tiles in area to the same element as caster.				
 monk	0	L1		칸티움의 울타리	Fence of Cantium	40	2	0.7	Auto	Global	Global	Buff	LightShield	FFF	Shield	Shot	Hit/Normal	<color=yellow>대상: 모든 수도사, 신도, 시민</color>^1.5×공격력의 보호막(2턴)을 부여합니다.	<color=yellow>Target: All monks, followers, civilians</color>^Shield(2 Turns) of 1.5×Power.				
@@ -122,8 +122,6 @@ triana	10	B5		얼음날	Ice Blade	25	0	0.5	Auto	Straight/1/2	Same	DamageHealth	I
 triana	6	C8		포획	Capture	26	0	0.6	Route	Straight/1/4	One	DamageHealth	Vine	TFT	Wind	HitGreen	Hit/Normal	당기기 DEFAULT^자신이 나무 속성이면, 피해를 <color=red>2배</color>로 주고 1턴 동안 도발합니다.	Pull^DEFAULT^If Triana has Plant element, <color=red>double</color> the Damage and Taunt(1 Turn) the target.				
 triana	10	A10		열풍	Heat Wave	24	0	0.6	Route	Straight/1/3	One	DamageHealth	FirePillar	FFF	Salamander	HitRed	Hit/Fire	돌진 DEFAULT^자신이 불 속성이면, 피해를 <color=red>2배</color>로 주고 1턴 동안 침묵시킵니다.	Charge^DEFAULT^If Triana has Fire element, <color=red>double</color> the Damage and Give Silence(1 Turn).				
 triana	10	B20		결정화	Crystalize	9	3	0	Auto	Square/0/1	Same	Buff	Crystalize	FFF	Crystalize	Shot	Hit/Normal	2턴 동안 방어력을 317+레벨당 4.2 높입니다.^자신이 물 속성이 아니면, 추가로 의지를 <color=#00FFFF>30</color> 낮춥니다.	Increase Defense by 317+Levelx4.2(2 Turns).^If Triana dosen't have Water element, Decrease Will by <color=#00FFFF>30</color>(2 Turns).				
-triana	0	B22		해방: 얼음 폭풍	Release: Ice Strom	63	0	2.4	Auto	Diamond/1/3	Same	DamageHealth	ReleaseIcedStorm	TFF	-	HitBlue	Hit/Normal	?	?				
-triana	0	C22		해방: 탐식의 덩굴	Release: Ingurgitating Vine	62	0	2.9	Route	AllDirection/1/3	One	DamageHealth	-	TFF	-	HitGreen	Hit/Normal	?	?				
 triana	0	A50		실체화: 샐러맨더	Realize: Salamander	84	2	3.1	Auto	Front/1/5/3	Same	DamageHealth	-	TFT	Salamander	HitRed	Hit/Fire	?	?				
 triana	0	B50		실체화: 펜릴	Realize: Fenrir	84	2	3.4	Auto	Diamond/1/3	Same	DamageHealth	-	TFF	Fenrir	HitBlue	Hit/Normal	?	?				
 yeong	7	A3		은빛 베기	Silverly Slash	40	0	0.9	Auto	Sector/1/2	Same	DamageHealth	SilverlySlash	TFT	Slash	HitWhite	Hit/Bashed	DEFAULT^<color=#ff9999ff>방랑자</color> 효과가 있으면, <color=red>20%</color>의 <color=red>추가 피해</color>를 입힙니다.	DEFAULT^<color=red>+20%</color> if yeong has <color=#ff9999ff>Vagabond</color> effect.				

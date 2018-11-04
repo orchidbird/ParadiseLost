@@ -2,7 +2,6 @@
 using System.Linq;
 using System.Collections.Generic;
 using Battle.Damage;
-using UnityEngine;
 
 namespace Battle.Skills {
     class Sepia_1_m_SkillLogic : BasePassiveSkillLogic {

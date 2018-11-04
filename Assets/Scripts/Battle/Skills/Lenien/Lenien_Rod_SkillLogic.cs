@@ -13,7 +13,7 @@ namespace Battle.Skills{
 			    StatusEffector.FindAndAttachUnitStatusEffectsOfPrecalculatedAmounts(caster, passiveSkill, caster,
 				    new List<List<float>>{
 					    new List<float>{
-						    caster.GetStat(Stat.Power) * 0.2f
+						    caster.GetStat(Stat.Power) * 0.3f
 					    }
 				    });
 		    }

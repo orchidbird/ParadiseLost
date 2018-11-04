@@ -12,7 +12,7 @@ namespace Battle.Skills {
 
 			if (targets.Count <= 0) return;
 			CameraMover.MoveCameraToUnit (caster);
-			float damage = caster.GetStat(Stat.Power) * 0.8f;
+			float damage = caster.GetStat(Stat.Power) * 0.4f;
 			foreach (Unit unit in targets) 
 				unit.ApplyDamageByNonCasting (damage, caster, true);
         }

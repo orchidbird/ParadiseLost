@@ -474,7 +474,7 @@ namespace Battle.Turn{
 			BattleManager.Instance.ReadyForUnitAction();
 
 			bool chain = false;
-			if (casting.Skill.IsOffensive() && VolatileData.OpenCheck(Setting.chainOpenStage) && VolatileData.difficulty != Difficulty.Intro
+			if (casting.Skill.IsOffensive() && VolatileData.difficulty != Difficulty.Intro
 			    && SkillAndChainStates.GetCastingResultPreview(ChainList.GetAllChainTriggered(casting), false).All(kv => GetTargetValue(kv.Key) >= 0 || kv.Value.unitHp <= kv.Key.RetreatHP)
 			    && (casting.Skill.GetRangeType() != RangeType.Route || Calculate.Distance(casting.Location.TargetTile, unit) <= 1)){
 				for (int i = 0; i < UnitManager.Instance.unitsActThisPhase.Count; i++){

@@ -260,7 +260,7 @@ public class TileManager : MonoBehaviour {
             tile.Value.UpdateRemainPhaseAtPhaseEnd();
     }
 
-	public readonly static int mapSize = 11;
+	public readonly static int mapSize = 12;
 	void GenerateTiles(){
 		for (int x = 1; x <= mapSize; x++)
 			for (int y = 1; y <= mapSize; y++)
@@ -269,7 +269,7 @@ public class TileManager : MonoBehaviour {
 	void GenerateTile (int x, int y){
 		if (Random.Range(0f, 1f) < 0.05f) return;
 
-		var height = Random.Range(0, 2);
+		var height = Random.Range(0, 3);
 		var location = new Vector2Int(x, y);
 		var tile = Instantiate(tilePrefab, CalculateRealTilePosition(location, height), Quaternion.identity).GetComponent<Tile>();
 		tile.name = "Tile(" + x + "," + y + ")";
@@ -286,12 +286,6 @@ public class TileManager : MonoBehaviour {
 		GenerateTiles();
 		foreach (var tile in tiles.Values)
 			tile.FillHeight();
-		//유닛 생성 후 안개 처리 필요.
-		/*foreach (var tile in tiles.Values){
-			tile.ApplyFogType(tile.fogType);
-			if(!fogUsed && tile.fogType != FogType.None)
-				fogUsed = true;
-		}*/
 
 		allTiles = GetAllTiles().Values.ToList();
 		SetBloodShow();

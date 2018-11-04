@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Enums;
 using UnityEngine;
@@ -173,13 +174,9 @@ namespace Battle {
 			return chainBonus;
 		}
 
-		private static float GetChainDamageFactorFromChainCombo(int chainCombo)
-		{
+		private static float GetChainDamageFactorFromChainCombo(int chainCombo){
 			if (chainCombo < 2)	return 1.0f;
-			else if (chainCombo == 2) return 1.2f;
-			else if (chainCombo == 3) return 1.5f;
-			else if (chainCombo == 4) return 2.0f;
-			else return 3.0f;  
+			return (float) Math.Pow(1.3f, chainCombo - 1);  
 		}
 
 		private static float SmiteAmount(Unit casterUnit) {
