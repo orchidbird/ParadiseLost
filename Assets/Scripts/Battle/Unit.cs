@@ -1264,10 +1264,10 @@ public class Unit : Entity{
 		actualStats.Clear();
 
 		if (isPC){
-			baseStats.Add(Stat.MaxHealth, RandomIntOfVariation(100, 1.2f));
-			baseStats.Add(Stat.Power, RandomIntOfVariation(20, 1.2f));
-			baseStats.Add(Stat.Defense, RandomIntOfVariation(32, 1.2f));
-			baseStats.Add(Stat.Agility, RandomIntOfVariation(50, 1.1f));
+			baseStats.Add(Stat.MaxHealth, RandomIntOfVariation(100, 1.05f));
+			baseStats.Add(Stat.Power, RandomIntOfVariation(20, 1.1f));
+			baseStats.Add(Stat.Defense, RandomIntOfVariation(32, 1.15f));
+			baseStats.Add(Stat.Agility, RandomIntOfVariation(50, 1.04f));
 			baseStats.Add(Stat.Will, RandomIntOfVariation(100, 1.1f));
 			baseStats.Add(Stat.Level, 1);
 		}else{

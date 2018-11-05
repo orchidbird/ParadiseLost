@@ -1,7 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using Enums;
 
 public class ChainList : MonoBehaviour {
 	private static List<Chain> chainList = new List<Chain>();

@@ -45,6 +45,7 @@ public class BattleManager : MonoBehaviour{
 		yield return MoveCameraToTileAveragePosAndZoomOut();
 		UM.GenerateUnitAutomatically();
 		BattleUIInitialize();
+		yield return MoveCameraToPCAveragePos();
 		
 		UM.ReadAfterGeneration();
 		StartCoroutine (TurnManager ());
@@ -526,6 +527,7 @@ public class BattleManager : MonoBehaviour{
 			var tiles = TileManager.Instance.GetAllTiles().Values.ToList();
 			cameraMover.MoveCameraToAveragePosition(tiles);
 		}else{
+			Debug.Log("Change aspect with turnUnit");
 			cameraMover.SetFixedPosition(BattleData.turnUnit.realPosition);
 			cameraMover.MoveCameraToPosition(cameraMover.fixedPosition);
 			BattleUIManager.Instance.SetMovedUICanvasOnUnitAsCenter(BattleData.turnUnit);

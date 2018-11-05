@@ -50,7 +50,7 @@ public class Casting {
 
 	//PC일 때만 체크한다는 전제 하에 Side를 IsAllyTo/IsEnemyTo를 거치지 않고 바로 받아오므로, AI 턴에 사용할 경우 수정하고 나서 쓸 것!
 	public bool IsValid{get{
-		if (GetTargets().Count == 0) return false;
+		if (Skill.GetSkillApplyType() != SkillApplyType.Move && GetTargets().Count == 0) return false;
 		if (Skill.IsOffensive() && GetTargets().All(unit => unit.GetSide() == Side.Ally))
 			return false;
 		if (Skill.IsFriendly() && GetTargets().All(unit => unit.GetSide() == Side.Enemy))

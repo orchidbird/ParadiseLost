@@ -1,7 +1,4 @@
-﻿using UnityEngine;
-using Enums;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 public class Chain {
 	readonly Casting casting;

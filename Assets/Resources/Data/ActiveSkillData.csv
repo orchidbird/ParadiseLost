@@ -1,5 +1,5 @@
 ﻿owner	ether	address	required	nameKor	nameEng	ReqAP	cooldown	coef	RangeType	FirstRange	SecondRange	skillApplyType	CastVEName	Area/Move/Dir	CastSEName	HitVeName	HitSeName	explainKor	explainEng	AdditiveValues	ValueType	ValueCoef	ValueBase
-common	0	P0		순간 이동	Blink	30	2	0	Point	Diamond/1/3	One	Move	-	FFF	-	-	-	3타일 이내의 빈 타일로 이동합니다.	Move to an empty tile in range of 3 tiles radius.
+common	0	P0		순간 이동	Blink	30	2	0	Point	Diamond/1/3	One	Move	-	FFF	-	-	-	반경 3타일 이내의 빈 타일로 이동합니다.	Move to an empty tile in range of 3 tiles radius.
 ~Spear~	0	L1		찌르기	Pierce	42	0	1	Auto	Straight/1/2	Same	DamageHealth	Melee	FFF	Pierce	HitWhite	Hit/Pierced	DEFAULT	DEFAULT				
 unitySpearman01	0	L13		구급 치료	First aid	40	0	0.4	Auto	One	One	HealHealth	-	FFF	Heal	Shot	Hit/Normal	DEFAULT	DEFAULT				
 agent	0	L1		창술	Lance	42	0	1	Point	Diamond/1/2	One	DamageHealth	Melee	FFF	Pierce	HitWhite	Hit/Pierced	DEFAULT	DEFAULT				

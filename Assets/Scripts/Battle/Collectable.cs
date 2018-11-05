@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using UtilityMethods;
+﻿using UtilityMethods;
 
 public class Collectable{
     // 수집 가능한 오브젝트(Collectable)에 대한 정보들

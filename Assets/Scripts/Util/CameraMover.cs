@@ -52,7 +52,7 @@ public class CameraMover : MonoBehaviour{
 
     int currentZoomCorutineID = 0;
     float originalCameraSize = 3.6f;
-    public bool zoomedOut = false;
+    public bool zoomedOut;
     IEnumerator ChangeCameraSize(float size, float duration, int id) {
         float startSize = Camera.main.orthographicSize;
         float time = 0;
@@ -128,7 +128,8 @@ public class CameraMover : MonoBehaviour{
     }
 
 
-    public void MoveCameraToPosition(Vector2 position) {
+    public void MoveCameraToPosition(Vector2 position){
+	    Debug.Log("줌아웃 여부: " + zoomedOut);
 	    if (zoomedOut) return;
 	    Camera.main.transform.position = new Vector3(position.x, position.y, -10);
     }

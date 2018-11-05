@@ -141,25 +141,6 @@ public class ReadyManager : MonoBehaviour{
 				PickUnit(unitButton, true);
 		}
     }
-
-	/*private void GenerateNPCUnitButtons(){
-		Debug.Log("Generate NPC Button");
-        VolatileData.stageData.Load(true);  // 재도전했을 시 Battle 씬에서 unitInfo가 오염되었으므로 다시 로드한다. 
-        var unitInfos = VolatileData.stageData.GetUnitInfos();
-        var NPCNameDict = new Dictionary<string, UnitInfo>();
-        foreach(var info in unitInfos){
-	        if (info.nameKor == "selected" || info.isObject) continue;
-	        var generalCodeName = _String.GeneralName(info.codeName);
-	        if(!NPCNameDict.ContainsKey(generalCodeName))
-		        NPCNameDict.Add(generalCodeName, info);
-        }
-		
-        foreach (var kv in NPCNameDict) {
-            var unitButton = Instantiate(characterButtonPrefab, CharacterButtons.transform).GetComponent<AvailableUnitButton>();
-            unitButton.Initialize(false, info : kv.Value);
-            unitButtons.Add(unitButton);
-        }
-    }*/
 	
     public void ActivateUnitButtons(bool PC, bool activate) {
         unitButtons.FindAll(button => button.isPC == PC).ForEach(button => button.gameObject.SetActive(activate));

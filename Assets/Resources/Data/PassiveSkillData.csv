@@ -28,7 +28,6 @@ bianca	8	C19		응원 고마워!	Thank you!	비공격 기술의 대상이 되었�
 curi	11	A5		호기심	Curious	첫 5턴 동안 공격력이 <color=red>15%</color> 높아집니다.	Power <color=red>+15%</color> for the first 5 Turns.
 curi	8	A14		동적 평형	Dynamic Balance	체력을 1% 잃을 때마다 행동력을 민첩성의 1%만큼 회복합니다.	Whenever takes Damage 1% of Max HP, Recover AP 1% of Agility.
 curi	7	B16	B3	가연성 부착물	Flammable Attachment	<color=yellow>(향상 - 수상한 덩어리)</color>^대상에게 '가연성 부착물' 효과(유닛이 불 속성 타일에 있을 때, 반경 1타일에 0.3×공격력의 피해를 준 후 사라짐)를 부여합니다.	<color=yellow>(Enhance - Starange Lump)</color>^Give an additional effect to the target. when the unit is in a Fire-element tile, it will deal 0.3×Power of Damage to the range of 1 tile radius and then be removed.
-curi	8	B18	B3	조연성 부착물	Abrasive Attachment	<color=yellow>(향상 - 수상한 덩어리)</color>^피해량이 0.9×공격력으로 줄어드는 대신, 대상에게 20%의 불 속성 약점(2턴)을 부여합니다.	<color=yellow>(Enhance - Strange Lump)</color>^Instead of reducing the damage to 0.9x damage, give the target 20% Fire Weak (2 Turns).
 curi	6	C20		환원	Restoration	금속 속성 타일에 있으면, 방어력이나 저항력을 낮추는 약화를 새로 받지 않습니다.	While on a tile with Metal element, immune to debuffs decreasing Defense or Resistance.
 curi	0	A29		재결정	Recrystalize	ABCD	ABCD
 curi	0	C36		성분 분석	Ingredient Analysis	ABCD	ABCD

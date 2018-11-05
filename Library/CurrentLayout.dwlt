@@ -109,7 +109,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 342}
   m_MaxSize: {x: 12008, y: 8042}
   vertical: 0
-  controlID: 23103
+  controlID: 1941
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 342}
   m_MaxSize: {x: 8006, y: 8042}
   vertical: 1
-  controlID: 23104
+  controlID: 1942
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 23105
+  controlID: 2012
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -367,10 +367,10 @@ MonoBehaviour:
     height: 433
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
-    scrollPos: {x: 0, y: 158.1099}
-    m_SelectedIDs: 2a4e0000
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 040c0000
     m_LastClickedID: 0
-    m_ExpandedIDs: 022af4ff2cefffff2eefffff12f6ffffbaf7ffffbcf7ffff98fbffff0000000036590000405a0000425c0000665c0000185d0000d45e0000e86200008c64000048650000
+    m_ExpandedIDs: 9efbffff000000007a640000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -537,7 +537,7 @@ MonoBehaviour:
     height: 256
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SearchFilter:
-    m_NameFilter: 
+    m_NameFilter: ratice
     m_ClassNames: []
     m_AssetLabels: []
     m_AssetBundleNames: []
@@ -548,19 +548,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scripts/Battle/Damage
+    - Assets/Resources/Icon/Skill/common
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/Battle/Damage
+  - Assets/Resources/Icon/Skill/common
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Nansae\Desktop\ParadiseLost
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 369}
+    scrollPos: {x: 0, y: 489}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c02d0000543d0000604e0000c4520000c8550000ffffff7f
+    m_ExpandedIDs: 00000000bc2d00007e310000e4370000503d0000624e0000c8520000d0550000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -588,7 +588,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c02d0000543d0000604e0000c4520000c8550000ffffff7f
+    m_ExpandedIDs: 00000000bc2d00007e310000e4370000503d0000624e0000c8520000d0550000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -613,9 +613,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 2a4e0000
-    m_LastClickedInstanceID: 20010
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: 040c0000
+    m_LastClickedInstanceID: 3076
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000c0abf5ff842e0000be320000f43900001e310000b03e0000ae280000c02c000066410000d8a4010060420000a830000094660000aa690000a8eb0000803c0000e66000003e390000740d0600180e0600902d0000240e0100f40203000c9b00008a41000016070000a64b0000bc4d0000e63f0000004b00005243000070330000e008000096390000e63a00006c2e0000fa410000ac0a00008649000020f30500c4500000343b00009e4c0000ca4f0000e42e0000003000003c51000022310000e63b0000765100000a340000d2480000d4480000443b0000bc4700003c35000000000000ba4c00004c490000ee420000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
