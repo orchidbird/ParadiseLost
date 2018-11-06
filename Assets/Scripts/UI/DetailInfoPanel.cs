@@ -112,7 +112,7 @@ public class UnitInfoUI : MonoBehaviour{
 	public virtual void AfterAwake(){}
 
 	protected void SetCommonUnitInfoUI(){
-		unitName.text = UnitInfo.ConvertName(unit.codeName);
+		unitName.text = UnitInfo.ConvertName(unit.CodeName);
 		HpText.text = unit.GetHP + " / " + unit.GetStat(Stat.MaxHealth);
 		ApText.text = unit.GetCurrentActivityPoint() + " / " + unit.GetStat(Stat.Agility);
 		UpdateStat(Stat.Power);

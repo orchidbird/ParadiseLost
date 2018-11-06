@@ -93,7 +93,7 @@ public class BattleTriggerManager : MonoBehaviour {
 	}
 
 	public IEnumerator EndBattle(bool victory){
-		CheckExtraTriggersAtWinGame();
+		//CheckExtraTriggersAtWinGame();
         BattleUIManager.Instance.SlideUIsOut(Setting.slideUISlowDuration);
 		resultPanel.gameObject.SetActive(true);
 		resultPanel.Initialize();
@@ -103,7 +103,7 @@ public class BattleTriggerManager : MonoBehaviour {
 	}
 
 	//게임 종료시에 한꺼번에 체크해야 하는 트리거.
-	void CheckExtraTriggersAtWinGame(){
+	/*void CheckExtraTriggersAtWinGame(){
 		var exTrigs = triggers.FindAll(trig => trig.action == TrigActionType.Extra);
 		var units = UnitManager.GetAllUnits();
 		StageNum stage = VolatileData.progress.stageNumber;
@@ -178,7 +178,7 @@ public class BattleTriggerManager : MonoBehaviour {
 					CountBattleTrigger(exTrigs[i]);
 			} else RepeatBattleTrigger(exTrigs[i], repeatCounts[exTrigs[i]]);
 		}
-	}
+	}*/
 
 	List<T> LogsOfType<T>(){
 		List<T> result = new List<T>();

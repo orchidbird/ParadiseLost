@@ -54,7 +54,6 @@ eugene	0	B29		은의 지평선	Silver Horizon	ABCD	ABCD
 eugene	0	C36		야영 전문가	야영 전문가	ABCD	ABCD
 eugene	0	A43		청명수의 은총	청명수의 은총	ABCD	ABCD
 eugene	0	B43		백색 파문	백색 파문	ABCD	ABCD
-eugene	0	C43		길잡이	길잡이	ABCD	ABCD
 grenev	0	P0		고지대 점령	Siege Mode	이동할 때 <color=red>30%</color> 더 많은 행동력을 사용합니다.^이동할 때 높이차 3단계까지 넘어갈 수 있습니다.	Require <color=red>30%</color> more AP for moving.^Can go to 3 level higher tile when move.
 grenev	11	C2		원거리 사격	Long Snipping	<color=#BDB76B>공격 대상과의 거리 1타일</color>당 <color=red>2%</color> 더 많은 피해를 줍니다.	Deal <color=red>+2%</color> more Damage per <color=#BDB76B>1 tile of distance to the target</color>.
 grenev	10	C8		피의 냄새	Bloody Smell	<color=green>대상의 잃은 체력 1%</color>당 <color=red>0.2%</color> 더 많은 피해를 줍니다.	Deal <color=red>+0.2%</color> more Damage per <color=red>lost HP 1% of the target</color>.
@@ -85,7 +84,6 @@ kashasty	10	C20		마법공학 스캐너	Arcane Scanner	카샤스티가 연계 �
 kashasty	0	A29		압축탄	Compressed Shot	ABCD	ABCD
 kashasty	0	C36		마법공학 조준경	Arcane Scope	ABCD	ABCD
 kashasty	9	C8		시들지 않는 의지	Everlasting Will	<color=green>잃은 체력 4%</color>마다 <color=#00FFFF>의지</color>가 1 높아집니다.	Will <color=#00FFFF>+1</color> per <color=green>lost HP 4%</color>.
-kashasty	0	A43		에테르화	Etherize	ABCD	ABCD
 lenien	0	P0		감전	Electromagica	공격 대상이 물 속성 또는 금속 속성 타일에 있으면, 저항력을 <color=green>42+레벨당 0.6</color>(1턴) 낮춥니다.	If target is on a tile with Water of Metal element, decrease Resistance of the target by <color=green>42+Level×0.6</color> for 1 Turn.
 lenien	4	A9		피뢰침	Lightning Rod	턴을 시작할 때, 자신보다 높은 위치에 있는 유닛이 없으면 0.3×공격력의 강타를 얻습니다.	At the start of turn, If Lenien is one of the units on the highest position, Get Smite(0.2×Power).^If Lenien is on a tile with Metal element, the effect will be <color=red>double</color>d.
 lenien	9	B12		전도체	Conductor	공격 대상이 물 속성 타일에 있으면, 저항력을 <color=green>51+레벨당 0.7</color> 무시합니다.	Ignore Resistance of target on a tile with Water element by <color=green>51+Level×0.7</color>.
@@ -154,5 +152,4 @@ yeong	0	B29		유법	유법	ABCD	ABCD
 yeong	0	A36		접근	접근	ABCD	ABCD
 yeong	0	B36		무아지경	무아지경	ABCD	ABCD
 yeong	0	C36		끝없는 단련	끝없는 단련	피해를 받으면, 다음에 받는 공격에 회피율 +15%를 얻습니다.	ABCD
-yeong	0	B43		후의 선	후의 선	ABCD	ABCD
 yeong	0	C43		명경지수	명경지수	ABCD	ABCD

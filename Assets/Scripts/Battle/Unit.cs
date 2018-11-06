@@ -15,18 +15,6 @@ using UtilityMethods;
 using Color = UnityEngine.Color;
 using Random = UnityEngine.Random;
 
-public class HitInfo{
-	public readonly Unit caster;
-	public readonly ActiveSkill skill;
-    public readonly int finalDamage;
-
-	public HitInfo(Unit caster, ActiveSkill skill, int finalDamage){
-		this.caster = caster;
-		this.skill = skill;
-        this.finalDamage = finalDamage;
-	}
-}
-
 public class Unit : Entity{
 	public GameObject damageTexts;
 	GameObject recoverTextObject;
@@ -57,11 +45,8 @@ public class Unit : Entity{
 	AI _AI;
 
 	// 스킬리스트
-	List<ActiveSkill> activeSkillList = new List<ActiveSkill>();
-	List<PassiveSkill> passiveSkillList = new List<PassiveSkill>();
 	public Dictionary<WillCharacteristic, bool> WillCharacteristics = new Dictionary<WillCharacteristic, bool>();
 
-	public string codeName;
 	public string holdName;
 	public string connectedName;
 	public string nameKor;
@@ -71,7 +56,6 @@ public class Unit : Entity{
 	// 사용한 스킬 정보 저장(쿨타임 산정용)
 	Dictionary<string, int> usedSkillDict = new Dictionary<string, int>();
 	public Dictionary<Stat, int> actualStats = new Dictionary<Stat, int>();
-	public Dictionary<Stat, int> baseStats = new Dictionary<Stat, int>();
 
 	public Vector2 size = new Vector2(1, 1);
 	Vector2Int pivot; //Variable한 위치 개념. IsLarge일 경우 가장 소속 타일 중 가장 x/y값이 작은 곳을 따름. 아니면 그냥 자기 위치.
@@ -91,6 +75,7 @@ public class Unit : Entity{
 	GameObject chargeEffect;
 	public GameObject chargeEffectPrefab;
 	public CustomWorldText DamageTextPrefab;
+	public UnitInfo myInfo;
 
 	public Dictionary<Direction, Sprite> Sprites = new Dictionary<Direction, Sprite>();
 	public Dictionary<Direction, Sprite> SubSprites = new Dictionary<Direction, Sprite>();
@@ -116,7 +101,7 @@ public class Unit : Entity{
 	}
 
 	public int GetBaseStat(Stat stat){
-		return baseStats.ContainsKey(stat) ? baseStats[stat] : 0;
+		return myInfo.baseStats.ContainsKey(stat) ? myInfo.baseStats[stat] : 0;
 	}
 
 	public float GetEvasionChance(){
@@ -165,7 +150,8 @@ public class Unit : Entity{
 		isAlreadyBehavedObject = input;
 	}
 
-	public List<ActiveSkill> GetActiveSkillList() {return activeSkillList;}
+	public List<ActiveSkill> GetActiveSkillList() {return myInfo.skills.FindAll(skill => skill is ActiveSkill).ConvertAll(skill => (ActiveSkill)skill);}
+	public List<PassiveSkill> GetPassiveSkillList(){return myInfo.skills.FindAll(skill => skill is PassiveSkill).ConvertAll(skill => (PassiveSkill)skill);}
 	public List<ActiveSkill> ActiveSkillsToThink{get{
 		var result = GetActiveSkillList().FindAll(IsThisSkillUsable);
 		if (CodeName == "monk")
@@ -175,11 +161,7 @@ public class Unit : Entity{
 
 	public ListPassiveSkillLogic listPassiveSkillLogic;
 	public ListPassiveSkillLogic GetListPassiveSkillLogic(){
-		return listPassiveSkillLogic ?? (listPassiveSkillLogic = SkillLogicFactory.Get(passiveSkillList));
-	}
-
-	public List<PassiveSkill> GetPassiveSkillList(){
-		return passiveSkillList;
+		return listPassiveSkillLogic ?? (listPassiveSkillLogic = SkillLogicFactory.Get(GetPassiveSkillList()));
 	}
 
 	// 효과 리스트
@@ -244,9 +226,7 @@ public class Unit : Entity{
 		return TileUnderUnit.GetHeight();
 	}
 
-	public string CodeName{
-		get { return codeName; }
-	}
+	public string CodeName{get { return myInfo.codeName; }}
 
 	public string GetNameKor(){
 		return nameKor;
@@ -401,11 +381,11 @@ public class Unit : Entity{
 	}
 
 	public bool HasAnySkillToCast(){
-		return IsSkillUsePossibleState() && activeSkillList.Any(IsThisSkillUsable);
+		return IsSkillUsePossibleState() && GetActiveSkillList().Any(IsThisSkillUsable);
 	}
 
 	public bool HasOnlyFriendlySkill(){
-		return activeSkillList.All (skill => skill.IsFriendly ());
+		return GetActiveSkillList().All (skill => skill.IsFriendly ());
 	}
 
 	public void ChangePosition(List<Tile> path, bool forced = false, bool charge = false){
@@ -519,8 +499,8 @@ public class Unit : Entity{
 	}
 
 	public bool HasSkillOfKorName(string skillName){
-		return activeSkillList.Any(skill => skill.korName == skillName) ||
-		       passiveSkillList.Any(skill => skill.korName == skillName);
+		return GetActiveSkillList().Any(skill => skill.korName == skillName) ||
+		       GetPassiveSkillList().Any(skill => skill.korName == skillName);
 	}
 	// searching certain StatusEffectType
 	public bool HasStatusEffect(StatusEffectType statusEffectType){
@@ -1003,7 +983,7 @@ public class Unit : Entity{
 	public void CalculateBestCasting(){
 		Casting bestCasting = null;
 		float maxReward = 0;
-		foreach (ActiveSkill skill in activeSkillList){
+		foreach (ActiveSkill skill in GetActiveSkillList()){
 			if (!IsThisSkillUsable(skill))
 				continue;
 			skill.CalculateBestCasting(this, TileUnderUnit);
@@ -1259,50 +1239,12 @@ public class Unit : Entity{
 		faintTurnSkipIcon.SetActive(onoff);
 	}
 
-	public void InitializeStats(bool isPC){
-		baseStats.Clear();
+	public void ApplyInfo(UnitInfo info){
 		actualStats.Clear();
-
-		if (isPC){
-			baseStats.Add(Stat.MaxHealth, RandomIntOfVariation(100, 1.05f));
-			baseStats.Add(Stat.Power, RandomIntOfVariation(20, 1.1f));
-			baseStats.Add(Stat.Defense, RandomIntOfVariation(32, 1.15f));
-			baseStats.Add(Stat.Agility, RandomIntOfVariation(50, 1.04f));
-			baseStats.Add(Stat.Will, RandomIntOfVariation(100, 1.1f));
-			baseStats.Add(Stat.Level, 1);
-		}else{
-			baseStats.Add(Stat.MaxHealth, 300);
-			baseStats.Add(Stat.Power, 40);
-			baseStats.Add(Stat.Defense, 50);
-			baseStats.Add(Stat.Agility, 60);
-			baseStats.Add(Stat.Will, 100);
-			baseStats.Add(Stat.Level, 1);
-		}
-		
-		foreach (var kv in baseStats)
+		myInfo = info;
+		foreach (var kv in info.baseStats)
 			actualStats.Add(kv.Key, kv.Value);
 		hp = actualStats[Stat.MaxHealth];
-	}
-
-	int RandomIntOfVariation(int basePoint, float maxRatio){
-		var minValue = (int)Math.Round(basePoint * maxRatio);
-		var maxValue = (int)Math.Round(basePoint / maxRatio);
-		return Random.Range(minValue, maxValue+1);
-	}
-
-	void AddSkill(Skill skill, List<UnitStatusEffectInfo> statusEffectInfoList, List<TileStatusEffectInfo> tileStatusEffectInfoList){
-		skill.ApplyUnitStatusEffectList(statusEffectInfoList);
-		skill.ApplyTileStatusEffectList(tileStatusEffectInfoList);
-		if(skill is ActiveSkill)
-			activeSkillList.Add((ActiveSkill)skill);
-		else
-			passiveSkillList.Add((PassiveSkill)skill);
-		skill.owner = this;
-	}
-
-	public void ApplySkillList(List<Skill> skills, List<UnitStatusEffectInfo> statusEffectInfoList, List<TileStatusEffectInfo> tileStatusEffectInfoList){
-		foreach (var skill in skills)
-			AddSkill(skill, statusEffectInfoList, tileStatusEffectInfoList);
 	}
 
 	public void LoadSprites(string spriteName = ""){
@@ -1356,7 +1298,7 @@ public class Unit : Entity{
 	}
 
 	void Start(){
-		gameObject.name = codeName;
+		gameObject.name = CodeName;
 		startPositionOfPhase = pivot;
 		HideAfterImage();
 		hp = GetMaxHealth();
@@ -1421,8 +1363,6 @@ public class Unit : Entity{
 			SetAI(gameObject.AddComponent<S141_AI_Schmidt>());
 		else if (CodeName == "grenev")
 			SetAI(gameObject.AddComponent<NeverMoveAI>());
-		else if (CodeName == "bianca")
-			SetAI(gameObject.AddComponent<SpecialAI_Bianca>());
 		else if (CodeName == "citizen")
 			SetAI(gameObject.AddComponent<S161_AI_Citizen>());
 		else if (CodeName == "monk")

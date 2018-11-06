@@ -43,11 +43,13 @@ public class BattleManager : MonoBehaviour{
 		bloodyScreen.material.SetFloat("_HP_Percent", 1);
 		
 		yield return MoveCameraToTileAveragePosAndZoomOut();
+		for (int i = 0; i < 6; i++)
+			RecordData.units.Add(new UnitInfo(true));
 		UM.GenerateUnitAutomatically();
 		BattleUIInitialize();
 		yield return MoveCameraToPCAveragePos();
 		
-		UM.ReadAfterGeneration();
+		//UM.ReadAfterGeneration();
 		StartCoroutine (TurnManager ());
     }
 

@@ -5,3 +5,6 @@ curi	9	A17		신속 반응	Fast Response	불 속성 타일에 있으면, 의지�
 curi	8	B18	B3	조연성 부착물	Abrasive Attachment	<color=yellow>(향상 - 수상한 덩어리)</color>^피해량이 0.9×공격력으로 줄어드는 대신, 대상에게 20%의 불 속성 약점(2턴)을 부여합니다.	<color=yellow>(Enhance - Strange Lump)</color>^Instead of reducing the damage to 0.9x damage, give the target 20% Fire Weak (2 Turns).
 eren	0	A43		압도적인 공포	압도적인 공포	ABCD	ABCD
 eugene	10	B10	B7	순은의 매듭	White Knot	<color=yellow>(향상 - 순백의 방패)</color>^효과의 지속이 2턴로 줄어드는 대신, 서로 다른 대상으로부터의 효과가 중첩됩니다.	<color=yellow>(Enhance - White Shield)</color>^Reduce the duration of the effect to 2 Turns, but these effects from different objects become compatible.
+eugene	0	C43		길잡이	길잡이	ABCD	ABCD
+kashasty	0	A43		에테르화	Etherize	ABCD	ABCD
+yeong	0	B43		후의 선	후의 선	ABCD	ABCD

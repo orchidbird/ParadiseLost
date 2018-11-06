@@ -68,7 +68,7 @@ public class BattleStartLog : EventLog {
 
 	protected override void AfterExecute(){
 		BattleTriggerManager.Instance.CountTriggers(TrigActionType.Start, log: this);
-		UnitManager.Instance.ApplyUSEsAtBattleStart();
+		//UnitManager.Instance.ApplyUSEsAtBattleStart();
 		UnitManager.Instance.CheckVigilAreaForAI();
 	}
 }

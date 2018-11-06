@@ -1,12 +1,81 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 using System;
-using System.Runtime.Remoting.Messaging;
+using System.Linq;
 using Enums;
 using GameData;
 using UtilityMethods;
+using Random = UnityEngine.Random;
 
-public class UnitInfo{//아래의 2개 메소드는 PCStatData에 정보가 있는 유닛에게만 사용 가능(18.04.15)
+public class HitInfo{
+	public readonly Unit caster;
+	public readonly ActiveSkill skill;
+	public readonly int finalDamage;
+
+	public HitInfo(Unit caster, ActiveSkill skill, int finalDamage){
+		this.caster = caster;
+		this.skill = skill;
+		this.finalDamage = finalDamage;
+	}
+}
+
+public class UnitInfo{
+	public string codeName;
+	public Dictionary<Stat, int> baseStats = new Dictionary<Stat, int>();
+	public bool isAlly;
+	public List<Skill> skills = new List<Skill>();
+	
+	private string GetRandomCharacterName{get{
+		return Generic.PickRandom(new List<string> {"reina", "noel", "yeong", "lucius", "bianca", "lenien", "karldrich"});
+	}}
+
+	void AddSkill(List<Skill> potentialSkills){
+		Debug.Assert(potentialSkills.Count > skills.Count);
+		Skill skill;
+
+		do{
+			skill = Generic.PickRandom(potentialSkills);
+		}while(skills.Contains(skill));
+		
+		skills.Add(skill);
+	}
+	public UnitInfo(bool isAlly){
+		this.isAlly = isAlly;
+		do{
+			codeName = GetRandomCharacterName;
+		} while (RecordData.units.Any(unit => unit.codeName == codeName));
+		
+		if (isAlly){
+			baseStats.Add(Stat.MaxHealth, RandomIntOfVariation(100, 1.05f));
+			baseStats.Add(Stat.Power, RandomIntOfVariation(20, 1.1f));
+			baseStats.Add(Stat.Defense, RandomIntOfVariation(32, 1.15f));
+			baseStats.Add(Stat.Agility, RandomIntOfVariation(50, 1.04f));
+			baseStats.Add(Stat.Will, RandomIntOfVariation(100, 1.1f));
+			baseStats.Add(Stat.Level, 1);
+			skills.Add(TableData.ActiveSkills.Find(skill => skill.korName == "순간 이동"));
+			AddSkill(TableData.ActiveSkills.FindAll(skill => skill.GetCooldown() < 2).ConvertAll(skill => (Skill)skill));
+		}else{
+			baseStats.Add(Stat.MaxHealth, 300);
+			baseStats.Add(Stat.Power, 40);
+			baseStats.Add(Stat.Defense, 50);
+			baseStats.Add(Stat.Agility, 60);
+			baseStats.Add(Stat.Will, 100);
+			baseStats.Add(Stat.Level, 1);
+			skills.Add(TableData.ActiveSkills.Find(skill => skill.korName == "화염 폭발"));
+			skills.Add(TableData.ActiveSkills.Find(skill => skill.korName == "쇄도"));
+			AddSkill(TableData.ActiveSkills.ConvertAll(skill => (Skill)skill));
+		}
+		baseStats.Add(Stat.CurrentHP, baseStats[Stat.MaxHealth]);
+		AddSkill(TableData.PassiveSkills.ConvertAll(skill => (Skill)skill));
+
+		RecordData.units.Add(this);
+	}
+	
+	int RandomIntOfVariation(int basePoint, float maxRatio){
+		var minValue = (int)Math.Round(basePoint * maxRatio);
+		var maxValue = (int)Math.Round(basePoint / maxRatio);
+		return Random.Range(minValue, maxValue+1);
+	}
 	static string PCStatData;
 	static string PCWillCharacteristicData;
 	static List<string[]> statCoefTable;

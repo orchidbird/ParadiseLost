@@ -9,6 +9,7 @@ namespace GameData{
 	// 세션별로 달라져야 하는 데이터 - 즉, 로드와 세이브, 리셋을 할 때 달라져야 하는 데이터는 RecordData쪽에(세션의 진행상황, 마지막으로 선택한 기술들 등), 
 	// 달라지지 않는 데이터 - 즉, 로드와 세이브, 리셋을 해도 달라지지 않을 데이터는 VolatileData 쪽에(언어 설정, 캐싱 정보 등).
 	public class RecordData{
+		public static List<UnitInfo> units = new List<UnitInfo>();
         public static Progress progress = new Progress();
 		public static float totalPlayingTime = 0;
 		public static int level{get{return (int)VolatileData.progress.stageNumber / 10;}} 

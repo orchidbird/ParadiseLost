@@ -208,27 +208,26 @@ public class UnitManager : MonoBehaviour{
             foreach (var passive in unit.GetPassiveSkillList())
                 passive.SkillLogic.TriggerOnUnitDestroy(unit, destroyedUnit, actionType);
 
-			if (actionType != TrigActionType.Escape) {
-				if (destroyedUnit.IsEnemyTo (unit)){
-					unit.ChangeWill(WillChangeType.Cheer, BigSmall.Small);
-					if(unit == BattleData.turnUnit)
-						unit.ChangeWill(WillChangeType.DirectNeutralize, BigSmall.None);
-				} else if (!destroyedUnit.IsObject && destroyedUnit.IsAllyTo(unit)){
-					if (destroyedUnit.IsPC) {
-						unit.ChangeWill (WillChangeType.Disturbed, BigSmall.Big);
-						unit.ChangeWill (WillChangeType.Angry, BigSmall.None);
-					}else 
-						unit.ChangeWill (WillChangeType.Disturbed, BigSmall.Small);
-				}
-			}
+	        if (actionType == TrigActionType.Escape) continue;
+	        
+	        if (destroyedUnit.IsEnemyTo (unit)){
+		        unit.ChangeWill(WillChangeType.Cheer, BigSmall.Small);
+		        if(unit == BattleData.turnUnit)
+			        unit.ChangeWill(WillChangeType.DirectNeutralize, BigSmall.None);
+	        } else if (!destroyedUnit.IsObject && destroyedUnit.IsAllyTo(unit)){
+		        if (destroyedUnit.IsPC) {
+			        unit.ChangeWill (WillChangeType.Disturbed, BigSmall.Big);
+			        unit.ChangeWill (WillChangeType.Angry, BigSmall.None);
+		        }else 
+			        unit.ChangeWill (WillChangeType.Disturbed, BigSmall.Small);
+	        }
         }
 
 		foreach (var kv in TileManager.Instance.GetAllTiles()) {
 			Tile tile = kv.Value;
 			TileStatusEffect zoc = tile.StatusEffectList.Find (se => se.GetCaster () == destroyedUnit && se.IsTypeOf (StatusEffectType.ZOC));
-			if (zoc != null) {
+			if (zoc != null)
 				tile.RemoveStatusEffect (zoc);
-			}
 		}
     }
     public void DeleteDestroyedUnit(Unit target){
@@ -281,27 +280,24 @@ public class UnitManager : MonoBehaviour{
 	}
 
 	public void GenerateUnitAutomatically(){
+		var infoListToSpawn = new List<UnitInfo>();
 		for (int i = 0; i < 3; i++){
-			GenerateUnit(true);
+			UnitInfo info;
+			do
+				info = Generic.PickRandom(RecordData.units);
+			while (infoListToSpawn.Contains(info));
+			infoListToSpawn.Add(info);
 		}
-		GenerateUnit(false);
 
+		foreach (var unitInfo in infoListToSpawn)
+			GenerateUnit(unitInfo);
+		GenerateUnit(new UnitInfo(false));
         UpdateFogOfWar();
     }
 
-	private string GetRandomCharacterName{get{
-		return Generic.PickRandom(new List<string> {"reina", "lucius", "yeong", "karldrich", "noel"});
-	}}
-
-	void GenerateUnit(bool isPC){
+	void GenerateUnit(UnitInfo info){
         var unit = Instantiate(unitPrefab).GetComponent<Unit>();
-		string codeName;
-		do{
-			codeName = GetRandomCharacterName;
-		} while (GetAllUnits().Any(item => item.codeName == codeName));
-
-		unit.codeName = codeName;
-		unit.InitializeStats(isPC);
+		unit.ApplyInfo(info);
         unit.transform.SetParent(transform);
 		unit.LoadSprites();
         unit.SetDirection(Generic.PickRandom(EnumUtil.directions));
@@ -313,32 +309,13 @@ public class UnitManager : MonoBehaviour{
 	
         //AIInfo가 allUnits를 참조하고 unitsActThisPhase.Add 여부가 AI를 참조하므로, 아래 문단 내 순서를 함부로 바꾸지 말 것!
         allUnits.Add(unit);
-		if (!isPC){
+		if (!info.isAlly){
 			unit.side = Side.Enemy;
 			ApplyAIInfo(unit);
 		}
 
-		var skills = new List<Skill>();
-		if (unit.IsPC){
-			skills.Add(TableData.ActiveSkills.Find(skill => skill.korName == "순간 이동"));
-			skills.Add(Generic.PickRandom(TableData.ActiveSkills.FindAll(skill => !skills.Contains(skill) && skill.GetCooldown() < 2)));
-		}else{
-			skills.Add(TableData.ActiveSkills.Find(skill => skill.korName == "화염 폭발"));
-			skills.Add(TableData.ActiveSkills.Find(skill => skill.korName == "쇄도"));
-			skills.Add(Generic.PickRandom(TableData.ActiveSkills.FindAll(skill => !skills.Contains(skill))));
-		}
-		skills.Add(Generic.PickRandom(TableData.PassiveSkills));
-		
-        unit.ApplySkillList(skills, StatusEffector.USEInfoList, StatusEffector.TSEInfoList);
         if(unit.HasAction) unitsActThisPhase.Add(unit);
-
-		unit.healthViewer.SetInitHealth(unit.baseStats[Stat.MaxHealth], unit);
-        if(unit.IsPC){
-            var skillNameList = unit.GetPassiveSkillList().FindAll(skill => skill.RequireLevel > 0).Select(skill => skill.Name).ToList();
-            skillNameList.AddRange(unit.GetActiveSkillList().Select(skill => skill.GetName()));
-	        //Debug.Log(unit.CodeName + "의 스킬 정보 등록");
-            PCSelectedSkillList.Add(unit.CodeName, skillNameList);
-        }
+		unit.healthViewer.SetInitHealth(unit.actualStats[Stat.MaxHealth], unit);
 
         //평균 위치 계산하고, 소속 타일 중 가장 앞에 있는 것보다 position.z를 0.05f 당김
         var tiles = unit.TilesUnderUnit;
