@@ -31,6 +31,8 @@ public class UnitInfo{
 
 	void AddSkill(List<Skill> potentialSkills){
 		Debug.Assert(potentialSkills.Count > skills.Count);
+		if (isAlly)
+			potentialSkills = potentialSkills.FindAll(item => item.address[0] != 'L' && item.address[0] != 'E');
 		Skill skill;
 
 		do{
@@ -52,12 +54,12 @@ public class UnitInfo{
 			baseStats.Add(Stat.Agility, RandomIntOfVariation(50, 1.04f));
 			baseStats.Add(Stat.Will, RandomIntOfVariation(100, 1.1f));
 			baseStats.Add(Stat.Level, 1);
-			skills.Add(TableData.ActiveSkills.Find(skill => skill.korName == "보호의 손길"));
 			skills.Add(TableData.ActiveSkills.Find(skill => skill.korName == "순간 이동"));
-			AddSkill(TableData.ActiveSkills.FindAll(skill => skill.GetCooldown() < 2 && skill.address[0] != 'L').ConvertAll(skill => (Skill)skill));
+			//E로 시작하는 것은 시작 스킬로 주지 않도록 지정
+			AddSkill(TableData.ActiveSkills.FindAll(skill => skill.GetCooldown() < 2).ConvertAll(skill => (Skill)skill));
 		}else{
 			baseStats.Add(Stat.MaxHealth, 300);
-			baseStats.Add(Stat.Power, 40);
+			baseStats.Add(Stat.Power, 35);
 			baseStats.Add(Stat.Defense, 50);
 			baseStats.Add(Stat.Agility, 60);
 			baseStats.Add(Stat.Will, 100);

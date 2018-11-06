@@ -1,6 +1,5 @@
 ﻿owner	ether	address	required	nameKor	nameEng	TextKor	TextEng
 statue	0	L1		파편	Fragment	파괴될 때 주변 3×3타일의 이동 비용을 20 높입니다.	When Destroyed, Increase the moving costs of nearby 3×3 tiles by 20.
-triana_Rest	0	L1		광폭화	Berserk Mode	체력이 50% 미만일 때 공격력이 <color=red>2배</color>가 되고 방어력이 <color=green>200</color> 높아집니다. 이 상태에서는 적과 동료를 구분하지 않습니다.	Under HP of 50%, Power becomes <color=red>doubled</color> and Defense Increases by <color=green>200</color>. Doesn't distinguish enemies and allies at this state.
 asterCavalry~	0	L3		약점 노출	Weakness Exposure	공격받을 때 방향 보정치를 2배로 적용합니다.	Direction modifier is <color=red>doubled</color> when get attacked.
 monster~	0	L4		완강한 복족류	Stubborn Gastropod	의지가 -<color=#00FFFF>30</color>, 방어력과 저항력 +<color=green>100</color>^<color=yellow>조작 제한 상태일 때 무효화됩니다.</color>	Will -<color=#00FFFF>30</color>, Defense and Resistance +<color=green>100</color>^<color=yellow>This effect will removed after getting Restriction.</color>
 monster~	0	L5		흉포함	Furious	공격받을 때, 공격한 유닛에게 도발됩니다.^주변의 수정이 사라지면 함께 이탈합니다.	After getting attacked, this unit will be taunted by the attacker.^This unit will retreat when the linked crystal disappears
@@ -30,7 +29,6 @@ curi	8	A14		동적 평형	Dynamic Balance	체력을 1% 잃을 때마다 행동�
 curi	7	B16	B3	가연성 부착물	Flammable Attachment	<color=yellow>(향상 - 수상한 덩어리)</color>^대상에게 '가연성 부착물' 효과(유닛이 불 속성 타일에 있을 때, 반경 1타일에 0.3×공격력의 피해를 준 후 사라짐)를 부여합니다.	<color=yellow>(Enhance - Starange Lump)</color>^Give an additional effect to the target. when the unit is in a Fire-element tile, it will deal 0.3×Power of Damage to the range of 1 tile radius and then be removed.
 curi	6	C20		환원	Restoration	금속 속성 타일에 있으면, 방어력이나 저항력을 낮추는 약화를 새로 받지 않습니다.	While on a tile with Metal element, immune to debuffs decreasing Defense or Resistance.
 curi	0	A29		재결정	Recrystalize	ABCD	ABCD
-curi	0	C36		성분 분석	Ingredient Analysis	ABCD	ABCD
 curi	0	A43		제한 구역	Restricted Area	ABCD	ABCD
 darkenir	0	P0		흐름 동화	Flow Assimilation	자신에게 효과를 건 대상에게 해당 효과의 절반을 반사합니다.	Refelect every buff and debuff by half to the caster.
 darkenir	10	C2		무심한 주시	Detached Regard	자신으로부터 3타일 이내의 유닛이 무력화되면, 행동력을 <color=#BE81F7>5</color> 얻습니다.	Recover <color=#BE81F7>5</color> AP whenever a unit in range of 3 tiles radius get neutralized.
@@ -44,7 +42,7 @@ eren	0	P0		에테르 지배	Ether Domination	유닛이 처치될 때마다 <colo
 eren	11	B4		흑화	Blacken	공격 대상의 저항력을 <color=green>27+(레벨×흡수 중첩당 0.3)</color> 무시합니다.	All attacks ignore the target's Resistance by <color=green>27+(0.3 per Level × Absorpsion Count)</color>.
 eren	14	B13		초월	Transcendence	자신보다 최대 체력이 낮은 대상을 공격하면 <color=red>15%</color> 더 많은 피해를 줍니다.	Deal <color=red>+15%</color> more Damage to targets with lower Max HP than Eren.
 eren	0	A29		배척받는 자	배척받는 자	ABCD	ABCD
-eren	0	B29		영겁의 지식	영겁의 지식	ABCD	ABCD
+eren	0	B29	P0	영겁의 지식	영겁의 지식	ABCD	ABCD
 eren	0	B36		진형 붕괴	진형 붕괴	ABCD	ABCD
 eren	0	C43		천상의 전령	천상의 전령	ABCD	ABCD
 eugene	0	P0		거울 공명	Mirror Resonance	대상에 자신이나 동료가 포함된 마법 공격의 위력이, <color=#BDB76B>대상 1명</color>당 5%(최대 30%) 줄어듭니다.	Damage of Magic attacks containing any ally as target will decreased by 5% per every <color=#BDB76B>target</color> of the attack(maximum 30%).
@@ -105,7 +103,7 @@ luvericha	8	B18		위기상황	Emergency	현재 체력<color=#BDB76B>이</color> 
 luvericha	10	C20		치유의 오오라	Healing Aura	페이즈를 시작할 때, 반경 3타일 안에 있는 모든 유닛이 최대 체력의 <color=green>5%</color>만큼 회복합니다. 자신에게는 적용되지 않습니다.	Units in a range of 3 tiles radius without herself will recover 5% of HP at the start of turn.
 luvericha	0	C29		넘치는 사랑	넘치는 사랑	ABCD	ABCD
 luvericha	0	C36		영혼의 교감	영혼의 교감	ABCD	ABCD
-luvericha	0	B43		헌신	헌신	ABCD	ABCD
+luvericha	0	E43		헌신	헌신	ABCD	ABCD
 luvericha	0	C43		응급처치	응급처치	ABCD	ABCD
 noel	0	P0		심판의 빛	Judgelight	자신이 부여한 보호막이 피해를 흡수할 때,^공격자에게 <color=red>흡수량만큼</color> 마법 피해를 반사합니다.	Whenever a Shield from Noel reduces Damage, deal that amount of Damage to the attacker.
 noel	10	B11		승리의 함성	Commander	적이 이탈할 때마다 모든 동료가 행동력 <color=#00FFFF>0.1×민첩성</color> 회복합니다.	Whenever an enemy retreats, all allies recover AP of <color=#00FFFF>0.1×Agility</color>.
@@ -122,7 +120,6 @@ reina	4	A16		상처 태우기	Burning Scar	모든 공격이 자신이 <color=#BD
 reina	10	C18		잉걸불	Everlasting Fire	공격 대상이 나무 속성 타일에 있으면, 1.3×공격력의 지속 피해(2턴)를 부여합니다.	All attacks deal Damage of 1.3×Power at the start of next 2 Turns if the target is on a Plant-element tile.
 reina	0	A29		뭉치면 죽는다	뭉치면 죽는다	ABCD	ABCD
 reina	0	B29		흩어져도 죽는다	흩어져도 죽는다	ABCD	ABCD
-reina	0	A36		잿더미	잿더미	ABCD	ABCD
 reina	0	C36		흐름 변환	흐름 변환	ABCD	ABCD
 reina	0	B43		열상 낙인	열상 낙인	ABCD	ABCD
 reina	0	C43		에테르 순환	에테르 순환	ABCD	ABCD
@@ -130,12 +127,11 @@ sepia	0	P0		통제 구역	Zone Of Control	반경 1타일 안으로 적이 지나
 sepia	5	B5		정교한 칼날	Elaborate Blade	공격 범위에 있더라도 동료에게는 피해를 주지 않습니다.	Never deals Damage to allies.
 sepia	7	A15		정찰 복귀	Scout Comeback	이동할 때, 도착점이 동료의 바로 옆 타일이면 행동력을 <color=#BE81F7>30%</color> 더 적게 사용합니다.	If a destination of moving is adjacent to an ally, use <color=#BE81F7>30%</color> less AP for that move.
 sepia	9	B19		신뢰의 끈	Trusty String	2타일 이내의 후면에 동료가 있으면, 방어력이 <color=green>51+레벨당 0.7</color> 높아집니다.	Defense +<color=green>51+Level×0.7</color> per an <color=#BDB76B>ally in a range of 2 tiles backward from Sepia</color>.
-triana	0	P0		감응	Response	속성이 있는 타일 위로 이동할 때, 자신의 속성을 그 속성으로 바꿉니다.	Element of this unit is always same with the tile under the unit.
 triana	8	P2		양분 흡수	Nutrient Absorbtion	턴을 끝낼 때 나무 속성이면, 반경 2타일 이내의 나무 속성 타일 하나당 최대 체력의 <color=green>2%</color>만큼 회복합니다.	At the end of the turn, if Triana has Plant element, recover <color=green>2%</color> of Max health per tile with Plant element in a range of 2 tiles radius.
+triana	0	L3		광폭화	Berserk Mode	체력이 50% 미만일 때 공격력이 <color=red>2배</color>가 되고 방어력이 <color=green>200</color> 높아집니다. 이 상태에서는 적과 동료를 구분하지 않습니다.	Under HP of 50%, Power becomes <color=red>doubled</color> and Defense Increases by <color=green>200</color>. Doesn't distinguish enemies and allies at this state.
 triana	0	T16		폭주	Overdrive	모든 조작 제한 효과를 무시합니다.	Ignore All Restriction Effect.
 triana	8	A16		들불	Wildfire	턴을 끝낼 때 불 속성이면, 반경 2타일 이내에 있는 유닛의 공격력을 1턴 동안 <color=red>40%</color> 낮춥니다.	At the end of the turn, if Triana has Fire element, decrease Power of units in a range of 2 tiles radius by <color=red>40%</color> for 1 Turn.
 triana	7	B17		서릿결 방패	Frost Shield	턴을 끝낼 때 물 속성이면, 반경 2타일 이내에 있는 물 속성 타일 하나당 방어력이 30+레벨당 0.4 높아집니다(2턴).	At the end of the turn, if Triana has Water element, increase Defense of Triana by 30+Level×0.4 per a tile with Water element in a range of 2 tiles radius(2 Turns).
-triana	9	A25		정화의 불길	Fire Purify	자신이 불 속성이면, 턴을 마칠 때 반경 2타일 안의 전투 흔적을 1단계 낮춥니다.	자신이 불 속성이면, 턴을 마칠 때 반경 2타일 안의 전투 흔적을 1단계 낮춥니다.
 triana	0	B29		얼어붙은 피	Frozen Blood	ABCD	ABCD
 triana	0	A36		불걸음	Firewalk	ABCD	ABCD
 triana	0	B36		동상	Frostbite	ABCD	ABCD
@@ -152,4 +148,3 @@ yeong	0	B29		유법	유법	ABCD	ABCD
 yeong	0	A36		접근	접근	ABCD	ABCD
 yeong	0	B36		무아지경	무아지경	ABCD	ABCD
 yeong	0	C36		끝없는 단련	끝없는 단련	피해를 받으면, 다음에 받는 공격에 회피율 +15%를 얻습니다.	ABCD
-yeong	0	C43		명경지수	명경지수	ABCD	ABCD

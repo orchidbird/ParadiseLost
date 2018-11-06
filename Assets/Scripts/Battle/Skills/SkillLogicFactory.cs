@@ -617,9 +617,6 @@ public static class SkillLogicFactory{
 			case "끝없는 단련":
 			passiveSkillLogic = new Yeong_6_r_SkillLogic();
 			break;
-			case "명경지수":
-			passiveSkillLogic = new Yeong_7_r_SkillLogic();
-			break;
 
 			// 에렌
 			case "에테르 지배":

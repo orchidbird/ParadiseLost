@@ -1,12 +1,15 @@
 ﻿owner	ether	address	required	nameKor	nameEng	ReqAP	cooldown	coef	RangeType	FirstRange	SecondRange	skillApplyType	CastVEName	Area/Move/Dir	CastSEName	HitVeName	HitSeName	explainKor	explainEng	AdditiveValues	ValueType	ValueCoef	ValueBase
 snowHippoLeader	0	L3		높은 도약	High Leap	50	1	0.5	Auto	Global	Global	DamageHealth	-	FFF	-	HitBlue	Pierce	<color=yellow>대상: 자신을 제외한 모든 유닛^DEFAULT^<color=#92B4F2>자신은 지정한 위치로 이동</color>	<color=yellow>Target: All units except for caster^DEFAULT^<color=#92B4F2>Caster moves to the targeted tile.</color>				
+arcadia	8	C11		한여름	Midsummer	0	0	0	Auto	Diamond/0/2	Same	Tile	-	TFF	Life	Shot	Hit/Normal	<color=yellow>사용 조건: 범위 내에 나무 속성 타일이 존재</color>^범위 내의 타일을 모두 나무 속성으로 바꿉니다.^<color=#BDB76B>바꾼 타일 하나</color>당 최대 체력의 <color=green>2%</color>를 사용합니다.	<color=yellow>Require: one or more tiles with Plant element in the area</color>^Change elements of all tiles in the area to Plant.^Consume <color=green>2%</color> of Max HP per <color=#BDB76B>every changed tile</color>.				
 bianca	6	C2		떠밀기	Pushing	5	0	0	Auto	Straight/1/1	Same	Move	Pushing	FFF	Push	HitWhite	Hit/Striked	밀기(2)^과부하(10)^<color=yellow>이 기술은 연계를 발동시키지 않습니다.</color>	Push(2)^Overload(10)				
 curi	0	B22		산성 혼합물	Acidic Mixture	61	4	1.3	Point	Diamond/3/5	Diamond/0/2	DamageHealth	-	TFF	AlkaliBomb	Shot	Hit/Normal	?	?				
 curi	0	C29		도금	Plate	24	4	0	Point	Diamond/1/5	Diagonal/0/1	Debuff	-	FFF	AlkaliBomb	Shot	Hit/Normal	?	?				
 curi	0	B36		유독성 촉매	Toxic Catalyst	0	1	0	Auto	One	One	Buff	-	FFF	AlkaliBomb	Shot	Hit/Normal	?	?				
 eren	0	C22		순간 재충전	Recharge	25	5	0	Point	Diamond/0/9	One	Buff	-	TFF	-	Shot	Hit/Normal	--	--				
+eugene	13	B7		순백의 방패	White Shield	20	0	0	Auto	Straight/1/1	Same	Buff	WhiteShield	FFF	-	Shot	Hit/Normal	대상으로부터 2타일 이내에 있는 유닛의 저항력을 <color=green>40+레벨당 0.5</color> 증가시키는 효과(3턴)를 부여합니다.	Increase the Resistance of the target by <color=green>40+0.5xLevel</color> for 3 Turns.				
 eugene	0	B22		백은의 장막	White Curtain	8	5	0	Auto	Diamond/0/4	Same	Buff	-	FFF	-	Shot	Hit/Normal	?	?				
 kashasty	6	B18		셔플 불릿	Shuffle Bullet	18	3	0	Point	Diamond/1/6	One	Move	-	TTF	Gun	HitArcane	Hit/Normal	대상과 자신의 위치를 바꿉니다.	Exchange positions of the caster and the target.				
+luvericha	0	B29		소녀의 기도	The Maiden's Prayer	52	0	1.5	Auto	One	One	Buff	-	TTF	-	Shot	Hit/Normal	--	--				
 noel	5	B15		언령	Mercy of God	39	3	0	Auto	One	One	Buff	-	FFF	Life	HitHoly	Hit/Normal	다음 자신의 턴까지 모든 유닛의 이탈 기준치를 +10% 높입니다.	Increase ALL units' Retreat Point by 10% until Noel's next turn.				
 reina	0	C29		에테르 과부하	Ether Overload	0	5	A0.2	Auto	One	One	HealAP	-	TTF	Heal	Shot	Hit/Normal	--	--				
 triana-stage17	0	L1		해방: 폭염	Release: Flame	61	0	1.9	Auto	Front/1/5/3	Same	DamageHealth	-	FFF	Salamander	HitRed	Hit/Fire	<color=yellow>사용 조건: 자신이 불 속성</color>^DEFAULT^자신을 금속 속성으로 전환합니다.	<color=yellow>Require: Triana must have Fire element.</color>^DEFAULT				

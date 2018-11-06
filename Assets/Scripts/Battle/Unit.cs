@@ -59,6 +59,15 @@ public class Unit : Entity{
 
 	public Vector2 size = new Vector2(1, 1);
 	Vector2Int pivot; //Variable한 위치 개념. IsLarge일 경우 가장 소속 타일 중 가장 x/y값이 작은 곳을 따름. 아니면 그냥 자기 위치.
+	public void SetPivot(Vector2Int position){pivot = position;}
+	public void SetInitialLocation(){
+		var emptyTiles = TileManager.Instance.GetAllTiles().Values.ToList().FindAll(tile => !tile.IsUnitOnTile());
+		if (IsAlly){
+			var enemy = UnitManager.GetAllUnits().Find(item => !item.IsAlly);
+			emptyTiles = emptyTiles.FindAll(tile => Calculate.Distance(enemy, tile, -1) >= 4); //적으로부터의 거리가 4타일 이상인 곳
+		}
+		SetPivot(Generic.PickRandom(emptyTiles).Location);
+	}
 
 	// 유닛이 해당 페이즈에서 처음 있었던 위치 - 영 패시브에서 체크
 	Vector2Int startPositionOfPhase;
@@ -265,6 +274,7 @@ public class Unit : Entity{
 	//지형지물은 AI로 분류되지 않으므로 PC인지 확인하려면 !IsAI가 아니라 IsPC(=!isAI && !isObject로 아래에 get 함수로 있음)의 return 값을 받아야 한다
 	public bool IsAI{get { return _AI != null; }} 
 
+	public bool IsAlly{get { return myInfo.isAlly; }}
 	public bool IsPC{
 		get { return !IsAI && (!isObject); }
 	}
@@ -301,9 +311,6 @@ public class Unit : Entity{
 	//public Vector2 Pos{get{return pivot + myInfo.size - new Vector2(1, 1);}}
 
 	public bool IsLarge{get{return size != new Vector2(1, 1);}}
-	public void SetPivot(Vector2Int position){
-		pivot = position;
-	}
 
 	public Vector3 realPosition{
 		get { return transform.position; }
@@ -1242,6 +1249,8 @@ public class Unit : Entity{
 	public void ApplyInfo(UnitInfo info){
 		actualStats.Clear();
 		myInfo = info;
+		foreach (var skill in info.skills)
+			skill.owner = this;
 		foreach (var kv in info.baseStats)
 			actualStats.Add(kv.Key, kv.Value);
 		hp = actualStats[Stat.MaxHealth];

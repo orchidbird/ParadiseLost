@@ -289,6 +289,10 @@ public class UnitDestroyLog : EffectLog {
 	    
 	    UnitManager.Instance.DeleteDestroyedUnit(target);
 	    target.StartCoroutine(target.ShowDestroy(reason));
+	    
+	    if(!target.IsAlly){ //전투 승리
+		    UnitManager.Instance.StartCoroutine(GameObject.FindObjectOfType<SceneLoader>().LoadScene("Era", false));
+	    }
 	    BattleTriggerManager.Instance.CountTriggers(TrigActionType.UnderCount, actor: target, log: this);
 
 	    if (target.IsPC){

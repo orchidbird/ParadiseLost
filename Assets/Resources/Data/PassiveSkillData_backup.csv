@@ -3,8 +3,11 @@ alchemySage	0	L13		나를 따르라	Follow Me	반경 3타일 이내의 자신을
 curi	0	P0		정제	Refine	공격할 때 모든 대상이 속성이 같으면, 해당 속성의 '<color=#FF9999>정제</color>(<color=red>공격력 +5%</color>, 5중첩까지 가능)' 효과를 얻습니다.^이 효과는 다른 속성 유닛을 공격하면 사라집니다.	When attack, get '<color=#FF9999>Refine</color>(</color=red>Power +5%</color>, max count 5)' effect If the elements of targets are all same.^This effect will be removed after attacking a unit with different element.
 curi	9	A17		신속 반응	Fast Response	불 속성 타일에 있으면, 의지가 <color=#00FFFF>20</color> 높아집니다.	Will <color=#00FFFF>+20</color> while on a Fire-element tile.
 curi	8	B18	B3	조연성 부착물	Abrasive Attachment	<color=yellow>(향상 - 수상한 덩어리)</color>^피해량이 0.9×공격력으로 줄어드는 대신, 대상에게 20%의 불 속성 약점(2턴)을 부여합니다.	<color=yellow>(Enhance - Strange Lump)</color>^Instead of reducing the damage to 0.9x damage, give the target 20% Fire Weak (2 Turns).
+curi	0	C36		성분 분석	Ingredient Analysis	ABCD	ABCD
 eren	0	A43		압도적인 공포	압도적인 공포	ABCD	ABCD
 eugene	10	B10	B7	순은의 매듭	White Knot	<color=yellow>(향상 - 순백의 방패)</color>^효과의 지속이 2턴로 줄어드는 대신, 서로 다른 대상으로부터의 효과가 중첩됩니다.	<color=yellow>(Enhance - White Shield)</color>^Reduce the duration of the effect to 2 Turns, but these effects from different objects become compatible.
 eugene	0	C43		길잡이	길잡이	ABCD	ABCD
 kashasty	0	A43		에테르화	Etherize	ABCD	ABCD
+triana	0	P0		감응	Response	속성이 있는 타일 위로 이동할 때, 자신의 속성을 그 속성으로 바꿉니다.	Element of this unit is always same with the tile under the unit.
+triana	9	A25		정화의 불길	Fire Purify	자신이 불 속성이면, 턴을 마칠 때 반경 2타일 안의 전투 흔적을 1단계 낮춥니다.	자신이 불 속성이면, 턴을 마칠 때 반경 2타일 안의 전투 흔적을 1단계 낮춥니다.
 yeong	0	B43		후의 선	후의 선	ABCD	ABCD

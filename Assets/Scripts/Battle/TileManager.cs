@@ -260,7 +260,7 @@ public class TileManager : MonoBehaviour {
             tile.Value.UpdateRemainPhaseAtPhaseEnd();
     }
 
-	public readonly static int mapSize = 12;
+	public readonly static int mapSize = 7;
 	void GenerateTiles(){
 		for (int x = 1; x <= mapSize; x++)
 			for (int y = 1; y <= mapSize; y++)

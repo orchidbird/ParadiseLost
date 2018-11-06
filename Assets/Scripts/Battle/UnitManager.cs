@@ -138,12 +138,12 @@ public class UnitManager : MonoBehaviour{
         foreach(var unit in GetAllUnits())
 	        unit.UpdateTransparency();
 		foreach(var kv in originalFogTypesDict) {
-			if((int)kv.Key.fogType < (int)kv.Value) {
-				Log lastLog = LogManager.Instance.GetLastEventLog();
-				if (!(lastLog is MoveLog)) continue;
-				((MoveLog)lastLog).sightChanged = true;
-				break;
-			}
+			if ((int) kv.Key.fogType >= (int) kv.Value) continue;
+			
+			Log lastLog = LogManager.Instance.GetLastEventLog();
+			if (!(lastLog is MoveLog)) continue;
+			((MoveLog)lastLog).sightChanged = true;
+			break;
 		}
     }
 
@@ -254,15 +254,11 @@ public class UnitManager : MonoBehaviour{
 
 	public void ActivateGuard(List<Tile> tiles){
 		foreach (var tile in tiles) {
-			if (tile == null) {
+			if (tile == null || !BattleData.guardDict.ContainsKey(tile))
 				continue;
-			}
-			if(!BattleData.guardDict.ContainsKey(tile))
-				continue;
-			foreach (var unit in BattleData.guardDict[tile]){
+			foreach (var unit in BattleData.guardDict[tile])
 				if (unit != null && unit.IsAI && !unit.GetComponent<AIData>().isActive && unit.GetComponent<AIData>().info.acute) 
 					unit.GetComponent<AIData>().SetActive(true);
-			}
 		}
 	}
 
@@ -270,7 +266,7 @@ public class UnitManager : MonoBehaviour{
 		var aiData = unit.GetComponent<AIData>();
 		aiData.isActive = true; //게임 시작 전이므로 Log를 통해 활성화할 수 없음!
 		
-		unit.GetActiveSkillList().RemoveAll (skill => skill.korName == "언령" || skill.korName == "광휘" || skill.korName == "집중" || skill.korName == "암살 표식" || skill.korName == "셔플 불릿" || skill.korName == "한여름");
+		unit.GetActiveSkillList().RemoveAll (skill => skill.korName == "언령" || skill.korName == "광휘" || skill.korName == "집중" || skill.korName == "암살 표식" || skill.korName == "셔플 불릿");
 		unit.AddAI();
 	}
 
@@ -289,9 +285,9 @@ public class UnitManager : MonoBehaviour{
 			infoListToSpawn.Add(info);
 		}
 
+		GenerateUnit(new UnitInfo(false));
 		foreach (var unitInfo in infoListToSpawn)
 			GenerateUnit(unitInfo);
-		GenerateUnit(new UnitInfo(false));
         UpdateFogOfWar();
     }
 
@@ -305,7 +301,7 @@ public class UnitManager : MonoBehaviour{
 		//유닛이 생성되자마자 fogOfWar 아래에 있으면 숨겨야 하는데,
 		//pivot 세팅은 다음 프레임에 이루어지므로 미리 하지 않으면 숨겨지지 않는다.
 		//빈 타일 중 무작위로 골라서 유닛을 생성
-        unit.SetPivot(Generic.PickRandom(TileManager.Instance.GetAllTiles().Values.ToList().FindAll(tile => !tile.IsUnitOnTile())).Location);
+		unit.SetInitialLocation();
 	
         //AIInfo가 allUnits를 참조하고 unitsActThisPhase.Add 여부가 AI를 참조하므로, 아래 문단 내 순서를 함부로 바꾸지 말 것!
         allUnits.Add(unit);
