@@ -9,17 +9,10 @@ namespace Battle.Damage{
 	public static class StatusEffector{
 		static List<UnitStatusEffectInfo> unitStatusEffectInfoList;
 		static List<TileStatusEffectInfo> tileStatusEffectInfoList;
-
-		public static List<UnitStatusEffectInfo> USEInfoList{get{
-			if(unitStatusEffectInfoList == null)
-				unitStatusEffectInfoList = Parser.GetParsedData<UnitStatusEffectInfo>();
-			return unitStatusEffectInfoList;
-		}}
-		public static List<TileStatusEffectInfo> TSEInfoList{get{
-			if (tileStatusEffectInfoList == null)
-				tileStatusEffectInfoList = Parser.GetParsedData<TileStatusEffectInfo>();
-			return tileStatusEffectInfoList;
-		}}
+		public static List<UnitStatusEffectInfo> USEInfoList{get
+		{ return unitStatusEffectInfoList ?? (unitStatusEffectInfoList = Parser.GetParsedData<UnitStatusEffectInfo>()); }}
+		public static List<TileStatusEffectInfo> TSEInfoList{get
+		{ return tileStatusEffectInfoList ?? (tileStatusEffectInfoList = Parser.GetParsedData<TileStatusEffectInfo>()); }}
 
 		public static UnitStatusEffectInfo FindUSE(string skillName){
 			return USEInfoList.Find(se => se.GetOriginSkillName() == skillName);

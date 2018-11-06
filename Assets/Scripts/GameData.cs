@@ -365,8 +365,8 @@ namespace GameData{
 		}
 		public static List<Skill> AllSkills{get{
 			if (allSkills != null) return allSkills;
-			var actives = activeSkills.Cast<Skill>();
-			var passives = passiveSkills.Cast<Skill>();
+			var actives = ActiveSkills.Cast<Skill>();
+			var passives = PassiveSkills.Cast<Skill>();
 			return allSkills = actives.Union(passives).ToList();
 		}}
 	}

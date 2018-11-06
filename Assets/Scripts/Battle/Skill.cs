@@ -1,6 +1,7 @@
 ﻿using Enums;
 using System;
 using System.Collections.Generic;
+using Battle.Damage;
 using Battle.Skills;
 using GameData;
 using UnityEngine;
@@ -41,6 +42,9 @@ public class Skill{
 		korName = parser.ConsumeString();
 	    engName = parser.ConsumeString();
         icon = Resources.Load<Sprite> ("Icon/Skill/" + _String.GeneralName(ownerName) + "/" + engName) ?? VolatileData.GetIcon(IconSprites.Transparent);
+	    
+	    ApplyUnitStatusEffectList();
+	    ApplyTileStatusEffectList();
     }
 
     public void GetCommonSkillExplanationText(StringParser parser) {
@@ -77,18 +81,18 @@ public class Skill{
     }
 	public Skill RequiredSkill{get { return Find(TableData.AllSkills, ownerName, required); }}
 	
-	public void ApplyUnitStatusEffectList(List<UnitStatusEffectInfo> statusEffectInfoList){
+	void ApplyUnitStatusEffectList(){
 		unitStatusEffectList.Clear();
-		foreach (var SEInfo in statusEffectInfoList) {
+		foreach (var SEInfo in StatusEffector.USEInfoList) {
 			if(SEInfo.GetOriginSkillName().Equals(korName) && SEInfo.GetOwnerOfSkill() == ownerName 
 			    && !unitStatusEffectList.Contains(SEInfo)) {    //같은 스킬을 가진 유닛이 여러 개일 때 중복으로 들어가는 것 방지
 				unitStatusEffectList.Add(SEInfo);
 			}
 		}
 	}
-	public void ApplyTileStatusEffectList(List<TileStatusEffectInfo> statusEffectInfoList){
+	void ApplyTileStatusEffectList(){
 		tileStatusEffectList.Clear();
-		foreach (var SEInfo in statusEffectInfoList) {
+		foreach (var SEInfo in StatusEffector.TSEInfoList) {
 			if(SEInfo.GetOriginSkillName().Equals(korName)
 			    && !tileStatusEffectList.Contains(SEInfo)){
 				tileStatusEffectList.Add(SEInfo);

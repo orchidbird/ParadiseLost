@@ -3,6 +3,7 @@ Debuff	general	공용	기절	Faint	FALSE	1	1	FALSE	TRUE	1	Faint	X	X	X	FALSE	NONE
 Debuff	general	공용	속박	Bind	FALSE	1	1	FALSE	TRUE	1	Bind	X	X	X	FALSE	NONE													이동 불가	Cannot Move.
 Debuff	general	공용	도발	Taunt	FALSE	1	1	FALSE	TRUE	1	Taunt	X	X	X	FALSE	NONE													시전자만을 공격 대상으로 인식합니다.	Considers the caster as the only target.
 Debuff	general	공용	침묵	Silence	FALSE	1	1	FALSE	TRUE	1	Silence	X	X	X	FALSE	NONE													기술 사용 불가	Cannot use any skills.
+Buff	general	광란	광란	Crazy	FALSE	99	1	FALSE	TRUE	3	PowerChange	O	0	40	TRUE	TRUE	MaxHealthChange	O	0	40	TRUE	TRUE	WillChange	O	0	10	FALSE	FALSE	공격력 & 체력 +40%, 의지 +10	-
 Debuff	fear	두려움	두려움	Fear	FALSE	99	1	FALSE	FALSE	1	WillChange	O	0	-10	FALSE	FALSE													의지 AMOUNT0^의지 저하 효과를 2배로 받습니다.	Will AMOUNT0^Every Will decreases are doubled.
 Buff	POV	주인공	주인공	Protagonist	FALSE	99	1	FALSE	FALSE	3	PowerChange	O	0	5	TRUE	TRUE	MaxHealthChange	O	0	5	TRUE	TRUE	WillChange	O	0	5	FALSE	FALSE	이번 이야기는 이 인물의 시선에서 진행^공격력 <color=red>+AMOUNT0</color>, 최대 체력 <color=green>+AMOUNT1</color>,^의지 <color=#00FFFF>+AMOUNT2</color>	This chapter is played with this character's view.^Power <color=red>+AMOUNT0</color>^Max HP <color=green>+AMOUNT1</color>^Will <color=#00FFFF>+AMOUNT2</color>
 Debuff	holder	붙잡힘	속박	Bind	FALSE	99	1	FALSE	TRUE	1	Bind	X	X	X	FALSE	NONE													이동할 수 없습니다. 시전자가 사라지면 해제됩니다.	Cannot move. Removed when the caster disappears.

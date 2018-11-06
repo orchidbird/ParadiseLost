@@ -609,12 +609,12 @@
                 <e p="Noel_A1_SkillLogic.cs" t="Include" />
               </e>
               <e p="Ratice" t="Include">
-                <e p="Ratice_1_l_SkillLogic.cs" t="Include" />
                 <e p="Ratice_1_m_SkillLogic.cs" t="Include" />
                 <e p="Ratice_1_r_SkillLogic.cs" t="Include" />
                 <e p="Ratice_2_l_SkillLogic.cs" t="Include" />
                 <e p="Ratice_2_m_SkillLogic.cs" t="Include" />
                 <e p="Ratice_3_r_SkillLogic.cs" t="Include" />
+                <e p="Ratice_Aura_SkillLogic.cs" t="Include" />
                 <e p="Ratice_Unique_SkillLogic.cs" t="Include" />
                 <e p="Ratice_Unite_SkillLogic.cs" t="Include" />
               </e>

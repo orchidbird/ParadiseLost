@@ -287,12 +287,12 @@
     <Compile Include="Assets\Scripts\Battle\Skills\Noel\Noel_3_m_SkillLogic.cs" />
     <Compile Include="Assets\Scripts\Battle\Skills\Noel\Noel_3_r_SkillLogic.cs" />
     <Compile Include="Assets\Scripts\Battle\Skills\Noel\Noel_A1_SkillLogic.cs" />
-    <Compile Include="Assets\Scripts\Battle\Skills\Ratice\Ratice_1_l_SkillLogic.cs" />
     <Compile Include="Assets\Scripts\Battle\Skills\Ratice\Ratice_1_m_SkillLogic.cs" />
     <Compile Include="Assets\Scripts\Battle\Skills\Ratice\Ratice_1_r_SkillLogic.cs" />
     <Compile Include="Assets\Scripts\Battle\Skills\Ratice\Ratice_2_l_SkillLogic.cs" />
     <Compile Include="Assets\Scripts\Battle\Skills\Ratice\Ratice_2_m_SkillLogic.cs" />
     <Compile Include="Assets\Scripts\Battle\Skills\Ratice\Ratice_3_r_SkillLogic.cs" />
+    <Compile Include="Assets\Scripts\Battle\Skills\Ratice\Ratice_Aura_SkillLogic.cs" />
     <Compile Include="Assets\Scripts\Battle\Skills\Ratice\Ratice_Unique_SkillLogic.cs" />
     <Compile Include="Assets\Scripts\Battle\Skills\Ratice\Ratice_Unite_SkillLogic.cs" />
     <Compile Include="Assets\Scripts\Battle\Skills\Reina\Reina_1_m_SkillLogic.cs" />

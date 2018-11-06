@@ -129,7 +129,6 @@ public class CameraMover : MonoBehaviour{
 
 
     public void MoveCameraToPosition(Vector2 position){
-	    Debug.Log("줌아웃 여부: " + zoomedOut);
 	    if (zoomedOut) return;
 	    Camera.main.transform.position = new Vector3(position.x, position.y, -10);
     }

@@ -10,7 +10,6 @@ namespace Battle.Skills
         public override float GetStatusEffectVar(UnitStatusEffect statusEffect, int i, Unit caster, Unit owner) {
             var nearbyUnits = Utility.UnitsInRange(Utility.TilesInDiamondRange(owner.Pos, 1, 3, 1));
             var count = nearbyUnits.Count(nearUnit => nearUnit.IsEnemyTo(owner));
-            Debug.Log("주변 적 수: " + count);
             return count;
         }
     }

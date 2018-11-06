@@ -7,6 +7,7 @@ using UtilityMethods;
 using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
+using Battle.Damage;
 
 public class EffectLog : Log {
     public EventLog parentEvent;
@@ -289,6 +290,14 @@ public class UnitDestroyLog : EffectLog {
 	    UnitManager.Instance.DeleteDestroyedUnit(target);
 	    target.StartCoroutine(target.ShowDestroy(reason));
 	    BattleTriggerManager.Instance.CountTriggers(TrigActionType.UnderCount, actor: target, log: this);
+
+	    if (target.IsPC){
+		    var seInfo = StatusEffector.FindUSE("광란");
+		    foreach (var ally in UnitManager.GetAllUnits().FindAll(unit => unit.IsPC))
+			    if(ally != target)
+				    StatusEffector.AttachAndReturnUSE(ally, new List<UnitStatusEffect> { new UnitStatusEffect(seInfo, ally, ally) }, ally, false);
+	    }
+	    
 	    yield break;
     }
 	//UnitDetroyLog는 Rewind할 수 없으므로 UnitDestroyLog가 있다면 Rewind하지 못하게 할 것

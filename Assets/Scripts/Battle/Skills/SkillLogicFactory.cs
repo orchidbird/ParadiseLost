@@ -238,9 +238,6 @@ public static class SkillLogicFactory{
 			case "제압":
 				skillLogic = new Ratice_1_r_SkillLogic ();
 				break;
-			case "보호의 손길":
-				skillLogic = new Ratice_2_l_SkillLogic ();
-				break;
 
             //제이선
             case "그림자 일격":
@@ -687,7 +684,7 @@ public static class SkillLogicFactory{
 				passiveSkillLogic = new Ratice_Unique_SkillLogic ();
 				break;
 			case "수호의 오오라":
-				passiveSkillLogic = new Ratice_1_l_SkillLogic ();
+				passiveSkillLogic = new Ratice_Aura_SkillLogic();
 				break;
 			case "흔들림 없는 눈빛":
 				passiveSkillLogic = new Ratice_2_m_SkillLogic ();
