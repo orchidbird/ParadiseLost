@@ -1,8 +1,0 @@
-NameInCode	Side	BaseHealth	BasePower	BaseDefense	BaseResistance	BaseAgility	UnitClass	Element	IsObject	IsNamed		
-manastone01	Neutral	550	0	0	100	0	None	None	TRUE	FALSE	connect	monster01
-manastone02	Neutral	550	0	0	100	0	None	None	TRUE	FALSE	connect	monster02
-manastone03	Neutral	550	0	0	100	0	None	None	TRUE	FALSE	connect	monster03
-manastone04	Neutral	550	0	0	100	0	None	None	TRUE	FALSE	connect	monster04
-monster01	Enemy	353	67	92	53	50	Melee	Plant	FALSE	FALSE		
-monster02	Enemy	353	67	92	53	50	Melee	Plant	FALSE	FALSE		
-monster03	Enemy	353	67	92	53	50	Melee	Plant	FALSE	FALSE		

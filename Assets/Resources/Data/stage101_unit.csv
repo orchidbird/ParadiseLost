@@ -1,5 +1,0 @@
-﻿NameInCode	Side	BaseHealth	BasePower	BaseDefense	BaseResistance	BaseAgility	UnitClass	Element	IsObject	IsNamed
-stel-NormalW	Enemy	239	114	199	199	67	Magic	Water	FALSE	FALSE
-stel-NormalF	Enemy	240	114	39	499	58	Magic	Fire	FALSE	FALSE
-stel-NormalM	Enemy	164	149	499	19	49	Melee	Metal	FALSE	FALSE
-stel-elder	Enemy	822	95	199	99	80	Magic	Plant	FALSE	TRUE

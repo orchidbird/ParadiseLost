@@ -120,7 +120,6 @@ reina	10	C18		잉걸불	Everlasting Fire	공격 대상이 나무 속성 타일�
 reina	0	A29		뭉치면 죽는다	뭉치면 죽는다	ABCD	ABCD
 reina	0	B29		흩어져도 죽는다	흩어져도 죽는다	ABCD	ABCD
 reina	0	C36		흐름 변환	흐름 변환	ABCD	ABCD
-reina	0	B43		열상 낙인	열상 낙인	ABCD	ABCD
 reina	0	C43		에테르 순환	에테르 순환	ABCD	ABCD
 sepia	0	P0		통제 구역	Zone Of Control	반경 1타일 안으로 적이 지나갈 수 없게 됩니다.	Enemies cannot pass by tiles in a range of 1 tile radius form Sepia.
 sepia	5	B5		정교한 칼날	Elaborate Blade	공격 범위에 있더라도 동료에게는 피해를 주지 않습니다.	Never deals Damage to allies.

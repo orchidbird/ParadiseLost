@@ -1,9 +1,0 @@
-NameInCode	Side	BaseHealth	BasePower	BaseDefense	BaseResistance	BaseAgility	UnitClass	Element	IsObject	IsNamed
-lucius	Enemy	1301	234	194	119	73	Melee	Water	FALSE	TRUE
-ratice	Enemy	1654	133	245	144	73	Magic	Plant	FALSE	TRUE
-curi	Enemy	877	296	144	119	65	Magic	Metal	FALSE	TRUE
-karldrich	Enemy	877	334	43	43	85	Melee	Fire	FALSE	TRUE
-luvericha	Enemy	1111	185	94	144	69	Magic	Plant	FALSE	TRUE
-json	Enemy	1203	263	119	94	85	Melee	Fire	FALSE	TRUE
-deus	Neutral	9999	9999	9999	9999	100	Magic	Fire	FALSE	TRUE
-boulder	Neutral	600	0	0	0	0	None	None	TRUE	FALSE

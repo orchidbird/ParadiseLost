@@ -1,8 +1,0 @@
-﻿NameInCode	Side	BaseHealth	BasePower	BaseDefense	BaseResistance	BaseAgility	UnitClass	Element	IsObject	IsNamed
-zealot	Enemy	508	144	32	32	64	Melee	Fire	FALSE	FALSE
-missionary	Enemy	440	73	77	191	53	Magic	Plant	FALSE	FALSE
-monk	Enemy	681	117	77	169	60	Melee	Water	FALSE	FALSE
-orchidStatue	Neutral	1000	0	0	0	0	None	None	TRUE	FALSE
-freight171	Ally	100	0	0	0	0	None	None	TRUE	FALSE	Collectable
-carriage01	Ally	275	0	0	0	0	None	None	TRUE	FALSE	size	3/1
-wallBright	Neutral	1000	0	0	0	0	None	None	TRUE	FALSE

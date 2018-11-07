@@ -1,9 +1,0 @@
-NameInCode	Side	BaseHealth	BasePower	BaseDefense	BaseResistance	BaseAgility	UnitClass	Element	IsObject	IsNamed
-reina	Enemy	1028	263	119	169	69	Magic	Fire	FALSE	TRUE
-triana	Enemy	1528	148	245	169	65	Melee	Metal	FALSE	TRUE
-lenien	Enemy	1203	234	68	68	65	Magic	Metal	FALSE	TRUE
-yeong	Enemy	1528	209	144	144	77	Melee	Metal	FALSE	TRUE
-kashasty	Enemy	1111	209	94	169	65	Melee	Plant	FALSE	TRUE
-eren	Enemy	877	334	94	194	61	Magic	Water	FALSE	TRUE
-deus	Neutral	9999	9999	9999	9999	100	Magic	Fire	FALSE	TRUE
-boulder	Neutral	600	0	0	0	0	None	None	TRUE	FALSE

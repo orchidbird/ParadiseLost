@@ -1,44 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eaf629eb-d67e-4d43-8426-c19b52b31267" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ParadiseLost/.idea/contentModel.xml" afterPath="$PROJECT_DIR$/.idea/.idea.ParadiseLost/.idea/contentModel.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ParadiseLost/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.ParadiseLost/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Battle/BloodyScreen.mat" afterPath="$PROJECT_DIR$/Assets/Resources/Battle/BloodyScreen.mat" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/ActiveSkillData.csv" afterPath="$PROJECT_DIR$/Assets/Resources/Data/ActiveSkillData.csv" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/PassiveSkillData.csv" afterPath="$PROJECT_DIR$/Assets/Resources/Data/PassiveSkillData.csv" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scene/Battle.unity" afterPath="$PROJECT_DIR$/Assets/Scene/Battle.unity" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scene/Era.unity" afterPath="$PROJECT_DIR$/Assets/Scene/Era.unity" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Battle/BattleManager.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Battle/BattleManager.cs" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Battle/Skills/Arcadia/ApplyOnPlantTile.cs" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Battle/Skills/Arcadia/ApplyOnPlantTile.cs.meta" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Battle/Skills/SkillLogicFactory.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Battle/Skills/SkillLogicFactory.cs" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Battle/Unit.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Battle/Unit.cs" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Battle/UnitInfo.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Battle/UnitInfo.cs" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Battle/UnitManager.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Battle/UnitManager.cs" />
-      <change beforePath="$PROJECT_DIR$/Assets/prefab/BattleUI/DetailInfoPanel.prefab" afterPath="$PROJECT_DIR$/Assets/prefab/BattleUI/DetailInfoPanel.prefab" />
-      <change beforePath="$PROJECT_DIR$/Library/CurrentLayout.dwlt" afterPath="$PROJECT_DIR$/Library/CurrentLayout.dwlt" />
-      <change beforePath="$PROJECT_DIR$/Library/CurrentMaximizeLayout.dwlt" afterPath="$PROJECT_DIR$/Library/CurrentMaximizeLayout.dwlt" />
-      <change beforePath="$PROJECT_DIR$/Library/EditorUserBuildSettings.asset" afterPath="$PROJECT_DIR$/Library/EditorUserBuildSettings.asset" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll.mdb" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll.mdb" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-UnityScript.dll" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-UnityScript.dll" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-UnityScript.dll.mdb" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-UnityScript.dll.mdb" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/BuiltinAssemblies.stamp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Library/assetDatabase3" afterPath="$PROJECT_DIR$/Library/assetDatabase3" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/13/1300927c325794145948205ee40612af" afterPath="$PROJECT_DIR$/Library/metadata/13/1300927c325794145948205ee40612af" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/43/432755227ae824048983af733b219a68" afterPath="$PROJECT_DIR$/Library/metadata/43/432755227ae824048983af733b219a68" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/6a/6a09e0738d6320546bfc9a13f283daa3" afterPath="$PROJECT_DIR$/Library/metadata/6a/6a09e0738d6320546bfc9a13f283daa3" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/6f/6f2ff02d437344a13910d89640e7e60a" afterPath="$PROJECT_DIR$/Library/metadata/6f/6f2ff02d437344a13910d89640e7e60a" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/91/912d79766add02d4b831e95e047fe704.info" afterPath="$PROJECT_DIR$/Library/metadata/91/912d79766add02d4b831e95e047fe704.info" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/98/983715c2feff24b5cb0c10c6df350860" afterPath="$PROJECT_DIR$/Library/metadata/98/983715c2feff24b5cb0c10c6df350860" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/bc/bc7e208d5678fc243a6352343b56d482" afterPath="$PROJECT_DIR$/Library/metadata/bc/bc7e208d5678fc243a6352343b56d482" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/c4/c4bcfc68c0f674d6faecfded0ffe0ce8" afterPath="$PROJECT_DIR$/Library/metadata/c4/c4bcfc68c0f674d6faecfded0ffe0ce8" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/f3/f3d1381b284e19e4c81e48d0adb50344" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/f3/f3d1381b284e19e4c81e48d0adb50344.info" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" />
-    </list>
+    <list default="true" id="eaf629eb-d67e-4d43-8426-c19b52b31267" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -152,8 +115,8 @@
       <file leaf-file-name="SkillLogicFactory.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Battle/Skills/SkillLogicFactory.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="506" column="58" lean-forward="false" selection-start-line="506" selection-start-column="58" selection-end-line="506" selection-end-column="58" />
+            <state relative-caret-position="239">
+              <caret line="477" column="54" lean-forward="false" selection-start-line="477" selection-start-column="54" selection-end-line="477" selection-end-column="54" />
               <folding>
                 <marker date="1541595371555" expanded="false" signature="6:97" ph="..." />
                 <marker date="1541595371555" expanded="true" signature="122:22353" ph="{...}" />
@@ -167,6 +130,22 @@
                 <marker date="1541595371555" expanded="true" signature="13243:13411" ph="/* case &quot;잿더미&quot;: ... */" />
                 <marker date="1541595371555" expanded="true" signature="13502:13625" ph="/* case &quot;에테르 순환&quot;: ... */" />
                 <marker date="1541595371555" expanded="true" signature="17108:17188" ph="/* case &quot;접근&quot;: ... */" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Reina_7_m_SkillLogic.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Battle/Skills/Reina/Reina_7_m_SkillLogic.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+              <folding>
+                <marker date="1539942368082" expanded="false" signature="6:92" ph="..." />
+                <marker date="1539942368082" expanded="true" signature="117:737" ph="{...}" />
+                <marker date="1539942368082" expanded="true" signature="182:735" ph="{...}" />
+                <marker date="1539942368082" expanded="true" signature="278:399" ph="{...}" />
+                <marker date="1539942368082" expanded="true" signature="500:729" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -377,20 +356,6 @@
                 <marker date="1541138111400" expanded="true" signature="38:335" ph="{...}" />
                 <marker date="1541138111400" expanded="true" signature="102:333" ph="{...}" />
                 <marker date="1541138111400" expanded="true" signature="237:327" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Luvericha_5_r_SkillLogic.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Battle/Skills/Luvericha/Luvericha_5_r_SkillLogic.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <marker date="1541515127834" expanded="true" signature="38:518" ph="{...}" />
-                <marker date="1541515127834" expanded="true" signature="99:516" ph="{...}" />
-                <marker date="1541515127834" expanded="true" signature="183:510" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -652,11 +617,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UnitInfo.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UnitInfo.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Battle/UnitInfo.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="121">
-              <caret line="83" column="126" lean-forward="true" selection-start-line="83" selection-start-column="126" selection-end-line="83" selection-end-column="126" />
+              <caret line="83" column="126" lean-forward="false" selection-start-line="83" selection-start-column="126" selection-end-line="83" selection-end-column="126" />
               <folding>
                 <marker date="1541598693042" expanded="true" signature="6:171" ph="..." />
                 <marker date="1541598693042" expanded="true" signature="193:446" ph="{...}" />
@@ -686,7 +651,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>generateUnits</find>
       <find>loc</find>
       <find>posit</find>
       <find>pivot</find>
@@ -716,6 +680,7 @@
       <find>hasonlyf</find>
       <find>generateunits</find>
       <find>haso</find>
+      <find>열상</find>
     </findStrings>
     <replaceStrings>
       <replace>tilePos.y</replace>
@@ -986,6 +951,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Battle/UI/StatusEffectDisplayPanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Battle/Skills/Darkenir/Darkenir_EtherShot_SkillLogic.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Battle/UI/APBarPanel/UnitWrapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Battle/Skills/Reina/Reina_7_m_SkillLogic.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Battle/UI/APBarPanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/ResultPanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/StandardPointPanel.cs" root0="FORCE_HIGHLIGHTING" />
@@ -1212,12 +1178,12 @@
       <workItem from="1541486572921" duration="4227000" />
       <workItem from="1541498799550" duration="106000" />
       <workItem from="1541499026739" duration="8072000" />
-      <workItem from="1541595341161" duration="2935000" />
+      <workItem from="1541595341161" duration="3049000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62267000" />
+    <option name="totallyTimeSpent" value="62381000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1289,13 +1255,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assets/SuperScrollView/Demo/Scripts/PullToRefreshDemoScript.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="20" column="45" lean-forward="false" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/SuperScrollView/Demo/Scripts/ResManager.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
@@ -2227,27 +2186,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Battle/Skills/SkillLogicFactory.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="506" column="58" lean-forward="false" selection-start-line="506" selection-start-column="58" selection-end-line="506" selection-end-column="58" />
-          <folding>
-            <marker date="1541595371555" expanded="false" signature="6:97" ph="..." />
-            <marker date="1541595371555" expanded="true" signature="122:22353" ph="{...}" />
-            <marker date="1541595371555" expanded="true" signature="162:22351" ph="{...}" />
-            <marker date="1541595371555" expanded="true" signature="222:8281" ph="{...}" />
-            <marker date="1541595371555" expanded="true" signature="293:8183" ph="{...}" />
-            <marker date="1541595371555" expanded="true" signature="2889:2968" ph="/* case &quot;에테르 과부하&quot;: ... */" />
-            <marker date="1541595371555" expanded="true" signature="8357:8428" ph="{...}" />
-            <marker date="1541595371555" expanded="true" signature="8497:22349" ph="{...}" />
-            <marker date="1541595371555" expanded="true" signature="8580:22225" ph="{...}" />
-            <marker date="1541595371555" expanded="true" signature="13243:13411" ph="/* case &quot;잿더미&quot;: ... */" />
-            <marker date="1541595371555" expanded="true" signature="13502:13625" ph="/* case &quot;에테르 순환&quot;: ... */" />
-            <marker date="1541595371555" expanded="true" signature="17108:17188" ph="/* case &quot;접근&quot;: ... */" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Battle/Skills/Luvericha/Luvericha_7_r_SkillLogic.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
@@ -2684,7 +2622,7 @@
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Battle/UnitInfo.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="121">
-          <caret line="83" column="126" lean-forward="true" selection-start-line="83" selection-start-column="126" selection-end-line="83" selection-end-column="126" />
+          <caret line="83" column="126" lean-forward="false" selection-start-line="83" selection-start-column="126" selection-end-line="83" selection-end-column="126" />
           <folding>
             <marker date="1541598693042" expanded="true" signature="6:171" ph="..." />
             <marker date="1541598693042" expanded="true" signature="193:446" ph="{...}" />
@@ -2705,6 +2643,41 @@
             <marker date="1541598693042" expanded="true" signature="5442:5474" ph="{...}" />
             <marker date="1541598693042" expanded="true" signature="5564:5656" ph="{...}" />
             <marker date="1541598693042" expanded="true" signature="5802:6227" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Battle/Skills/SkillLogicFactory.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="477" column="54" lean-forward="false" selection-start-line="477" selection-start-column="54" selection-end-line="477" selection-end-column="54" />
+          <folding>
+            <marker date="1541595371555" expanded="false" signature="6:97" ph="..." />
+            <marker date="1541595371555" expanded="true" signature="122:22353" ph="{...}" />
+            <marker date="1541595371555" expanded="true" signature="162:22351" ph="{...}" />
+            <marker date="1541595371555" expanded="true" signature="222:8281" ph="{...}" />
+            <marker date="1541595371555" expanded="true" signature="293:8183" ph="{...}" />
+            <marker date="1541595371555" expanded="true" signature="2889:2968" ph="/* case &quot;에테르 과부하&quot;: ... */" />
+            <marker date="1541595371555" expanded="true" signature="8357:8428" ph="{...}" />
+            <marker date="1541595371555" expanded="true" signature="8497:22349" ph="{...}" />
+            <marker date="1541595371555" expanded="true" signature="8580:22225" ph="{...}" />
+            <marker date="1541595371555" expanded="true" signature="13243:13411" ph="/* case &quot;잿더미&quot;: ... */" />
+            <marker date="1541595371555" expanded="true" signature="13502:13625" ph="/* case &quot;에테르 순환&quot;: ... */" />
+            <marker date="1541595371555" expanded="true" signature="17108:17188" ph="/* case &quot;접근&quot;: ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Battle/Skills/Reina/Reina_7_m_SkillLogic.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+          <folding>
+            <marker date="1539942368082" expanded="false" signature="6:92" ph="..." />
+            <marker date="1539942368082" expanded="true" signature="117:737" ph="{...}" />
+            <marker date="1539942368082" expanded="true" signature="182:735" ph="{...}" />
+            <marker date="1539942368082" expanded="true" signature="278:399" ph="{...}" />
+            <marker date="1539942368082" expanded="true" signature="500:729" ph="{...}" />
           </folding>
         </state>
       </provider>

@@ -1,7 +1,0 @@
-﻿ResultType	reqCount	Reward	Name	Action	Actor/Target/Etc
-Trigger	19-0	1	0	도착지점	Escape	4	7/20	22/25	18/8	12/6	Ally	Repeat
-Script	1	0	Cave	Start
-Script	1	0	Choice	Escape	1	7/20	Ally
-Win	4	100	출전 캐릭터 4명 도착지점에 도달	All player characters escape	Escape	8	7/20	22/25	18/8	12/6	24/11	25/11	24/12	25/12	PC
-Lose	1	0	출전 캐릭터 무력화	Any player character gets neutralized	Neutralize	Any	PC
-Info	Scene#19-2	One	One					

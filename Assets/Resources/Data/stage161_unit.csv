@@ -1,8 +1,0 @@
-﻿NameInCode	Side	BaseHealth	BasePower	BaseDefense	BaseResistance	BaseAgility	UnitClass	Element	IsObject	IsNamed
-citizen	Neutral	560	0	10	10	20	Melee	Plant	FALSE	FALSE
-monk	Neutral	757	130	77	169	60	Melee	Water	FALSE	FALSE
-triana	Enemy	2574	170	224	154	62	Melee	Metal	FALSE	TRUE
-fireSpirit	Enemy	1155	229	260	32	67	Magic	Fire	FALSE	FALSE
-statue	Neutral	1000	0	0	0	0	None	None	TRUE	FALSE	Deathrattle
-freight	Neutral	400	0	0	0	0	None	None	TRUE	FALSE
-door	Neutral	500	0	0	0	0	None	None	TRUE	FALSE

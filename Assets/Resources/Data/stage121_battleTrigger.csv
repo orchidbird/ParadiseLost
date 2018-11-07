@@ -1,8 +1,0 @@
-ResultType	reqCount	Reward	Name	Action	Actor/Target/Etc				
-Win	Target	30	모든 적 무력화	Neutralize ALL enemies	Neutralize	Any	Enemy			
-Win	8	15	8페이즈 경과	8 phases over	Phase					
-Lose	Target	0	모든 출전 캐릭터 무력화	All player characters get neutalized	Neutralize	Any	PC			
-Bonus	1	2	고저차를 이용한 공격	Attack with height bonus	Extra	Repeat				
-Bonus	1	20	출전 캐릭터가 이탈하지 않음	All player characters alive	Neutralize	Any	Ally	Reverse		
-Bonus	6	20	5페이즈 이내에 승리	Win in 5 phases	Phase	Reverse
-Info	Scene#12-2	One	One						
