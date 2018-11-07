@@ -159,8 +159,8 @@ public class Unit : Entity{
 		isAlreadyBehavedObject = input;
 	}
 
-	public List<ActiveSkill> GetActiveSkillList() {return myInfo.skills.FindAll(skill => skill is ActiveSkill).ConvertAll(skill => (ActiveSkill)skill);}
-	public List<PassiveSkill> GetPassiveSkillList(){return myInfo.skills.FindAll(skill => skill is PassiveSkill).ConvertAll(skill => (PassiveSkill)skill);}
+	public List<ActiveSkill> GetActiveSkillList() {return myInfo.activeSkills;}
+	public List<PassiveSkill> GetPassiveSkillList(){return myInfo.passiveSkills;}
 	public List<ActiveSkill> ActiveSkillsToThink{get{
 		var result = GetActiveSkillList().FindAll(IsThisSkillUsable);
 		if (CodeName == "monk")
@@ -1249,7 +1249,9 @@ public class Unit : Entity{
 	public void ApplyInfo(UnitInfo info){
 		actualStats.Clear();
 		myInfo = info;
-		foreach (var skill in info.skills)
+		foreach (var skill in info.activeSkills)
+			skill.owner = this;
+		foreach (var skill in info.passiveSkills)
 			skill.owner = this;
 		foreach (var kv in info.baseStats)
 			actualStats.Add(kv.Key, kv.Value);

@@ -23,23 +23,27 @@ public class UnitInfo{
 	public string codeName;
 	public Dictionary<Stat, int> baseStats = new Dictionary<Stat, int>();
 	public bool isAlly;
-	public List<Skill> skills = new List<Skill>();
+	public List<ActiveSkill> activeSkills;
+	public List<PassiveSkill> passiveSkills;
 	
 	private string GetRandomCharacterName{get{
 		return Generic.PickRandom(new List<string> {"reina", "noel", "yeong", "lucius", "bianca", "lenien", "karldrich"});
 	}}
 
 	void AddSkill(List<Skill> potentialSkills){
-		Debug.Assert(potentialSkills.Count > skills.Count);
+		Debug.Assert(potentialSkills.Count > activeSkills.Count + passiveSkills.Count);
 		if (isAlly)
 			potentialSkills = potentialSkills.FindAll(item => item.address[0] != 'L' && item.address[0] != 'E');
 		Skill skill;
 
 		do{
 			skill = Generic.PickRandom(potentialSkills);
-		}while(skills.Contains(skill) || (skill.RequiredSkill != null && !skills.Contains(skill.RequiredSkill)));
+		}while(HasThisSkill(skill) || skill.RequiredSkill != null && !HasThisSkill(skill.RequiredSkill));
 		
-		skills.Add(skill);
+		if(skill is ActiveSkill)
+			activeSkills.Add((ActiveSkill)skill);
+		else
+			passiveSkills.Add((PassiveSkill)skill);
 	}
 	public UnitInfo(bool isAlly){
 		this.isAlly = isAlly;
@@ -54,18 +58,19 @@ public class UnitInfo{
 			baseStats.Add(Stat.Agility, RandomIntOfVariation(50, 1.04f));
 			baseStats.Add(Stat.Will, RandomIntOfVariation(100, 1.1f));
 			baseStats.Add(Stat.Level, 1);
-			skills.Add(TableData.ActiveSkills.Find(skill => skill.korName == "순간 이동"));
-			//E로 시작하는 것은 시작 스킬로 주지 않도록 지정
-			AddSkill(TableData.ActiveSkills.FindAll(skill => skill.GetCooldown() < 2).ConvertAll(skill => (Skill)skill));
+			activeSkills.Add(TableData.ActiveSkills.Find(skill => skill.korName == "순간 이동"));
+			//쿨타임이 2턴 이상이거나 비용이 민첩성의 1.5배를 넘는 스킬은 첫 스킬로 주지 않음
+			var availableSkills = TableData.ActiveSkills.FindAll(skill => skill.GetCooldown() < 2 && skill.GetRequireAP() < baseStats[Stat.Agility] * 1.5f);
+			AddSkill(availableSkills.ConvertAll(skill => (Skill)skill));
 		}else{
-			baseStats.Add(Stat.MaxHealth, 300);
+			baseStats.Add(Stat.MaxHealth, 250);
 			baseStats.Add(Stat.Power, 35);
 			baseStats.Add(Stat.Defense, 50);
 			baseStats.Add(Stat.Agility, 60);
 			baseStats.Add(Stat.Will, 100);
 			baseStats.Add(Stat.Level, 1);
-			skills.Add(TableData.ActiveSkills.Find(skill => skill.korName == "화염 폭발"));
-			skills.Add(TableData.ActiveSkills.Find(skill => skill.korName == "쇄도"));
+			activeSkills.Add(TableData.ActiveSkills.Find(skill => skill.korName == "화염 폭발"));
+			activeSkills.Add(TableData.ActiveSkills.Find(skill => skill.korName == "쇄도"));
 			AddSkill(TableData.ActiveSkills.ConvertAll(skill => (Skill)skill));
 		}
 		baseStats.Add(Stat.CurrentHP, baseStats[Stat.MaxHealth]);
@@ -73,7 +78,12 @@ public class UnitInfo{
 
 		RecordData.units.Add(this);
 	}
-	
+
+	public bool HasOffensiveSkill{get { return activeSkills.Any(skill => skill.IsOffensive()); }}
+	bool HasThisSkill(Skill skill){
+		return skill is ActiveSkill ? activeSkills.Contains((ActiveSkill)skill) : passiveSkills.Contains((PassiveSkill)skill);
+	}
+
 	int RandomIntOfVariation(int basePoint, float maxRatio){
 		var minValue = (int)Math.Round(basePoint * maxRatio);
 		var maxValue = (int)Math.Round(basePoint / maxRatio);

@@ -575,14 +575,6 @@ public static class SkillLogicFactory{
             passiveSkillLogic = new Sepia_A15_SkillLogic();
             break;
 
-            //아르카디아
-            case "뿌리 내리기":
-            passiveSkillLogic = new ApplyOnPlantTile();
-            break;
-            case "광합성":
-            passiveSkillLogic = new ApplyOnPlantTile();
-            break;
-
 			// 영
 			case "방랑자":
 			passiveSkillLogic = new Yeong_0_1_SkillLogic();

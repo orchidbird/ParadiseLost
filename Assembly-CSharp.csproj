@@ -133,7 +133,6 @@
     <Compile Include="Assets\Scripts\Battle\Skills\AI\Stage_18_0_SkillLogic.cs" />
     <Compile Include="Assets\Scripts\Battle\Skills\AI\Stage_20_1_SkillLogic.cs" />
     <Compile Include="Assets\Scripts\Battle\Skills\AI\Stage_20_2_SkillLogic.cs" />
-    <Compile Include="Assets\Scripts\Battle\Skills\Arcadia\ApplyOnPlantTile.cs" />
     <Compile Include="Assets\Scripts\Battle\Skills\Arcadia\Arcadia_C1_SkillLogic.cs" />
     <Compile Include="Assets\Scripts\Battle\Skills\Arcadia\Arcadia_Weathering_SkillLogic.cs" />
     <Compile Include="Assets\Scripts\Battle\Skills\Arcadia\Blink_SkillLogic.cs" />

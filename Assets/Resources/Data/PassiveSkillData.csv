@@ -18,8 +18,7 @@ fireSpirit	0	L16		휘몰아치는 열기	Stirring Heat	턴을 시작할 때, 반
 freight171~	0	L1		알뜰함	Nifty	수집한 유닛의 의지를 4페이즈 동안 40 올립니다.	After collected, Will <color=#00FFFF>+40</color> (4 Turns)
 carriage01	0	L18		엄폐물	Cover	마차가 공격 범위에 포함되면, 그 공격의 피해가 30% 줄어듭니다.	The damage of all attacks including this unit as target will be decreased by 30%.
 arcadia	0	P0		숲의 후예	Descendants of Forest	나무 속성 타일에서 <color=green>체력 +10%</color>, 공격력 <color=red>+10%</color>, 의지 <color=#00FFFF>+10</color>^불 속성 타일에서 <color=green>체력 -10%</color>, 공격력 <color=red>-10%</color>, 의지 <color=#00FFFF>-10</color>^나무 속성 타일의 이동 소모 행동력이 <color=#00FFFF>2</color> 감소합니다.	<color=green>HP</color> & Power +10%, Will <color=#00FFFF>+10</color> on a Plant element tile^<color=green>HP</color> & Power -10%, Will <color=#00FFFF>-10</color> on a Fire element tile^Use <color=#00FFFF>2</color> less AP for moving on a Plant element tile.
-arcadia	6	B7		광합성	Photosynthesis	나무 속성 타일에 있는 동안 받는 회복량이 50% 늘어납니다.	Heal taking <color=green>+50%</color> while on a Plant-element tile.
-arcadia	11	A18		뿌리 내리기	Root	나무 속성 타일에 있는 동안, 최대 체력이 <color=green>25%</color> 늘어나며 강제 이동에 대해 면역됩니다.	HP <color=green>+25%</color> and Immune to forced move while on a Plant-element tile.
+arcadia	6	E7		광합성	Photosynthesis	받는 회복량이 50% 늘어납니다.	Heal taking <color=green>+50%</color> while on a Plant-element tile.
 bianca	0	P0		사뿐사뿐	Light Step	모든 덫의 효과에 면역이며, 덫 타일을 밟아도 발동시키지 않습니다.	Ignore all Traps and their effects.
 bianca	10	A8		관람석 선점	Prepare to Watch	덫을 설치하면, 그 턴 동안 이동에 필요한 행동력이 30% 줄어듭니다.	After setting up a trap, moving cost will be reduced by 30% during the turn.
 bianca	10	C15		의욕 상승	Motivated	덫이 발동할 때마다, 행동력을 <color=#BE81F7>8</color> 회복합니다.	Recover <color=#BE81F7>8</color> AP when a Trap is activated.
@@ -104,10 +103,10 @@ luvericha	10	C20		치유의 오오라	Healing Aura	페이즈를 시작할 때, �
 luvericha	0	C29		넘치는 사랑	넘치는 사랑	ABCD	ABCD
 luvericha	0	C36		영혼의 교감	영혼의 교감	ABCD	ABCD
 luvericha	0	E43		헌신	헌신	ABCD	ABCD
-luvericha	0	C43		응급처치	응급처치	ABCD	ABCD
+luvericha	0	E43		응급처치	응급처치	모든 치유량이 대상의 잃은 체력 1%당 0.3% 늘어납니다.	ABCD
 noel	0	P0		심판의 빛	Judgelight	자신이 부여한 보호막이 피해를 흡수할 때,^공격자에게 <color=red>흡수량만큼</color> 마법 피해를 반사합니다.	Whenever a Shield from Noel reduces Damage, deal that amount of Damage to the attacker.
+noel	10	E2		주교의 권능	Authority of Bishop	자신이 부여한 보호막이 피해에 의해 모두 소진될 때마다, 공격력이 <color=red>5%</color> 높아집니다.	Whenever a Shield from Noel is depleted by attack, Power <color=red>+5%</color>
 noel	10	B11		승리의 함성	Commander	적이 이탈할 때마다 모든 동료가 행동력 <color=#00FFFF>0.1×민첩성</color> 회복합니다.	Whenever an enemy retreats, all allies recover AP of <color=#00FFFF>0.1×Agility</color>.
-noel	10	B2		주교의 권능	Authority of Bishop	자신이 부여한 보호막이 피해에 의해 모두 소진될 때마다, 공격력이 <color=red>5%</color> 높아집니다.	Whenever a Shield from Noel is depleted by attack, Power <color=red>+5%</color>
 ratice	0	P0		속죄양	Scapegoat	옆 타일의 동료가 <color=red>피해</color>를 받을 때, 그 절반을 가져가서 대신 받습니다.	옆 타일의 동료가 <color=red>피해</color>를 받을 때, 그 절반을 가져가서 대신 받습니다.
 ratice	10	A11		일치단결	Unite	반경 2타일 안에 있는 동료와 자신의 공격력과 <color=green>체력</color>을, <color=#BDB76B>영역 안의 동료 하나</color>당 3% 높입니다.	Increase Power and HP of allies in a range of 2 tiles radius by <color=#BDB76B>3%</color> per an <color=#BDB76B>ally in that area</color>.
 ratice	9	B17		흔들림 없는 눈빛	Gaze	정면에서 공격을 받으면 피해가 15% 줄어듭니다.	Take <color=red>15%</color> less Damage by attacks without Direction Bonus.
