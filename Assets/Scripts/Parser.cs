@@ -108,7 +108,7 @@ public class Parser : MonoBehaviour{
 		}
 	}
 	
-	public static List<TileInfo> GetParsedTileInfo(){
+	/*public static List<TileInfo> GetParsedTileInfo(){
 		List<TileInfo> tileInfoList = new List<TileInfo>();
 
 		TextAsset csvFile = GetDataAddress<TileInfo>();
@@ -126,7 +126,7 @@ public class Parser : MonoBehaviour{
 		}
 
 		return tileInfoList;
-	}
+	}*/
 
 	public static List<GlossaryData> GetParsedGlossaryData(){
 		var glossaryDataList = new List<GlossaryData>();
@@ -141,15 +141,6 @@ public class Parser : MonoBehaviour{
 
 	private static string dataAddressIncludingAB(string stageName, string typeName){
 		var address = "Data/" + stageName;
-		
-		if(VolatileData.stageData.IsTwoSideStage()){
-			if (BattleData.selectedFaction == Faction.Pintos) {
-				address += "A";
-			} else {
-				address += "B";
-			}
-		}
-
 		return address + "_" + typeName;
 	}
 	

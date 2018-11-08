@@ -52,11 +52,11 @@ public class SteamAchievementManager : MonoBehaviour {
 			if(RecordData.neutralizeEnemyCount >= 800)
 				Achieve("Battle Specialist");
 			// 도주 스테이지에서 모든 적을 격파
-			if(VolatileData.stageData.GetBattleTriggers().Any(trig => trig.result == TrigResultType.Win && trig.action == TrigActionType.Escape)) {
+			/*if(VolatileData.stageData.GetBattleTriggers().Any(trig => trig.result == TrigResultType.Win && trig.action == TrigActionType.Escape)) {
 				List<Unit> enemyUnits = UnitManager.GetAllUnits().FindAll(u => u.GetSide() == Side.Enemy);
 				if(enemyUnits.Count == 0 || (enemyUnits.Count == 1 && enemyUnits[0] == target))
 					Achieve("No witness alive");
-			}
+			}*/
 			// 한 스테이지에서 한 캐릭터로 8명 이상 이탈
 			if(logs.Count(log => log is UnitDestroyLog && ((UnitDestroyLog)log).actor == actor) >= 8)
 				Achieve("LEGENDARY!");
@@ -106,9 +106,9 @@ public class SteamAchievementManager : MonoBehaviour {
 		}
 
 		// 도주 스테이지에서 적을 한 명도 제거하지 않음
-		if (VolatileData.stageData.GetBattleTriggers().Any(trig => trig.result == TrigResultType.Win && trig.action == TrigActionType.Escape)
+		/*if (VolatileData.stageData.GetBattleTriggers().Any(trig => trig.result == TrigResultType.Win && trig.action == TrigActionType.Escape)
 				&& !logs.Any(log => log is UnitDestroyLog && ((UnitDestroyLog)log).target.GetSide() == Side.Enemy))
-			Achieve("Ahimsa");
+			Achieve("Ahimsa");*/
 
 		// 사기가 10 이하인 캐릭터 존재 중 승리
 		if (UnitManager.GetAllUnits().Any(u => u.actualStats[Stat.Will] <= 10))

@@ -61,8 +61,8 @@ public class SkillSelectButton : SkillUI, IPointerDownHandler{
 		    }
 
 		    recentStageString = RM.StageAvailablePCTable[i][0];
-		    if (StageData.CandidatesOfStage(RM.StageAvailablePCTable[i]).Contains(inputSkill.ownerName))
-			    break;
+		    //if (StageData.CandidatesOfStage(RM.StageAvailablePCTable[i]).Contains(inputSkill.ownerName))
+			  //  break;
 	    }
 
 	    transform.Find("Notification").GetComponent<Image>().enabled = inputSkill.RequireLevel > int.Parse(recentStageString) / 10;

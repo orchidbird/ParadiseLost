@@ -278,6 +278,7 @@ public class UnitManager : MonoBehaviour{
 	public void GenerateUnitAutomatically(){
 		var infoListToSpawn = new List<UnitInfo>();
 		do{
+			infoListToSpawn.Clear();
 			for (int i = 0; i < 3; i++){
 				UnitInfo info;
 				do
@@ -445,7 +446,7 @@ public class UnitManager : MonoBehaviour{
     public void ApplyUSEsAtBattleStart(){
 	    //var POVBuff = StatusEffector.FindUSE("주인공");
 	    var HoldedDebuff = StatusEffector.FindUSE("붙잡힘");
-	    var POVName = VolatileData.GetStageData(VolatileData.progress.stageNumber, StageInfoType.POV);
+	    //var POVName = VolatileData.GetStageData(VolatileData.progress.stageNumber, StageInfoType.POV);
         foreach(var unit in GetAllUnits()){
 	        //if (unit.CodeName == POVName)
 		    //    StatusEffector.AttachAndReturnUSE(unit, new List<UnitStatusEffect> { new UnitStatusEffect(POVBuff, unit) }, unit, false);

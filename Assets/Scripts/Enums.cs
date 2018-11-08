@@ -84,8 +84,8 @@ namespace Enums {
     public enum Stat{
         MaxHealth = 1, Power = 2, Defense = 3, Agility = 4,
         CurrentHP = 6, Will = 7, CurrentAP = 8, // 이 셋은 엄밀히 말해 Stat은 아니지만 대미지/효과 계산에 포함되므로 추가
-        Level = 9,
-		None = 10 // 대미지 없음, 고정값, 또는 기타 특수한 경우
+        Level = 9, 
+	    Exp = 10, MaxExp = 11, None = 12 // 대미지 없음, 고정값, 또는 기타 특수한 경우
     }
 
 	public enum RangeForm {Front, AllDirection, Straight, Diamond, Square, Triangle, Cross, Diagonal, Sector, Global, One}

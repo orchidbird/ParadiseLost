@@ -21,9 +21,9 @@ public class MapBriefingManager : MonoBehaviour {
     public void GenerateUnitAndTileImages(RectTransform viewport, GameObject parent) {
         viewportCenter = viewport.position + new Vector3(0, 0, -50);
         viewportSize = viewport.rect.size;
-        var tileInfos = VolatileData.stageData.GetTileInfos();
-        AdjustScaleAndCalculatePos(tileInfos);
-        GenerateTileImages(tileInfos, parent);
+        //var tileInfos = VolatileData.stageData.GetTileInfos();
+        //AdjustScaleAndCalculatePos(tileInfos);
+        //GenerateTileImages(tileInfos, parent);
     }
 
     void AdjustScaleAndCalculatePos(List<TileInfo> tileInfoList) {

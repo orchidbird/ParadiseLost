@@ -30,7 +30,6 @@ public class BattleManager : MonoBehaviour{
 		BattleData.Initialize ();
 		triggers = BattleData.triggers;
 
-	    VolatileData.stageData.Load(true);
 	    LogManager.SetInstance();
 	    TileManager.SetInstance();
 		TileManager.Instance.GenerateMap();

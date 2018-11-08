@@ -82,7 +82,7 @@ public class ArchiveManager : MonoBehaviour {
             return null;
         GameObject stageButton = Instantiate(stageButtonPrefab);
 		var chapterNumber = (int) stageNum / 10;
-        stageButton.GetComponentInChildren<Text>().text = Language.Select(chapterNumber + "장 ", "Chapter " + chapterNumber) + "." + VolatileData.GetStageData(stageNum, StageInfoType.Title);
+        //stageButton.GetComponentInChildren<Text>().text = Language.Select(chapterNumber + "장 ", "Chapter " + chapterNumber) + "." + VolatileData.GetStageData(stageNum, StageInfoType.Title);
         stageButton.transform.Find("FrameImage").gameObject.SetActive(false);
         GameObject stars = stageButton.GetComponentInChildren<HorizontalLayoutGroup>().gameObject;
         for (int j = 0; j < bestRecords[stageNum].star; j++)
@@ -117,7 +117,7 @@ public class ArchiveManager : MonoBehaviour {
     }
 
     public void UpdateStageBriefingPanel() {
-        RenewBackgroundImage();
+        //RenewBackgroundImage();
         RenewExplanationText();
         RenewPOVimage();
         RenewBestRecordPCPortraits();
@@ -138,16 +138,11 @@ public class ArchiveManager : MonoBehaviour {
         }
     }
     string stageBackgroundsData = null;
-    void RenewBackgroundImage() {
-        background.sprite = VolatileData.GetStageBackground(selectedStage);
-    }
     void RenewExplanationText() {
-        explanationPanel.GetComponentInChildren<Text>().text = VolatileData.GetStageData(selectedStage, StageInfoType.Intro);
+        //explanationPanel.GetComponentInChildren<Text>().text = VolatileData.GetStageData(selectedStage, StageInfoType.Intro);
     }
-    void RenewPOVimage()
-    {
-	    POVImage.sprite = VolatileData.GetSpriteOf(SpriteType.Illust,
-		    VolatileData.GetStageData(selectedStage, StageInfoType.POV));
+    void RenewPOVimage(){
+	    //POVImage.sprite = VolatileData.GetSpriteOf(SpriteType.Illust, VolatileData.GetStageData(selectedStage, StageInfoType.POV));
         float lowBorder = POVImage.sprite.border.y * POVImage.rectTransform.sizeDelta.y * POVImage.rectTransform.localScale.y / POVImage.sprite.rect.size.y;
         POVImage.rectTransform.anchoredPosition3D = new Vector3(-30, 7 - lowBorder, 0);
     }
@@ -174,12 +169,12 @@ public class ArchiveManager : MonoBehaviour {
 	Dictionary<string, int> unitNumDict = new Dictionary<string, int>();
 	void CountUnitNum() {
 		unitNumDict = new Dictionary<string, int>();
-		List<string> unitNames = VolatileData.stageData.GetUnitGenInfos().Select(unitInfo => unitInfo.CodeName).ToList();
+		/*List<string> unitNames = VolatileData.stageData.GetUnitGenInfos().Select(unitInfo => unitInfo.CodeName).ToList();
 		foreach(var unitName in unitNames) {
 			if (!unitNumDict.ContainsKey(unitName))
 				unitNumDict.Add(unitName, 1);
 			else unitNumDict[unitName]++;
-		}
+		}*/
 	}
     
     void RenewBattleTriggers() {
@@ -187,10 +182,10 @@ public class ArchiveManager : MonoBehaviour {
 
         // 해당 스테이지의 모든 battleTrigger들마다, 그 battleTrigger가 한번이라도 클리어된 적이 있는지의 여부를 들고 있는 딕셔너리
         Dictionary<BattleTrigger, bool> battleTriggers = new Dictionary<BattleTrigger, bool>();
-        foreach (var battleTrigger in VolatileData.stageData.GetBattleTriggers()) {
+        /*foreach (var battleTrigger in VolatileData.stageData.GetBattleTriggers()) {
             if(battleTrigger.GetName == null)   continue;
             battleTriggers.Add(battleTrigger, everAchievedTriggers.ContainsKey(battleTrigger.korName));
-        }
+        }*/
 
         foreach (Transform child in objectTriggers.transform)
             Destroy(child.gameObject);

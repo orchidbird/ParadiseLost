@@ -65,7 +65,7 @@ public class LogManager : MonoBehaviour {
 	    foreach (var chain in ChainList.GetChainList())
 		    chain.Casting.ResetRealRange();
 
-	    yield return BattleManager.Instance.CheckWinOrLoseTriggers();
+	    //yield return BattleManager.Instance.CheckWinOrLoseTriggers();
 	    //Debug.Log("로그 실행 종료");
 	}
     IEnumerator ExecuteConsequentEventLogs() {

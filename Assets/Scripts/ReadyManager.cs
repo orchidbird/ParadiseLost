@@ -127,10 +127,10 @@ public class ReadyManager : MonoBehaviour{
 		bool isAllPickStage = (selectMax == availableNum);
 		FindObjectOfType<SelectableUnitCounter>().SetMaxSelectableUnitNumber (selectMax);
 
-        var selectableUnitNames = (VolatileData.gameMode == GameMode.Challenge)?
-	        RecordData.GetUnlockedCharacters() : StageData.CandidatesOfStage(VolatileData.progress.stageNumber); 
+        //var selectableUnitNames = (VolatileData.gameMode == GameMode.Challenge)?
+	        //RecordData.GetUnlockedCharacters() : StageData.CandidatesOfStage(VolatileData.progress.stageNumber); 
 
-		for (int i = 0; i < selectableUnitNames.Count; i++) {
+		/*for (int i = 0; i < selectableUnitNames.Count; i++) {
 			var unitButton = Instantiate(characterButtonPrefab, CharacterButtons.transform).GetComponent<AvailableUnitButton>();
 			var candidate = new Candidate (selectableUnitNames [i]);
 			candidates.Add(candidate);
@@ -139,7 +139,7 @@ public class ReadyManager : MonoBehaviour{
 			LoadSkillTree(unitButton.candidate);
 			if(RecordData.recentPicks.Contains(unitButton.codeName) && !VolatileData.stageData.IsTwoSideStage())
 				PickUnit(unitButton, true);
-		}
+		}*/
     }
 	
     public void ActivateUnitButtons(bool PC, bool activate) {

@@ -192,8 +192,6 @@ public class BattleTriggerManager : MonoBehaviour {
 
 	void Awake(){
         instance = this;
-		StageData stageData = VolatileData.stageData;
-		triggers = stageData.GetBattleTriggers();
 	}
 	void Start () {
         BattleUIManager.Instance.resultPanel.Checker = this;

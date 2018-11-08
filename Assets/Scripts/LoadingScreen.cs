@@ -35,7 +35,7 @@ public class LoadingScreen : MonoBehaviour{
 		ChapterTitle.text = info.Title;
 		ChapterText.text = info.Intro;
 		CharacterName.text = UnitInfo.ConvertName(info.POV, true);
-		Illust.sprite = VolatileData.GetSpriteOf(SpriteType.Illust, VolatileData.GetStageData(stage, StageInfoType.POV));
+		//Illust.sprite = VolatileData.GetSpriteOf(SpriteType.Illust, VolatileData.GetStageData(stage, StageInfoType.POV));
 		IllustBG.sprite = Illust.sprite;
 
 		if (afterSceneName == "Battle"){

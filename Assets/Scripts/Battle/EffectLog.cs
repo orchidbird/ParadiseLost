@@ -25,7 +25,8 @@ public class EffectLog : Log {
     }
 }
 
-public class HPChangeLog : EffectLog {
+public class HPChangeLog : EffectLog{
+	private readonly float maxHpCutRatio = 1f / 3;
     public Unit target;
 	public Unit caster; //연계할 경우 모든 EffectLog가 연계를 터뜨린 유닛의 Casting에 붙으므로 actor가 실제와 달라질 수 있는데 이 때문에 caster를 사용해야 함.
     public int amount { get { return -(int)damage.resultDamage; } }
@@ -63,6 +64,14 @@ public class HPChangeLog : EffectLog {
     public override IEnumerator Execute() {
 		tiles = new List<Tile> { target.TileUnderUnit };
 	    target.hp += amount;
+	    if (target.IsAlly && amount < 0){
+		    var hpLossRatio = (float) -amount / target.GetStat(Stat.MaxHealth);
+		    var hp = target.hp;
+		    target.myInfo.woundDuration += hpLossRatio * 50;
+		    target.myInfo.baseStats[Stat.MaxHealth] -= (int)(hpLossRatio * target.GetBaseStat(Stat.MaxHealth) * maxHpCutRatio);
+		    target.UpdateStats();
+		    target.hp = hp;
+	    }
 
 	    if (amount >= 0) yield break;
 

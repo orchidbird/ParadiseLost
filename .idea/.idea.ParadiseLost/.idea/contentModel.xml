@@ -775,7 +775,6 @@
           <e p="UI" t="Include">
             <e p="AvailableUnitButton.cs" t="Include" />
             <e p="BattleWarning.cs" t="Include" />
-            <e p="BGLoader.cs" t="Include" />
             <e p="BlinkingObject.cs" t="Include" />
             <e p="ClickEffect.cs" t="Include" />
             <e p="CustomNumberText.cs" t="Include" />

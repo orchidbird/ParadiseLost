@@ -91,9 +91,9 @@ public class BattleTrigger{
 		            
 		            var spawnCandidates = new List<string>();
 		            spawnCandidates.Add(parser.ConsumeString());
-		            if (spawnCandidates[0] == "random")
+		            //if (spawnCandidates[0] == "random")
 			            //생성할 유닛 후보들의 codeName List를 넘겨줌.
-			            spawnCandidates = VolatileData.stageData.GetUnitGenInfos().FindAll(info => info.Additive).ConvertAll(info => info.CodeName);    
+			          //  spawnCandidates = VolatileData.stageData.GetUnitGenInfos().FindAll(info => info.Additive).ConvertAll(info => info.CodeName);    
 		            
 		            var targetTilesList = new List<List<Vector2Int>>();
 		            var directionsList = new List<List<Direction>>();

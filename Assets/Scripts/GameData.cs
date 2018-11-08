@@ -81,10 +81,10 @@ namespace GameData{
             if (newRecordsAdded || unlockedCharacters == null) {
                 unlockedCharacters = new List<string>();
 	            foreach (var record in stageClearRecords){
-		            foreach (var unit in StageData.CandidatesOfStage(record.Key)){
+		            /*foreach (var unit in StageData.CandidatesOfStage(record.Key)){
 			            if(!unlockedCharacters.Contains(unit) && unit != "tien")
 				            unlockedCharacters.Add(unit);
-		            }
+		            }*/
 	            }
             }
             newRecordsAdded = false;
@@ -193,8 +193,6 @@ namespace GameData{
 		}
         public static int currentSaveSlotIndex = 0;
         public static string saveSlotName;
-
-        public static StageData stageData = new StageData(); // 현재 스테이지(progress.currentStage)에 대한 정보들
         
         public static void Reset() {
             progress.Reset();
@@ -296,29 +294,6 @@ namespace GameData{
             }
             return fontDict[name];
         }
-		
-	    static string stageInfo;
-        static string GetStageInfo(){
-	        return stageInfo ?? (stageInfo = Resources.Load<TextAsset>("Data/StageInfo").text);
-        }
-
-		public static int GetStageDate(StageNum stage){
-		    Debug.Log("Get Date of stage " + stage);
-			return int.Parse(Parser.FindRowDataOf(GetStageInfo(), ((int)stage).ToString())[1]);
-	    }
-
-		public static string GetStageData(StageNum stage, StageInfoType infoType){
-		    var column = (int) infoType + (infoType != StageInfoType.POV && language == Lang.Eng ? 1 : 0);
-			return Parser.FindRowDataOf(GetStageInfo(), ((int)stage).ToString())[column];
-	    }
-
-		public static Sprite GetStageBackground(StageNum stage) {
-			if (!stageBackgroundDict.ContainsKey((int)stage)) {
-				string bgImageName = Parser.FindRowDataOf(GetStageInfo(), ((int)stage).ToString())[3];
-				stageBackgroundDict.Add((int)stage, Resources.Load<Sprite>("Background/" + bgImageName));
-			}
-			return stageBackgroundDict[(int)stage];
-		}
 
         public static GameObject GetVisualEffectPrefab(string visualEffectName){
 	        if (visualEffectName == "-") return null;
@@ -401,74 +376,6 @@ namespace GameData{
 			engIntro = parser.ConsumeString();
 		}
 	}
-
-    public class StageData {
-	    private StageNum loadedStage;
-	    private List<BattleTrigger> _battleTriggers;
-	    private List<UnitInfo> _unitInfos;
-	    private List<TileInfo> _tileInfos;
-	    private List<AIInfo> _aiInfos;
-	    private List<UnitGenInfo> _genInfos;
-		private List<CameraWork> _cameraWorkInfos;
-        
-        public void Load(bool forced = false){
-	        if(!forced && loadedStage == VolatileData.progress.stageNumber) return;
-			
-	        //BattleTrigger.Spawn은 _genInfo를 참조하므로, 반드시 후자가 전자보다 먼저 읽혀야 한다!
-		    loadedStage = VolatileData.progress.stageNumber;
-	        _genInfos = Parser.GetParsedData<UnitGenInfo>();
-            _battleTriggers = Parser.GetParsedData<BattleTrigger>();
-            //_unitInfos = Parser.GetParsedData<UnitInfo>();
-            _tileInfos = Parser.GetParsedTileInfo();
-            _aiInfos = Parser.GetParsedData<AIInfo>();
-			_cameraWorkInfos = Parser.GetParsedData<CameraWork>();
-        }
-
-        public List<BattleTrigger> GetBattleTriggers() {
-            Load();
-            return _battleTriggers;
-        }
-        public List<UnitInfo> GetUnitInfos() {
-            Load();
-            return _unitInfos;
-        }
-        public List<TileInfo> GetTileInfos() {
-            Load();
-            return _tileInfos;
-        }
-        public List<AIInfo> GetAIInfos() {
-            Load();
-            return _aiInfos;
-        }
-	    public List<UnitGenInfo> GetUnitGenInfos(){
-		    Load();
-		    return _genInfos;
-	    }
-		public List<CameraWork> GetCameraWorkInfos() {
-			Load();
-			return _cameraWorkInfos;
-		}
-	    public bool IsTwoSideStage(){
-		    Load();
-		    return loadedStage == Setting.pintosVSHaskellStage;
-	    }
-	    public bool IsAgiligyChangingStage{get{
-		    Load();
-		    return Setting.agilityChangingStage.Contains(loadedStage);
-	    }}
-
-	    public static List<string> CandidatesOfStage(string[] stageRow){
-		    var result = new List<string>();
-		    if (stageRow != null)
-			    for (int i = 0; i < int.Parse (stageRow [2]); i++)
-				    result.Add (stageRow [i + 4]);
-		    
-		    return result;
-	    }
-		public static List<string> CandidatesOfStage(StageNum stage){
-			return CandidatesOfStage(Parser.FindRowOf(ReadyManager.Instance.StageAvailablePCTable, ((int) stage).ToString())); 
-	    }
-    }
 
     public class Progress {
         public bool isDialogue;

@@ -423,7 +423,6 @@
     <Compile Include="Assets\Scripts\TutorialScenario.cs" />
     <Compile Include="Assets\Scripts\UI\AvailableUnitButton.cs" />
     <Compile Include="Assets\Scripts\UI\BattleWarning.cs" />
-    <Compile Include="Assets\Scripts\UI\BGLoader.cs" />
     <Compile Include="Assets\Scripts\UI\BlinkingObject.cs" />
     <Compile Include="Assets\Scripts\UI\ClickEffect.cs" />
     <Compile Include="Assets\Scripts\UI\CustomNumberText.cs" />

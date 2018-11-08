@@ -23,8 +23,9 @@ public class UnitInfo{
 	public string codeName;
 	public Dictionary<Stat, int> baseStats = new Dictionary<Stat, int>();
 	public bool isAlly;
-	public List<ActiveSkill> activeSkills;
-	public List<PassiveSkill> passiveSkills;
+	public List<ActiveSkill> activeSkills = new List<ActiveSkill>();
+	public List<PassiveSkill> passiveSkills = new List<PassiveSkill>();
+	public float woundDuration;
 	
 	private string GetRandomCharacterName{get{
 		return Generic.PickRandom(new List<string> {"reina", "noel", "yeong", "lucius", "bianca", "lenien", "karldrich"});
@@ -58,9 +59,11 @@ public class UnitInfo{
 			baseStats.Add(Stat.Agility, RandomIntOfVariation(50, 1.04f));
 			baseStats.Add(Stat.Will, RandomIntOfVariation(100, 1.1f));
 			baseStats.Add(Stat.Level, 1);
+			baseStats.Add(Stat.MaxExp, 30);
+			baseStats.Add(Stat.Exp, 0);
 			activeSkills.Add(TableData.ActiveSkills.Find(skill => skill.korName == "순간 이동"));
 			//쿨타임이 2턴 이상이거나 비용이 민첩성의 1.5배를 넘는 스킬은 첫 스킬로 주지 않음
-			var availableSkills = TableData.ActiveSkills.FindAll(skill => skill.GetCooldown() < 2 && skill.GetRequireAP() < baseStats[Stat.Agility] * 1.5f);
+			var availableSkills = TableData.ActiveSkills.FindAll(skill => skill.GetCooldown() < 1 && skill.GetRequireAP() < baseStats[Stat.Agility] * 1.5f);
 			AddSkill(availableSkills.ConvertAll(skill => (Skill)skill));
 		}else{
 			baseStats.Add(Stat.MaxHealth, 250);

@@ -74,14 +74,14 @@ public class BattleReadyPanel : MonoBehaviour{
 		storyPanel.gameObject.SetActive(isBriefing);
 		mainPanel.SetActive(!isBriefing);
 		SkillResetButton.SetActive(!isBriefing);
-		ReadyManager.Instance.secret.enabled = isBriefing && VolatileData.stageData.IsTwoSideStage();
+		//ReadyManager.Instance.secret.enabled = isBriefing && VolatileData.stageData.IsTwoSideStage();
 		
         if (isBriefing) {
             RM.ActivateUnitButtons(PC:true, activate:false);
             RM.ActivateUnitButtons(PC:false, activate:true);
             MBM.GenerateUnitAndTileImages(backgroundPanel.GetComponent<RectTransform>(), backgroundPanel);
 	        LayoutRebuilder.ForceRebuildLayoutImmediate(conditionPanel.GetComponent<RectTransform>());
-			storyPanel.GetComponentInChildren<Text>().text = VolatileData.GetStageData(VolatileData.progress.stageNumber, StageInfoType.Summary);
+			//storyPanel.GetComponentInChildren<Text>().text = VolatileData.GetStageData(VolatileData.progress.stageNumber, StageInfoType.Summary);
 	        //0.882를 곱하는 이유는 깃발 이미지파일의 왼쪽 11.8%가 투명 영역으로 비어있기 때문.
 	        var newOffset = new Vector2(-conditionPanel.GetComponent<RectTransform>().rect.width * conditionPanel.GetComponent<RectTransform>().localScale.x * 0.882f, storyPanel.GetComponent<RectTransform>().offsetMax.y);
 	        storyPanel.GetComponent<RectTransform>().offsetMax = newOffset;

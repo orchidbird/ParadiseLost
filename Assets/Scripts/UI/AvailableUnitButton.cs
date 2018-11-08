@@ -107,19 +107,19 @@ public class AvailableUnitButton : MonoBehaviour, IPointerDownHandler, IPointerE
 			//출전중이 아니라면
 			if(RM.pickedList.All(unit => unit.CodeName != codeName)){
 				SoundManager.Instance.PlaySE ("Click");
-				if (VolatileData.stageData.IsTwoSideStage()){
+				/*if (VolatileData.stageData.IsTwoSideStage()){
 					var faction = Utility.PCNameToFaction (codeName);
 					RM.PickFaction (faction);
 				}else
-					RM.PickUnit(this, true);
+					RM.PickUnit(this, true);*/
 			}
 			//이미 출전 중 && 최근 선택한 유닛이면 빠짐(파티 화면 한정)
 			else if(RM.RecentUnitButton == this) {
 				SoundManager.Instance.PlaySE ("Cancel");
-				if(VolatileData.stageData.IsTwoSideStage ())
+				/*if(VolatileData.stageData.IsTwoSideStage ())
 					RM.UnPickAll();
 				else
-					RM.PickUnit(this, false);
+					RM.PickUnit(this, false);*/
 			}
 		}
 		
