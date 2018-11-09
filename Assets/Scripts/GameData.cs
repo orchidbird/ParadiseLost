@@ -10,7 +10,23 @@ namespace GameData{
 	// 달라지지 않는 데이터 - 즉, 로드와 세이브, 리셋을 해도 달라지지 않을 데이터는 VolatileData 쪽에(언어 설정, 캐싱 정보 등).
 	public class RecordData{
 		public static List<UnitInfo> units = new List<UnitInfo>();
-        public static Progress progress = new Progress();
+		public static List<UnitInfo> AllUnitInfo{get{
+			Debug.Log("기존 병력: " + units.Count);
+			if(units.Count == 0)
+				CreateInitialCharacters();
+			Debug.Log("총 병력: " + units.Count);
+			return units;
+		}}
+		static void CreateInitialCharacters(){
+			//최소 2명 이상은 공격기를 보유하도록 보장
+			do{
+				units.Clear();
+				for (int i = 0; i < 6; i++)
+					units.Add(new UnitInfo(true));
+			} while (units.Count(unit => unit.HasOffensiveSkill) < 2);
+		}
+
+		public static Progress progress = new Progress();
 		public static float totalPlayingTime = 0;
 		public static int level{get{return (int)VolatileData.progress.stageNumber / 10;}} 
         public static Dictionary<StageNum, List<StageClearRecord>> stageClearRecords = new Dictionary<StageNum, List<StageClearRecord>>();

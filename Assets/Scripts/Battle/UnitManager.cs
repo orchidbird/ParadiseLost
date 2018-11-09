@@ -282,7 +282,7 @@ public class UnitManager : MonoBehaviour{
 			for (int i = 0; i < 3; i++){
 				UnitInfo info;
 				do
-					info = Generic.PickRandom(RecordData.units); while (infoListToSpawn.Contains(info));
+					info = Generic.PickRandom(RecordData.AllUnitInfo); while (infoListToSpawn.Contains(info));
 				infoListToSpawn.Add(info);
 			}
 		} while (infoListToSpawn.Count(info => info.HasOffensiveSkill) <= 2);

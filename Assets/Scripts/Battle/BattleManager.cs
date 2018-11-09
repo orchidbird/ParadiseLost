@@ -42,8 +42,6 @@ public class BattleManager : MonoBehaviour{
 		bloodyScreen.material.SetFloat("_HP_Percent", 1);
 		
 		yield return MoveCameraToTileAveragePosAndZoomOut();
-		CreateInitialCharacters();
-		
 		UM.GenerateUnitAutomatically();
 		BattleUIInitialize();
 		yield return MoveCameraToPCAveragePos();
@@ -52,14 +50,7 @@ public class BattleManager : MonoBehaviour{
 		StartCoroutine (TurnManager ());
     }
 
-	void CreateInitialCharacters(){
-		//최소 2명 이상은 공격기를 보유하도록 보장
-		do{
-			RecordData.units.Clear();
-			for (int i = 0; i < 6; i++)
-				RecordData.units.Add(new UnitInfo(true));
-		} while (RecordData.units.Count(unit => unit.HasOffensiveSkill) <= 2);
-	}
+	
 
 	IEnumerator WaitForClickingConditionPanel() {
 		// condition panel이 사라진 이후 유닛 배치 UI가 뜨고, 그 이후 유닛 배치를 해야 하므로 일시정지.

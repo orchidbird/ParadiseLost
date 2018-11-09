@@ -52,6 +52,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\CenterManager.cs" />
     <Compile Include="Assets\ChainCutScene.cs" />
     <Compile Include="Assets\ChangeColor.cs" />
     <Compile Include="Assets\CustomCursor.cs" />

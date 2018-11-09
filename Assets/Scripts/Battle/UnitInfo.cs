@@ -28,7 +28,7 @@ public class UnitInfo{
 	public float woundDuration;
 	
 	private string GetRandomCharacterName{get{
-		return Generic.PickRandom(new List<string> {"reina", "noel", "yeong", "lucius", "bianca", "lenien", "karldrich"});
+		return Generic.PickRandom(new List<string> {"reina", "noel", "yeong", "lucius", "bianca", "lenien", "eren", "karldrich"});
 	}}
 
 	void AddSkill(List<Skill> potentialSkills){
@@ -78,8 +78,6 @@ public class UnitInfo{
 		}
 		baseStats.Add(Stat.CurrentHP, baseStats[Stat.MaxHealth]);
 		AddSkill(TableData.PassiveSkills.ConvertAll(skill => (Skill)skill));
-
-		RecordData.units.Add(this);
 	}
 
 	public bool HasOffensiveSkill{get { return activeSkills.Any(skill => skill.IsOffensive()); }}
