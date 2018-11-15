@@ -61,7 +61,7 @@ public class CustomUIText : MonoBehaviour{
     }
 
     private void Clear(){
-	    UI.DestroyAllChilds(transform);
+	    UI.DestroyAllChildren(transform);
 		characterInstances.Clear();
 	}
 

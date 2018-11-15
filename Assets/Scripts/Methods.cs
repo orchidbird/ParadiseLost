@@ -261,7 +261,7 @@ namespace UtilityMethods{
 	}
 
 	public static class UI{
-		public static void DestroyAllChilds(Transform transform){
+		public static void DestroyAllChildren(Transform transform){
 			List<Transform> childs = new List<Transform>();
 			foreach (Transform child in transform)	
 				childs.Add(child);

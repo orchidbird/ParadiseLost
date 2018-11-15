@@ -11,10 +11,8 @@ namespace GameData{
 	public class RecordData{
 		public static List<UnitInfo> units = new List<UnitInfo>();
 		public static List<UnitInfo> AllUnitInfo{get{
-			Debug.Log("기존 병력: " + units.Count);
 			if(units.Count == 0)
 				CreateInitialCharacters();
-			Debug.Log("총 병력: " + units.Count);
 			return units;
 		}}
 		static void CreateInitialCharacters(){

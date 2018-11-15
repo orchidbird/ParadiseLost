@@ -394,7 +394,7 @@ namespace Battle.Turn {
 			}
 			
 			yield return new WaitForSeconds(ChainCutScene.moveDuration * 2 + ChainCutScene.waitTime - timeInterval);
-			UI.DestroyAllChilds(CutSceneHolder.transform);
+			UI.DestroyAllChildren(CutSceneHolder.transform);
 			CutSceneHolder.GetComponent<Image>().enabled = false;
 		}
 	}

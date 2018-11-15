@@ -20,6 +20,6 @@ public class TutorialReviewPanel : MonoBehaviour{
 	}
 
 	private void OnDisable(){
-		UI.DestroyAllChilds(BackGround.transform);
+		UI.DestroyAllChildren(BackGround.transform);
 	}
 }

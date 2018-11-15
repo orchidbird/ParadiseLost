@@ -238,7 +238,7 @@ public class BattleUIManager : UIManager{
 
 	void DeactivateSePanelList(){
 		for(int i = sePanelList.transform.childCount-1 ; i >= 0 ; i--)
-			UI.DestroyAllChilds(sePanelList.transform.GetChild(i));
+			UI.DestroyAllChildren(sePanelList.transform.GetChild(i));
 	}
 
     public void ActivateStatusEffectDisplayPanelAndSetText(RectPosition rectPosition, StatusEffect statusEffect) {
