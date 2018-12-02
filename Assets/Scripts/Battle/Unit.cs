@@ -64,7 +64,7 @@ public class Unit : Entity{
 		var emptyTiles = TileManager.Instance.GetAllTiles().Values.ToList().FindAll(tile => !tile.IsUnitOnTile());
 		if (IsAlly){
 			var enemy = UnitManager.GetAllUnits().Find(item => !item.IsAlly);
-			emptyTiles = emptyTiles.FindAll(tile => Calculate.Distance(enemy, tile, -1) >= 4); //적으로부터의 거리가 4타일 이상인 곳
+			emptyTiles = emptyTiles.FindAll(tile => Calculate.Distance(enemy, tile, -1) >= Setting.initDistToEnemy); //적으로부터의 거리가 일정 이상인 곳
 		}
 		SetPivot(Generic.PickRandom(emptyTiles).Location);
 	}

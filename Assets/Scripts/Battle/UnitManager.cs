@@ -28,17 +28,14 @@ public class UnitManager : MonoBehaviour{
     List<Collectable> Collectables = new List<Collectable>();
     public Dictionary<string, List<string>> PCSelectedSkillList = new Dictionary<string, List<string>>();
     int generatedPC = 0;
-    List<UnitGenInfo> genInfos = new List<UnitGenInfo>();
     
 	public static List<Unit> GetAllUnits() {return Instance.allUnits;}
 
 	public Unit GetAnUnit(string engName){
 		Unit wantedUnit = null;
-		foreach(Unit unit in GetAllUnits()){
-			if (unit.CodeName == engName) {
+		foreach(Unit unit in GetAllUnits())
+			if (unit.CodeName == engName) 
 				wantedUnit = unit;
-			}
-		}
 		return wantedUnit;
 	}
 
@@ -326,34 +323,7 @@ public class UnitManager : MonoBehaviour{
 		unit.transform.position = new Vector3(averagePos.x, averagePos.y, zValue - 0.05f);
     }
 
-    /*public void GenerateUnitsAtPosition(string codeName, List<Vector2Int> positions, List<Direction> directions){
-        //codeName인 유닛을 positions에, directions의 방향으로 생성
-        for (int i = 0; i < positions.Count; i++) {
-            UnitInfo unitInfo = VolatileData.stageData.GetUnitInfos().Find(info => info.codeName == codeName);
-
-            int range = 0;
-            Vector2Int? position = null;
-            do {
-                foreach (var tile in Utility.TilesInDiamondRange(positions[i], 0, range, 0))
-					if(!tile.IsUnitOnTile()) {
-                        position = tile.Location;
-                        break;
-                    }
-	            
-                range++;
-            } while (position == null);
-
-	        var genInfo = new UnitGenInfo((Vector2Int) position, directions[i]) {CodeName = unitInfo.codeName};
-	        var unit = GenerateUnit(genInfo, false);
-
-	        if (TileManager.Instance.GetTile(genInfo.Position).fogType != FogType.None) continue;
-			if(regenEffect == null) regenEffect = Resources.Load("VisualEffect/Prefab/ControllerActive") as GameObject;
-			LogManager.Instance.Record (new VisualEffectLog (unit, regenEffect, (Setting.basicCameraMoveDuration + 0.5f) * 2));
-	        LogManager.Instance.Record(new CameraMoveLog(unit.transform.position, Setting.basicCameraMoveDuration));
-	        LogManager.Instance.Record(new CameraMoveLog(null, 0.5f));
-        }
-    }*/
-	static GameObject regenEffect;
+    static GameObject regenEffect;
 
 	public void AllPassiveSkillsTriggerOnStageStart(){
 		foreach (Unit caster in GetAllUnits())
@@ -444,12 +414,8 @@ public class UnitManager : MonoBehaviour{
 	}
 
     public void ApplyUSEsAtBattleStart(){
-	    //var POVBuff = StatusEffector.FindUSE("주인공");
 	    var HoldedDebuff = StatusEffector.FindUSE("붙잡힘");
-	    //var POVName = VolatileData.GetStageData(VolatileData.progress.stageNumber, StageInfoType.POV);
         foreach(var unit in GetAllUnits()){
-	        //if (unit.CodeName == POVName)
-		    //    StatusEffector.AttachAndReturnUSE(unit, new List<UnitStatusEffect> { new UnitStatusEffect(POVBuff, unit) }, unit, false);
 	        if (unit.holdName == "") continue;
 	        var target = GetAllUnits().Find(_unit => _unit.CodeName == unit.holdName);
 	        if(target != null)

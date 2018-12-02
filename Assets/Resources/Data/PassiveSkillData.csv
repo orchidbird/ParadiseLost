@@ -48,7 +48,6 @@ eugene	0	P0		거울 공명	Mirror Resonance	대상에 자신이나 동료가 포
 eugene	11	C12		여행자의 발걸음	Adventuristic Step	매턴 기술을 시전하기 전까지, 이동 소모 행동력의 거리 가중치가 1 줄어듭니다.	Every turn before casting a skill, moving cost increasing by tile will be 1.
 eugene	0	A29		순수한 물	Pure Water	ABCD	ABCD
 eugene	0	B29		은의 지평선	Silver Horizon	ABCD	ABCD
-eugene	0	C36		야영 전문가	야영 전문가	ABCD	ABCD
 eugene	0	A43		청명수의 은총	청명수의 은총	ABCD	ABCD
 eugene	0	B43		백색 파문	백색 파문	ABCD	ABCD
 grenev	0	P0		고지대 점령	Siege Mode	이동할 때 <color=red>30%</color> 더 많은 행동력을 사용합니다.^이동할 때 높이차 3단계까지 넘어갈 수 있습니다.	Require <color=red>30%</color> more AP for moving.^Can go to 3 level higher tile when move.

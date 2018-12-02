@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using Enums;
+﻿using Enums;
 
 public class Setting{
 	//기능 통제
@@ -11,8 +10,6 @@ public class Setting{
 	public static readonly StageNum readySceneOpenStage = StageNum.S6_1; //능력 선택과 동시에 개방
 	public static readonly StageNum WillCharacteristicOpenStage = StageNum.S7_1;
 	public static readonly StageNum manualGenerationOpenStage = StageNum.S9_1;
-	public static readonly StageNum pintosVSHaskellStage = StageNum.S20_1;
-	public static readonly List<StageNum> agilityChangingStage = new List<StageNum>{StageNum.S6_1, StageNum.S11_1};
 	public static bool clickEnable = true; //ActionButton에 대한 마우스 입력 허용 여부. 단축키를 강제할 때만 false로 두면 됨
 	public static bool shortcutEnable = true;
 	public static bool showMotionPC = true;
@@ -23,7 +20,8 @@ public class Setting{
 	public static readonly int moveCostAcc = 2; //이동할 때 타일당 추가로 붙는 계차값
 	public static readonly float defenseHalfLevel = 100; //방어력에 의한 감소율이 절반이 되는 값. 100일 때 절반이 된다
 	public static readonly float sideAttackBonus = 1.1f;
-	public static readonly float backAttackBonus = 1.25f; 
+	public static readonly float backAttackBonus = 1.25f;
+	public static readonly int initDistToEnemy = 5;
 	
 	//변수 통제(시간)
 	public static readonly float fadeInWaitingTime = 0.3f;
