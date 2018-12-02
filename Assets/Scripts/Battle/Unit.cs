@@ -26,7 +26,7 @@ public class Unit : Entity{
 	public TextMesh OrderText;
 	GameObject chainAttackerIcon;
 	public GameObject faintTurnSkipIcon;
-	public HighlightBorder highlightBorder;
+	MaterialManager MaterialManager;
 	OrderPortraitSlot orderPortraitSlot;
 
 	private SpriteRenderer overrideImage;
@@ -119,36 +119,35 @@ public class Unit : Entity{
 
 	public void ShowArrow(){
 		activeArrowIcon.SetActive(true);
-		highlightBorder.Activate (ColorList.CMY, 1.0f);
+		MaterialManager.Activate (ColorList.CMY, 1.0f);
 	}
 	void HideArrow(){
-		highlightBorder.InactiveBorder ();
+		MaterialManager.Reset();
 		activeArrowIcon.SetActive(false);
 	}
 
 	public void PreviewChainTriggered(bool highlightOn){
-		if(highlightBorder == null) return;
+		if(MaterialManager == null) return;
 		if (highlightOn)	
-			highlightBorder.Activate (ColorList.ForChain, 0.33f);
+			MaterialManager.Activate (ColorList.ForChain, 0.33f);
 		else{
-			highlightBorder.InactiveBorder ();
+			MaterialManager.Reset ();
 			DisplayChainIcon(false);
 		}
 	}
 
 	public void SetMouseOverHighlightBorder(bool onoff){
 		if (onoff)
-			highlightBorder.HighlightWithBlackAndWhite();
+			MaterialManager.HighlightBorderWithBlackAndWhite();
 		else 
-			highlightBorder.InactiveBorder ();
+			MaterialManager.Reset ();
 	}
-
 	public void SetMouseOverHighlightUnitAndPortrait(bool onoff){
 		if (BattleData.turnUnit == this) return;
 			
-		SetMouseOverHighlightBorder (onoff);
+		SetMouseOverHighlightBorder(onoff);
 		if (orderPortraitSlot != null)
-			orderPortraitSlot.HighlightPortrait (onoff);
+			orderPortraitSlot.HighlightPortrait(onoff);
 	}
 
 	public bool IsAlreadyBehavedObject(){
@@ -1305,7 +1304,7 @@ public class Unit : Entity{
 		chainAttackerIcon = transform.Find("VisualProperty/icons/chain").gameObject;
 		overrideImage = transform.Find("VisualProperty/OverrideImage").GetComponent<SpriteRenderer>();
 		afterimage = transform.Find("VisualProperty/Afterimage").gameObject;
-		highlightBorder = GetComponent<HighlightBorder> ();
+		MaterialManager = GetComponent<MaterialManager>();
 	}
 
 	void Start(){
@@ -1461,12 +1460,12 @@ public class Unit : Entity{
 
 		foreach(var kv in attackDamage.relativeModifiers)
 			if(kv.Value != 1)
-				ShowBonusIcon(kv.Key);
+				ShowBonusIcon(kv.Key, attackDamage);
 		foreach(var kv in attackDamage.absoluteModifiers)
 			if (kv.Value != 0)
-				ShowBonusIcon(kv.Key);
+				ShowBonusIcon(kv.Key, attackDamage);
 	}
-	void ShowBonusIcon(Sprite sprite){
+	void ShowBonusIcon(Sprite sprite, DamageCalculator.AttackDamage attackDamage){
 		var icon = new GameObject(sprite.name, typeof(RectTransform));
 		icon.transform.SetParent(modifierIcons.transform);
 		var image = icon.AddComponent<Image>();
@@ -1474,6 +1473,12 @@ public class Unit : Entity{
 		icon.GetComponent<RectTransform>().sizeDelta = new Vector2(0.15f, 0.15f);
 		icon.GetComponent<RectTransform>().localPosition = Vector3.zero;
 		modIconInstances.Add(icon);
+		
+		if (sprite != VolatileData.GetIcon(IconSprites.Direction) && sprite != VolatileData.GetIcon(IconSprites.Height)) return;		
+		if (attackDamage.IsCritical)
+			image.color = HealthViewer.criticalColor;
+		else
+			image.color = attackDamage.relativeModifiers[sprite] > 1 ? Color.green : Color.red;
 	}
 
 	public void HideBonusIcons(){
@@ -1545,8 +1550,6 @@ public class Unit : Entity{
 		bloodyScreen.SetFloat("_HP_Percent", 1);
 	}
 	IEnumerator FadeOutEffect(TrigActionType actionType){
-		GetComponent<HighlightBorder>().enabled = false;
-		//SetMouseOverHighlightUnitAndPortrait (false);
 		var BM = BattleManager.Instance;
 		float fadeOutDuration = Setting.unitFadeOutDuration;
 		float fadeInDuration = Setting.unitFadeInDuration;

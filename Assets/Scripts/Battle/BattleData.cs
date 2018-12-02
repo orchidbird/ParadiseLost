@@ -150,14 +150,11 @@ public static class BattleData{
 		public EventTrigger directionLongSelected = new EventTrigger();
 		public EventTrigger skillSelected = new EventTrigger();
 		public EventTrigger<ActionCommand> actionCommand = new EventTrigger<ActionCommand>();
-		public EventTrigger resetUnitInput = new EventTrigger();
-		public EventTrigger finishUnitInput = new EventTrigger();
         public EventTrigger castCheckYesClicked = new EventTrigger();
         public EventTrigger castCheckNoClicked = new EventTrigger();
 	}
 
 	public static TutorialState TutoState;
-	public static Candidate unitToGenerate;
 	public static bool rightClickLock;
 	public static bool longClickLock;
 	public static bool shortClickLock;
@@ -204,7 +201,6 @@ public static class BattleData{
 	// 또 전투 시작할 때 반드시 Initialize() 함수를 불러야 한다(현재는 BattleManager 인스턴스의 Awake()시 호출함)
 	public static void Initialize(){
 		TutoState = TutorialState.None;
-		unitToGenerate = null;
 		rightClickLock = false;
 		longClickLock = false;
 		shortClickLock = false;

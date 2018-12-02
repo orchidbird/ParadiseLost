@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 22272118}
   - component: {fileID: 21280136}
   - component: {fileID: 114109202501214672}
-  - component: {fileID: 114052993278641530}
+  - component: {fileID: 114104185677496718}
   m_Layer: 0
   m_Name: unitPrefab
   m_TagString: Untagged
@@ -346,7 +346,6 @@ MonoBehaviour:
   healthViewer: {fileID: 11421940}
   OrderText: {fileID: 10293216}
   faintTurnSkipIcon: {fileID: 1205952590470146}
-  highlightBorder: {fileID: 0}
   modifierIcons: {fileID: 1536731009714956}
   modIconInstances: []
   evasionTextObject: {fileID: 1880109207049558}
@@ -356,6 +355,12 @@ MonoBehaviour:
   criticalApplied: 0
   movedTileCount: 0
   previousMoveCost: 0
+  holdName: 
+  connectedName: 
+  nameKor: 
+  side: 0
+  isObject: 0
+  size: {x: 1, y: 1}
   notMovedTurnCount: 0
   activityPoint: 0
   chargeEffectPrefab: {fileID: 1000013694251166, guid: 77bd5a11acebf4fff9feabc7419e83d3,
@@ -363,6 +368,7 @@ MonoBehaviour:
   DamageTextPrefab: {fileID: 114585000940519828, guid: ca5a50fc0e1a11e478ce4841cd70d0aa,
     type: 2}
   hp: 0
+  objectTag: 0
   ccIcon: {fileID: 212843240715341936}
 --- !u!212 &21201284
 SpriteRenderer:
@@ -696,7 +702,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0.000000007450581}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.05}
 --- !u!1001 &100100000
@@ -1671,7 +1677,7 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
---- !u!114 &114052993278641530
+--- !u!114 &114104185677496718
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -1682,8 +1688,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57de50ef24ee9409d80f4d88d7820ef3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: 0
   spriteRenderer: {fileID: 21280136}
-  highlightBorderMaterial: {fileID: 2100000, guid: 5a96c8fba7207594fa2020e77061e262,
+  image: {fileID: 0}
+  highlightBorderMaterial: {fileID: 2100000, guid: bb8853c69fde54a3db65ed18fd2a3d6d,
     type: 2}
 --- !u!114 &114109202501214672
 MonoBehaviour:

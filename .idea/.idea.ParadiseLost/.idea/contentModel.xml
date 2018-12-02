@@ -365,7 +365,6 @@
             <e p="Aura.cs" t="Include" />
             <e p="BattleData.cs" t="Include" />
             <e p="BattleManager.cs" t="Include" />
-            <e p="BattleReadyPanel.cs" t="Include" />
             <e p="BattleTrigger.cs" t="Include" />
             <e p="BattleTriggerManager.cs" t="Include" />
             <e p="CameraWork.cs" t="Include" />
@@ -720,9 +719,6 @@
             <e p="UnitManager.cs" t="Include" />
             <e p="UnitStatusEffect.cs" t="Include" />
           </e>
-          <e p="Challenge" t="Include">
-            <e p="ArchiveManager.cs" t="Include" />
-          </e>
           <e p="Dialogue" t="Include">
             <e p="DialogueData.cs" t="Include" />
             <e p="DialogueDebugPanel.cs" t="Include" />
@@ -730,23 +726,18 @@
             <e p="DialogueManager.cs" t="Include" />
           </e>
           <e p="Enums.cs" t="Include" />
-          <e p="EtherText.cs" t="Include" />
           <e p="Formula.cs" t="Include" />
           <e p="GameData.cs" t="Include" />
           <e p="Graphic" t="Include">
             <e p="TextMeshOutline.cs" t="Include" />
           </e>
-          <e p="HighlightBorder.cs" t="Include" />
           <e p="LoadingScreen.cs" t="Include" />
           <e p="LogTracker.cs" t="Include" />
-          <e p="Magnifier.cs" t="Include" />
-          <e p="MapBriefingManager.cs" t="Include" />
+          <e p="MaterialManager.cs" t="Include" />
           <e p="MenuButton.cs" t="Include" />
           <e p="Methods.cs" t="Include" />
           <e p="Parser.cs" t="Include" />
-          <e p="PlacedUnitCheckPanel.cs" t="Include" />
           <e p="RaycastUI.cs" t="Include" />
-          <e p="ReadyManager.cs" t="Include" />
           <e p="RectPosition.cs" t="Include" />
           <e p="RightScreen_BattleReady.cs" t="Include" />
           <e p="Save" t="Include">
@@ -756,10 +747,8 @@
           </e>
           <e p="SaveSlotPanel.cs" t="Include" />
           <e p="SceneLoader.cs" t="Include" />
-          <e p="SelectableUnitCounter.cs" t="Include" />
           <e p="Setting.cs" t="Include" />
           <e p="SkillInfoButton.cs" t="Include" />
-          <e p="SkillSelectButton.cs" t="Include" />
           <e p="SoundManager.cs" t="Include" />
           <e p="SteamAchievementManager.cs" t="Include" />
           <e p="Steamworks.NET" t="Include">
@@ -774,7 +763,6 @@
           <e p="TutorialReviewPanel.cs" t="Include" />
           <e p="TutorialScenario.cs" t="Include" />
           <e p="UI" t="Include">
-            <e p="AvailableUnitButton.cs" t="Include" />
             <e p="BattleWarning.cs" t="Include" />
             <e p="BlinkingObject.cs" t="Include" />
             <e p="ClickEffect.cs" t="Include" />

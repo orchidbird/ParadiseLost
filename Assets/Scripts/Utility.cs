@@ -374,6 +374,7 @@ public class Utility : MonoBehaviour {
     }
 
     public static List<Unit> UnitsInRange(List<Tile> input){
+        Debug.Assert(input != null);
         return input.FindAll(tile => tile.IsUnitOnTile()).ConvertAll(tile => tile.GetUnitOnTile());
     }
 

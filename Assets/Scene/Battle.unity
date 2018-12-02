@@ -7779,7 +7779,6 @@ MonoBehaviour:
   skillNamePanelUI: {fileID: 664623564}
   phaseUI: {fileID: 680909715}
   detailInfoUI: {fileID: 614078568}
-  placedUnitCheckUI: {fileID: 1271338679}
   sePanelPrefab: {fileID: 1918958613840120, guid: bdc965dc320e475448fe8c0ac4017ec4,
     type: 2}
   sePanelList: {fileID: 521388002}

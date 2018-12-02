@@ -31,7 +31,6 @@ public class BattleUIManager : UIManager{
     public GameObject skillNamePanelUI;
     public GameObject phaseUI;
     public DetailInfoPanel detailInfoUI;
-    public PlacedUnitCheckPanel placedUnitCheckUI;
 	public GameObject sePanelPrefab;
 	public GameObject sePanelList;
     public StatusEffectDisplayPanel statusEffectDisplayPanel;
@@ -393,20 +392,9 @@ public class BattleUIManager : UIManager{
 		Vector2 position = obj.gameObject.transform.position;
 		SetMovedUICanvasOnCenter (position);
 	}
-	private void SetMovedUICanvasOnCenter(Vector2 position)
-	{
+	private void SetMovedUICanvasOnCenter(Vector2 position){
 		Vector3 newPosition = (new Vector3(position.x, position.y, -8));
 		movedUICanvas.transform.position = newPosition;
-	}
-
-	public void EnablePlacedUnitCheckUI() {
-		placedUnitCheckUI.gameObject.SetActive(true);
-		ReadyManager RM = FindObjectOfType<ReadyManager>();
-		placedUnitCheckUI.SetUnitPortraits(RM.pickedList);
-	}
-
-	public void DisablePlacedUnitCheckUI() {
-		placedUnitCheckUI.gameObject.SetActive(false);
 	}
 
 	public UnityEvent activateDetailInfoEvent = new UnityEvent ();

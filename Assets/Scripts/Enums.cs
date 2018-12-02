@@ -130,7 +130,7 @@ namespace Enums {
 		Etc // 기타 변수
 	}
 
-    public enum IconSprites {Transparent, Black, Bind, Silence, Faint, Collect, Chain, Standby, PointSkill, AutoSkill, Crown, LeftArrow, RightArrow, Spotlight, Taunt, Deathrattle, Fear}
+    public enum IconSprites {Transparent, Black, Bind, Silence, Faint, Collect, Chain, Standby, PointSkill, AutoSkill, Crown, LeftArrow, RightArrow, Taunt, Deathrattle, Fear, Direction, Height}
     public enum SpriteType {Portrait, Illust, UnitImage, TileImage, Icon}
 
 	public enum WillChangeType {Pain, Exhausted, Cheer, Disturbed, Shocked, DirectNeutralize, Angry, Guardian, Saviour, Cooperative, Chain, Blood, Etc}

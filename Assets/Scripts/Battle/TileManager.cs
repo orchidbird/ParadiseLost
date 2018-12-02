@@ -146,9 +146,8 @@ public class TileManager : MonoBehaviour {
 	public void PreselectTiles(List<Tile> tiles){
 		if (preselectLockOn) return;
 		
-		foreach (var tile in tiles){
+		foreach (var tile in tiles)
 			tile.SetPreSelected (true);
-		}
 	}
 
 	public void PreselectTilesForTutorial(List<Tile> tiles){
@@ -260,7 +259,7 @@ public class TileManager : MonoBehaviour {
             tile.Value.UpdateRemainPhaseAtPhaseEnd();
     }
 
-	public readonly static int mapSize = 7;
+	static readonly int mapSize = 9;
 	void GenerateTiles(){
 		for (int x = 1; x <= mapSize; x++)
 			for (int y = 1; y <= mapSize; y++)

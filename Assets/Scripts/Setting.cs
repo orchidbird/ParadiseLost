@@ -21,7 +21,7 @@ public class Setting{
 	public static readonly float defenseHalfLevel = 100; //방어력에 의한 감소율이 절반이 되는 값. 100일 때 절반이 된다
 	public static readonly float sideAttackBonus = 1.1f;
 	public static readonly float backAttackBonus = 1.25f;
-	public static readonly int initDistToEnemy = 5;
+	public static readonly int initDistToEnemy = 8;
 	
 	//변수 통제(시간)
 	public static readonly float fadeInWaitingTime = 0.3f;

@@ -22,7 +22,6 @@ public class HealthViewer : MonoBehaviour { //Unit뿐 아니라 LogDisplay에서
     public GameObject shieldDamageBar;
 	public SpriteRenderer HpBarIcon;
 	public SpriteRenderer HpBarFrame;
-	public SpriteRenderer HpBarOrb;
 
     int currentHealth;
 	int maxHealth;
@@ -136,6 +135,7 @@ public class HealthViewer : MonoBehaviour { //Unit뿐 아니라 LogDisplay에서
     readonly Color recoverBarColor = new Color(0f, 1.0f, 0.25f);
     readonly Color damageBarColor = new Color(0.7f, 0f, 0f);
     readonly Color shieldDamageBarColor = new Color(0.9f, 0.3f, 0.3f);
+	public static readonly Color criticalColor = new Color(0.625f, 0, 0.733f);
     
     bool isUI;
     void Awake () {

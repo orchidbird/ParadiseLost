@@ -219,8 +219,6 @@ public class StatusEffect{
 	    Skill originSkill = GetOriginSkill();
         if (originSkill != null)
             return originSkill.icon;
-        if(myInfo.displayEng == "Protagonist")
-            return VolatileData.GetIcon(IconSprites.Spotlight);
 	    if(myInfo.displayEng == "Fear")
 		    return VolatileData.GetIcon(IconSprites.Fear);
 	    

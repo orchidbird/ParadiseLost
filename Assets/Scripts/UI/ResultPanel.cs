@@ -23,9 +23,6 @@ public class ResultPanel : MonoBehaviour{
 		ScoreText.gameObject.SetActive(true);
 		ScoreText.text = "";
 		sceneLoader = Checker.SceneLoader;
-		
-		if(ReadyManager.Instance != null)
-			Destroy(ReadyManager.Instance.gameObject);
 	}
 
 	public IEnumerator PrintLoseResult(){
