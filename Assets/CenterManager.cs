@@ -1,4 +1,6 @@
-﻿using GameData;
+﻿using System.Collections;
+using Enums;
+using GameData;
 using UnityEngine;
 using UnityEngine.UI;
 using UtilityMethods;
@@ -22,6 +24,7 @@ public class CenterManager : MonoBehaviour{
         ShowAvailableSoldiers();
     }
     void ShowAvailableSoldiers(){
+        ClearSoldierList();
         UIManager.Instance.PushUI(SoldierList);
         foreach (var unit in RecordData.AllUnitInfo){
             var soldier = Instantiate(SoldierButtonPrefab, SoldierList.transform);
@@ -32,5 +35,18 @@ public class CenterManager : MonoBehaviour{
     public void ClearSoldierList(){
         UI.DestroyAllChildren(SoldierList.transform);
         SoldierList.SetActive(false);
+    }
+
+    public void ElapseTime(){
+        StartCoroutine(Elapse());
+    }
+    IEnumerator Elapse(){
+        var wait = new WaitForSeconds(0.5f);
+        for (int i = 0; i < 6; i++){
+            if (projType == ProjectType.Training)
+                selectedSoldier.baseStats[Stat.Exp] += 1;
+            yield return wait;
+        }
+        Debug.Log("다음 임무 발생");
     }
 }

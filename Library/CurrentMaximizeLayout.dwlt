@@ -23,7 +23,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 6169
+  controlID: 3123
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -124,7 +124,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 6170
+  controlID: 3101
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 6171
+  controlID: 3102
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -202,10 +202,10 @@ MonoBehaviour:
     height: 429
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
-    scrollPos: {x: 0, y: 20}
-    m_SelectedIDs: be570000
-    m_LastClickedID: 22462
-    m_ExpandedIDs: 088bfeff76fbffff00000000ac56000072570000be57000038590000
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 5c590000
+    m_LastClickedID: 22876
+    m_ExpandedIDs: 76fbffff00000000b8560000505900005c590000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -359,7 +359,7 @@ MonoBehaviour:
     width: 786
     height: 429
   m_PersistentViewDataDictionary: {fileID: 0}
-  m_Recording: 0
+  m_Recording: 1
   m_ActiveNativePlatformSupportModule: 
   m_ViewType: 0
   m_CurrentArea: 0
@@ -425,7 +425,7 @@ MonoBehaviour:
     height: 260
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SearchFilter:
-    m_NameFilter: sold
+    m_NameFilter: 
     m_ClassNames: []
     m_AssetLabels: []
     m_AssetBundleNames: []
@@ -436,19 +436,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Nansae\Desktop\ParadiseLost
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 31}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: 00000000342e0000b8310000c8370000f03c0000524d0000725100004e540000ffffff7f
+    scrollPos: {x: 0, y: 1341}
+    m_SelectedIDs: f23c0000
+    m_LastClickedID: 15602
+    m_ExpandedIDs: 00000000362e0000ba310000ca370000f23c0000544d00007451000050540000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -476,7 +476,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000342e0000b8310000c8370000f03c0000524d0000725100004e540000ffffff7f
+    m_ExpandedIDs: 00000000362e0000ba310000ca370000f23c0000544d00007451000050540000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -501,8 +501,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: be570000
-    m_LastClickedInstanceID: 22462
+    m_SelectedInstanceIDs: 5c590000
+    m_LastClickedInstanceID: 22876
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000c0abf5ff842e0000be320000f43900001e310000b03e0000ae280000c02c000066410000d8a4010060420000a830000094660000aa690000a8eb0000803c0000e66000003e390000740d0600180e0600902d0000240e0100f40203000c9b00008a41000016070000a64b0000bc4d0000e63f0000004b00005243000070330000e008000096390000e63a00006c2e0000fa410000ac0a00008649000020f30500c4500000343b00009e4c0000ca4f0000003000003c51000022310000e63b0000765100000a340000d2480000d4480000443b0000bc4700003c35000000000000ba4c00004c490000ee420000
     m_RenameOverlay:
@@ -528,7 +528,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 38.5}
     m_GridSize: 64
   m_DirectoriesAreaWidth: 206
 --- !u!114 &12
@@ -611,7 +611,7 @@ MonoBehaviour:
     width: 417
     height: 710
   m_PersistentViewDataDictionary: {fileID: 0}
-  m_ScrollPosition: {x: 0, y: 0}
+  m_ScrollPosition: {x: 0, y: 267.95508}
   m_InspectorMode: 0
   m_PreviewResizer:
     m_CachedPref: 199
