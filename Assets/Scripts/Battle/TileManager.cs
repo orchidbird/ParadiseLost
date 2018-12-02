@@ -315,7 +315,7 @@ public class TileManager : MonoBehaviour {
             realZ = - tilePos.y - tilePos.x;
             break;
         }
-		return new Vector3(Setting.tileImageWidth * realX * 0.5f, Setting.tileImageHeight * (realZ+height) * 0.5f, realZ * 0.1f);
+		return new Vector3(Setting.tileImageWidth * realX * 0.5f, Setting.tileImageHeight * (realZ + height * 1.5f) * 0.5f, realZ * 0.1f);
 	}
 
 	//PC 차례에만 사용할 것!

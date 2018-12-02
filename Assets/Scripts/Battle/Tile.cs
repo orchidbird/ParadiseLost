@@ -75,14 +75,14 @@ public class Tile : Entity, IPointerEnterHandler, IPointerExitHandler, IPointerD
 			if(nearTile == null) continue;
 			
 			minHeightinNearTiles = Math.Min(minHeightinNearTiles, nearTile.GetHeight());
-			if (height - minHeightinNearTiles < 3) continue;
+			if (height - minHeightinNearTiles < 2) continue;
 			for (int i = minHeightinNearTiles; i < height; i++){
 				var item = Instantiate(TileManager.Instance.tileHeightPrefab, transform);
 				var itemSR = item.GetComponent<SpriteRenderer>();
 				itemSR.sprite = GetComponent<SpriteRenderer>().sprite;
 				spriteRenderersUnderTile.Add(itemSR);
 				int diff = height - i;
-				item.transform.localPosition = new Vector3(0, -0.25f*diff, 0.01f*diff);
+				item.transform.localPosition = new Vector3(0, -0.5f*diff, 0.01f*diff);
 			}
 		}
 	}
